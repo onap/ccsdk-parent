@@ -183,7 +183,7 @@
 	</dependencyManagement>
 
 
-	<name>SDNC Root</name>
+	<name>Parent PON : ODL project, Boron SR3</name>
 	<url>http://wiki.onap.org</url>
 	<description>Root POM to be used for all SDNC projects</description>
 

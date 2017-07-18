@@ -8,7 +8,7 @@
 	<artifactId>parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>Parent</name>
+	<name>Parent POMs</name>
 	<url>http://wiki.onap.org</url>
 	<description>Parent POMs to be used by clients of CCSDK</description>
 
@@ -423,4 +423,8 @@
 	<organization>
 		<name>ONAP</name>
 	</organization>
+
+	<modules>
+		<module>odlparent-boron-sr3</module>
+	</modules>
 </project>
