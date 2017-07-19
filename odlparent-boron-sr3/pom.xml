@@ -353,7 +353,7 @@
 	<pluginRepositories>
 		<pluginRepository>
 			<id>onap-public</id>
-			<url>${onap.nexus.public-url}</url>
+			<url>${openecomp.nexus.public-url}</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -402,7 +402,7 @@
 	<repositories>
 		<repository>
 			<id>onap-public</id>
-			<url>${onap.nexus.public-url}</url>
+			<url>${openecomp.nexus.public-url}</url>
 			<releases>
 				<enabled>true</enabled>
 				<!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
@@ -419,7 +419,7 @@
 		<repository>
 			<id>onap-release</id>
 			<name>onap-repository-releases</name>
-			<url>${onap.nexus.release-url}</url>
+			<url>${openecomp.nexus.release-url}</url>
 			<releases>
 				<enabled>true</enabled>
 				<updatePolicy>never</updatePolicy>
@@ -431,7 +431,7 @@
 		<repository>
 			<id>onap-snapshot</id>
 			<name>onap-repository-snapshots</name>
-			<url>${onap.nexus.snapshot-url}</url>
+			<url>${openecomp.nexus.snapshot-url}</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -469,12 +469,12 @@
 		<repository>
 			<id>ecomp-releases</id>
 			<name>onap-repository-releases</name>
-			<url>${onap.nexus.release-url}</url>
+			<url>${openecomp.nexus.release-url}</url>
 		</repository>
 		<snapshotRepository>
 			<id>ecomp-snapshots</id>
 			<name>onap-repository-snapshots</name>
-			<url>${onap.nexus.snapshot-url}</url>
+			<url>${openecomp.nexus.snapshot-url}</url>
 		</snapshotRepository>
 	</distributionManagement>
 
