@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>pom</packaging>
+	<groupId>org.onap.ccsdk.parent</groupId>
+	<artifactId>parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>Parent POMs</name>
+	<url>http://wiki.onap.org</url>
+	<description>Parent POMs to be used by clients of CCSDK</description>
+
+
+	<issueManagement>
+		<system>JIRA</system>
+		<url>https://jira.onap.org/</url>
+	</issueManagement>
+
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>onap-public</id>
+			<url>${onap.nexus.public-url}</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>opendaylight-mirror</id>
+			<name>opendaylight-mirror</name>
+			<url>${opendaylight.nexus.public-url}</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>opendaylight-snapshot</id>
+			<name>opendaylight-snapshot</name>
+			<url>${opendaylight.nexus.snapshot-url}</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+		<!-- Black Duck plugin dependencies -->
+		<pluginRepository>
+			<id>JCenter</id>
+			<name>JCenter Repository</name>
+			<url>http://jcenter.bintray.com</url>
+		</pluginRepository>
+
+		<pluginRepository>
+			<id>Restlet</id>
+			<name>Restlet Repository</name>
+			<url>http://maven.restlet.com</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+
+	<repositories>
+		<repository>
+			<id>onap-public</id>
+			<url>${onap.nexus.public-url}</url>
+			<releases>
+				<enabled>true</enabled>
+				<!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
+					<updatePolicy>daily</updatePolicy> <updatePolicy>interval:in minutes</updatePolicy> -->
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
+					<updatePolicy>daily</updatePolicy> <updatePolicy>interval:30</updatePolicy> -->
+			</snapshots>
+		</repository>
+		<repository>
+			<id>onap-release</id>
+			<name>onap-repository-releases</name>
+			<url>${onap.nexus.release-url}</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>onap-snapshot</id>
+			<name>onap-repository-snapshots</name>
+			<url>${onap.nexus.snapshot-url}</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>opendaylight-mirror</id>
+			<name>opendaylight-mirror</name>
+			<url>${opendaylight.nexus.public-url}</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>opendaylight-snapshot</id>
+			<name>opendaylight-snapshot</name>
+			<url>${opendaylight.nexus.snapshot-url}</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>onap-releases</id>
+			<name>onap-repository-releases</name>
+			<url>${onap.nexus.release-url}</url>
+		</repository>
+		<snapshotRepository>
+			<id>onap-snapshots</id>
+			<name>onap-repository-snapshots</name>
+			<url>${onap.nexus.snapshot-url}</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.6</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.apache.maven.wagon</groupId>
+							<artifactId>wagon-webdav-jackrabbit</artifactId>
+							<version>2.10</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.doxia</groupId>
+							<artifactId>doxia-core</artifactId>
+							<version>1.7</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.doxia</groupId>
+							<artifactId>doxia-sink-api</artifactId>
+							<version>1.7</version>
+						</dependency>
+						<dependency>
+							<groupId>org.apache.maven.doxia</groupId>
+							<artifactId>doxia-logging-api</artifactId>
+							<version>1.7</version>
+						</dependency>
+					</dependencies>
+					<executions>
+						<execution>
+							<id>attach-descriptor</id>
+							<goals>
+								<goal>attach-descriptor</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compile.plugin.version}</version>
+					<configuration>
+						<source>${java.version.source}</source>
+						<target>${java.version.target}</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>3.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.10</version>
+					<configuration>
+						<additionalDependencies>
+							<additionalDependency>
+								<groupId>org.slf4j</groupId>
+								<artifactId>slf4j-api</artifactId>
+								<version>${slf4j.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>org.antlr</groupId>
+								<artifactId>antlr4</artifactId>
+								<version>${antlr.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>org.antlr</groupId>
+								<artifactId>antlr4-runtime</artifactId>
+								<version>${antlr.version}</version>
+							</additionalDependency>
+
+							<additionalDependency>
+								<groupId>com.sun.jersey</groupId>
+								<artifactId>jersey-client</artifactId>
+								<version>${jersey.client.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>com.sun.jersey</groupId>
+								<artifactId>jersey-core</artifactId>
+								<version>${jersey.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>org.apache.httpcomponents</groupId>
+								<artifactId>httpcore-osgi</artifactId>
+								<version>${apache.httpcomponents.core.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>org.apache.httpcomponents</groupId>
+								<artifactId>httpclient-osgi</artifactId>
+								<version>${apache.httpcomponents.client.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>com.fasterxml.jackson.core</groupId>
+								<artifactId>jackson-databind</artifactId>
+								<version>${jackson.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>com.fasterxml.jackson.core</groupId>
+								<artifactId>jackson-annotations</artifactId>
+								<version>${jackson.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>com.fasterxml.jackson.core</groupId>
+								<artifactId>jackson-core</artifactId>
+								<version>${jackson.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>commons-lang</groupId>
+								<artifactId>commons-lang</artifactId>
+								<version>${commons.lang.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>org.opendaylight.mdsal</groupId>
+								<artifactId>yang-binding</artifactId>
+								<version>${odl.mdsal.yang.binding.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>org.opendaylight.yangtools</groupId>
+								<artifactId>yang-common</artifactId>
+								<version>${odl.yangtools.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>org.opendaylight.mdsal.model</groupId>
+								<artifactId>ietf-inet-types</artifactId>
+								<version>${odl.ietf-inet-types.version}</version>
+							</additionalDependency>
+							<additionalDependency>
+								<groupId>org.opendaylight.mdsal.model</groupId>
+								<artifactId>ietf-yang-types</artifactId>
+								<version>${odl.ietf-yang-types.version}</version>
+							</additionalDependency>
+						</additionalDependencies>
+					</configuration>
+
+					<executions>
+						<execution>
+							<id>aggregate</id>
+							<goals>
+								<goal>aggregate</goal>
+							</goals>
+							<phase>site</phase>
+
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.1.1</version>
+					<executions>
+						<execution>
+							<id>bundle-sources</id>
+							<phase>package</phase>
+							<goals>
+								<!-- produce source artifact for main project sources -->
+								<goal>jar-no-fork</goal>
+
+								<!-- produce source artifact for project test sources -->
+								<goal>test-jar-no-fork</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+
+			</plugins>
+
+		</pluginManagement>
+
+		<plugins>
+			<!-- license plugin -->
+
+			<plugin>
+
+				<groupId>org.codehaus.mojo</groupId>
+
+				<artifactId>license-maven-plugin</artifactId>
+
+				<version>1.10</version>
+
+				<configuration>
+
+					<addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
+
+					<processStartTag>============LICENSE_START=======================================================</processStartTag>
+
+					<processEndTag>============LICENSE_END=========================================================</processEndTag>
+
+					<sectionDelimiter>================================================================================</sectionDelimiter>
+
+					<licenseName>apache_v2</licenseName>
+
+					<inceptionYear>2017</inceptionYear>
+
+					<organizationName>AT&amp;T Intellectual Property. All rights
+						reserved.</organizationName>
+
+					<projectName>openECOMP : SDN-C</projectName>
+
+					<canUpdateCopyright>true</canUpdateCopyright>
+
+					<canUpdateDescription>true</canUpdateDescription>
+
+					<canUpdateLicense>true</canUpdateLicense>
+
+					<emptyLineAfterHeader>true</emptyLineAfterHeader>
+					<excludes>
+						<exclude>**/*.png</exclude>
+						<exclude>**/*.json</exclude>
+					</excludes>
+
+				</configuration>
+
+				<executions>
+
+					<execution>
+
+						<id>first</id>
+
+						<goals>
+
+							<goal>update-file-header</goal>
+
+						</goals>
+
+						<phase>process-sources</phase>
+
+					</execution>
+
+				</executions>
+
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>set-system-properties</goal>
+						</goals>
+						<configuration>
+							<properties>
+								<property>
+									<name>maven.wagon.http.ssl.allowall</name>
+									<value>${ssl.allowall}</value>
+								</property>
+								<property>
+									<name>maven.wagon.http.ssl.insecure</name>
+									<value>${ssl.insecure}</value>
+								</property>
+							</properties>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>2.3</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.8.1</version>
+				<configuration>
+					<tag>${project.artifactId}-${project.version}</tag>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<organization>
+		<name>ONAP</name>
+	</organization>
+
+	<modules>
+		<module>odlparent-boron-sr3</module>
+	</modules>
+</project>
