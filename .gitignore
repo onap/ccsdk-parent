@@ -1,0 +1,44 @@
+#####standard .git ignore entries#####
+
+## IDE Specific Files ##
+org.eclipse.core.resources.prefs
+.classpath
+.project
+.settings
+.idea
+.externalToolBuilders
+.checkstyle
+maven-eclipse.xml
+workspace
+
+## Compilation Files ##
+*.class
+**/target
+target
+target-ide
+MANIFEST.MF
+
+## Misc Ignores (OS specific etc) ##
+bin/
+dist
+*~
+*.ipr
+*.iml
+*.iws
+classes
+out/
+.DS_STORE
+.metadata
+
+## antlr4 generated files ##
+ExprGrammarBaseListener.java
+ExprGrammarLexer.java
+ExprGrammarListener.java
+ExprGrammarParser.java
+ExprGrammar.tokens
+ExprGrammarLexer.tokens
+
+# BlackDuck generated file
+sdnc-core_bdio.jsonld
+blackDuckHubProjectName.txt
+blackDuckHubProjectVersionName.txt
