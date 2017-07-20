@@ -12,6 +12,19 @@
 	<url>http://wiki.onap.org</url>
 	<description>Parent POMs to be used by clients of CCSDK</description>
 
+	<properties>
+		<!-- ONAP repositories -->
+		<onap.nexus.host>nexus.onap.org</onap.nexus.host>
+		<onap.nexus.port>443</onap.nexus.port>
+		<onap.nexus.protocol>https</onap.nexus.protocol>
+		<onap.nexus.public-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/groups/public</onap.nexus.public-url>
+		<onap.nexus.release-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/releases</onap.nexus.release-url>
+		<onap.nexus.snapshot-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/snapshots</onap.nexus.snapshot-url>
+		<onap.nexus.staging.server-id>ecomp-releases</onap.nexus.staging.server-id>
+		<onap.nexus.staging.profile-id></onap.nexus.staging.profile-id>
+
+	</properties>
+
 
 	<repositories>
 		<repository>
