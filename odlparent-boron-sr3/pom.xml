@@ -430,7 +430,7 @@
 			</snapshots>
 		</repository>
 		<repository>
-			<id>onap-release</id>
+			<id>ecomp-release</id>
 			<name>onap-repository-releases</name>
 			<url>${onap.nexus.release-url}</url>
 			<releases>
@@ -442,7 +442,7 @@
 			</snapshots>
 		</repository>
 		<repository>
-			<id>onap-snapshot</id>
+			<id>ecomp-snapshot</id>
 			<name>onap-repository-snapshots</name>
 			<url>${onap.nexus.snapshot-url}</url>
 			<releases>
