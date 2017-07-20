@@ -17,26 +17,20 @@
 
 
 	<properties>
+		<!-- ONAP repositories -->
+		<onap.nexus.host>nexus.onap.org</onap.nexus.host>
+		<onap.nexus.port>443</onap.nexus.port>
+		<onap.nexus.protocol>https</onap.nexus.protocol>
+		<onap.nexus.public-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/groups/public</onap.nexus.public-url>
+		<onap.nexus.release-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/releases</onap.nexus.release-url>
+		<onap.nexus.snapshot-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/snapshots</onap.nexus.snapshot-url>
+		<onap.nexus.staging.server-id>ecomp-releases</onap.nexus.staging.server-id>
+		<onap.nexus.staging.profile-id></onap.nexus.staging.profile-id>
+
+
+		<!-- OpenDaylight repositories -->
 		<opendaylight.nexus.public-url>https://nexus.opendaylight.org/content/repositories/public/</opendaylight.nexus.public-url>
 		<opendaylight.nexus.snapshot-url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</opendaylight.nexus.snapshot-url>
-
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version.source>1.8</java.version.source>
-		<java.version.target>1.8</java.version.target>
-		<bundle.plugin.version>2.5.0</bundle.plugin.version>
-		<maven.compile.plugin.version>2.5.1</maven.compile.plugin.version>
-		<features.file>features.xml</features.file>
-		<jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
-		<salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
-		<checkstyle.skip>true</checkstyle.skip>
-
-
-		<sonar.language>java</sonar.language>
-		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-		<sonar.surefire.reportsPath>${project.build.directory}/surefire-reports</sonar.surefire.reportsPath>
-		<sonar.jacoco.reportPath>${project.build.directory}/coverage-reports/jacoco.exec</sonar.jacoco.reportPath>
-		<sonar.jacoco.reportMissing.force.zero>true</sonar.jacoco.reportMissing.force.zero>
-		<sonar.projectVersion>${project.version}</sonar.projectVersion>
 
 		<!-- OpenDaylight component versions -->
 		<odl.version>1.7.3-Boron-SR3</odl.version>
@@ -56,6 +50,25 @@
 		<odl.yang.jmx.generator.version>0.5.3-Boron-SR3</odl.yang.jmx.generator.version>
 		<odl.yangtools.yang.maven.plugin.version>${odl.yangtools.version}</odl.yangtools.yang.maven.plugin.version>
 		<odl.sal.api.gen.plugin.version>0.9.3-Boron-SR3</odl.sal.api.gen.plugin.version>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version.source>1.8</java.version.source>
+		<java.version.target>1.8</java.version.target>
+		<bundle.plugin.version>2.5.0</bundle.plugin.version>
+		<maven.compile.plugin.version>2.5.1</maven.compile.plugin.version>
+		<features.file>features.xml</features.file>
+		<jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
+		<salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
+		<checkstyle.skip>true</checkstyle.skip>
+
+
+		<sonar.language>java</sonar.language>
+		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+		<sonar.surefire.reportsPath>${project.build.directory}/surefire-reports</sonar.surefire.reportsPath>
+		<sonar.jacoco.reportPath>${project.build.directory}/coverage-reports/jacoco.exec</sonar.jacoco.reportPath>
+		<sonar.jacoco.reportMissing.force.zero>true</sonar.jacoco.reportMissing.force.zero>
+		<sonar.projectVersion>${project.version}</sonar.projectVersion>
+
 
 
 
@@ -353,7 +366,7 @@
 	<pluginRepositories>
 		<pluginRepository>
 			<id>onap-public</id>
-			<url>${openecomp.nexus.public-url}</url>
+			<url>${onap.nexus.public-url}</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -402,7 +415,7 @@
 	<repositories>
 		<repository>
 			<id>onap-public</id>
-			<url>${openecomp.nexus.public-url}</url>
+			<url>${onap.nexus.public-url}</url>
 			<releases>
 				<enabled>true</enabled>
 				<!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
@@ -419,7 +432,7 @@
 		<repository>
 			<id>onap-release</id>
 			<name>onap-repository-releases</name>
-			<url>${openecomp.nexus.release-url}</url>
+			<url>${onap.nexus.release-url}</url>
 			<releases>
 				<enabled>true</enabled>
 				<updatePolicy>never</updatePolicy>
@@ -431,7 +444,7 @@
 		<repository>
 			<id>onap-snapshot</id>
 			<name>onap-repository-snapshots</name>
-			<url>${openecomp.nexus.snapshot-url}</url>
+			<url>${onap.nexus.snapshot-url}</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -469,12 +482,12 @@
 		<repository>
 			<id>ecomp-releases</id>
 			<name>onap-repository-releases</name>
-			<url>${openecomp.nexus.release-url}</url>
+			<url>${onap.nexus.release-url}</url>
 		</repository>
 		<snapshotRepository>
 			<id>ecomp-snapshots</id>
 			<name>onap-repository-snapshots</name>
-			<url>${openecomp.nexus.snapshot-url}</url>
+			<url>${onap.nexus.snapshot-url}</url>
 		</snapshotRepository>
 	</distributionManagement>
 
