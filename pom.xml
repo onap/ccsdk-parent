@@ -13,65 +13,10 @@
 	<description>Parent POMs to be used by clients of CCSDK</description>
 
 
-	<issueManagement>
-		<system>JIRA</system>
-		<url>https://jira.onap.org/</url>
-	</issueManagement>
-
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>onap-public</id>
-			<url>${openecomp.nexus.public-url}</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-		<pluginRepository>
-			<id>opendaylight-mirror</id>
-			<name>opendaylight-mirror</name>
-			<url>${opendaylight.nexus.public-url}</url>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-		<pluginRepository>
-			<id>opendaylight-snapshot</id>
-			<name>opendaylight-snapshot</name>
-			<url>${opendaylight.nexus.snapshot-url}</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-		<!-- Black Duck plugin dependencies -->
-		<pluginRepository>
-			<id>JCenter</id>
-			<name>JCenter Repository</name>
-			<url>http://jcenter.bintray.com</url>
-		</pluginRepository>
-
-		<pluginRepository>
-			<id>Restlet</id>
-			<name>Restlet Repository</name>
-			<url>http://maven.restlet.com</url>
-		</pluginRepository>
-	</pluginRepositories>
-
-
 	<repositories>
 		<repository>
 			<id>onap-public</id>
-			<url>${openecomp.nexus.public-url}</url>
+			<url>${onap.nexus.public-url}</url>
 			<releases>
 				<enabled>true</enabled>
 				<!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
@@ -88,7 +33,7 @@
 		<repository>
 			<id>onap-release</id>
 			<name>onap-repository-releases</name>
-			<url>${openecomp.nexus.release-url}</url>
+			<url>${onap.nexus.release-url}</url>
 			<releases>
 				<enabled>true</enabled>
 				<updatePolicy>never</updatePolicy>
@@ -100,7 +45,7 @@
 		<repository>
 			<id>onap-snapshot</id>
 			<name>onap-repository-snapshots</name>
-			<url>${openecomp.nexus.snapshot-url}</url>
+			<url>${onap.nexus.snapshot-url}</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -138,12 +83,12 @@
 		<repository>
 			<id>onap-releases</id>
 			<name>onap-repository-releases</name>
-			<url>${openecomp.nexus.release-url}</url>
+			<url>${onap.nexus.release-url}</url>
 		</repository>
 		<snapshotRepository>
 			<id>onap-snapshots</id>
 			<name>onap-repository-snapshots</name>
-			<url>${openecomp.nexus.snapshot-url}</url>
+			<url>${onap.nexus.snapshot-url}</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -198,102 +143,6 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>sonar-maven-plugin</artifactId>
 					<version>3.2</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.10</version>
-					<configuration>
-						<additionalDependencies>
-							<additionalDependency>
-								<groupId>org.slf4j</groupId>
-								<artifactId>slf4j-api</artifactId>
-								<version>${slf4j.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>org.antlr</groupId>
-								<artifactId>antlr4</artifactId>
-								<version>${antlr.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>org.antlr</groupId>
-								<artifactId>antlr4-runtime</artifactId>
-								<version>${antlr.version}</version>
-							</additionalDependency>
-
-							<additionalDependency>
-								<groupId>com.sun.jersey</groupId>
-								<artifactId>jersey-client</artifactId>
-								<version>${jersey.client.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>com.sun.jersey</groupId>
-								<artifactId>jersey-core</artifactId>
-								<version>${jersey.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>org.apache.httpcomponents</groupId>
-								<artifactId>httpcore-osgi</artifactId>
-								<version>${apache.httpcomponents.core.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>org.apache.httpcomponents</groupId>
-								<artifactId>httpclient-osgi</artifactId>
-								<version>${apache.httpcomponents.client.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>com.fasterxml.jackson.core</groupId>
-								<artifactId>jackson-databind</artifactId>
-								<version>${jackson.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>com.fasterxml.jackson.core</groupId>
-								<artifactId>jackson-annotations</artifactId>
-								<version>${jackson.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>com.fasterxml.jackson.core</groupId>
-								<artifactId>jackson-core</artifactId>
-								<version>${jackson.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>commons-lang</groupId>
-								<artifactId>commons-lang</artifactId>
-								<version>${commons.lang.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>org.opendaylight.mdsal</groupId>
-								<artifactId>yang-binding</artifactId>
-								<version>${odl.mdsal.yang.binding.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>org.opendaylight.yangtools</groupId>
-								<artifactId>yang-common</artifactId>
-								<version>${odl.yangtools.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>org.opendaylight.mdsal.model</groupId>
-								<artifactId>ietf-inet-types</artifactId>
-								<version>${odl.ietf-inet-types.version}</version>
-							</additionalDependency>
-							<additionalDependency>
-								<groupId>org.opendaylight.mdsal.model</groupId>
-								<artifactId>ietf-yang-types</artifactId>
-								<version>${odl.ietf-yang-types.version}</version>
-							</additionalDependency>
-						</additionalDependencies>
-					</configuration>
-
-					<executions>
-						<execution>
-							<id>aggregate</id>
-							<goals>
-								<goal>aggregate</goal>
-							</goals>
-							<phase>site</phase>
-
-						</execution>
-					</executions>
 				</plugin>
 				<plugin>
 					<artifactId>maven-source-plugin</artifactId>
