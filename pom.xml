@@ -288,5 +288,6 @@
 
 	<modules>
 		<module>odlparent-boron-sr3</module>
+		<module>odlparent-carbon-sr1</module>
 	</modules>
 </project>
