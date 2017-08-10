@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a1a2d67_28dac578",
+        "filename": "odlparent-carbon-sr1/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2017-08-10T23:52:05Z",
+      "side": 1,
+      "message": "A nit, but any chance of changing your IDE to use 4 spaces instead of tabs? See block indentation in style guide: https://wiki.onap.org/display/DW/Java+code+style",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 2
+      },
+      "revId": "36ec2048487aa458c9cf5624133b863e956d9504",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a1a2d67_e8e3ad31",
+        "filename": "odlparent-carbon-sr1/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2017-08-10T23:52:05Z",
+      "side": 1,
+      "message": "should these be org.onap.ccsdk.core?",
+      "revId": "36ec2048487aa458c9cf5624133b863e956d9504",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
