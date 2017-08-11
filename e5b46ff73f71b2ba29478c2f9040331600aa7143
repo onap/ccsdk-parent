@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Dan Timoney <dtimoney@att.com>
+Code-Review+2: Marcus Williams <marcus.williams@intel.com>
+Submitted-by: Marcus Williams <marcus.williams@intel.com>
+Submitted-at: Fri, 11 Aug 2017 18:33:43 +0000
+Reviewed-on: http://gerrit.onap.org/r/7251
+Project: ccsdk/parent
+Branch: refs/heads/master
