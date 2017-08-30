@@ -197,9 +197,9 @@
     </dependencyManagement>
 
 
-    <name>Parent POM : ODL project, Carbon SR1</name>
+    <name>CCSDK Parent POM : ODL project, Carbon SR1</name>
     <url>http://wiki.onap.org</url>
-    <description>Root POM to be used for all SDNC projects</description>
+    <description>Root POM to be used for all Carbon SR1 based CCSDK projects</description>
 
 
     <issueManagement>

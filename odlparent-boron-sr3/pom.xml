@@ -196,9 +196,9 @@
 	</dependencyManagement>
 
 
-	<name>Parent PON : ODL project, Boron SR3</name>
+	<name>CCSDK Parent POM : ODL project, Boron SR3</name>
 	<url>http://wiki.onap.org</url>
-	<description>Root POM to be used for all SDNC projects</description>
+	<description>Root POM to be used for all Boron SR3 Based CCSDK projects</description>
 
 
 	<issueManagement>
