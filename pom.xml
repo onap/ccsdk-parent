@@ -8,7 +8,7 @@
     <artifactId>parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>CCSDK Parent POMs</name>
+    <name>ccsdk-parent</name>
     <url>http://wiki.onap.org</url>
     <description>Parent POMs to be used by clients of CCSDK</description>
 
