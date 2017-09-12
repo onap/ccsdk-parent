@@ -6,7 +6,7 @@
     <packaging>pom</packaging>
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <name>CCSDK Parent POMs</name>
     <url>http://wiki.onap.org</url>
@@ -165,10 +165,12 @@
                             <id>bundle-sources</id>
                             <phase>package</phase>
                             <goals>
-                                <!-- produce source artifact for main project sources -->
+                                <!-- produce source artifact for main project
+                                    sources -->
                                 <goal>jar-no-fork</goal>
 
-                                <!-- produce source artifact for project test sources -->
+                                <!-- produce source artifact for project
+                                    test sources -->
                                 <goal>test-jar-no-fork</goal>
                             </goals>
                         </execution>
