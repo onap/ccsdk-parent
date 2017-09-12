@@ -6,6 +6,7 @@
         <groupId>org.opendaylight.odlparent</groupId>
         <artifactId>odlparent</artifactId>
         <version>1.7.3-Boron-SR3</version>
+        <relativePath />
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -108,10 +109,10 @@
         <!-- Used by snmp4sdn, yangtools -->
         <javassist.version>3.20.0-GA</javassist.version>
 
-        <!-- FIXME remove all dependencies for jersey 1.17 after migration all
-            projects -->
-        <!-- Used by aaa, alto, netconf, neutron, sfc; see also affinity, defense4all,
-            snmp4sdn, toolkit -->
+        <!-- FIXME remove all dependencies for jersey 1.17 after migration
+            all projects -->
+        <!-- Used by aaa, alto, netconf, neutron, sfc; see also affinity,
+            defense4all, snmp4sdn, toolkit -->
         <jersey.version>1.17</jersey.version>
         <!-- Used by sfc -->
         <jersey.client.version>1.17</jersey.client.version>
@@ -129,17 +130,18 @@
             is fixed (either in PowerMock or with a new JUnit release) -->
         <!-- Used everywhere -->
         <junit.version>4.11</junit.version>
-        <!-- Used by coretutorials, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
+        <!-- Used by coretutorials, sfc, snmp4sdn, sxp; see also affinity,
+            toolkit -->
         <logback.version>1.1.7</logback.version>
         <!-- Used by nic, sfc, sxp, tsdr -->
         <mockito.version>1.10.19</mockito.version>
         <!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
         <netty.version>4.0.44.Final</netty.version>
-        <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity,
-            toolkit -->
+        <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also
+            affinity, toolkit -->
         <slf4j.version>1.7.21</slf4j.version>
-        <!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit,
-            tsdr, ttp -->
+        <!-- Used in integration/distribution; see also affinity, snmp4sdn,
+            toolkit, tsdr, ttp -->
         <spring.version>3.2.14.RELEASE</spring.version>
 
 
@@ -647,10 +649,12 @@
                             <id>bundle-sources</id>
                             <phase>package</phase>
                             <goals>
-                                <!-- produce source artifact for main project sources -->
+                                <!-- produce source artifact for main project
+                                    sources -->
                                 <goal>jar-no-fork</goal>
 
-                                <!-- produce source artifact for project test sources -->
+                                <!-- produce source artifact for project
+                                    test sources -->
                                 <goal>test-jar-no-fork</goal>
                             </goals>
                         </execution>
