@@ -6,7 +6,7 @@
     <packaging>pom</packaging>
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <name>ccsdk-parent</name>
     <url>http://wiki.onap.org</url>
