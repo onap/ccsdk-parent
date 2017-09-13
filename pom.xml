@@ -6,7 +6,7 @@
     <packaging>pom</packaging>
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <name>ccsdk-parent</name>
     <url>http://wiki.onap.org</url>
@@ -20,7 +20,7 @@
         <onap.nexus.public-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/groups/public</onap.nexus.public-url>
         <onap.nexus.release-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/releases</onap.nexus.release-url>
         <onap.nexus.snapshot-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/snapshots</onap.nexus.snapshot-url>
-        <onap.nexus.staging.server-id>ecomp-releases</onap.nexus.staging.server-id>
+        <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
 
     </properties>
@@ -233,7 +233,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <skipStaging>true</skipStaging>
+                    <skipStaging>false</skipStaging>
                 </configuration>
             </plugin>
         </plugins>
