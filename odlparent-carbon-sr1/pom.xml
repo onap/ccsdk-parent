@@ -154,6 +154,7 @@
         <apache.httpcomponents.client.version>4.3.3</apache.httpcomponents.client.version>
         <antlr.version>4.5.1</antlr.version>
         <mysql.connector.version>5.1.39</mysql.connector.version>
+        <mariadb.connector.version>2.1.1</mariadb.connector.version>
         <h2database.version>1.4.186</h2database.version>
 
         <tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
