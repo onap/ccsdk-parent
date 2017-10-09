@@ -12,12 +12,6 @@
     <url>http://wiki.onap.org</url>
     <description>Parent POMs to be used by clients of CCSDK</description>
 
-    <parent>
-        <groupId>org.onap.ccsdk.parent</groupId>
-        <artifactId>odlparent-carbon-sr1</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
-
     <properties>
         <!-- ONAP repositories -->
         <onap.nexus.host>nexus.onap.org</onap.nexus.host>
@@ -189,6 +183,17 @@
         </pluginManagement>
 
         <plugins>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <nexusUrl>${onap.nexus.url}</nexusUrl>
+                    <stagingProfileId>176c31dfe190a</stagingProfileId>
+                    <serverId>ecomp-staging</serverId>
+                </configuration>
+            </plugin>
 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -233,7 +238,6 @@
     </organization>
 
     <modules>
-        <module>odlparent-boron-sr3</module>
         <module>odlparent-carbon-sr1</module>
     </modules>
 </project>
