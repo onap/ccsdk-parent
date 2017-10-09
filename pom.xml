@@ -17,6 +17,7 @@
         <onap.nexus.host>nexus.onap.org</onap.nexus.host>
         <onap.nexus.port>443</onap.nexus.port>
         <onap.nexus.protocol>https</onap.nexus.protocol>
+        <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
         <onap.nexus.public-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/groups/public</onap.nexus.public-url>
         <onap.nexus.release-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/releases</onap.nexus.release-url>
         <onap.nexus.snapshot-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/snapshots</onap.nexus.snapshot-url>
