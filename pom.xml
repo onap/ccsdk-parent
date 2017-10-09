@@ -226,22 +226,6 @@
                     <tag>${project.artifactId}-${project.version}</tag>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>injected-nexus-deploy</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <skipStaging>false</skipStaging>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
     <organization>
