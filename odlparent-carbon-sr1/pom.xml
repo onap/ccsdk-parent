@@ -2,18 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <parent>
-        <groupId>org.onap.oparent</groupId>
-        <artifactId>oparent-odlparent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-	<relativePath />
-  </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>odlparent-carbon-sr1</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
 
 
 
@@ -22,9 +16,10 @@
         <onap.nexus.host>nexus.onap.org</onap.nexus.host>
         <onap.nexus.port>443</onap.nexus.port>
         <onap.nexus.protocol>https</onap.nexus.protocol>
-        <onap.nexus.public-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/groups/public</onap.nexus.public-url>
-        <onap.nexus.release-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/releases</onap.nexus.release-url>
-        <onap.nexus.snapshot-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/snapshots</onap.nexus.snapshot-url>
+        <onap.nexus.public-url>https://nexus.onap.org/content/groups/public</onap.nexus.public-url>
+        <onap.nexus.staging-url>https://nexus.onap.org/content/groups/staging</onap.nexus.staging-url>
+        <onap.nexus.release-url>https://nexus.onap.org/content/repositories/releases</onap.nexus.release-url>
+        <onap.nexus.snapshot-url>https://nexus.onap.org/content/repositories/snapshots</onap.nexus.snapshot-url>
         <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
 
@@ -74,10 +69,10 @@
 
 
         <!-- CCSDK component versions -->
-        <ccsdk.sli.core.version>[0.1.0-SNAPSHOT,0.2.0-SNAPSHOT)</ccsdk.sli.core.version>
-        <ccsdk.sli.adaptors.version>[0.1.0-SNAPSHOT,0.2.0-SNAPSHOT)</ccsdk.sli.adaptors.version>
-        <ccsdk.sli.northbound.version>[0.1.0-SNAPSHOT,0.2.0-SNAPSHOT)</ccsdk.sli.northbound.version>
-        <ccsdk.sli.plugins.version>[0.1.0-SNAPSHOT,0.2.0-SNAPSHOT)</ccsdk.sli.plugins.version>
+        <ccsdk.sli.core.version>0.1.0</ccsdk.sli.core.version>
+        <ccsdk.sli.adaptors.version>0.1.0</ccsdk.sli.adaptors.version>
+        <ccsdk.sli.northbound.version>0.1.0</ccsdk.sli.northbound.version>
+        <ccsdk.sli.plugins.version>0.1.0</ccsdk.sli.plugins.version>
         <sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
         <sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
         <sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
@@ -161,6 +156,12 @@
     </properties>
 
 
+  <parent>
+        <groupId>org.onap.oparent</groupId>
+        <artifactId>oparent-odlparent</artifactId>
+        <version>1.0.0</version>
+	<relativePath />
+  </parent>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -378,6 +379,16 @@
             </snapshots>
         </pluginRepository>
         <pluginRepository>
+            <id>onap-snapshot</id>
+            <url>${onap.nexus.snapshot-url}</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
             <id>opendaylight-mirror</id>
             <name>opendaylight-mirror</name>
             <url>${opendaylight.nexus.public-url}</url>
@@ -421,15 +432,23 @@
             <url>${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
-                <!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
-                    <updatePolicy>daily</updatePolicy> <updatePolicy>interval:in minutes</updatePolicy> -->
                 <updatePolicy>never</updatePolicy>
             </releases>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
-                <!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
-                    <updatePolicy>daily</updatePolicy> <updatePolicy>interval:30</updatePolicy> -->
+            </snapshots>
+        </repository>
+        <repository>
+            <id>onap-staging</id>
+            <url>${onap.nexus.staging-url}</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
         <repository>
