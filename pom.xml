@@ -69,7 +69,7 @@
 
 
         <!-- CCSDK component versions -->
-        <ccsdk.sli.core.version>0.1.0</ccsdk.sli.core.version>
+        <ccsdk.sli.core.version>0.1.2</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>0.1.0</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>0.1.0</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>0.1.0</ccsdk.sli.plugins.version>
