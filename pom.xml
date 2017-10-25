@@ -2,30 +2,428 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
+
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <groupId>org.onap.ccsdk.parent</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>odlparent-carbon-sr1</artifactId>
     <version>0.1.0-SNAPSHOT</version>
 
-    <name>ccsdk-parent</name>
-    <url>http://wiki.onap.org</url>
-    <description>Parent POMs to be used by clients of CCSDK</description>
+
 
     <properties>
         <!-- ONAP repositories -->
         <onap.nexus.host>nexus.onap.org</onap.nexus.host>
         <onap.nexus.port>443</onap.nexus.port>
         <onap.nexus.protocol>https</onap.nexus.protocol>
-        <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
-        <onap.nexus.public-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/groups/public</onap.nexus.public-url>
-        <onap.nexus.staging-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/groups/staging</onap.nexus.staging-url>
-        <onap.nexus.release-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/releases</onap.nexus.release-url>
-        <onap.nexus.snapshot-url>${onap.nexus.protocol}://${onap.nexus.host}:${onap.nexus.port}/content/repositories/snapshots</onap.nexus.snapshot-url>
+        <onap.nexus.public-url>https://nexus.onap.org/content/groups/public</onap.nexus.public-url>
+        <onap.nexus.staging-url>https://nexus.onap.org/content/groups/staging</onap.nexus.staging-url>
+        <onap.nexus.release-url>https://nexus.onap.org/content/repositories/releases</onap.nexus.release-url>
+        <onap.nexus.snapshot-url>https://nexus.onap.org/content/repositories/snapshots</onap.nexus.snapshot-url>
         <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
 
+
+        <!-- OpenDaylight repositories -->
+        <opendaylight.nexus.public-url>https://nexus.opendaylight.org/content/repositories/public/</opendaylight.nexus.public-url>
+        <opendaylight.nexus.snapshot-url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</opendaylight.nexus.snapshot-url>
+
+        <!-- OpenDaylight component versions -->
+        <odl.version>1.8.1-Carbon</odl.version>
+        <odl.dlux.version>0.5.1-Carbon</odl.dlux.version>
+        <odl.yangtools.version>1.1.1-Carbon</odl.yangtools.version>
+        <odl.mdsal.version>1.5.1-Carbon</odl.mdsal.version>
+        <odl.mdsal.features.version>2.2.1-Carbon</odl.mdsal.features.version>
+        <odl.mdsal.model.version>0.10.1-Carbon</odl.mdsal.model.version>
+        <odl.mdsal.yang.binding.version>0.10.1-Carbon</odl.mdsal.yang.binding.version>
+        <odl.restconf.version>1.5.1-Carbon</odl.restconf.version>
+        <odl.controller.model.version>${odl.mdsal.model.version}</odl.controller.model.version>
+        <odl.controller.config.api.version>0.6.1-Carbon</odl.controller.config.api.version>
+        <odl.karaf.empty.distro.version>${odl.version}</odl.karaf.empty.distro.version>
+        <odl.commons.opendaylight.version>${odl.version}</odl.commons.opendaylight.version>
+        <odl.ietf-inet-types.version>2010.09.24.10.1-Carbon</odl.ietf-inet-types.version>
+        <odl.ietf-yang-types.version>2010.09.24.10.1-Carbon</odl.ietf-yang-types.version>
+        <odl.yang.jmx.generator.version>0.6.1-Carbon</odl.yang.jmx.generator.version>
+        <odl.yangtools.yang.maven.plugin.version>${odl.yangtools.version}</odl.yangtools.yang.maven.plugin.version>
+        <odl.sal.api.gen.plugin.version>0.10.1-Carbon</odl.sal.api.gen.plugin.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version.source>1.8</java.version.source>
+        <java.version.target>1.8</java.version.target>
+        <bundle.plugin.version>2.5.0</bundle.plugin.version>
+        <maven.compile.plugin.version>2.5.1</maven.compile.plugin.version>
+        <features.file>features.xml</features.file>
+        <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
+        <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
+        <checkstyle.skip>true</checkstyle.skip>
+
+
+        <sonar.language>java</sonar.language>
+        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+        <sonar.surefire.reportsPath>${project.build.directory}/surefire-reports</sonar.surefire.reportsPath>
+        <sonar.jacoco.reportPath>${project.build.directory}/coverage-reports/jacoco.exec</sonar.jacoco.reportPath>
+        <sonar.jacoco.reportMissing.force.zero>true</sonar.jacoco.reportMissing.force.zero>
+        <sonar.projectVersion>${project.version}</sonar.projectVersion>
+
+
+
+
+        <!-- CCSDK component versions -->
+        <ccsdk.sli.core.version>0.1.0</ccsdk.sli.core.version>
+        <ccsdk.sli.adaptors.version>0.1.0</ccsdk.sli.adaptors.version>
+        <ccsdk.sli.northbound.version>0.1.0</ccsdk.sli.northbound.version>
+        <ccsdk.sli.plugins.version>0.1.0</ccsdk.sli.plugins.version>
+        <sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
+        <sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
+        <sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
+        <sdnctl.mdsal.resource.version>${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
+        <sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
+
+        <!-- Support libraries used by OpenDaylight -->
+        <!-- Used by aaa, vtn -->
+        <commons.codec.version>1.10</commons.codec.version>
+        <!-- Used by netconf, ovsdb -->
+        <commons.lang3.version>3.4</commons.lang3.version>
+        <!-- Used by sfc, snmp4sdn; see also affinity, toolkit -->
+        <commons.lang.version>2.6</commons.lang.version>
+        <!-- Used by neutron; see also controller, vtn -->
+        <commons.net.version>3.5</commons.net.version>
+        <!-- Used by neutron -->
+        <eclipse.persistence.version>2.6.2</eclipse.persistence.version>
+        <!-- Used by aaa -->
+        <felix.dependencymanager.version>4.3.0</felix.dependencymanager.version>
+        <!-- Used by lacp, netconf, ovsdb, sfc, toolkit; see also vtn -->
+        <gson.version>2.3.1</gson.version>
+        <!-- Used by aaa, dlux, persistence, snmp4sdn, sxp -->
+        <guava.version>18.0</guava.version>
+        <!-- Used by lispflowmapping, sxp, vtn/manager -->
+        <hamcrest.version>1.3</hamcrest.version>
+        <!-- Used by aaa, alto, netconf, ovsdb, sfc; see also affinity, defense4all,
+            integration/distribution, snmp4sdn, toolkit, ttp -->
+        <jackson.version>2.3.2</jackson.version>
+        <!-- Used by snmp4sdn, yangtools -->
+        <javassist.version>3.20.0-GA</javassist.version>
+
+        <!-- FIXME remove all dependencies for jersey 1.17 after migration
+            all projects -->
+        <!-- Used by aaa, alto, netconf, neutron, sfc; see also affinity,
+            defense4all, snmp4sdn, toolkit -->
+        <jersey.version>1.17</jersey.version>
+        <!-- Used by sfc -->
+        <jersey.client.version>1.17</jersey.client.version>
+
+        <!-- New packages for jersey migration 1.17 to 2.8 -->
+        <!-- appache.geronimo.bundle for DocGen -->
+        <!-- Used by aaa, iotdm, netconf, ovsdb, sfc -->
+        <org.json.version>20131018</org.json.version>
+
+        <!-- Used by sfc -->
+        <jettison.version>1.3.6</jettison.version>
+        <!-- Used by persistence -->
+        <jsr305.api.version>3.0.0</jsr305.api.version>
+        <!-- Need to stick to JUnit 4.11 until https://github.com/jayway/powermock/issues/560
+            is fixed (either in PowerMock or with a new JUnit release) -->
+        <!-- Used everywhere -->
+        <junit.version>4.11</junit.version>
+        <!-- Used by coretutorials, sfc, snmp4sdn, sxp; see also affinity,
+            toolkit -->
+        <logback.version>1.1.7</logback.version>
+        <!-- Used by nic, sfc, sxp, tsdr -->
+        <mockito.version>1.10.19</mockito.version>
+        <!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
+        <netty.version>4.0.44.Final</netty.version>
+        <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also
+            affinity, toolkit -->
+        <slf4j.version>1.7.21</slf4j.version>
+        <!-- Used in integration/distribution; see also affinity, snmp4sdn,
+            toolkit, tsdr, ttp -->
+        <spring.version>3.2.14.RELEASE</spring.version>
+
+
+
+        <!-- Extra support libraries used by SDN-C -->
+        <equinox.osgi.version>3.8.1.v20120830-144521</equinox.osgi.version>
+        <jackson-annotations-version>${jackson.version}</jackson-annotations-version>
+        <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
+        <apache.httpcomponents.core.version>4.3.2</apache.httpcomponents.core.version>
+        <apache.httpcomponents.client.version>4.3.3</apache.httpcomponents.client.version>
+        <antlr.version>4.5.1</antlr.version>
+        <mysql.connector.version>5.1.39</mysql.connector.version>
+        <mariadb.connector.version>2.1.1</mariadb.connector.version>
+        <h2database.version>1.4.186</h2database.version>
+
+        <tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
     </properties>
+
+
+  <parent>
+        <groupId>org.onap.oparent</groupId>
+        <artifactId>oparent-odlparent</artifactId>
+        <version>1.0.0</version>
+	<relativePath />
+  </parent>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.opendaylight.odlparent</groupId>
+                <artifactId>opendaylight-karaf-empty</artifactId>
+                <version>${odl.karaf.empty.distro.version}</version>
+                <type>zip</type>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.onap.sdnc.core</groupId>
+                <artifactId>sli-common</artifactId>
+                <version>${sdnctl.sli.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.onap.sdnc.core</groupId>
+                <artifactId>sli-provider</artifactId>
+                <version>${sdnctl.sli.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.onap.sdnc.core</groupId>
+                <artifactId>aai-service-provider</artifactId>
+                <version>${sdnctl.aai.service.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.onap.sdnc.core</groupId>
+                <artifactId>dblib-provider</artifactId>
+                <version>${sdnctl.dblib.version}</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+
+    <name>CCSDK Parent POM : ODL project, Carbon SR1</name>
+    <url>http://wiki.onap.org</url>
+    <description>Root POM to be used for all Carbon SR1 based CCSDK projects</description>
+
+
+    <issueManagement>
+        <system>JIRA</system>
+        <url>https://jira.onap.org/</url>
+    </issueManagement>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <configuration>
+                    <failOnError>false</failOnError>
+                    <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+                    <docletArtifact>
+                        <groupId>org.umlgraph</groupId>
+                        <artifactId>umlgraph</artifactId>
+                        <version>5.6</version>
+                    </docletArtifact>
+                    <additionalparam>-views</additionalparam>
+                    <useStandardDocletOptions>true</useStandardDocletOptions>
+                    <excludePackageNames>org.opendaylight.*</excludePackageNames>
+                    <additionalDependencies>
+                        <additionalDependency>
+                            <groupId>org.slf4j</groupId>
+                            <artifactId>slf4j-api</artifactId>
+                            <version>${slf4j.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>org.antlr</groupId>
+                            <artifactId>antlr4</artifactId>
+                            <version>${antlr.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>org.antlr</groupId>
+                            <artifactId>antlr4-runtime</artifactId>
+                            <version>${antlr.version}</version>
+                        </additionalDependency>
+
+                        <additionalDependency>
+                            <groupId>com.sun.jersey</groupId>
+                            <artifactId>jersey-client</artifactId>
+                            <version>${jersey.json.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>com.sun.jersey</groupId>
+                            <artifactId>jersey-core</artifactId>
+                            <version>${jersey.json.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>org.apache.httpcomponents</groupId>
+                            <artifactId>httpcore-osgi</artifactId>
+                            <version>${apache.httpcomponents.core.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>org.apache.httpcomponents</groupId>
+                            <artifactId>httpclient-osgi</artifactId>
+                            <version>${apache.httpcomponents.client.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                            <artifactId>jackson-databind</artifactId>
+                            <version>${fasterxml.jackson.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                            <artifactId>jackson-annotations</artifactId>
+                            <version>${fasterxml.jackson.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                            <artifactId>jackson-core</artifactId>
+                            <version>${fasterxml.jackson.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>commons-lang</groupId>
+                            <artifactId>commons-lang</artifactId>
+                            <version>${commons.lang.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>org.opendaylight.mdsal</groupId>
+                            <artifactId>yang-binding</artifactId>
+                            <version>${odl.mdsal.yang.binding.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>org.opendaylight.yangtools</groupId>
+                            <artifactId>yang-common</artifactId>
+                            <version>${odl.yangtools.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>org.opendaylight.mdsal.model</groupId>
+                            <artifactId>ietf-inet-types</artifactId>
+                            <version>${odl.ietf-inet-types.version}</version>
+                        </additionalDependency>
+                        <additionalDependency>
+                            <groupId>org.opendaylight.mdsal.model</groupId>
+                            <artifactId>ietf-yang-types</artifactId>
+                            <version>${odl.ietf-yang-types.version}</version>
+                        </additionalDependency>
+                    </additionalDependencies>
+                </configuration>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>javadoc-no-fork</report>
+                            <report>test-javadoc-no-fork</report>
+                        </reports>
+                    </reportSet>
+                    <reportSet>
+                        <id>aggregate</id>
+                        <reports>
+                            <report>aggregate</report>
+                            <report>test-aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.3</version>
+                <reportSets>
+                    <reportSet>
+                        <id>aggregate</id>
+                        <reports>
+                            <report>aggregate</report>
+                            <report>test-aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.17</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changelog-plugin</artifactId>
+                <version>2.3</version>
+                <reportSets>
+                    <reportSet>
+                        <id>dual-report</id>
+                        <configuration>
+                            <type>range</type>
+                            <range>30</range>
+                        </configuration>
+                        <reports>
+                            <report>changelog</report>
+                            <report>file-activity</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>taglist-maven-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>onap-public</id>
+            <url>${onap.nexus.public-url}</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>onap-snapshot</id>
+            <url>${onap.nexus.snapshot-url}</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>opendaylight-mirror</id>
+            <name>opendaylight-mirror</name>
+            <url>${opendaylight.nexus.public-url}</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>opendaylight-snapshot</id>
+            <name>opendaylight-snapshot</name>
+            <url>${opendaylight.nexus.snapshot-url}</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <!-- Black Duck plugin dependencies -->
+        <pluginRepository>
+            <id>JCenter</id>
+            <name>JCenter Repository</name>
+            <url>http://jcenter.bintray.com</url>
+        </pluginRepository>
+
+        <pluginRepository>
+            <id>Restlet</id>
+            <name>Restlet Repository</name>
+            <url>http://maven.restlet.com</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 
     <repositories>
@@ -34,15 +432,11 @@
             <url>${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
-                <!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
-                    <updatePolicy>daily</updatePolicy> <updatePolicy>interval:in minutes</updatePolicy> -->
                 <updatePolicy>never</updatePolicy>
             </releases>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
-                <!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
-                    <updatePolicy>daily</updatePolicy> <updatePolicy>interval:30</updatePolicy> -->
             </snapshots>
         </repository>
         <repository>
@@ -50,15 +444,11 @@
             <url>${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
-                <!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
-                    <updatePolicy>daily</updatePolicy> <updatePolicy>interval:in minutes</updatePolicy> -->
                 <updatePolicy>never</updatePolicy>
             </releases>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
-                <!-- <updatePolicy>always</updatePolicy> <updatePolicy>never</updatePolicy>
-                    <updatePolicy>daily</updatePolicy> <updatePolicy>interval:30</updatePolicy> -->
             </snapshots>
         </repository>
         <repository>
@@ -164,7 +554,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.5.1</version>
+                    <version>${maven.compile.plugin.version}</version>
                     <configuration>
                         <source>${java.version.source}</source>
                         <target>${java.version.target}</target>
@@ -174,6 +564,102 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>3.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.10</version>
+                    <configuration>
+                        <additionalDependencies>
+                            <additionalDependency>
+                                <groupId>org.slf4j</groupId>
+                                <artifactId>slf4j-api</artifactId>
+                                <version>${slf4j.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.antlr</groupId>
+                                <artifactId>antlr4</artifactId>
+                                <version>${antlr.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.antlr</groupId>
+                                <artifactId>antlr4-runtime</artifactId>
+                                <version>${antlr.version}</version>
+                            </additionalDependency>
+
+                            <additionalDependency>
+                                <groupId>com.sun.jersey</groupId>
+                                <artifactId>jersey-client</artifactId>
+                                <version>${jersey.client.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>com.sun.jersey</groupId>
+                                <artifactId>jersey-core</artifactId>
+                                <version>${jersey.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.apache.httpcomponents</groupId>
+                                <artifactId>httpcore-osgi</artifactId>
+                                <version>${apache.httpcomponents.core.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.apache.httpcomponents</groupId>
+                                <artifactId>httpclient-osgi</artifactId>
+                                <version>${apache.httpcomponents.client.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>com.fasterxml.jackson.core</groupId>
+                                <artifactId>jackson-databind</artifactId>
+                                <version>${jackson.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>com.fasterxml.jackson.core</groupId>
+                                <artifactId>jackson-annotations</artifactId>
+                                <version>${jackson.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>com.fasterxml.jackson.core</groupId>
+                                <artifactId>jackson-core</artifactId>
+                                <version>${jackson.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>commons-lang</groupId>
+                                <artifactId>commons-lang</artifactId>
+                                <version>${commons.lang.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.opendaylight.mdsal</groupId>
+                                <artifactId>yang-binding</artifactId>
+                                <version>${odl.mdsal.yang.binding.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.opendaylight.yangtools</groupId>
+                                <artifactId>yang-common</artifactId>
+                                <version>${odl.yangtools.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.opendaylight.mdsal.model</groupId>
+                                <artifactId>ietf-inet-types</artifactId>
+                                <version>${odl.ietf-inet-types.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.opendaylight.mdsal.model</groupId>
+                                <artifactId>ietf-yang-types</artifactId>
+                                <version>${odl.ietf-yang-types.version}</version>
+                            </additionalDependency>
+                        </additionalDependencies>
+                    </configuration>
+
+                    <executions>
+                        <execution>
+                            <id>aggregate</id>
+                            <goals>
+                                <goal>aggregate</goal>
+                            </goals>
+                            <phase>site</phase>
+
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <artifactId>maven-source-plugin</artifactId>
@@ -201,17 +687,6 @@
         </pluginManagement>
 
         <plugins>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <nexusUrl>${onap.nexus.url}</nexusUrl>
-                    <stagingProfileId>176c31dfe190a</stagingProfileId>
-                    <serverId>ecomp-staging</serverId>
-                </configuration>
-            </plugin>
 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -254,8 +729,4 @@
     <organization>
         <name>ONAP</name>
     </organization>
-
-    <modules>
-        <module>odlparent-carbon-sr1</module>
-    </modules>
 </project>
