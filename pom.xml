@@ -13,11 +13,11 @@
     <distributionManagement>
         <repository>
             <id>ecomp-releases</id>
-            <url>http://mavencentral.it.att.com:8084/nexus/content/repositories/att-repository-releases/</url>
+            <url>http://nexus.onap.org/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
             <id>ecomp-snapshots</id>
-            <url>http://mavencentral.it.att.com:8084/nexus/content/repositories/att-repository-snapshots/</url>
+            <url>http://nexus.onap.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 
