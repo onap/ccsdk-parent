@@ -7,7 +7,7 @@
     <packaging>pom</packaging>
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>feature-repo-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <parent>
         <groupId>org.opendaylight.odlparent</groupId>
@@ -92,10 +92,10 @@
 
 
         <!-- CCSDK component versions -->
-        <ccsdk.sli.core.version>0.2.0-SNAPSHOT</ccsdk.sli.core.version>
-        <ccsdk.sli.adaptors.version>0.2.0-SNAPSHOT</ccsdk.sli.adaptors.version>
-        <ccsdk.sli.northbound.version>0.2.0-SNAPSHOT</ccsdk.sli.northbound.version>
-        <ccsdk.sli.plugins.version>0.2.0-SNAPSHOT</ccsdk.sli.plugins.version>
+        <ccsdk.sli.core.version>0.2.1-SNAPSHOT</ccsdk.sli.core.version>
+        <ccsdk.sli.adaptors.version>0.2.1-SNAPSHOT</ccsdk.sli.adaptors.version>
+        <ccsdk.sli.northbound.version>0.2.1-SNAPSHOT</ccsdk.sli.northbound.version>
+        <ccsdk.sli.plugins.version>0.2.1-SNAPSHOT</ccsdk.sli.plugins.version>
         <sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
         <sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
         <sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>

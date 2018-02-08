@@ -7,7 +7,7 @@
     <packaging>pom</packaging>
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
 
     <distributionManagement>
@@ -21,6 +21,18 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <processAllModules>true</processAllModules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <modules>
 	<module>odlparent</module>
     </modules>
