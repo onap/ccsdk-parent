@@ -102,7 +102,9 @@
         <sdnctl.mdsal.resource.version>${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
         <sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
 
+
         <!-- Support libraries used by OpenDaylight -->
+        <odl.mdsal.version>1.6.1</odl.mdsal.version>
         <!-- Used by aaa, vtn -->
         <commons.codec.version>1.10</commons.codec.version>
         <!-- Used by netconf, ovsdb -->
@@ -170,7 +172,7 @@
         <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
         <apache.httpcomponents.core.version>4.4.4</apache.httpcomponents.core.version>
         <apache.httpcomponents.client.version>4.5.2</apache.httpcomponents.client.version>
-        <antlr.version>4.5.1</antlr.version>
+        <antlr.version>4.7</antlr.version>
         <mysql.connector.version>5.1.39</mysql.connector.version>
         <mariadb.connector.version>2.1.1</mariadb.connector.version>
         <h2database.version>1.4.186</h2database.version>
@@ -433,33 +435,144 @@
 
         <!-- End of profiles from ONAP oparent -->
 
+        <profile>
+            <activation>
+                <file>
+                    <exists>src/main/yang</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.opendaylight.yangtools</groupId>
+                        <artifactId>yang-maven-plugin</artifactId>
+                        <version>${yangtools.version}</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.opendaylight.mdsal</groupId>
+                                <artifactId>maven-sal-api-gen-plugin</artifactId>
+                                <version>0.11.1</version>
+                                <type>jar</type>
+                            </dependency>
+                            <dependency>
+                                <groupId>org.opendaylight.netconf</groupId>
+                                <artifactId>sal-rest-docgen-maven</artifactId>
+                                <version>${odl.mdsal.version}</version>
+                                <type>jar</type>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>generate-sources</goal>
+                                </goals>
+                                <configuration>
+                                    <yangFilesRootDir>${yang.file.directory}</yangFilesRootDir>
+                                    <codeGenerators>
+                                        <generator>
+                                            <codeGeneratorClass>org.opendaylight.mdsal.binding.maven.api.gen.plugin.CodeGeneratorImpl</codeGeneratorClass>
+                                            <outputBaseDir>${salGeneratorPath}</outputBaseDir>
+                                        </generator>
+                                        <generator>
+                                            <codeGeneratorClass>org.opendaylight.netconf.sal.rest.doc.maven.StaticDocGenerator</codeGeneratorClass>
+                                            <outputBaseDir>target/swagger</outputBaseDir>
+                                        </generator>
+                                    </codeGenerators>
+                                    <inspectDependencies>true</inspectDependencies>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
     </profiles>
 
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.onap.sdnc.core</groupId>
+                <groupId>org.opendaylight.controller</groupId>
+                <artifactId>mdsal-artifacts</artifactId>
+                <version>${odl.mdsal.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.opendaylight.mdsal.model</groupId>
+                <artifactId>mdsal-model-artifacts</artifactId>
+                <version>0.11.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.opendaylight.controller</groupId>
+                <artifactId>sal-binding-config</artifactId>
+                <version>${odl.mdsal.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opendaylight.controller</groupId>
+                <artifactId>sal-test-model</artifactId>
+                <version>${odl.mdsal.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.opendaylight.netconf</groupId>
+                <artifactId>sal-rest-connector</artifactId>
+                <version>${odl.mdsal.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.opendaylight.controller</groupId>
+                <artifactId>sal-binding-broker-impl</artifactId>
+                <version>${odl.mdsal.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.opendaylight.controller</groupId>
+                <artifactId>sal-binding-broker-impl</artifactId>
+                <version>${odl.mdsal.version}</version>
+                <type>test-jar</type>
+                <classifier>tests</classifier>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>sli-common</artifactId>
-                <version>${sdnctl.sli.version}</version>
+                <version>${ccsdk.sli.core.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.onap.sdnc.core</groupId>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>sli-provider</artifactId>
-                <version>${sdnctl.sli.version}</version>
+                <version>${ccsdk.sli.core.version}</version>
             </dependency>
-
             <dependency>
-                <groupId>org.onap.sdnc.core</groupId>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
+                <artifactId>ccsdk-sli</artifactId>
+                <version>${ccsdk.sli.core.version}</version>
+                <type>xml</type>
+                <classifier>features</classifier>
+            </dependency>
+            <dependency>
+                <groupId>org.onap.ccsdk.sli.adaptors</groupId>
                 <artifactId>aai-service-provider</artifactId>
                 <version>${sdnctl.aai.service.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.onap.sdnc.core</groupId>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>dblib-provider</artifactId>
                 <version>${sdnctl.dblib.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>6.11</version>
             </dependency>
         </dependencies>
 
@@ -1152,7 +1265,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>2.5</version>
-                 <configuration>
+                <configuration>
                     <processAllModules>true</processAllModules>
                 </configuration>
             </plugin>
