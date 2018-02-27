@@ -454,27 +454,54 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>org.onap.sdnc.core</groupId>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>sli-common</artifactId>
-                <version>${sdnctl.sli.version}</version>
+                <version>${ccsdk.sli.core.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.onap.sdnc.core</groupId>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>sli-provider</artifactId>
-                <version>${sdnctl.sli.version}</version>
+                <version>${ccsdk.sli.core.version}</version>
             </dependency>
-
             <dependency>
-                <groupId>org.onap.sdnc.core</groupId>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
+                <artifactId>ccsdk-sli</artifactId>
+                <version>${ccsdk.sli.core.version}</version>
+                <type>xml</type>
+                <classifier>features</classifier>
+            </dependency>
+            <dependency>
+                <groupId>org.onap.ccsdk.sli.adaptors</groupId>
                 <artifactId>aai-service-provider</artifactId>
                 <version>${sdnctl.aai.service.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.onap.sdnc.core</groupId>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>dblib-provider</artifactId>
                 <version>${sdnctl.dblib.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>6.11</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
             </dependency>
         </dependencies>
 
