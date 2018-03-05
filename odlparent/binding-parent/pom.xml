@@ -96,6 +96,7 @@
         <ccsdk.sli.adaptors.version>0.2.1-SNAPSHOT</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>0.2.1-SNAPSHOT</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>0.2.1-SNAPSHOT</ccsdk.sli.plugins.version>
+        <ccsdl.distribution.version>0.2.1-SNAPSHOT</ccsdl.distribution.version>
         <sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
         <sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
         <sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
@@ -162,7 +163,7 @@
         <slf4j.version>1.7.21</slf4j.version>
         <!-- Used in integration/distribution; see also affinity, snmp4sdn,
             toolkit, tsdr, ttp -->
-        <spring.version>3.2.17.RELEASE</spring.version>
+        <spring.version>5.0.4.RELEASE</spring.version>
 
 
 

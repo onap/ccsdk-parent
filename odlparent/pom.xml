@@ -25,7 +25,10 @@
 		<module>binding-parent</module>
 		<module>bundle-parent</module>
 		<module>feature-repo-parent</module>
+		<!-- Version 2.0.5 of karaf4-parent includes
+                jars with known security vulnerabilities.
 		<module>karaf4-parent</module>
+		-->
 		<module>mdsal-it-parent</module>
 		<module>odlparent</module>
 		<module>odlparent-lite</module>

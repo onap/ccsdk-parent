@@ -27,7 +27,7 @@
         <url>https://jira.onap.org/</url>
     </issueManagement>
 
-    <properties>
+   <properties>
 
         <!--- properties from oparent -->
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -96,13 +96,16 @@
         <ccsdk.sli.adaptors.version>0.2.1-SNAPSHOT</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>0.2.1-SNAPSHOT</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>0.2.1-SNAPSHOT</ccsdk.sli.plugins.version>
+        <ccsdl.distribution.version>0.2.1-SNAPSHOT</ccsdl.distribution.version>
         <sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
         <sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
         <sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
         <sdnctl.mdsal.resource.version>${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
         <sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
 
+
         <!-- Support libraries used by OpenDaylight -->
+        <odl.mdsal.version>1.6.1</odl.mdsal.version>
         <!-- Used by aaa, vtn -->
         <commons.codec.version>1.10</commons.codec.version>
         <!-- Used by netconf, ovsdb -->
@@ -160,7 +163,7 @@
         <slf4j.version>1.7.21</slf4j.version>
         <!-- Used in integration/distribution; see also affinity, snmp4sdn,
             toolkit, tsdr, ttp -->
-        <spring.version>3.2.17.RELEASE</spring.version>
+        <spring.version>5.0.4.RELEASE</spring.version>
 
 
 
@@ -170,14 +173,13 @@
         <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
         <apache.httpcomponents.core.version>4.4.4</apache.httpcomponents.core.version>
         <apache.httpcomponents.client.version>4.5.2</apache.httpcomponents.client.version>
-        <antlr.version>4.5.1</antlr.version>
+        <antlr.version>4.7</antlr.version>
         <mysql.connector.version>5.1.39</mysql.connector.version>
         <mariadb.connector.version>2.1.1</mariadb.connector.version>
         <h2database.version>1.4.186</h2database.version>
 
         <tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
     </properties>
-
 
     <profiles>
         <!-- Profiles from ONAP oparent -->
