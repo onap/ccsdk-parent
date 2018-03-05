@@ -10,6 +10,12 @@
     <version>1.0.1-SNAPSHOT</version>
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
 
+    <properties>
+        <onap.nexus.host>nexus.onap.org</onap.nexus.host>
+        <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
+        <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
+    </properties>
+
     <distributionManagement>
         <repository>
             <id>ecomp-releases</id>
@@ -29,6 +35,17 @@
                 <version>2.5</version>
                 <configuration>
                     <processAllModules>true</processAllModules>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <nexusUrl>https://${onap.nexus.host}</nexusUrl>
+                    <stagingProfileId>${onap.nexus.staging.profile-id}</stagingProfileId>
+                    <serverId>${onap.nexus.staging.server-id}</serverId>
                 </configuration>
             </plugin>
         </plugins>
