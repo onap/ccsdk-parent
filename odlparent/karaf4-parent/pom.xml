@@ -41,8 +41,7 @@
         <sonar-jacoco-listeners.version>3.2</sonar-jacoco-listeners.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
         <!-- Default Sonar configuration -->
-        <sonar.jacoco.reportPath>target/code-coverage/jacoco-ut.exec</sonar.jacoco.reportPath>
-        <sonar.jacoco.itReportPath>target/code-coverage/jacoco-it.exec</sonar.jacoco.itReportPath>
+        <sonar.jacoco.reportPaths>target/code-coverage/jacoco-ut.exec,target/code-coverage/jacoco-it.exec</sonar.jacoco.reportPaths>
         <!-- Note: This list should match jacoco-maven-plugin's exclusion
             list below -->
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
