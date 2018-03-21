@@ -176,6 +176,9 @@
         <mariadb.connector.version>2.1.1</mariadb.connector.version>
         <h2database.version>1.4.186</h2database.version>
 
+        <eelf.version>0.0.1</eelf.version>
+        <eelf.maven.plugin.version>0.0.1</eelf.maven.plugin.version>
+
         <tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
     </properties>
 
@@ -461,6 +464,11 @@
                 <groupId>org.onap.sdnc.core</groupId>
                 <artifactId>dblib-provider</artifactId>
                 <version>${sdnctl.dblib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.att.eelf</groupId>
+                <artifactId>eelf-core</artifactId>
+                <version>${eelf.version}</version>
             </dependency>
         </dependencies>
 
