@@ -30,6 +30,7 @@
    <properties>
 
         <!--- properties from oparent -->
+
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -37,11 +38,21 @@
         <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
         <!-- sitePath may be overridden in the inheriting POM if desired -->
         <sitePath>/content/sites/site/${project.groupId}/${project.artifactId}/${project.version}</sitePath>
+        <!-- properties for Nexus raw repo -->
+        <onap.nexus.rawrepo.baseurl.upload>https://nexus.onap.org/content/sites/raw</onap.nexus.rawrepo.baseurl.upload>
+        <onap.nexus.rawrepo.baseurl.download>
+            https://nexus.onap.org/service/local/repositories/raw/content
+        </onap.nexus.rawrepo.baseurl.download>
+        <onap.nexus.rawrepo.serverid>ecomp-raw</onap.nexus.rawrepo.serverid>
+        <!-- properties for Nexus Docker registry -->
+        <onap.nexus.dockerregistry.daily>nexus3.onap.org:10003</onap.nexus.dockerregistry.daily>
+        <onap.nexus.dockerregistry.release>nexus3.onap.org:10002</onap.nexus.dockerregistry.release>
         <jacoco.version>0.7.7.201606060606</jacoco.version>
         <sonar-jacoco-listeners.version>3.2</sonar-jacoco-listeners.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
         <!-- Default Sonar configuration -->
-        <sonar.jacoco.reportPaths>target/code-coverage/jacoco-ut.exec,target/code-coverage/jacoco-it.exec</sonar.jacoco.reportPaths>
+        <sonar.jacoco.reportPath>target/code-coverage/jacoco-ut.exec</sonar.jacoco.reportPath>
+        <sonar.jacoco.itReportPath>target/code-coverage/jacoco-it.exec</sonar.jacoco.itReportPath>
         <!-- Note: This list should match jacoco-maven-plugin's exclusion
             list below -->
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
@@ -294,7 +305,6 @@
                                 <configuration>
                                     <exportAntProperties>true</exportAntProperties>
                                     <tasks>
-
                                         <taskdef
                                             resource="net/sf/antcontrib/antlib.xml"
                                             classpathref="maven.plugin.classpath" />
@@ -764,6 +774,17 @@
 
                 <!-- Plugins from ONAP oparent -->
                 <plugin>
+                    <groupId>org.sonatype.plugins</groupId>
+                    <artifactId>nexus-staging-maven-plugin</artifactId>
+                    <version>1.6.7</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <nexusUrl>${onap.nexus.url}</nexusUrl>
+                        <stagingProfileId>176c31dfe190a</stagingProfileId>
+                        <serverId>ecomp-staging</serverId>
+                    </configuration>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <!-- This version supports the "deployAtEnd" parameter -->
@@ -772,7 +793,6 @@
                         <skip />
                     </configuration>
                 </plugin>
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
@@ -783,84 +803,35 @@
                             <artifactId>wagon-webdav-jackrabbit</artifactId>
                             <version>2.10</version>
                         </dependency>
-                        <dependency>
-                            <groupId>org.apache.maven.doxia</groupId>
-                            <artifactId>doxia-core</artifactId>
-                            <version>1.7</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.apache.maven.doxia</groupId>
-                            <artifactId>doxia-sink-api</artifactId>
-                            <version>1.7</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.apache.maven.doxia</groupId>
-                            <artifactId>doxia-logging-api</artifactId>
-                            <version>1.7</version>
-                        </dependency>
                     </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>3.0.0-M1</version>
                     <executions>
                         <execution>
-                            <id>attach-descriptor</id>
+                            <id>enforce-no-snapshots</id>
                             <goals>
-                                <goal>attach-descriptor</goal>
+                                <goal>enforce</goal>
                             </goals>
+                            <configuration>
+                                <rules>
+                                    <requireReleaseDeps>
+                                        <failWhenParentIsSnapshot>false</failWhenParentIsSnapshot>
+                                        <onlyWhenRelease>true</onlyWhenRelease>
+                                        <level>ERROR</level>
+                                    </requireReleaseDeps>
+                                </rules>
+                            </configuration>
                         </execution>
                     </executions>
                 </plugin>
+                <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
                 <plugin>
-                    <artifactId>maven-checkstyle-plugin</artifactId>
-                    <version>2.17</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.onap.oparent</groupId>
-                            <artifactId>checkstyle</artifactId>
-                            <version>1.1.0-SNAPSHOT</version>
-                        </dependency>
-                    </dependencies>
-                    <executions>
-                        <execution>
-                            <id>check-license</id>
-                            <goals>
-                                <goal>check</goal>
-                            </goals>
-                            <phase>process-sources</phase>
-                            <configuration>
-                                <configLocation>onap-checkstyle/check-license.xml</configLocation>
-                                <headerLocation>onap-checkstyle/apache-license-2.regexp.txt</headerLocation>
-                                <includeResources>false</includeResources>
-                                <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                                <includeTestResources>false</includeTestResources>
-                                <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
-                                <excludes>
-                                </excludes>
-                                <failsOnError>false</failsOnError>
-                                <consoleOutput>true</consoleOutput>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>check-style</id>
-                            <goals>
-                                <goal>check</goal>
-                            </goals>
-                            <phase>process-sources</phase>
-                            <configuration>
-                                <!-- Use Google Java Style Guide: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
-                                    with minor changes -->
-                                <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
-                                <!-- <sourceDirectory> is needed so that
-                                    checkstyle ignores the generated sources directory -->
-                                <sourceDirectory>${project.build.sourceDirectory}/src/main/java</sourceDirectory>
-                                <includeResources>true</includeResources>
-                                <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                                <includeTestResources>true</includeTestResources>
-                                <excludes>
-                                </excludes>
-                                <failsOnError>false</failsOnError>
-                                <consoleOutput>true</consoleOutput>
-                            </configuration>
-                        </execution>
-                    </executions>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.2</version>
                 </plugin>
                 <plugin>
                     <groupId>org.jacoco</groupId>
@@ -981,21 +952,84 @@
                         </execution>
                     </executions>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven.compile.plugin.version}</version>
-                    <configuration>
-                        <source>${java.version.source}</source>
-                        <target>${java.version.target}</target>
-                    </configuration>
-                </plugin>
+                <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
                 <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
-                    <version>3.3.0.603</version>
+                    <version>3.2</version>
                 </plugin>
 
+                <plugin>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>2.17</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.onap.oparent</groupId>
+                            <artifactId>checkstyle</artifactId>
+                            <version>1.1.1-SNAPSHOT</version>
+                        </dependency>
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <id>onap-license</id>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                            <phase>process-sources</phase>
+                            <configuration>
+                                <configLocation>onap-checkstyle/check-license.xml</configLocation>
+                                <includeResources>false</includeResources>
+                                <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                                <includeTestResources>false</includeTestResources>
+                                <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+                                <excludes>
+                                </excludes>
+                                <consoleOutput>true</consoleOutput>
+                                <failsOnViolation>false</failsOnViolation>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>onap-java-style</id>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                            <phase>process-sources</phase>
+                            <configuration>
+                                <!-- Use Google Java Style Guide: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
+                                    with minor changes -->
+                                <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
+                                <!-- <sourceDirectory> is needed so that
+                                    checkstyle ignores the generated sources directory -->
+                                <sourceDirectory>${project.build.sourceDirectory}/src/main/java</sourceDirectory>
+                                <includeResources>true</includeResources>
+                                <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                                <includeTestResources>true</includeTestResources>
+                                <excludes>
+                                </excludes>
+                                <consoleOutput>true</consoleOutput>
+                                <failsOnViolation>false</failsOnViolation>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>1.12</version>
+                </plugin>
+                <!-- Jacoco / Sonar -->
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                </plugin>
                 <!-- End of plugins from ONAP oparent -->
 
                 <plugin>
@@ -1102,7 +1136,73 @@
         <plugins>
             <!-- Plugins from ONAP oparent -->
             <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.onap.oparent</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>1.1.1-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>onap-license</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <configLocation>onap-checkstyle/check-license.xml</configLocation>
+                            <includeResources>false</includeResources>
+                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                            <includeTestResources>false</includeTestResources>
+                            <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+                            <excludes>
+                            </excludes>
+                            <consoleOutput>true</consoleOutput>
+                            <failsOnViolation>false</failsOnViolation>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>onap-java-style</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <!-- Use Google Java Style Guide: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
+                                with minor changes -->
+                            <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
+                            <!-- <sourceDirectory> is needed so that checkstyle
+                                ignores the generated sources directory -->
+                            <sourceDirectory>${project.build.sourceDirectory}/src/main/java</sourceDirectory>
+                            <includeResources>true</includeResources>
+                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                            <includeTestResources>true</includeTestResources>
+                            <excludes>
+                            </excludes>
+                            <consoleOutput>true</consoleOutput>
+                            <failsOnViolation>false</failsOnViolation>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -1122,7 +1222,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
             </plugin>
-
             <!-- End of plugins from ONAP oparent -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
