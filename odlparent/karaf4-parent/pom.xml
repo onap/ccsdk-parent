@@ -173,8 +173,8 @@
         <mariadb.connector.version>2.1.1</mariadb.connector.version>
         <h2database.version>1.4.186</h2database.version>
 
-        <eelf.version>0.0.1</eelf.version>
-        <eelf.maven.plugin.version>0.0.1</eelf.maven.plugin.version>
+        <eelf.version>1.0.0</eelf.version>
+        <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 
         <tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
     </properties>
