@@ -90,11 +90,11 @@
 
 
         <!-- CCSDK component versions -->
-        <ccsdk.sli.core.version>0.2.1-SNAPSHOT</ccsdk.sli.core.version>
-        <ccsdk.sli.adaptors.version>0.2.1-SNAPSHOT</ccsdk.sli.adaptors.version>
-        <ccsdk.sli.northbound.version>0.2.1-SNAPSHOT</ccsdk.sli.northbound.version>
-        <ccsdk.sli.plugins.version>0.2.1-SNAPSHOT</ccsdk.sli.plugins.version>
-        <ccsdk.distribution.version>0.2.1-SNAPSHOT</ccsdk.distribution.version>
+        <ccsdk.sli.core.version>0.2.1</ccsdk.sli.core.version>
+        <ccsdk.sli.adaptors.version>0.2.1</ccsdk.sli.adaptors.version>
+        <ccsdk.sli.northbound.version>0.2.1</ccsdk.sli.northbound.version>
+        <ccsdk.sli.plugins.version>0.2.1</ccsdk.sli.plugins.version>
+        <ccsdk.distribution.version>0.2.1</ccsdk.distribution.version>
         <sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
         <sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
         <sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
@@ -841,7 +841,7 @@
                         <dependency>
                             <groupId>org.onap.oparent</groupId>
                             <artifactId>checkstyle</artifactId>
-                            <version>1.1.1-SNAPSHOT</version>
+                            <version>1.1.1</version>
                         </dependency>
                     </dependencies>
                     <executions>
