@@ -180,6 +180,10 @@
         <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 
         <tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
+
+
+	<!-- Disable SingleFeatureTest, since it will fail if any dependencies are released ONAP artifacts -->
+	<skip.karaf.featureTest>true</skip.karaf.featureTest>
     </properties>
 
 

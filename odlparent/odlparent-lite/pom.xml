@@ -180,6 +180,9 @@
         <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 
         <tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
+
+        <dmaapClient.groupId>org.onap.dmaap.messagerouter.dmaapclient</dmaapClient.groupId>
+        <dmaapClient.version>1.1.5</dmaapClient.version>
     </properties>
 
 
