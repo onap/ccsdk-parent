@@ -39,6 +39,7 @@
 		<module>odlparent</module>
 		<module>odlparent-lite</module>
 		<module>single-feature-parent</module>
+		<module>client-parent</module>
 	</modules>
 
 </project>
