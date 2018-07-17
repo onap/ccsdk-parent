@@ -232,6 +232,12 @@
 			<name>Restlet Repository</name>
 			<url>http://maven.restlet.com</url>
 		</pluginRepository>
+
+		<pluginRepository>		
+			<id>onap-bintray</id>
+			<name>onap-bintray</name>
+			<url>https://nexus.onap.org/content/repositories/bintray/</url>
+		</pluginRepository>
 	</pluginRepositories>
 
 
@@ -306,7 +312,14 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
-
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>onap-bintray</id>
+			<name>onap-bintray</name>
+			<url>https://nexus.onap.org/content/repositories/bintray/</url>
+		</repository>
 	</repositories>
 
 	<distributionManagement>
