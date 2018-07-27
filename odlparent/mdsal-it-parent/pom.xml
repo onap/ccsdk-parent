@@ -30,7 +30,7 @@
 
 	<properties>
 
-		<!--- properties from oparent -->
+		<!-- properties from oparent -->
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,7 +50,7 @@
 		<swagger-properties>${basedir}/src/main/resources/swagger.properties</swagger-properties>
 		<!-- If following file exist, auto-generation of sdk will be done -->
 		<swagger-json>${basedir}/src/main/resources/swagger.json</swagger-json>
-		<!--- end of properties from oparent -->
+		<!-- end of properties from oparent -->
 
 		<!-- ONAP repositories -->
 		<onap.nexus.host>nexus.onap.org</onap.nexus.host>
@@ -1089,24 +1089,6 @@
 						</execution>
 					</executions>
 				</plugin>
-				<plugin>
-					<artifactId>maven-source-plugin</artifactId>
-					<version>2.1.1</version>
-					<executions>
-						<execution>
-							<id>bundle-sources</id>
-							<phase>package</phase>
-							<goals>
-								<!-- produce source artifact for main project sources -->
-								<goal>jar-no-fork</goal>
-
-								<!-- produce source artifact for project test sources -->
-								<goal>test-jar-no-fork</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-
 
 			</plugins>
 
