@@ -417,7 +417,7 @@
 				<plugin>
 					<groupId>org.opendaylight.yangtools</groupId>
 					<artifactId>yang-maven-plugin</artifactId>
-					<version>1.0.3-Boron-SR3</version>
+					<version>1.2.3</version>
 					<dependencies>
 						<dependency>
 							<groupId>com.mrv.yangtools</groupId>
