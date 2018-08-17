@@ -67,6 +67,17 @@
 		<javax.validation.version>2.0.0.Final</javax.validation.version>
 		<swagger.version>1.5.16</swagger.version>
 
+		<!-- ONAP repositories -->
+		<onap.nexus.host>nexus.onap.org</onap.nexus.host>
+		<onap.nexus.port>443</onap.nexus.port>
+		<onap.nexus.protocol>https</onap.nexus.protocol>
+		<onap.nexus.public-url>https://nexus.onap.org/content/groups/public</onap.nexus.public-url>
+		<onap.nexus.staging-url>https://nexus.onap.org/content/groups/staging</onap.nexus.staging-url>
+		<onap.nexus.release-url>https://nexus.onap.org/content/repositories/releases</onap.nexus.release-url>
+		<onap.nexus.snapshot-url>https://nexus.onap.org/content/repositories/snapshots</onap.nexus.snapshot-url>
+		<onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
+		<onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
+
 	</properties>
 
 	<dependencies>
@@ -83,10 +94,10 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-		    <groupId>com.openpojo</groupId>
-		    <artifactId>openpojo</artifactId>
-		    <version>${openpojo.version}</version>
-		    <scope>test</scope>
+			<groupId>com.openpojo</groupId>
+			<artifactId>openpojo</artifactId>
+			<version>${openpojo.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -233,7 +244,7 @@
 			<url>http://maven.restlet.com</url>
 		</pluginRepository>
 
-		<pluginRepository>		
+		<pluginRepository>
 			<id>onap-bintray</id>
 			<name>onap-bintray</name>
 			<url>https://nexus.onap.org/content/repositories/bintray/</url>
@@ -383,37 +394,42 @@
 						</execution>
 					</executions>
 				</plugin>
-		        <plugin>
-		            <artifactId>maven-antrun-plugin</artifactId>
-		            <version>1.8</version>
-		            <executions>
-		                <execution>
-		                    <phase>initialize</phase>
-		                    <goals>
-		                        <goal>run</goal>
-		                    </goals>
-		                </execution>
-		            </executions>
-		            <configuration>
-		                <tasks>
-		                	<!-- flatten out structure -->
-		                    <move todir="${project.build.directory}/dependency" failonerror="false">
-		                        <fileset dir="${project.build.directory}/dependency" />
-		                        <mapper type="flatten"/>
-		                    </move>
-		                    <!-- move to yang folder -->
-		                    <copy todir="${project.build.directory}/yang" failonerror="false">
-		                        <fileset dir="${project.build.directory}/dependency" includes="**/*.yang"/>
-		                        <mapper type="flatten"/>
-		                    </copy>
-		                    <!-- add in hard coded items from src/main/yang -->
-		                    <copy todir="${project.build.directory}/yang" failonerror="false">
-		                        <fileset dir="${project.basedir}/src/main/yang" includes="**/*.yang"/>
-		                        <mapper type="flatten"/>
-		                    </copy>
-		                </tasks>
-		            </configuration>
-		        </plugin>
+				<plugin>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>1.8</version>
+					<executions>
+						<execution>
+							<phase>initialize</phase>
+							<goals>
+								<goal>run</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<tasks>
+							<!-- flatten out structure -->
+							<move todir="${project.build.directory}/dependency"
+								failonerror="false">
+								<fileset dir="${project.build.directory}/dependency" />
+								<mapper type="flatten" />
+							</move>
+							<!-- move to yang folder -->
+							<copy todir="${project.build.directory}/yang"
+								failonerror="false">
+								<fileset dir="${project.build.directory}/dependency"
+									includes="**/*.yang" />
+								<mapper type="flatten" />
+							</copy>
+							<!-- add in hard coded items from src/main/yang -->
+							<copy todir="${project.build.directory}/yang"
+								failonerror="false">
+								<fileset dir="${project.basedir}/src/main/yang"
+									includes="**/*.yang" />
+								<mapper type="flatten" />
+							</copy>
+						</tasks>
+					</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.opendaylight.yangtools</groupId>
 					<artifactId>yang-maven-plugin</artifactId>
@@ -507,6 +523,34 @@
 			</plugins>
 
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.7</version>
+				<extensions>true</extensions>
+				<configuration>
+					<nexusUrl>${onap.nexus.url}</nexusUrl>
+					<stagingProfileId>176c31dfe190a</stagingProfileId>
+					<serverId>ecomp-staging</serverId>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<processAllModules>true</processAllModules>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.8.1</version>
+				<configuration>
+					<tag>${project.artifactId}-${project.version}</tag>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 	<organization>
 		<name>ONAP</name>
