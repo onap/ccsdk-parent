@@ -185,6 +185,8 @@
 
 		<dmaapClient.groupId>org.onap.dmaap.messagerouter.dmaapclient</dmaapClient.groupId>
 		<dmaapClient.version>1.1.5</dmaapClient.version>
+
+		<glassfish.version>2.27</glassfish.version>
 	</properties>
 
 

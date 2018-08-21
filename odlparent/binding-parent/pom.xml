@@ -181,6 +181,8 @@
 		<eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 
 		<tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
+
+		<glassfish.version>2.27</glassfish.version>
 	</properties>
 
 	<profiles>
