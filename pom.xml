@@ -52,6 +52,7 @@
     </build>
     <modules>
 	<module>odlparent</module>
+	<module>springboot</module>
     </modules>
 
 </project>
