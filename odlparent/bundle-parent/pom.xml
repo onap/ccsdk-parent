@@ -6,7 +6,7 @@
 	<packaging>pom</packaging>
 	<groupId>org.onap.ccsdk.parent</groupId>
 	<artifactId>bundle-parent</artifactId>
-	<version>0.3.1-SNAPSHOT</version>
+	<version>1.1.1-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.opendaylight.odlparent</groupId>
