@@ -788,11 +788,11 @@
 	<distributionManagement>
 		<repository>
 			<id>ecomp-releases</id>
-			<url>http://nexus.onap.org/content/repositories/releases</url>
+			<url>https://nexus.onap.org/content/repositories/releases</url>
 		</repository>
 		<snapshotRepository>
 			<id>ecomp-snapshots</id>
-			<url>http://nexus.onap.org/content/repositories/snapshots</url>
+			<url>https://nexus.onap.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 
