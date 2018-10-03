@@ -34,6 +34,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
+		<onap.nexus-staging.url>https://nexus.onap.org:443</onap.nexus-staging.url>
 		<!-- sitePath may be overridden in the inheriting POM if desired -->
 		<sitePath>/content/sites/site/${project.groupId}/${project.artifactId}/${project.version}</sitePath>
 		<jacoco.version>0.7.7.201606060606</jacoco.version>
@@ -55,7 +56,7 @@
 		<onap.nexus.port>443</onap.nexus.port>
 		<onap.nexus.protocol>https</onap.nexus.protocol>
 		<onap.nexus.public-url>https://nexus.onap.org/content/groups/public</onap.nexus.public-url>
-		<onap.nexus.staging-url>https://nexus.onap.org/content/groups/staging</onap.nexus.staging-url>
+		<onap.nexus.staging-url>https://nexus.onap.org:443/content/groups/staging</onap.nexus.staging-url>
 		<onap.nexus.release-url>https://nexus.onap.org/content/repositories/releases</onap.nexus.release-url>
 		<onap.nexus.snapshot-url>https://nexus.onap.org/content/repositories/snapshots</onap.nexus.snapshot-url>
 		<onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
@@ -729,7 +730,7 @@
 		</repository>
 		<repository>
 			<id>onap-staging</id>
-			<url>https://nexus.onap.org/content/groups/staging</url>
+			<url>https://nexus.onap.org:443/content/groups/staging</url>
 			<releases>
 				<enabled>true</enabled>
 				<updatePolicy>never</updatePolicy>
@@ -1165,7 +1166,7 @@
 				<version>1.6.7</version>
 				<extensions>true</extensions>
 				<configuration>
-					<nexusUrl>${onap.nexus.url}</nexusUrl>
+					<nexusUrl>${onap.nexus-staging.url}</nexusUrl>
 					<stagingProfileId>176c31dfe190a</stagingProfileId>
 					<serverId>ecomp-staging</serverId>
 				</configuration>
