@@ -7,12 +7,12 @@
 	<packaging>pom</packaging>
 	<groupId>org.onap.ccsdk.parent</groupId>
 	<artifactId>springboot-aggregator</artifactId>
-	<version>1.1.1-SNAPSHOT</version>
+	<version>1.2.0-SNAPSHOT</version>
 
     <parent>
         <groupId>org.onap.ccsdk.parent</groupId>
         <artifactId>parent</artifactId>
-        <version>1.1.1-SNAPSHOT</version>
+        <version>1.2.0-SNAPSHOT</version>
     </parent>
 
 	<name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
