@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
+<!-- 
+   PLEASE READ !!!!!
+   
+   This file is generated from ccsdk/parent/setup/src/main/template/pom-template.xml
+   
+   Any updates needed should be made to that template and not to the generated pom.xml file
+-->
 
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>pom</packaging>
@@ -100,7 +107,6 @@
 		<sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
 
 
-
 		<!-- Support libraries used by OpenDaylight -->
 		<odl.mdsal.version>1.7.3</odl.mdsal.version>
 		<odl.mdsal.model.version>0.12.3</odl.mdsal.model.version>
@@ -181,9 +187,9 @@
 
 		<tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
 
+		<glassfish.version>2.27</glassfish.version>
 		<skip.karaf.featureTest>true</skip.karaf.featureTest>
 	</properties>
-
 
 	<profiles>
 		<!-- Profiles from ONAP oparent -->
@@ -417,11 +423,69 @@
 
 		<!-- End of profiles from ONAP oparent -->
 
+		<profile>
+			<activation>
+				<file>
+					<exists>src/main/yang</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.opendaylight.yangtools</groupId>
+						<artifactId>yang-maven-plugin</artifactId>
+						<dependencies>
+							<dependency>
+								<groupId>org.opendaylight.mdsal</groupId>
+								<artifactId>maven-sal-api-gen-plugin</artifactId>
+								<version>0.12.1</version>
+								<type>jar</type>
+							</dependency>
+							<dependency>
+								<groupId>org.opendaylight.netconf</groupId>
+								<artifactId>sal-rest-docgen-maven</artifactId>
+								<version>${odl.mdsal.version}</version>
+								<type>jar</type>
+							</dependency>
+						</dependencies>
+						<executions>
+							<execution>
+								<goals>
+									<goal>generate-sources</goal>
+								</goals>
+								<configuration>
+									<yangFilesRootDir>${yang.file.directory}</yangFilesRootDir>
+									<codeGenerators>
+										<generator>
+											<codeGeneratorClass>org.opendaylight.mdsal.binding.maven.api.gen.plugin.CodeGeneratorImpl</codeGeneratorClass>
+											<outputBaseDir>${salGeneratorPath}</outputBaseDir>
+										</generator>
+										<generator>
+											<codeGeneratorClass>org.opendaylight.netconf.sal.rest.doc.maven.StaticDocGenerator</codeGeneratorClass>
+											<outputBaseDir>target/swagger</outputBaseDir>
+										</generator>
+									</codeGenerators>
+									<inspectDependencies>true</inspectDependencies>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
 	</profiles>
 
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.opendaylight.controller</groupId>
+				<artifactId>mdsal-artifacts</artifactId>
+				<version>${odl.mdsal.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 			<dependency>
 				<groupId>org.opendaylight.mdsal.model</groupId>
 				<artifactId>mdsal-model-artifacts</artifactId>
@@ -431,10 +495,27 @@
 			</dependency>
 			<dependency>
 				<groupId>org.opendaylight.controller</groupId>
-				<artifactId>mdsal-artifacts</artifactId>
+				<artifactId>sal-binding-config</artifactId>
 				<version>${odl.mdsal.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.opendaylight.controller</groupId>
+				<artifactId>sal-test-model</artifactId>
+				<version>${odl.mdsal.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.opendaylight.controller</groupId>
+				<artifactId>sal-binding-broker-impl</artifactId>
+				<version>${odl.mdsal.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.opendaylight.controller</groupId>
+				<artifactId>sal-binding-broker-impl</artifactId>
+				<version>${odl.mdsal.version}</version>
+				<type>test-jar</type>
+				<classifier>tests</classifier>
+				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.onap.ccsdk.sli.core</groupId>
@@ -490,11 +571,6 @@
 				<groupId>com.att.eelf</groupId>
 				<artifactId>eelf-core</artifactId>
 				<version>${eelf.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.ws.rs</groupId>
-				<artifactId>javax.ws.rs-api</artifactId>
-				<version>2.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.derby</groupId>

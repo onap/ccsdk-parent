@@ -28,6 +28,7 @@
 		</snapshotRepository>
 	</distributionManagement>
 	<modules>
+		<module>setup</module>
 		<module>binding-parent</module>
 		<module>bundle-parent</module>
 		<module>feature-repo-parent</module>
