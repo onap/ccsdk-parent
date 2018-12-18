@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Dan Timoney <dtimoney@att.com>
+Code-Review+2: Gaurav Agrawal <gaurav.agrawal@huawei.com>
+Submitted-by: Gaurav Agrawal <gaurav.agrawal@huawei.com>
+Submitted-at: Tue, 18 Dec 2018 01:42:44 +0000
+Reviewed-on: https://gerrit.onap.org/r/74759
+Project: ccsdk/parent
+Branch: refs/heads/casablanca
