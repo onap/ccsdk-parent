@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Dan Timoney <dtimoney@att.com>
+Code-Review+2: Gaurav Agrawal <gaurav.agrawal@huawei.com>
+Submitted-by: Dan Timoney <dtimoney@att.com>
+Submitted-at: Wed, 19 Dec 2018 13:54:53 +0000
+Reviewed-on: https://gerrit.onap.org/r/74864
+Project: ccsdk/parent
+Branch: refs/heads/master
