@@ -92,6 +92,11 @@
 		<sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
 		<sdnctl.mdsal.resource.version>${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
 		<sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
+		
+
+		<mariadb.connector.version>2.1.1</mariadb.connector.version>
+
+		
 
 	</properties>
 
