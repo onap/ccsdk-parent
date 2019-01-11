@@ -93,11 +93,11 @@
 
 
 		<!-- CCSDK component versions -->
-		<ccsdk.sli.core.version>0.4.0-SNAPSHOT</ccsdk.sli.core.version>
-		<ccsdk.sli.adaptors.version>0.4.0-SNAPSHOT</ccsdk.sli.adaptors.version>
-		<ccsdk.sli.northbound.version>0.4.0-SNAPSHOT</ccsdk.sli.northbound.version>
-		<ccsdk.sli.plugins.version>0.4.0-SNAPSHOT</ccsdk.sli.plugins.version>
-		<ccsdk.distribution.version>0.4.0-SNAPSHOT</ccsdk.distribution.version>
+		<ccsdk.sli.core.version>0.4.1-SNAPSHOT</ccsdk.sli.core.version>
+		<ccsdk.sli.adaptors.version>0.4.1-SNAPSHOT</ccsdk.sli.adaptors.version>
+		<ccsdk.sli.northbound.version>0.4.1-SNAPSHOT</ccsdk.sli.northbound.version>
+		<ccsdk.sli.plugins.version>0.4.1-SNAPSHOT</ccsdk.sli.plugins.version>
+		<ccsdk.distribution.version>0.4.1-SNAPSHOT</ccsdk.distribution.version>
 		<sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
 		<sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
 		<sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
@@ -532,35 +532,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<dependency>
-				<groupId>org.onap.ccsdk.sli.core</groupId>
-				<artifactId>sli-core-artifacts</artifactId>
-				<version>${ccsdk.sli.core.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.onap.ccsdk.sli.adaptors</groupId>
-				<artifactId>sli-adaptors-artifacts</artifactId>
-				<version>${ccsdk.sli.adaptors.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.onap.ccsdk.sli.northbound</groupId>
-				<artifactId>sli-northbound-artifacts</artifactId>
-				<version>${ccsdk.sli.northbound.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.onap.ccsdk.sli.plugins</groupId>
-				<artifactId>sli-plugins-artifacts</artifactId>
-				<version>${ccsdk.sli.plugins.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-
 
 			<dependency>
 				<groupId>org.opendaylight.controller</groupId>
