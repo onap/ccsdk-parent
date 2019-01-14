@@ -810,7 +810,7 @@
 									<requireReleaseDeps>
 										<failWhenParentIsSnapshot>false</failWhenParentIsSnapshot>
 										<onlyWhenRelease>true</onlyWhenRelease>
-										<level>ERROR</level>
+										<level>WARN</level>
 									</requireReleaseDeps>
 								</rules>
 							</configuration>
