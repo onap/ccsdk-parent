@@ -456,8 +456,8 @@
 						<extensions>true</extensions>
 						<configuration>
 							<nexusUrl>https://nexus.onap.org</nexusUrl>
-							<stagingProfileId></stagingProfileId>
-							<serverId>ecomp-releases</serverId>
+							<stagingProfileId>176c31dfe190a</stagingProfileId>
+							<serverId>ecomp-staging</serverId>
 						</configuration>
 					</plugin>
 				</plugins>
