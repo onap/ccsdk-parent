@@ -16,7 +16,7 @@
 	<parent>
 		<groupId>org.opendaylight.odlparent</groupId>
 		<artifactId>odlparent-lite</artifactId>
-		<version>3.1.4</version>
+		<version>3.1.5</version>
 		<relativePath />
 	</parent>
 
@@ -106,12 +106,12 @@
 
 
 		<!-- Support libraries used by OpenDaylight -->
-		<odl.controller.mdsal.version>1.8.1</odl.controller.mdsal.version>
-		<odl.mdsal.version>2.5.1</odl.mdsal.version>
-		<odl.mdsal.model.version>0.13.1</odl.mdsal.model.version>
-		<odl.netconf.restconf.version>1.8.1</odl.netconf.restconf.version>
-		<odl.netconf.netconf.version>1.5.1</odl.netconf.netconf.version>
-		<odl.netconf.sal.rest.docgen.version>1.8.1</odl.netconf.sal.rest.docgen.version>
+		<odl.controller.mdsal.version>1.8.2</odl.controller.mdsal.version>
+		<odl.mdsal.version>2.5.2</odl.mdsal.version>
+		<odl.mdsal.model.version>0.13.2</odl.mdsal.model.version>
+		<odl.netconf.restconf.version>1.8.2</odl.netconf.restconf.version>
+		<odl.netconf.netconf.version>1.5.2</odl.netconf.netconf.version>
+		<odl.netconf.sal.rest.docgen.version>1.8.2</odl.netconf.sal.rest.docgen.version>
 		<!-- Used by aaa, vtn -->
 		<commons.codec.version>1.11</commons.codec.version>
 		<!-- Used by netconf, ovsdb -->
@@ -134,7 +134,7 @@
 			integration/distribution, snmp4sdn, toolkit, ttp -->
 		<jackson.version>2.8.11</jackson.version>
 		<!-- Used by snmp4sdn, yangtools -->
-		<javassist.version>3.23.1-GA</javassist.version>
+		<javassist.version>3.24.0-GA</javassist.version>
 
 		<!-- FIXME remove all dependencies for jersey 1.17 after migration all 
 			projects -->
@@ -162,7 +162,7 @@
 		<!-- Used by nic, sfc, sxp, tsdr -->
 		<mockito.version>1.10.19</mockito.version>
 		<!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
-		<netty.version>4.1.30.Final</netty.version>
+		<netty.version>4.1.31.Final</netty.version>
 		<!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity, 
 			toolkit -->
 		<slf4j.version>1.7.25</slf4j.version>
@@ -456,8 +456,8 @@
 						<extensions>true</extensions>
 						<configuration>
 							<nexusUrl>https://nexus.onap.org</nexusUrl>
-							<stagingProfileId></stagingProfileId>
-							<serverId>ecomp-releases</serverId>
+							<stagingProfileId>176c31dfe190a</stagingProfileId>
+							<serverId>ecomp-staging</serverId>
 						</configuration>
 					</plugin>
 				</plugins>

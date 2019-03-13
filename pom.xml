@@ -46,7 +46,7 @@
 						<configuration>
 							<nexusUrl>https://${onap.nexus.host}</nexusUrl>
 							<stagingProfileId>${onap.nexus.staging.profile-id}</stagingProfileId>
-							<serverId>${onap.nexus.staging.server-id}</serverId>
+							<serverId>ecomp-staging</serverId>
 						</configuration>
 					</plugin>
 				</plugins>

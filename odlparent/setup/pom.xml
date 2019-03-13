@@ -21,6 +21,11 @@
 	<url>http://wiki.onap.org</url>
 	<description>Root POM to be used in place of odlparent for CCSDK based projects</description>
 
+	<properties>
+		<onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
+		<onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
+	</properties>
+
 	<build>
 		<plugins>
 			<plugin>

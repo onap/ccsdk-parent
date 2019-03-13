@@ -349,8 +349,8 @@
 						<extensions>true</extensions>
 						<configuration>
 							<nexusUrl>https://${onap.nexus.host}</nexusUrl>
-							<stagingProfileId>${onap.nexus.staging.profile-id}</stagingProfileId>
-							<serverId>${onap.nexus.staging.server-id}</serverId>
+							<stagingProfileId>176c31dfe190a</stagingProfileId>
+							<serverId>ecomp-staging</serverId>
 						</configuration>
 					</plugin>
 				</plugins>
