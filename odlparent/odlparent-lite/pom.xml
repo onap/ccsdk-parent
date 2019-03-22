@@ -133,6 +133,7 @@
 		<!-- Used by aaa, alto, netconf, ovsdb, sfc; see also affinity, defense4all, 
 			integration/distribution, snmp4sdn, toolkit, ttp -->
 		<jackson.version>2.8.11</jackson.version>
+		<jackson.bom.version>2.8.11.20181123</jackson.bom.version>
 		<!-- Used by snmp4sdn, yangtools -->
 		<javassist.version>3.24.0-GA</javassist.version>
 
@@ -553,6 +554,13 @@
 				<version>${odl.netconf.restconf.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+			    <groupId>com.fasterxml.jackson</groupId>
+			    <artifactId>jackson-bom</artifactId>
+			    <version>${jackson.bom.version}</version>
+			    <type>pom</type>
+			    <scope>import</scope>
 			</dependency>
 
 			<dependency>
