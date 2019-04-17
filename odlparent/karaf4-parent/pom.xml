@@ -411,7 +411,29 @@
 		</profile>
 
 		<!-- End of profiles from ONAP oparent -->
-
+		<profile>
+			<id>nexus-staging</id>
+			<activation>
+			    <property>
+			        <name>!altDeploymentRepository</name>
+			    </property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+						<version>1.6.7</version>
+						<extensions>true</extensions>
+						<configuration>
+							<nexusUrl>https://nexus.onap.org</nexusUrl>
+							<stagingProfileId>176c31dfe190a</stagingProfileId>
+							<serverId>ecomp-staging</serverId>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 	</profiles>
 
 
@@ -1120,17 +1142,6 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.7</version>
-				<extensions>true</extensions>
-				<configuration>
-					<nexusUrl>${onap.nexus.url}</nexusUrl>
-					<stagingProfileId>176c31dfe190a</stagingProfileId>
-					<serverId>ecomp-staging</serverId>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
