@@ -157,7 +157,7 @@
 		<!-- Need to stick to JUnit 4.11 until https://github.com/jayway/powermock/issues/560 
 			is fixed (either in PowerMock or with a new JUnit release) -->
 		<!-- Used everywhere -->
-		<junit.version>4.11</junit.version>
+		<junit.version>4.12</junit.version>
 		<!-- Used by coretutorials, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
 		<logback.version>1.2.3</logback.version>
 		<!-- Used by nic, sfc, sxp, tsdr -->
@@ -169,7 +169,7 @@
 		<slf4j.version>1.7.25</slf4j.version>
 		<!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit, 
 			tsdr, ttp -->
-		<spring.version>3.2.17.RELEASE</spring.version>
+		<spring.version>4.3.18.RELEASE</spring.version>
 
 
 
@@ -582,7 +582,12 @@
 				<classifier>tests</classifier>
 				<scope>test</scope>
 			</dependency>
-
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
 
 			<dependency>
 				<groupId>org.testng</groupId>
