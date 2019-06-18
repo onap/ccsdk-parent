@@ -465,6 +465,7 @@
 			</build>
 		</profile>
 		<profile>
+			<id>yang-compile</id>
 			<activation>
 				<file>
 					<exists>src/main/yang</exists>
@@ -521,104 +522,14 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>org.opendaylight.controller</groupId>
-				<artifactId>mdsal-artifacts</artifactId>
-				<version>\${odl.controller.mdsal.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.opendaylight.mdsal</groupId>
-				<artifactId>mdsal-artifacts</artifactId>
-				<version>\${odl.mdsal.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.opendaylight.mdsal.model</groupId>
-				<artifactId>mdsal-model-artifacts</artifactId>
-				<version>\${odl.mdsal.model.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.opendaylight.netconf</groupId>
-				<artifactId>netconf-artifacts</artifactId>
-				<version>\${odl.netconf.netconf.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.opendaylight.netconf</groupId>
-				<artifactId>restconf-artifacts</artifactId>
-				<version>\${odl.netconf.restconf.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-			    <groupId>com.fasterxml.jackson</groupId>
-			    <artifactId>jackson-bom</artifactId>
-			    <version>\${jackson.bom.version}</version>
-			    <type>pom</type>
-			    <scope>import</scope>
-			</dependency>
+
 
 			<dependency>
-				<groupId>org.opendaylight.controller</groupId>
-				<artifactId>sal-test-model</artifactId>
-				<version>\${odl.controller.mdsal.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.opendaylight.controller</groupId>
-				<artifactId>sal-binding-broker-impl</artifactId>
-				<version>\${odl.controller.mdsal.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.opendaylight.controller</groupId>
-				<artifactId>sal-binding-broker-impl</artifactId>
-				<version>\${odl.controller.mdsal.version}</version>
-				<type>test-jar</type>
-				<classifier>tests</classifier>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>\${junit.version}</version>
-				<scope>test</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.testng</groupId>
-				<artifactId>testng</artifactId>
-				<version>6.11</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-test</artifactId>
-				<version>\${spring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-beans</artifactId>
-				<version>\${spring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-				<version>\${spring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.att.eelf</groupId>
-				<artifactId>eelf-core</artifactId>
-				<version>\${eelf.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.derby</groupId>
-				<artifactId>derby</artifactId>
-				<version>\${derby.version}</version>
-				<scope>test</scope>
+				<groupId>org.onap.ccsdk.parent</groupId>
+				<artifactId>dependencies-odl-bom</artifactId>
+				<version>${project.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 		</dependencies>
 
@@ -1050,7 +961,7 @@
 							<excludes>
 							</excludes>
 							<consoleOutput>true</consoleOutput>
-							<failsOnViolation>false</failsOnViolation>
+							<failOnViolation>false</failOnViolation>
 						</configuration>
 					</execution>
 					<execution>
@@ -1072,7 +983,7 @@
 							<excludes>
 							</excludes>
 							<consoleOutput>true</consoleOutput>
-							<failsOnViolation>false</failsOnViolation>
+							<failOnViolation>false</failOnViolation>
 						</configuration>
 					</execution>
 				</executions>
