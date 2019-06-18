@@ -67,6 +67,8 @@
         </plugins>
     </build>
     <modules>
+        <module>dependencies-bom</module>
+        <module>dependencies-odl-bom</module>
         <module>standalone</module>
         <module>odlparent</module>
         <module>springboot</module>
