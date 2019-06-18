@@ -11,7 +11,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.20.RELEASE</version>
+		<version>1.5.21.RELEASE</version>
 		<relativePath/>
 	</parent>
 
@@ -362,6 +362,13 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.onap.ccsdk.parent</groupId>
+				<artifactId>dependencies-bom</artifactId>
+				<version>1.3.0-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 			<dependency>
 				<groupId>org.onap.ccsdk.sli.core</groupId>
 				<artifactId>sli-common</artifactId>
