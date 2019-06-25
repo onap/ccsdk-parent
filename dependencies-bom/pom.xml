@@ -9,6 +9,16 @@
     <artifactId>dependencies-bom</artifactId>
     <version>1.3.0-SNAPSHOT</version>
 
+    <distributionManagement>
+        <repository>
+            <id>ecomp-releases</id>
+            <url>https://nexus.onap.org/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>ecomp-snapshots</id>
+            <url>https://nexus.onap.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 
     <dependencyManagement>
