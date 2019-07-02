@@ -182,7 +182,6 @@
 
 		<eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 
-		<glassfish.version>2.27</glassfish.version>
 
 		<!-- Managed dependency versions -->
 		<apache.httpcomponents.core.version>4.4.4</apache.httpcomponents.core.version>
