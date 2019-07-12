@@ -93,17 +93,18 @@
 
 
 		<!-- CCSDK component versions -->
-		<ccsdk.sli.core.version>0.5.0-SNAPSHOT</ccsdk.sli.core.version>
-		<ccsdk.sli.adaptors.version>0.5.0-SNAPSHOT</ccsdk.sli.adaptors.version>
-		<ccsdk.sli.northbound.version>0.5.0-SNAPSHOT</ccsdk.sli.northbound.version>
-		<ccsdk.sli.plugins.version>0.5.0-SNAPSHOT</ccsdk.sli.plugins.version>
-		<ccsdk.distribution.version>0.5.0-SNAPSHOT</ccsdk.distribution.version>
+		<!--
+		<ccsdk.sli.core.version>0.5.0</ccsdk.sli.core.version>
+		<ccsdk.sli.adaptors.version>0.5.0</ccsdk.sli.adaptors.version>
+		<ccsdk.sli.northbound.version>0.5.0</ccsdk.sli.northbound.version>
+		<ccsdk.sli.plugins.version>0.5.0</ccsdk.sli.plugins.version>
+		<ccsdk.distribution.version>0.5.0</ccsdk.distribution.version>
 		<sdnctl.sli.version>\${ccsdk.sli.core.version}</sdnctl.sli.version>
 		<sdnctl.aai.service.version>\${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
 		<sdnctl.dblib.version>\${ccsdk.sli.core.version}</sdnctl.dblib.version>
 		<sdnctl.mdsal.resource.version>\${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
 		<sdnctl.slipluginutils.version>\${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
-
+-->
 
 		<!-- Support libraries used by OpenDaylight -->
 		<odl.controller.mdsal.version>1.8.2</odl.controller.mdsal.version>
@@ -905,6 +906,7 @@
 					<version>1.0.0</version>
 					<executions>
 						<execution>
+							<id>set-ssl-config</id>
 							<goals>
 								<goal>set-system-properties</goal>
 							</goals>
