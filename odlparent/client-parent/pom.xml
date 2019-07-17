@@ -6,7 +6,7 @@
 	<packaging>pom</packaging>
 	<groupId>org.onap.ccsdk.parent</groupId>
 	<artifactId>client-parent</artifactId>
-	<version>1.3.0-SNAPSHOT</version>
+	<version>1.3.1-SNAPSHOT</version>
 
 	<name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
 	<url>http://wiki.onap.org</url>
@@ -341,32 +341,7 @@
 			<url>https://nexus.onap.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
-	
-	<profiles>
-		<profile>
-			<id>nexus-staging</id>
-			<activation>
-			    <property>
-			        <name>!altDeploymentRepository</name>
-			    </property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.6.7</version>
-						<extensions>true</extensions>
-						<configuration>
-							<nexusUrl>https://${onap.nexus.host}</nexusUrl>
-							<stagingProfileId>176c31dfe190a</stagingProfileId>
-							<serverId>ecomp-staging</serverId>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+
 
 	<build>
 		<pluginManagement>

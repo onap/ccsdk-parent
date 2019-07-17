@@ -6,7 +6,7 @@
 	<packaging>pom</packaging>
 	<groupId>org.onap.ccsdk.parent</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>1.3.0-SNAPSHOT</version>
+	<version>1.3.1-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -346,29 +346,7 @@
 		</profile>
 
 		<!-- End of profiles from ONAP oparent -->
-		<profile>
-			<id>nexus-staging</id>
-			<activation>
-			    <property>
-			        <name>!altDeploymentRepository</name>
-			    </property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.6.7</version>
-						<extensions>true</extensions>
-						<configuration>
-							<nexusUrl>https://${onap.nexus.host}</nexusUrl>
-							<stagingProfileId>176c31dfe190a</stagingProfileId>
-							<serverId>ecomp-staging</serverId>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
+
 
 	</profiles>
 
@@ -378,7 +356,7 @@
 			<dependency>
 				<groupId>org.onap.ccsdk.parent</groupId>
 				<artifactId>dependencies-bom</artifactId>
-				<version>1.3.0-SNAPSHOT</version>
+				<version>1.3.1-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
