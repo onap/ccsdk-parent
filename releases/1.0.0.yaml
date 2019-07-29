@@ -1,0 +1,5 @@
+distribution_type: 'maven'
+version: '1.0.0'
+project: 'ccsdk-parent'
+log_dir: 'ccsdk-parent-maven-stage-master/158/'
+maven_central_url: 'oss.sonatype.org'
