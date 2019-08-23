@@ -1,0 +1,5 @@
+---
+distribution_type: 'maven'
+version: '1.4.0'
+project: 'ccsdk-parent'
+log_dir: 'ccsdk-parent-maven-stage-master/177/'
