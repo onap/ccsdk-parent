@@ -182,7 +182,7 @@
 		<derby.version>10.14.2.0</derby.version>
 		<eelf.version>1.0.0</eelf.version>
 		<grpc.version>1.17.1</grpc.version>
-		<mariadb.connector.version>2.1.1</mariadb.connector.version>
+		<mariadb.connector.version>1.5.9</mariadb.connector.version>
 		<mariadb4j.version>2.2.3</mariadb4j.version>
 		<testng.version>6.11</testng.version>
 		<tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
