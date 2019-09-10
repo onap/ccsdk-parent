@@ -6,7 +6,7 @@
 	<packaging>pom</packaging>
 	<groupId>org.onap.ccsdk.parent</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>1.4.1-SNAPSHOT</version>
+	<version>1.4.2-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -82,11 +82,11 @@
 
 
 		<!-- CCSDK component versions -->
-		<ccsdk.sli.core.version>0.6.1-SNAPSHOT</ccsdk.sli.core.version>
-		<ccsdk.sli.adaptors.version>0.6.1-SNAPSHOT</ccsdk.sli.adaptors.version>
-		<ccsdk.sli.northbound.version>0.6.1-SNAPSHOT</ccsdk.sli.northbound.version>
-		<ccsdk.sli.plugins.version>0.6.1-SNAPSHOT</ccsdk.sli.plugins.version>
-		<ccsdk.distribution.version>0.6.1-SNAPSHOT</ccsdk.distribution.version>
+		<ccsdk.sli.core.version>0.6.2-SNAPSHOT</ccsdk.sli.core.version>
+		<ccsdk.sli.adaptors.version>0.6.2-SNAPSHOT</ccsdk.sli.adaptors.version>
+		<ccsdk.sli.northbound.version>0.6.2-SNAPSHOT</ccsdk.sli.northbound.version>
+		<ccsdk.sli.plugins.version>0.6.2-SNAPSHOT</ccsdk.sli.plugins.version>
+		<ccsdk.distribution.version>0.6.2-SNAPSHOT</ccsdk.distribution.version>
 		<sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
 		<sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
 		<sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
@@ -366,7 +366,7 @@
 			<dependency>
 				<groupId>org.onap.ccsdk.parent</groupId>
 				<artifactId>dependencies-bom</artifactId>
-				<version>1.4.1-SNAPSHOT</version>
+				<version>1.4.2-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
