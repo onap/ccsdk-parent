@@ -7,7 +7,7 @@
     <packaging>pom</packaging>
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>dependencies-odl-bom</artifactId>
-    <version>1.4.2-SNAPSHOT</version>
+    <version>1.4.2</version>
 
     <parent>
         <groupId>org.opendaylight.odlparent</groupId>
