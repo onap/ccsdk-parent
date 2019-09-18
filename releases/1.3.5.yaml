@@ -1,0 +1,5 @@
+---
+distribution_type: 'maven'
+version: '1.3.5'
+project: 'ccsdk-parent'
+log_dir: 'ccsdk-parent-maven-stage-elalto-fluorine/2/'
