@@ -1,0 +1,9 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Dan Timoney <dtimoney@att.com>
+Code-Review+2: Jun (Nicolas) Hu <jun.nicolas.hu@att.com>
+Code-Review+2: Brinda Santh Muthuramalingam <brindasanth@in.ibm.com>
+Submitted-by: Dan Timoney <dtimoney@att.com>
+Submitted-at: Wed, 18 Sep 2019 19:36:53 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ccsdk/parent/+/95948
+Project: ccsdk/parent
+Branch: refs/heads/elalto-fluorine
