@@ -97,6 +97,29 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>create-karaf4-parent-pom</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals><!-- here the phase you need -->
+						<phase>validate</phase>
+						<configuration>
+							<outputDirectory>../karaf4-parent</outputDirectory>
+							<resources>
+								<resource>
+									<directory>src/main/resources</directory>
+									<includes>
+										<include>pom-template.xml</include>
+									</includes>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+							<escapeString>\</escapeString>
+							<filters>
+								<filter>${basedir}/src/main/properties/karaf4-parent.properties</filter>
+							</filters>
+						</configuration>
+					</execution>
+					<execution>
 						<id>create-mdsal-it-parent-pom</id>
 						<goals>
 							<goal>copy-resources</goal>
@@ -226,6 +249,17 @@
 						<configuration>
 							<sourceFile>../feature-repo-parent/pom-template.xml</sourceFile>
 							<destinationFile>../feature-repo-parent/pom.xml</destinationFile>
+						</configuration>
+					</execution>
+					<execution>
+						<id>rename-karaf4-parent-pom</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>rename</goal>
+						</goals>
+						<configuration>
+							<sourceFile>../karaf4-parent/pom-template.xml</sourceFile>
+							<destinationFile>../karaf4-parent/pom.xml</destinationFile>
 						</configuration>
 					</execution>
 					<execution>
