@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
+
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>parent</artifactId>
     <version>1.5.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
 
-    <properties>
-        <onap.nexus.host>nexus.onap.org</onap.nexus.host>
-        <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
-        <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
-    </properties>
+    <modules>
+        <module>dependencies-bom</module>
+        <module>dependencies-odl-bom</module>
+        <module>standalone</module>
+        <module>odlparent</module>
+        <module>springboot</module>
+    </modules>
 
     <distributionManagement>
         <repository>
@@ -28,6 +28,16 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <properties>
+        <onap.nexus.host>nexus.onap.org</onap.nexus.host>
+        <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
+        <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
+
+        <!-- Properties for POM Format -->
+        <format.skipValidate>false</format.skipValidate>
+        <format.skipExecute>true</format.skipExecute>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -38,14 +48,46 @@
                     <processAllModules>true</processAllModules>
                 </configuration>
             </plugin>
+
+            <!-- Plugin to Format/Validate POM Files -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>tidy-maven-plugin</artifactId>
+                <version>1.1.0</version>
+                <executions>
+                    <execution>
+                        <id>format-pom</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>pom</goal>
+                        </goals>
+                        <configuration>
+                            <skip>${format.skipExecute}</skip>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>validate-pom</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <skip>${format.skipValidate}</skip>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>dependencies-bom</module>
-        <module>dependencies-odl-bom</module>
-        <module>standalone</module>
-        <module>odlparent</module>
-        <module>springboot</module>
-    </modules>
 
+    <profiles>
+        <!-- Profile to format skip validate or execute -->
+        <profile>
+            <id>format</id>
+            <properties>
+                <format.skipValidate>true</format.skipValidate>
+                <format.skipExecute>false</format.skipExecute>
+            </properties>
+        </profile>
+    </profiles>
 </project>
