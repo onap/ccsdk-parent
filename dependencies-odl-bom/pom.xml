@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <groupId>org.onap.ccsdk.parent</groupId>
-    <artifactId>dependencies-odl-bom</artifactId>
-    <version>1.5.0-SNAPSHOT</version>
 
     <parent>
         <groupId>org.opendaylight.odlparent</groupId>
         <artifactId>odlparent</artifactId>
         <version>3.1.5</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
+    <groupId>org.onap.ccsdk.parent</groupId>
+    <artifactId>dependencies-odl-bom</artifactId>
+    <version>1.5.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <distributionManagement>
         <repository>
@@ -28,12 +25,10 @@
         </snapshotRepository>
     </distributionManagement>
 
-
     <!-- Note: maven properties do not work as expected in BOMs.  The property settings are
     not imported - so if you use a property in the version below, the pom that imports your BOM is
     expected to have that property set - defeating the whole point of a BOM.  Moral : use constants,
     not properties, for versions in BOMs -->
-
     <dependencyManagement>
         <dependencies>
             <!-- OpenDaylight dependencies -->
@@ -83,7 +78,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
 
             <!-- Other dependencies -->
             <dependency>
