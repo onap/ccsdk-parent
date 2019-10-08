@@ -245,6 +245,16 @@
 				<artifactId>jettison</artifactId>
 				<version>1.3.8</version>
 			</dependency>
+			<dependency>
+				<groupId>org.onap.logging-analytics</groupId>
+				<artifactId>logging-slf4j</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+			<dependency>
+				<groupId>org.onap.logging-analytics</groupId>
+				<artifactId>logging-filter-base</artifactId>
+				<version>1.6.1</version>
+			</dependency>
 		</dependencies>
 
 	</dependencyManagement>
