@@ -185,6 +185,7 @@
 		<tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
 		<jetty.version>9.4.12.v20180830</jetty.version>
 		<skip.karaf.featureTest>true</skip.karaf.featureTest>
+		<org.onap.logging-analytics.version>1.6.1</org.onap.logging-analytics.version>
 	</properties>
 
 	<dependencyManagement>
@@ -244,6 +245,16 @@
 				<groupId>org.codehaus.jettison</groupId>
 				<artifactId>jettison</artifactId>
 				<version>1.3.8</version>
+			</dependency>
+			<dependency>
+				<groupId>org.onap.logging-analytics</groupId>
+				<artifactId>logging-slf4j</artifactId>
+				<version>${org.onap.logging-analytics.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.onap.logging-analytics</groupId>
+				<artifactId>logging-filter-base</artifactId>
+				<version>${org.onap.logging-analytics.version}</version>
 			</dependency>
 		</dependencies>
 
