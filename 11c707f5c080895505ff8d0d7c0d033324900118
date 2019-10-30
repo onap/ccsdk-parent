@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ef224cf_75328861",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2019-10-30T20:39:09Z",
+      "side": 1,
+      "message": "It\u0027s better not to use a property here.  Otherwise, if someone sets org.onap.logging-analytics.version to a different value in their pom.xml or on the command line, they\u0027ll override this setting.",
+      "range": {
+        "startLine": 252,
+        "startChar": 13,
+        "endLine": 252,
+        "endChar": 50
+      },
+      "revId": "11c707f5c080895505ff8d0d7c0d033324900118",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "716e834d_c46307c2",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2019-10-30T20:39:09Z",
+      "side": 1,
+      "message": "Same comment (better not to use a property here)",
+      "range": {
+        "startLine": 257,
+        "startChar": 13,
+        "endLine": 257,
+        "endChar": 50
+      },
+      "revId": "11c707f5c080895505ff8d0d7c0d033324900118",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
