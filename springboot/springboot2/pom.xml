@@ -125,7 +125,7 @@
         <mariadb4j.version>2.2.3</mariadb4j.version>
         <slf4j.version>1.7.25</slf4j.version>
         <testng.version>6.11</testng.version>
-        <tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
+        <tomcat-jdbc.version>9.0.27</tomcat-jdbc.version>
 
     </properties>
 

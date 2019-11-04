@@ -182,7 +182,7 @@
 		<mariadb.connector.version>2.1.1</mariadb.connector.version>
 		<mariadb4j.version>2.2.3</mariadb4j.version>
 		<testng.version>6.11</testng.version>
-		<tomcat-jdbc.version>8.5.14</tomcat-jdbc.version>
+		<tomcat-jdbc.version>9.0.27</tomcat-jdbc.version>
 		<jetty.version>9.4.12.v20180830</jetty.version>
 		<skip.karaf.featureTest>true</skip.karaf.featureTest>
 	</properties>
