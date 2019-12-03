@@ -5,7 +5,6 @@
 	<!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/setup/src/main/template/pom-template.xml
         Any updates needed should be made to that template and not to the generated
         pom.xml file -->
-
 	<parent>
 		<groupId>${odlparent.groupId}</groupId>
 		<artifactId>${odlparent.artifactId}</artifactId>
@@ -134,7 +133,6 @@
 		<!-- Used by aaa, alto, netconf, ovsdb, sfc; see also affinity, defense4all,
             integration/distribution, snmp4sdn, toolkit, ttp -->
 		<jackson.version>2.9.8</jackson.version>
-		<jackson.bom.version>2.9.8</jackson.bom.version>
 		<!-- Used by snmp4sdn, yangtools -->
 		<javassist.version>3.24.1-GA</javassist.version>
 
@@ -167,15 +165,14 @@
 		<spring.version>4.3.24.RELEASE</spring.version>
 
 		<!-- Extra support libraries used by SDN-C -->
-		<jackson-annotations-version>\${jackson.version}</jackson-annotations-version>
 		<jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
 		<antlr.version>4.7.2</antlr.version>
 
 		<eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 
 		<!-- Managed dependency versions -->
-		<apache.httpcomponents.core.version>4.4.4</apache.httpcomponents.core.version>
-		<apache.httpcomponents.client.version>4.5.2</apache.httpcomponents.client.version>
+		<apache.httpcomponents.core.version>4.4.10</apache.httpcomponents.core.version>
+		<apache.httpcomponents.client.version>4.5.6</apache.httpcomponents.client.version>
 		<derby.version>10.14.2.0</derby.version>
 		<eelf.version>1.0.0</eelf.version>
 		<grpc.version>1.17.1</grpc.version>
@@ -442,7 +439,8 @@
 									<requireProperty>
 										<property>onap.nexus.url</property>
 										<message>You must set a onap.nexus.url property in your
-											~/.m2/settings.xml. See oparent/settings.xml for an example.</message>
+											~/.m2/settings.xml. See oparent/settings.xml for an example.
+										</message>
 									</requireProperty>
 								</rules>
 								<fail>true</fail>
