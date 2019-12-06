@@ -993,7 +993,42 @@
                 </dependency>
             </dependencies>
         </profile>
-
+        <profile>
+            <id>sonar-jacoco-aggregate</id>
+            <activation>
+                <property>
+                    <name>onap.jacoco.aggregateFile</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>merge</id>
+                                <goals>
+                                    <goal>merge</goal>
+                                </goals>
+                                <phase>generate-resources</phase>
+                                <configuration>
+                                    <destFile>${onap.jacoco.aggregateFile}</destFile>
+                                    <fileSets>
+                                        <fileSet>
+                                            <directory>/Users/dt5972/gerrit/ccsdk/parent/odlparent/setup</directory>
+                                            <includes>
+                                                <include>**/target/code-coverage/*.exec</include>
+                                            </includes>
+                                        </fileSet>
+                                    </fileSets>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <!-- End of profiles from ONAP oparent -->
 
         <profile>
