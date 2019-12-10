@@ -60,6 +60,8 @@
         <sdc.client.version>1.4.0</sdc.client.version>
         <sdc.tosca.version>1.6.3</sdc.tosca.version>
 
+        <dependency-list.file>direct-dependencies.txt</dependency-list.file>
+
     </properties>
 
     <dependencyManagement>
@@ -188,7 +190,24 @@
         </repository>
     </repositories>
 
+
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.ferstl</groupId>
+                    <artifactId>depgraph-maven-plugin</artifactId>
+                    <version>3.3.0</version>
+                    <configuration>
+                        <graphFormat>text</graphFormat>
+                        <outputFileName>${dependency-list.file}</outputFileName>
+                        <outputDirectory>${project.basedir}</outputDirectory>
+                        <transitiveExcludes>*</transitiveExcludes>
+                        <showVersions>true</showVersions>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
