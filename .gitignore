@@ -42,3 +42,6 @@ ExprGrammarLexer.tokens
 sdnc-core_bdio.jsonld
 blackDuckHubProjectName.txt
 blackDuckHubProjectVersionName.txt
+
+#Generated dependencies list
+direct-dependencies.txt
