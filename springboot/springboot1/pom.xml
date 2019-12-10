@@ -100,6 +100,8 @@
 
         <mariadb.connector.version>2.1.1</mariadb.connector.version>
 
+        <dependency-list.file>direct-dependencies.txt</dependency-list.file>
+
     </properties>
 
     <dependencyManagement>
@@ -577,7 +579,18 @@
                         </execution>
                     </executions>
                 </plugin>
-
+                <plugin>
+                    <groupId>com.github.ferstl</groupId>
+                    <artifactId>depgraph-maven-plugin</artifactId>
+                    <version>3.3.0</version>
+                    <configuration>
+                        <graphFormat>text</graphFormat>
+                        <outputFileName>${dependency-list.file}</outputFileName>
+                        <outputDirectory>${project.basedir}</outputDirectory>
+                        <transitiveExcludes>*</transitiveExcludes>
+                        <showVersions>true</showVersions>
+                    </configuration>
+                </plugin>
             </plugins>
 
         </pluginManagement>
@@ -992,6 +1005,5 @@
             </build>
         </profile>
         <!-- End of profiles from ONAP oparent -->
-
     </profiles>
 </project>
