@@ -620,6 +620,7 @@
                         <outputDirectory>${project.basedir}</outputDirectory>
                         <transitiveExcludes>*</transitiveExcludes>
                         <showVersions>true</showVersions>
+                        <showGroupIds>true</showGroupIds>
                     </configuration>
                 </plugin>
             </plugins>
