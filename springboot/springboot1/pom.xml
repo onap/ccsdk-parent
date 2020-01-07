@@ -49,8 +49,7 @@
         <jacoco.version>0.7.7.201606060606</jacoco.version>
         <sonar-jacoco-listeners.version>3.2</sonar-jacoco-listeners.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-        <!-- Default Sonar configuration -->
-        <sonar.jacoco.reportPaths>target/code-coverage/jacoco-ut.exec,target/code-coverage/jacoco-it.exec</sonar.jacoco.reportPaths>
+
         <!-- Note: This list should match jacoco-maven-plugin's exclusion list
             below -->
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
@@ -83,7 +82,6 @@
         <sonar.language>java</sonar.language>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.surefire.reportsPath>${project.build.directory}/surefire-reports</sonar.surefire.reportsPath>
-        <sonar.jacoco.reportMissing.force.zero>true</sonar.jacoco.reportMissing.force.zero>
         <sonar.projectVersion>${project.version}</sonar.projectVersion>
 
         <!-- CCSDK component versions -->
