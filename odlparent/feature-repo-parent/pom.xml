@@ -93,6 +93,7 @@
         <sonar.projectVersion>${project.version}</sonar.projectVersion>
 
         <!-- CCSDK component versions -->
+        <ccsdk.cds.version>0.7.0-SNAPSHOT</ccsdk.cds.version>
         <ccsdk.sli.core.version>0.7.0-SNAPSHOT</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>0.7.0-SNAPSHOT</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>0.7.0-SNAPSHOT</ccsdk.sli.northbound.version>
