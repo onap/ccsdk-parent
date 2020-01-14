@@ -170,14 +170,14 @@
         <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 
         <!-- Managed dependency versions -->
-        <apache.httpcomponents.core.version>4.4.10</apache.httpcomponents.core.version>
-        <apache.httpcomponents.client.version>4.5.6</apache.httpcomponents.client.version>
+        <apache.httpcomponents.core.version>4.4.12</apache.httpcomponents.core.version>
+        <apache.httpcomponents.client.version>4.5.10</apache.httpcomponents.client.version>
         <derby.version>10.14.2.0</derby.version>
         <eelf.version>1.0.0</eelf.version>
-        <grpc.version>1.17.1</grpc.version>
-        <mariadb.connector.version>2.1.1</mariadb.connector.version>
-        <mariadb4j.version>2.2.3</mariadb4j.version>
-        <testng.version>6.11</testng.version>
+        <grpc.version>1.21.1</grpc.version>
+        <mariadb.connector.version>2.4.4</mariadb.connector.version>
+        <mariadb4j.version>2.4.0</mariadb4j.version>
+        <testng.version>6.14.3</testng.version>
         <tomcat-jdbc.version>9.0.27</tomcat-jdbc.version>
         <jetty.version>9.4.12.v20180830</jetty.version>
         <skip.karaf.featureTest>true</skip.karaf.featureTest>
