@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "32258a5a_0780d0bf",
+        "filename": "springboot/springboot1/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-01-17T21:05:10Z",
+      "side": 1,
+      "message": "back slash (\\) shouldn\u0027t be present.",
+      "revId": "6284ac5f219be4e9c75a5c55eb574f4d764c055d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "be6b3f89_bad0b60f",
+        "filename": "springboot/springboot2/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-01-17T21:05:10Z",
+      "side": 1,
+      "message": "back slash (\\) shouldn\u0027t be present.",
+      "revId": "6284ac5f219be4e9c75a5c55eb574f4d764c055d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
