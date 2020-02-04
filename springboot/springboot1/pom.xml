@@ -75,6 +75,10 @@
         <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
 
+        <!-- OpenDaylight repositories -->
+        <opendaylight.nexus.public-url>https://nexus.opendaylight.org/content/repositories/public/</opendaylight.nexus.public-url>
+        <opendaylight.nexus.snapshot-url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</opendaylight.nexus.snapshot-url>
+
         <java.version.source>1.8</java.version.source>
         <java.version.target>1.8</java.version.target>
         <bundle.plugin.version>2.5.0</bundle.plugin.version>
@@ -98,6 +102,13 @@
         <sdnctl.mdsal.resource.version>${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
         <sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
 
+        <!-- Managed dependency versions -->
+        <antlr.version>4.7.2</antlr.version>
+        <commons.lang.version>2.6</commons.lang.version>
+        <apache.httpcomponents.core.version>4.4.12</apache.httpcomponents.core.version>
+        <apache.httpcomponents.client.version>4.5.10</apache.httpcomponents.client.version>
+        <jersey.version>2.25.1</jersey.version>
+        <jersey.client.version>2.25.1</jersey.client.version>
         <mariadb.connector.version>2.4.4</mariadb.connector.version>
 
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
@@ -446,7 +457,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.10</version>
+                    <version>2.10.4</version>
                     <configuration>
                         <additionalDependencies>
                             <additionalDependency>
