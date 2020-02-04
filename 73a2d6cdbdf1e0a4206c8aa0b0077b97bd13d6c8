@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "61cdff8b_d32a749f",
+        "filename": "springboot/springboot1/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1219
+      },
+      "writtenOn": "2020-02-04T15:44:40Z",
+      "side": 1,
+      "message": "Does ONAP nexus already mirror opendaylight nexus?",
+      "revId": "73a2d6cdbdf1e0a4206c8aa0b0077b97bd13d6c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "6a87a8e7_a54afc9d",
         "filename": "springboot/springboot1/pom.xml",
         "patchSetId": 1
@@ -19,6 +36,23 @@
         "endLine": 81,
         "endChar": 0
       },
+      "revId": "73a2d6cdbdf1e0a4206c8aa0b0077b97bd13d6c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dcf5cda2_798d8a69",
+        "filename": "springboot/springboot1/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1219
+      },
+      "writtenOn": "2020-02-04T15:44:40Z",
+      "side": 1,
+      "message": "Shouldn\u0027t dependency management be used instead?",
       "revId": "73a2d6cdbdf1e0a4206c8aa0b0077b97bd13d6c8",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
