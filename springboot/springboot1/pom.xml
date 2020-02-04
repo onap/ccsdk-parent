@@ -98,6 +98,13 @@
         <sdnctl.mdsal.resource.version>${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
         <sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
 
+        <!-- Managed dependency versions -->
+        <antlr.version>4.7.2</antlr.version>
+        <commons.lang.version>2.6</commons.lang.version>
+        <apache.httpcomponents.core.version>4.4.12</apache.httpcomponents.core.version>
+        <apache.httpcomponents.client.version>4.5.10</apache.httpcomponents.client.version>
+        <jersey.version>2.25.1</jersey.version>
+        <jersey.client.version>2.25.1</jersey.client.version>
         <mariadb.connector.version>2.4.4</mariadb.connector.version>
 
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
@@ -195,30 +202,6 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>opendaylight-mirror</id>
-            <name>opendaylight-mirror</name>
-            <url>https://nexus.opendaylight.org/content/repositories/public/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>opendaylight-snapshot</id>
-            <name>opendaylight-snapshot</name>
-            <url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -244,29 +227,6 @@
         <pluginRepository>
             <id>onap-snapshot</id>
             <url>${onap.nexus.snapshot-url}</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>opendaylight-mirror</id>
-            <name>opendaylight-mirror</name>
-            <url>${opendaylight.nexus.public-url}</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>opendaylight-snapshot</id>
-            <name>opendaylight-snapshot</name>
-            <url>${opendaylight.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -446,7 +406,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.10</version>
+                    <version>2.10.4</version>
                     <configuration>
                         <additionalDependencies>
                             <additionalDependency>
