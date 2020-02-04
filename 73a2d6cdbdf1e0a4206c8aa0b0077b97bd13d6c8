@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6a87a8e7_a54afc9d",
+        "filename": "springboot/springboot1/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2020-02-04T15:28:06Z",
+      "side": 1,
+      "message": "Why is this needed in this pom?  Projects with OpenDaylight dependencies should be using the odlparent poms.",
+      "range": {
+        "startLine": 78,
+        "startChar": 2,
+        "endLine": 81,
+        "endChar": 0
+      },
+      "revId": "73a2d6cdbdf1e0a4206c8aa0b0077b97bd13d6c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f29a98d2_71289a0e",
+        "filename": "springboot/springboot2/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2020-02-04T15:28:06Z",
+      "side": 1,
+      "message": "Same comment - not sure why this is needed in these particular poms?",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 149
+      },
+      "revId": "73a2d6cdbdf1e0a4206c8aa0b0077b97bd13d6c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
