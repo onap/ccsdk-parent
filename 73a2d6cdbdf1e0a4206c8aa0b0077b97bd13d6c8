@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5ef573c5_d1d0b696",
+        "filename": "springboot/springboot1/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-02-04T15:49:55Z",
+      "side": 1,
+      "message": "Removed it in latest patch after discussing it with Dan.",
+      "parentUuid": "61cdff8b_d32a749f",
+      "revId": "73a2d6cdbdf1e0a4206c8aa0b0077b97bd13d6c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "6a87a8e7_a54afc9d",
         "filename": "springboot/springboot1/pom.xml",
         "patchSetId": 1
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "e672e4b6_4014fccb",
+        "filename": "springboot/springboot1/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-02-04T15:49:55Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "6a87a8e7_a54afc9d",
+      "range": {
+        "startLine": 78,
+        "startChar": 2,
+        "endLine": 81,
+        "endChar": 0
+      },
+      "revId": "73a2d6cdbdf1e0a4206c8aa0b0077b97bd13d6c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dcf5cda2_798d8a69",
         "filename": "springboot/springboot1/pom.xml",
         "patchSetId": 1
@@ -53,6 +95,24 @@
       "writtenOn": "2020-02-04T15:44:40Z",
       "side": 1,
       "message": "Shouldn\u0027t dependency management be used instead?",
+      "revId": "73a2d6cdbdf1e0a4206c8aa0b0077b97bd13d6c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f9fcb5b0_e4c7c82e",
+        "filename": "springboot/springboot1/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-02-04T15:49:55Z",
+      "side": 1,
+      "message": "didn\u0027t get you, these properties are being referred within this pom, but were missing and not getting resolved to a version.",
+      "parentUuid": "dcf5cda2_798d8a69",
       "revId": "73a2d6cdbdf1e0a4206c8aa0b0077b97bd13d6c8",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
