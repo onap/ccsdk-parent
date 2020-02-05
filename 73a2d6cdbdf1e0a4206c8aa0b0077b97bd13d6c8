@@ -119,6 +119,24 @@
     },
     {
       "key": {
+        "uuid": "356c98ba_d1c973fd",
+        "filename": "springboot/springboot1/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 1219
+      },
+      "writtenOn": "2020-02-05T14:52:48Z",
+      "side": 1,
+      "message": "Just for javadoc? are they really needed for that?",
+      "parentUuid": "f9fcb5b0_e4c7c82e",
+      "revId": "73a2d6cdbdf1e0a4206c8aa0b0077b97bd13d6c8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "f29a98d2_71289a0e",
         "filename": "springboot/springboot2/pom.xml",
         "patchSetId": 1
