@@ -2,6 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/springboot/spring-boot-setup/src/main/template/pom-template.xml
+        Any updates needed should be made to that template and not to the generated
+        pom.xml file -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -15,7 +18,7 @@
     <packaging>pom</packaging>
 
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
-    <description>Root POM to be used in place of odlparent for CCSDK based projects</description>
+    <description>Root POM to be used in place of spring-boot parent for CCSDK based projects</description>
     <url>http://wiki.onap.org</url>
     <organization>
         <name>ONAP</name>
@@ -28,11 +31,11 @@
     <distributionManagement>
         <repository>
             <id>ecomp-releases</id>
-            <url>https://nexus.onap.org/content/repositories/releases</url>
+            <url>${onap.nexus.release-url}</url>
         </repository>
         <snapshotRepository>
             <id>ecomp-snapshots</id>
-            <url>https://nexus.onap.org/content/repositories/snapshots</url>
+            <url>${onap.nexus.snapshot-url}</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -49,6 +52,7 @@
         <!-- Jacoco properties -->
         <jacoco.version>0.8.5</jacoco.version>
         <!-- properties from oparent -->
+
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -83,6 +87,9 @@
         <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
         <checkstyle.skip>true</checkstyle.skip>
 
+        <!-- logging-analytics versions -->
+        <logging-analytics.version>1.6.4</logging-analytics.version>
+
         <!-- CCSDK component versions -->
         <ccsdk.cds.version>0.7.1-SNAPSHOT</ccsdk.cds.version>
         <ccsdk.sli.core.version>0.7.1-SNAPSHOT</ccsdk.sli.core.version>
@@ -90,11 +97,6 @@
         <ccsdk.sli.northbound.version>0.7.1-SNAPSHOT</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>0.7.1-SNAPSHOT</ccsdk.sli.plugins.version>
         <ccsdk.distribution.version>0.7.1-SNAPSHOT</ccsdk.distribution.version>
-        <sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
-        <sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
-        <sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
-        <sdnctl.mdsal.resource.version>${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
-        <sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
 
         <!-- Spring versions -->
         <spring.boot.version>2.2.4.RELEASE</spring.boot.version>
@@ -125,7 +127,6 @@
         <jersey.version>2.25.1</jersey.version>
         <jersey.client.version>2.25.1</jersey.client.version>
         <jettison.version>1.3.8</jettison.version>
-        <junit.version>4.12</junit.version>
         <logback.version>1.2.3</logback.version>
         <mariadb.connector.version>2.4.4</mariadb.connector.version>
         <mariadb4j.version>2.4.0</mariadb4j.version>
@@ -137,6 +138,9 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Note: If value in BOM conflicts with value inherited from
+            parent pom, inherited value takes precedence.  This seems more like
+            a bug than a feature, but this is how maven 3.6 works -->
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
@@ -149,7 +153,6 @@
                 <artifactId>sli-common</artifactId>
                 <version>${ccsdk.sli.core.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>sli-provider</artifactId>
@@ -163,30 +166,32 @@
                 <classifier>features</classifier>
             </dependency>
             <dependency>
-                <groupId>org.onap.ccsdk.sli.adaptors</groupId>
-                <artifactId>aai-service-provider</artifactId>
-                <version>${sdnctl.aai.service.version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>dblib-provider</artifactId>
-                <version>${sdnctl.dblib.version}</version>
+                <version>${ccsdk.sli.core.version}</version>
             </dependency>
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
+                <groupId>org.onap.ccsdk.sli.adaptors</groupId>
+                <artifactId>aai-service-provider</artifactId>
+                <version>${ccsdk.sli.adaptors.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.onap.logging-analytics</groupId>
+                <artifactId>logging-slf4j</artifactId>
+                <version>${logging-analytics.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.onap.logging-analytics</groupId>
+                <artifactId>logging-filter-base</artifactId>
+                <version>${logging-analytics.version}</version>
             </dependency>
         </dependencies>
-
     </dependencyManagement>
 
     <repositories>
         <repository>
             <id>onap-public</id>
-            <url>https://nexus.onap.org/content/groups/public</url>
+            <url>${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -198,7 +203,7 @@
         </repository>
         <repository>
             <id>onap-staging</id>
-            <url>https://nexus.onap.org/content/groups/staging</url>
+            <url>${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -211,7 +216,7 @@
         <repository>
             <id>ecomp-release</id>
             <name>onap-repository-releases</name>
-            <url>https://nexus.onap.org/content/repositories/releases</url>
+            <url>${onap.nexus.release-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -223,7 +228,7 @@
         <repository>
             <id>ecomp-snapshot</id>
             <name>onap-repository-snapshots</name>
-            <url>https://nexus.onap.org/content/repositories/snapshots</url>
+            <url>${onap.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -280,7 +285,6 @@
     <build>
         <pluginManagement>
             <plugins>
-
                 <!-- Plugins from ONAP oparent -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -291,7 +295,6 @@
                         <skip/>
                     </configuration>
                 </plugin>
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
@@ -367,8 +370,7 @@
                                 <!-- Use Google Java Style Guide: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
                                     with minor changes -->
                                 <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
-                                <!-- <sourceDirectory> is needed so that checkstyle ignores the generated
-                                    sources directory -->
+                                <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
                                 <sourceDirectory>${project.build.sourceDirectory}/src/main/java</sourceDirectory>
                                 <includeResources>true</includeResources>
                                 <includeTestSourceDirectory>true</includeTestSourceDirectory>
@@ -400,8 +402,7 @@
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <version>2.19.1</version>
                     <executions>
-                        <!-- Ensures that both integration-test and verify goals of the Failsafe
-                            Maven plugin are executed. -->
+                        <!-- Ensures that both integration-test and verify goals of the Failsafe Maven plugin are executed. -->
                         <execution>
                             <id>integration-tests</id>
                             <goals>
@@ -453,7 +454,6 @@
                                 <artifactId>antlr4-runtime</artifactId>
                                 <version>${antlr.version}</version>
                             </additionalDependency>
-
                             <additionalDependency>
                                 <groupId>com.sun.jersey</groupId>
                                 <artifactId>jersey-client</artifactId>
@@ -481,7 +481,6 @@
                             </additionalDependency>
                         </additionalDependencies>
                     </configuration>
-
                     <executions>
                         <execution>
                             <id>aggregate</id>
@@ -489,7 +488,6 @@
                                 <goal>aggregate</goal>
                             </goals>
                             <phase>site</phase>
-
                         </execution>
                     </executions>
                 </plugin>
@@ -507,8 +505,8 @@
                     </configuration>
                 </plugin>
             </plugins>
-
         </pluginManagement>
+
         <plugins>
             <!-- Plugins from ONAP oparent -->
             <!-- Jacoco / Sonar -->
@@ -525,13 +523,11 @@
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
                             <destFile>${project.build.directory}/code-coverage/jacoco-ut.exec</destFile>
-                            <!-- Sets the name of the property containing the settings for JaCoCo
-                                                                 runtime agent. -->
+                            <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>surefireArgLine</propertyName>
                         </configuration>
                     </execution>
-                    <!-- Ensures that the code coverage report for unit tests is created
-                                                 after unit tests have been run. -->
+                    <!-- Ensures that the code coverage report for unit tests is created after unit tests have been run. -->
                     <execution>
                         <id>post-unit-test</id>
                         <phase>test</phase>
@@ -554,13 +550,11 @@
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
                             <destFile>${project.build.directory}/code-coverage/jacoco-it.exec</destFile>
-                            <!-- Sets the name of the property containing the settings for JaCoCo
-                                                                 runtime agent. -->
+                            <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>failsafeArgLine</propertyName>
                         </configuration>
                     </execution>
-                    <!-- Ensures that the code coverage report for integration tests after
-                                                 integration tests have been run. -->
+                    <!-- Ensures that the code coverage report for integration tests after integration tests have been run. -->
                     <execution>
                         <id>post-integration-test</id>
                         <phase>post-integration-test</phase>
@@ -721,7 +715,6 @@
                     </reportSet>
                 </reportSets>
             </plugin>
-
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.17</version>
@@ -863,7 +856,6 @@
                                 <configuration>
                                     <exportAntProperties>true</exportAntProperties>
                                     <tasks>
-
                                         <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath"/>
                                         <condition property="is_windows" value="true">
                                             <os family="windows"/>

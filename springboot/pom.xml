@@ -16,6 +16,7 @@
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
 
     <modules>
+        <module>spring-boot-setup</module>
         <module>springboot1</module>
         <module>springboot2</module>
     </modules>
