@@ -2,6 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/springboot/spring-boot-setup/src/main/template/pom-template.xml
+        Any updates needed should be made to that template and not to the generated
+        pom.xml file -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -15,7 +18,7 @@
     <packaging>pom</packaging>
 
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
-    <description>Root POM to be used in place of odlparent for CCSDK based projects</description>
+    <description>Root POM to be used in place of spring-boot parent for CCSDK based projects</description>
     <url>http://wiki.onap.org</url>
     <organization>
         <name>ONAP</name>
@@ -28,11 +31,11 @@
     <distributionManagement>
         <repository>
             <id>ecomp-releases</id>
-            <url>https://nexus.onap.org/content/repositories/releases</url>
+            <url>${onap.nexus.release-url}</url>
         </repository>
         <snapshotRepository>
             <id>ecomp-snapshots</id>
-            <url>https://nexus.onap.org/content/repositories/snapshots</url>
+            <url>${onap.nexus.snapshot-url}</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -48,8 +51,8 @@
 
         <!-- Jacoco properties -->
         <jacoco.version>0.8.5</jacoco.version>
-
         <!-- properties from oparent -->
+
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -84,6 +87,8 @@
         <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
         <checkstyle.skip>true</checkstyle.skip>
 
+        <!-- logging-analytics versions -->
+        <logging-analytics.version>1.6.4</logging-analytics.version>
 
         <!-- CCSDK component versions -->
         <ccsdk.cds.version>0.7.1-SNAPSHOT</ccsdk.cds.version>
@@ -98,21 +103,50 @@
         <sdnctl.mdsal.resource.version>${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
         <sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
 
+        <!-- Spring versions -->
+        <spring.boot.version>1.5.22.RELEASE</spring.boot.version>
+        <spring.version>4.3.25.RELEASE</spring.version>
+
+        <!-- Kotlin versions -->
+        <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
+        <kotlin.version>1.3.61</kotlin.version>
+        <kotlin.maven.version>1.3.61</kotlin.maven.version>
+        <kotlin.couroutines.version>1.3.3</kotlin.couroutines.version>
+        <kotlinpoet.version>1.5.0</kotlinpoet.version>
+        <kroto-plus.version>0.5.0</kroto-plus.version>
+        <nats.version>2.6.6</nats.version>
+        <nats.streaming.version>2.2.3</nats.streaming.version>
+        <mockk.version>1.9.3</mockk.version>
+
         <!-- Managed dependency versions -->
         <antlr.version>4.7.2</antlr.version>
         <commons.lang.version>2.6</commons.lang.version>
         <apache.httpcomponents.core.version>4.4.12</apache.httpcomponents.core.version>
         <apache.httpcomponents.client.version>4.5.10</apache.httpcomponents.client.version>
+        <derby.version>10.14.2.0</derby.version>
+        <eelf.version>1.0.0</eelf.version>
+        <grpc.version>1.25.0</grpc.version>
+        <protobuff.java.version>3.10.0</protobuff.java.version>
+        <protobuff.java.utils.version>3.10.0</protobuff.java.utils.version>
+        <atomix.version>3.1.5</atomix.version>
         <jersey.version>2.25.1</jersey.version>
         <jersey.client.version>2.25.1</jersey.client.version>
+        <jettison.version>1.3.8</jettison.version>
+        <junit.version>4.12</junit.version>
+        <logback.version>1.2.3</logback.version>
         <mariadb.connector.version>2.4.4</mariadb.connector.version>
-
+        <mariadb4j.version>2.4.0</mariadb4j.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <testng.version>6.11</testng.version>
+        <tomcat-jdbc.version>9.0.27</tomcat-jdbc.version>
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
-
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- Note: If value in BOM conflicts with value inherited from
+            parent pom, inherited value takes precedence.  This seems more like
+            a bug than a feature, but this is how maven 3.6 works -->
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
@@ -149,15 +183,29 @@
                 <artifactId>dblib-provider</artifactId>
                 <version>${sdnctl.dblib.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.onap.logging-analytics</groupId>
+                <artifactId>logging-slf4j</artifactId>
+                <version>${logging-analytics.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.onap.logging-analytics</groupId>
+                <artifactId>logging-filter-base</artifactId>
+                <version>${logging-analytics.version}</version>
+            </dependency>
         </dependencies>
-
     </dependencyManagement>
 
     <repositories>
         <repository>
             <id>onap-public</id>
-            <url>https://nexus.onap.org/content/groups/public</url>
+            <url>${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -169,7 +217,7 @@
         </repository>
         <repository>
             <id>onap-staging</id>
-            <url>https://nexus.onap.org/content/groups/staging</url>
+            <url>${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -182,7 +230,7 @@
         <repository>
             <id>ecomp-release</id>
             <name>onap-repository-releases</name>
-            <url>https://nexus.onap.org/content/repositories/releases</url>
+            <url>${onap.nexus.release-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -194,7 +242,7 @@
         <repository>
             <id>ecomp-snapshot</id>
             <name>onap-repository-snapshots</name>
-            <url>https://nexus.onap.org/content/repositories/snapshots</url>
+            <url>${onap.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -251,7 +299,6 @@
     <build>
         <pluginManagement>
             <plugins>
-
                 <!-- Plugins from ONAP oparent -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -262,7 +309,6 @@
                         <skip/>
                     </configuration>
                 </plugin>
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
@@ -338,8 +384,7 @@
                                 <!-- Use Google Java Style Guide: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
                                     with minor changes -->
                                 <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
-                                <!-- <sourceDirectory> is needed so that checkstyle ignores the generated
-                                    sources directory -->
+                                <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
                                 <sourceDirectory>${project.build.sourceDirectory}/src/main/java</sourceDirectory>
                                 <includeResources>true</includeResources>
                                 <includeTestSourceDirectory>true</includeTestSourceDirectory>
@@ -371,8 +416,7 @@
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <version>2.19.1</version>
                     <executions>
-                        <!-- Ensures that both integration-test and verify goals of the Failsafe
-                            Maven plugin are executed. -->
+                        <!-- Ensures that both integration-test and verify goals of the Failsafe Maven plugin are executed. -->
                         <execution>
                             <id>integration-tests</id>
                             <goals>
@@ -424,7 +468,6 @@
                                 <artifactId>antlr4-runtime</artifactId>
                                 <version>${antlr.version}</version>
                             </additionalDependency>
-
                             <additionalDependency>
                                 <groupId>com.sun.jersey</groupId>
                                 <artifactId>jersey-client</artifactId>
@@ -452,7 +495,6 @@
                             </additionalDependency>
                         </additionalDependencies>
                     </configuration>
-
                     <executions>
                         <execution>
                             <id>aggregate</id>
@@ -460,7 +502,6 @@
                                 <goal>aggregate</goal>
                             </goals>
                             <phase>site</phase>
-
                         </execution>
                     </executions>
                 </plugin>
@@ -478,8 +519,8 @@
                     </configuration>
                 </plugin>
             </plugins>
-
         </pluginManagement>
+
         <plugins>
             <!-- Plugins from ONAP oparent -->
             <!-- Jacoco / Sonar -->
@@ -496,13 +537,11 @@
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
                             <destFile>${project.build.directory}/code-coverage/jacoco-ut.exec</destFile>
-                            <!-- Sets the name of the property containing the settings for JaCoCo
-                                                                 runtime agent. -->
+                            <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>surefireArgLine</propertyName>
                         </configuration>
                     </execution>
-                    <!-- Ensures that the code coverage report for unit tests is created
-                                                 after unit tests have been run. -->
+                    <!-- Ensures that the code coverage report for unit tests is created after unit tests have been run. -->
                     <execution>
                         <id>post-unit-test</id>
                         <phase>test</phase>
@@ -525,13 +564,11 @@
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
                             <destFile>${project.build.directory}/code-coverage/jacoco-it.exec</destFile>
-                            <!-- Sets the name of the property containing the settings for JaCoCo
-                                                                 runtime agent. -->
+                            <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>failsafeArgLine</propertyName>
                         </configuration>
                     </execution>
-                    <!-- Ensures that the code coverage report for integration tests after
-                                                 integration tests have been run. -->
+                    <!-- Ensures that the code coverage report for integration tests after integration tests have been run. -->
                     <execution>
                         <id>post-integration-test</id>
                         <phase>post-integration-test</phase>
@@ -692,7 +729,6 @@
                     </reportSet>
                 </reportSets>
             </plugin>
-
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.17</version>
@@ -834,7 +870,6 @@
                                 <configuration>
                                     <exportAntProperties>true</exportAntProperties>
                                     <tasks>
-
                                         <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath"/>
                                         <condition property="is_windows" value="true">
                                             <os family="windows"/>
@@ -951,6 +986,47 @@
                     <version>1.0.0</version>
                 </dependency>
             </dependencies>
+        </profile>
+        <profile>
+            <!-- http://blog2.vorburger.ch/2016/06/improve-maven-build-speed-with-q.html
+                 q = http://memory-alpha.wikia.com/wiki/Q ;)
+
+                 The Quick profile is used during incremental local development, when you want to "just get that JAR built",
+                 which is very handy e.g. for fast hot reloading cycles in Karaf with bundle watch.  It (intentionally!) skips
+                 tests, quality checks etc. which are great and useful to run before finally submitting changes to Gerrit, and
+                 which all must run on Gerrit, but which are overhead during ongoing fast iterative local development.
+
+                 Note that the idea here is that your IDE will already have run quality checks such as e.g. Checkstyle
+                 while you typed the code anyway.  Similarly, if you wrote a test, you'll probably already have compiled and run it
+                 from your IDE, so when you want the OSGi bundle JAR for Karaf, ASAP, you typically don't want all that to run again.
+              -->
+            <id>q</id>
+            <properties>
+                <skipTests>true</skipTests>
+                <!-- But NOT <maven.test.skip>true, as that's for compiling, not running, tests;
+                     and that's usually quick.  Skipping test compilation with -Pq with maven.test.skip would be
+                     particularly confusing when used in a project with maven-jar-plugin <goal>test-jar, so don't.)  -->
+                <skipIT>true</skipIT>
+                <skipITs>true</skipITs>
+                <skip.karaf.featureTest>true</skip.karaf.featureTest>
+                <jacoco.skip>true</jacoco.skip>
+                <maven.javadoc.skip>true</maven.javadoc.skip>
+                <maven.source.skip>true</maven.source.skip>
+                <checkstyle.skip>true</checkstyle.skip>
+                <findbugs.skip>true</findbugs.skip>
+                <spotbugs.skip>true</spotbugs.skip>
+                <pmd.skip>true</pmd.skip>
+                <cpd.skip>true</cpd.skip>
+                <maven.site.skip>true</maven.site.skip>
+                <invoker.skip>true</invoker.skip>
+                <enforcer.skip>true</enforcer.skip>
+                <duplicate-finder.skip>true</duplicate-finder.skip>
+                <mdsal.skip.verbose>true</mdsal.skip.verbose> <!-- Bug 6236 -->
+                <maven.gitcommitid.skip>true</maven.gitcommitid.skip>
+                <modernizer.skip>true</modernizer.skip>
+                <format.skipExecute>true</format.skipExecute>
+                <format.skipValidate>true</format.skipValidate>
+            </properties>
         </profile>
         <profile>
             <id>sonar-jacoco-aggregate</id>

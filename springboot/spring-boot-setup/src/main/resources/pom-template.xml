@@ -2,23 +2,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/setup/src/main/template/pom-template.xml
+    <!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/springboot/spring-boot-setup/src/main/template/pom-template.xml
         Any updates needed should be made to that template and not to the generated
         pom.xml file -->
     <parent>
-        <groupId>org.opendaylight.mdsal</groupId>
-        <artifactId>binding-parent</artifactId>
-        <version>3.0.8</version>
+        <groupId>${springbootparent.groupId}</groupId>
+        <artifactId>${springbootparent.artifactId}</artifactId>
+        <version>${springbootparent.version}</version>
         <relativePath/>
     </parent>
 
     <groupId>org.onap.ccsdk.parent</groupId>
-    <artifactId>binding-parent</artifactId>
-    <version>1.5.2-SNAPSHOT</version>
+    <artifactId>${springboot.project.artifactId}</artifactId>
+    <version>${project.version}</version>
     <packaging>pom</packaging>
 
-    <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
-    <description>Root POM to be used in place of odlparent for CCSDK based projects</description>
+    <name>ONAP :: \${project.groupId} :: \${project.artifactId}</name>
+    <description>Root POM to be used in place of spring-boot parent for CCSDK based projects</description>
     <url>http://wiki.onap.org</url>
     <organization>
         <name>ONAP</name>
@@ -31,11 +31,11 @@
     <distributionManagement>
         <repository>
             <id>ecomp-releases</id>
-            <url>${onap.nexus.release-url}</url>
+            <url>\${onap.nexus.release-url}</url>
         </repository>
         <snapshotRepository>
             <id>ecomp-snapshots</id>
-            <url>${onap.nexus.snapshot-url}</url>
+            <url>\${onap.nexus.snapshot-url}</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -45,26 +45,26 @@
         <sonar-jacoco-listeners.version>3.2</sonar-jacoco-listeners.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
         <!-- Default Sonar configuration -->
-        <sonar.coverage.jacoco.xmlReportPaths>${project.reporting.outputDirectory}/jacoco-ut/jacoco.xml,${project.reporting.outputDirectory}/jacoco-it/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>\${project.reporting.outputDirectory}/jacoco-ut/jacoco.xml,\${project.reporting.outputDirectory}/jacoco-it/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
         <!-- Note: This list should match jacoco-maven-plugin's exclusion list below -->
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
 
         <!-- Jacoco properties -->
         <jacoco.version>0.8.5</jacoco.version>
-
         <!-- properties from oparent -->
+
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
         <!-- sitePath may be overridden in the inheriting POM if desired -->
-        <sitePath>/content/sites/site/${project.groupId}/${project.artifactId}/${project.version}</sitePath>
+        <sitePath>/content/sites/site/\${project.groupId}/\${project.artifactId}/\${project.version}</sitePath>
 
         <!-- If following file exist, auto-generation of swagger.json will be done -->
-        <swagger-properties>${basedir}/src/main/resources/swagger.properties</swagger-properties>
+        <swagger-properties>\${basedir}/src/main/resources/swagger.properties</swagger-properties>
         <!-- If following file exist, auto-generation of sdk will be done -->
-        <swagger-json>${basedir}/src/main/resources/swagger.json</swagger-json>
+        <swagger-json>\${basedir}/src/main/resources/swagger.json</swagger-json>
         <!-- end of properties from oparent -->
 
         <!-- ONAP repositories -->
@@ -78,11 +78,6 @@
         <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
 
-        <!-- OpenDaylight repositories -->
-        <opendaylight.nexus.public-url>https://nexus.opendaylight.org/content/repositories/public/</opendaylight.nexus.public-url>
-        <opendaylight.nexus.snapshot-url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</opendaylight.nexus.snapshot-url>
-
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version.source>1.8</java.version.source>
         <java.version.target>1.8</java.version.target>
         <bundle.plugin.version>2.5.0</bundle.plugin.version>
@@ -102,84 +97,48 @@
         <ccsdk.sli.northbound.version>0.7.1-SNAPSHOT</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>0.7.1-SNAPSHOT</ccsdk.sli.plugins.version>
         <ccsdk.distribution.version>0.7.1-SNAPSHOT</ccsdk.distribution.version>
-        <sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
-        <sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
-        <sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
-        <sdnctl.mdsal.resource.version>${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
-        <sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
+        <sdnctl.sli.version>\${ccsdk.sli.core.version}</sdnctl.sli.version>
+        <sdnctl.aai.service.version>\${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
+        <sdnctl.dblib.version>\${ccsdk.sli.core.version}</sdnctl.dblib.version>
+        <sdnctl.mdsal.resource.version>\${ccsdk.sli.adaptors.version}</sdnctl.mdsal.resource.version>
+        <sdnctl.slipluginutils.version>\${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
 
-        <!-- Support libraries used by OpenDaylight -->
-        <odl.controller.mdsal.version>1.9.1</odl.controller.mdsal.version>
-        <odl.mdsal.version>3.0.8</odl.mdsal.version>
-        <odl.mdsal.model.version>1.0.8</odl.mdsal.model.version>
-        <odl.netconf.restconf.version>1.9.1</odl.netconf.restconf.version>
-        <odl.netconf.netconf.version>1.6.1</odl.netconf.netconf.version>
-        <odl.netconf.sal.rest.docgen.version>1.9.1</odl.netconf.sal.rest.docgen.version>
+        <!-- Spring versions -->
+        <spring.boot.version>${springbootparent.version}</spring.boot.version>
+        <spring.version>${spring.version}</spring.version>
 
-        <!-- Used by aaa, vtn -->
-        <commons.codec.version>1.12</commons.codec.version>
-        <!-- Used by netconf, ovsdb -->
-        <commons.lang3.version>3.8.1</commons.lang3.version>
-        <!-- Used by sfc, snmp4sdn; see also affinity, toolkit -->
-        <commons.lang.version>2.6</commons.lang.version>
-        <!-- Used by neutron; see also controller, vtn -->
-        <commons.net.version>3.6</commons.net.version>
-        <!-- Used by neutron -->
-        <eclipse.persistence.version>2.7.3</eclipse.persistence.version>
-        <!-- Used by aaa -->
-        <felix.dependencymanager.version>4.4.1</felix.dependencymanager.version>
-        <!-- Used by lacp, netconf, ovsdb, sfc, toolkit; see also vtn -->
-        <gson.version>2.8.5</gson.version>
-        <!-- Used by aaa, dlux, persistence, snmp4sdn, sxp -->
-        <guava.version>25.1-jre</guava.version>
-        <!-- Used by aaa, alto, netconf, ovsdb, sfc; see also affinity, defense4all,
-            integration/distribution, snmp4sdn, toolkit, ttp -->
-        <jackson.version>2.9.8</jackson.version>
-        <!-- Used by snmp4sdn, yangtools -->
-        <javassist.version>3.24.1-GA</javassist.version>
-
-        <!-- FIXME remove all dependencies for jersey 1.17 after migration all projects -->
-        <!-- Used by aaa, alto, netconf, neutron, sfc; see also affinity, defense4all, snmp4sdn, toolkit -->
-        <jersey.version>2.25.1</jersey.version>
-        <!-- Used by sfc -->
-        <jersey.client.version>2.25.1</jersey.client.version>
-
-        <!-- New packages for jersey migration 1.17 to 2.8 -->
-        <!-- appache.geronimo.bundle for DocGen -->
-        <!-- Used by aaa, iotdm, netconf, ovsdb, sfc -->
-        <org.json.version>20131018</org.json.version>
-
-        <!-- Used everywhere -->
-        <junit.version>4.12</junit.version>
-        <!-- Used by coretutorials, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
-        <logback.version>1.2.3</logback.version>
-        <!-- Used by nic, sfc, sxp, tsdr -->
-        <mockito.version>1.10.19</mockito.version>
-        <!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
-        <netty.version>4.1.34.Final</netty.version>
-        <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
-        <slf4j.version>1.7.25</slf4j.version>
-        <!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit, tsdr, ttp -->
-        <spring.version>4.3.24.RELEASE</spring.version>
-
-        <!-- Extra support libraries used by SDN-C -->
-        <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
-        <antlr.version>4.7.2</antlr.version>
-
-        <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
+        <!-- Kotlin versions -->
+        <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
+        <kotlin.version>1.3.61</kotlin.version>
+        <kotlin.maven.version>1.3.61</kotlin.maven.version>
+        <kotlin.couroutines.version>1.3.3</kotlin.couroutines.version>
+        <kotlinpoet.version>1.5.0</kotlinpoet.version>
+        <kroto-plus.version>0.5.0</kroto-plus.version>
+        <nats.version>2.6.6</nats.version>
+        <nats.streaming.version>2.2.3</nats.streaming.version>
+        <mockk.version>1.9.3</mockk.version>
 
         <!-- Managed dependency versions -->
+        <antlr.version>4.7.2</antlr.version>
+        <commons.lang.version>2.6</commons.lang.version>
         <apache.httpcomponents.core.version>4.4.12</apache.httpcomponents.core.version>
         <apache.httpcomponents.client.version>4.5.10</apache.httpcomponents.client.version>
         <derby.version>10.14.2.0</derby.version>
         <eelf.version>1.0.0</eelf.version>
-        <grpc.version>1.21.1</grpc.version>
+        <grpc.version>1.25.0</grpc.version>
+        <protobuff.java.version>3.10.0</protobuff.java.version>
+        <protobuff.java.utils.version>3.10.0</protobuff.java.utils.version>
+        <atomix.version>3.1.5</atomix.version>
+        <jersey.version>2.25.1</jersey.version>
+        <jersey.client.version>2.25.1</jersey.client.version>
+        <jettison.version>1.3.8</jettison.version>
+        <junit.version>4.12</junit.version>
+        <logback.version>1.2.3</logback.version>
         <mariadb.connector.version>2.4.4</mariadb.connector.version>
         <mariadb4j.version>2.4.0</mariadb4j.version>
-        <testng.version>6.14.3</testng.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <testng.version>6.11</testng.version>
         <tomcat-jdbc.version>9.0.27</tomcat-jdbc.version>
-        <jetty.version>9.4.12.v20180830</jetty.version>
-        <skip.karaf.featureTest>true</skip.karaf.featureTest>
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
     </properties>
 
@@ -190,20 +149,55 @@
             a bug than a feature, but this is how maven 3.6 works -->
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
-                <artifactId>dependencies-odl-bom</artifactId>
-                <version>1.5.2-SNAPSHOT</version>
+                <artifactId>dependencies-bom</artifactId>
+                <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
+                <artifactId>sli-common</artifactId>
+                <version>\${ccsdk.sli.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
+                <artifactId>sli-provider</artifactId>
+                <version>\${ccsdk.sli.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
+                <artifactId>ccsdk-sli</artifactId>
+                <version>\${ccsdk.sli.core.version}</version>
+                <type>xml</type>
+                <classifier>features</classifier>
+            </dependency>
+            <dependency>
+                <groupId>org.onap.ccsdk.sli.adaptors</groupId>
+                <artifactId>aai-service-provider</artifactId>
+                <version>\${sdnctl.aai.service.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.onap.ccsdk.sli.core</groupId>
+                <artifactId>dblib-provider</artifactId>
+                <version>\${sdnctl.dblib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>\${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.onap.logging-analytics</groupId>
                 <artifactId>logging-slf4j</artifactId>
-                <version>${logging-analytics.version}</version>
+                <version>\${logging-analytics.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.onap.logging-analytics</groupId>
                 <artifactId>logging-filter-base</artifactId>
-                <version>${logging-analytics.version}</version>
+                <version>\${logging-analytics.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -211,7 +205,7 @@
     <repositories>
         <repository>
             <id>onap-public</id>
-            <url>${onap.nexus.public-url}</url>
+            <url>\${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -223,7 +217,7 @@
         </repository>
         <repository>
             <id>onap-staging</id>
-            <url>${onap.nexus.staging-url}</url>
+            <url>\${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -236,7 +230,7 @@
         <repository>
             <id>ecomp-release</id>
             <name>onap-repository-releases</name>
-            <url>${onap.nexus.release-url}</url>
+            <url>\${onap.nexus.release-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -248,7 +242,7 @@
         <repository>
             <id>ecomp-snapshot</id>
             <name>onap-repository-snapshots</name>
-            <url>${onap.nexus.snapshot-url}</url>
+            <url>\${onap.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -256,35 +250,11 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>opendaylight-mirror</id>
-            <name>opendaylight-mirror</name>
-            <url>${opendaylight.nexus.public-url}</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>opendaylight-snapshot</id>
-            <name>opendaylight-snapshot</name>
-            <url>${opendaylight.nexus.snapshot-url}</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-
     </repositories>
     <pluginRepositories>
         <pluginRepository>
             <id>onap-public</id>
-            <url>${onap.nexus.public-url}</url>
+            <url>\${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -294,7 +264,7 @@
         </pluginRepository>
         <pluginRepository>
             <id>onap-staging</id>
-            <url>${onap.nexus.staging-url}</url>
+            <url>\${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -304,30 +274,7 @@
         </pluginRepository>
         <pluginRepository>
             <id>onap-snapshot</id>
-            <url>${onap.nexus.snapshot-url}</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>opendaylight-mirror</id>
-            <name>opendaylight-mirror</name>
-            <url>${opendaylight.nexus.public-url}</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>opendaylight-snapshot</id>
-            <name>opendaylight-snapshot</name>
-            <url>${opendaylight.nexus.snapshot-url}</url>
+            <url>\${onap.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -352,7 +299,7 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!-- Plugins from ONAP version (parent of oparent) -->
+                <!-- Plugins from ONAP oparent -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
@@ -372,63 +319,92 @@
                             <artifactId>wagon-webdav-jackrabbit</artifactId>
                             <version>2.10</version>
                         </dependency>
+                        <dependency>
+                            <groupId>org.apache.maven.doxia</groupId>
+                            <artifactId>doxia-core</artifactId>
+                            <version>1.7</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.maven.doxia</groupId>
+                            <artifactId>doxia-sink-api</artifactId>
+                            <version>1.7</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.maven.doxia</groupId>
+                            <artifactId>doxia-logging-api</artifactId>
+                            <version>1.7</version>
+                        </dependency>
                     </dependencies>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.0.0-M2</version>
                     <executions>
                         <execution>
-                            <id>enforce-property</id>
+                            <id>attach-descriptor</id>
                             <goals>
-                                <goal>enforce</goal>
+                                <goal>attach-descriptor</goal>
                             </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>2.17</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.onap.oparent</groupId>
+                            <artifactId>checkstyle</artifactId>
+                            <version>1.1.1</version>
+                        </dependency>
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <id>check-license</id>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                            <phase>process-sources</phase>
                             <configuration>
-                                <rules>
-                                    <requireProperty>
-                                        <property>onap.nexus.url</property>
-                                        <message>You must set a onap.nexus.url property in your
-                                            ~/.m2/settings.xml. See oparent/settings.xml for an example.
-                                        </message>
-                                    </requireProperty>
-                                </rules>
-                                <fail>true</fail>
+                                <configLocation>onap-checkstyle/check-license.xml</configLocation>
+                                <headerLocation>onap-checkstyle/apache-license-2.regexp.txt</headerLocation>
+                                <includeResources>false</includeResources>
+                                <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                                <includeTestResources>false</includeTestResources>
+                                <sourceDirectory>\${project.build.sourceDirectory}</sourceDirectory>
+                                <excludes>
+                                </excludes>
+                                <failsOnError>false</failsOnError>
+                                <consoleOutput>true</consoleOutput>
                             </configuration>
                         </execution>
                         <execution>
-                            <id>enforce-no-snapshots</id>
+                            <id>check-style</id>
                             <goals>
-                                <goal>enforce</goal>
+                                <goal>check</goal>
                             </goals>
+                            <phase>process-sources</phase>
                             <configuration>
-                                <rules>
-                                    <requireReleaseDeps>
-                                        <failWhenParentIsSnapshot>false</failWhenParentIsSnapshot>
-                                        <onlyWhenRelease>true</onlyWhenRelease>
-                                        <level>WARN</level>
-                                    </requireReleaseDeps>
-                                </rules>
+                                <!-- Use Google Java Style Guide: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
+                                    with minor changes -->
+                                <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
+                                <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
+                                <sourceDirectory>\${project.build.sourceDirectory}/src/main/java</sourceDirectory>
+                                <includeResources>true</includeResources>
+                                <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                                <includeTestResources>true</includeTestResources>
+                                <excludes>
+                                </excludes>
+                                <failsOnError>false</failsOnError>
+                                <consoleOutput>true</consoleOutput>
                             </configuration>
                         </execution>
                     </executions>
                 </plugin>
-                <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
-                <plugin>
-                    <groupId>org.sonarsource.scanner.maven</groupId>
-                    <artifactId>sonar-maven-plugin</artifactId>
-                    <version>${sonar.scanner.version}</version>
-                </plugin>
-                <!-- end of plugins from ONAP version (parent of oparent) -->
 
-                <!-- Plugins from ONAP oparent -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.22.0</version>
+                    <version>2.19.1</version>
                     <configuration>
                         <!-- Sets the VM argument line used when unit tests are run. -->
-                        <argLine>${surefireArgLine}</argLine>
+                        <argLine>\${surefireArgLine}</argLine>
                         <!-- Excludes integration tests when unit tests are run. -->
                         <excludes>
                             <exclude>**/IT*.java</exclude>
@@ -438,10 +414,9 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.22.0</version>
+                    <version>2.19.1</version>
                     <executions>
-                        <!-- Ensures that both integration-test and verify goals of the Failsafe
-                            Maven plugin are executed. -->
+                        <!-- Ensures that both integration-test and verify goals of the Failsafe Maven plugin are executed. -->
                         <execution>
                             <id>integration-tests</id>
                             <goals>
@@ -450,52 +425,85 @@
                             </goals>
                             <configuration>
                                 <!-- Sets the VM argument line used when integration tests are run. -->
-                                <argLine>${failsafeArgLine}</argLine>
+                                <argLine>\${failsafeArgLine}</argLine>
                             </configuration>
                         </execution>
                     </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>\${maven.compile.plugin.version}</version>
+                    <configuration>
+                        <source>\${java.version.source}</source>
+                        <target>\${java.version.target}</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.6.0.1398</version>
                 </plugin>
 
                 <!-- End of plugins from ONAP oparent -->
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>properties-maven-plugin</artifactId>
-                    <version>1.0.0</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>set-system-properties</goal>
-                            </goals>
-                            <configuration>
-                                <properties>
-                                    <property>
-                                        <name>maven.wagon.http.ssl.allowall</name>
-                                        <value>${ssl.allowall}</value>
-                                    </property>
-                                    <property>
-                                        <name>maven.wagon.http.ssl.insecure</name>
-                                        <value>${ssl.insecure}</value>
-                                    </property>
-                                </properties>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
 
                 <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>versions-maven-plugin</artifactId>
-                    <version>2.5</version>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.10.4</version>
                     <configuration>
-                        <processAllModules>true</processAllModules>
+                        <additionalDependencies>
+                            <additionalDependency>
+                                <groupId>org.slf4j</groupId>
+                                <artifactId>slf4j-api</artifactId>
+                                <version>\${slf4j.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.antlr</groupId>
+                                <artifactId>antlr4</artifactId>
+                                <version>\${antlr.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.antlr</groupId>
+                                <artifactId>antlr4-runtime</artifactId>
+                                <version>\${antlr.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>com.sun.jersey</groupId>
+                                <artifactId>jersey-client</artifactId>
+                                <version>\${jersey.client.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>com.sun.jersey</groupId>
+                                <artifactId>jersey-core</artifactId>
+                                <version>\${jersey.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.apache.httpcomponents</groupId>
+                                <artifactId>httpcore-osgi</artifactId>
+                                <version>\${apache.httpcomponents.core.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>org.apache.httpcomponents</groupId>
+                                <artifactId>httpclient-osgi</artifactId>
+                                <version>\${apache.httpcomponents.client.version}</version>
+                            </additionalDependency>
+                            <additionalDependency>
+                                <groupId>commons-lang</groupId>
+                                <artifactId>commons-lang</artifactId>
+                                <version>\${commons.lang.version}</version>
+                            </additionalDependency>
+                        </additionalDependencies>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-scm-plugin</artifactId>
-                    <version>1.8.1</version>
-                    <configuration>
-                        <tag>${project.artifactId}-${project.version}</tag>
-                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>aggregate</id>
+                            <goals>
+                                <goal>aggregate</goal>
+                            </goals>
+                            <phase>site</phase>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>com.github.ferstl</groupId>
@@ -503,8 +511,8 @@
                     <version>3.3.0</version>
                     <configuration>
                         <graphFormat>text</graphFormat>
-                        <outputFileName>${dependency-list.file}</outputFileName>
-                        <outputDirectory>${project.basedir}</outputDirectory>
+                        <outputFileName>\${dependency-list.file}</outputFileName>
+                        <outputDirectory>\${project.basedir}</outputDirectory>
                         <transitiveExcludes>*</transitiveExcludes>
                         <showVersions>true</showVersions>
                         <showGroupIds>true</showGroupIds>
@@ -512,86 +520,14 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
         <plugins>
-
-            <!-- Plugins from oparent version (parent of oparent) -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-            </plugin>
-            <!-- end of plugins from oparent version (parent of oparent) -->
-
-            <!-- Plugins from oparent -->
-            <plugin>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.onap.oparent</groupId>
-                        <artifactId>checkstyle</artifactId>
-                        <version>1.2.2</version>
-                    </dependency>
-                </dependencies>
-                <executions>
-                    <execution>
-                        <id>onap-license</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <phase>process-sources</phase>
-                        <configuration>
-                            <configLocation>onap-checkstyle/check-license.xml</configLocation>
-                            <includeResources>false</includeResources>
-                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                            <includeTestResources>false</includeTestResources>
-                            <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
-                            <excludes>
-                            </excludes>
-                            <consoleOutput>true</consoleOutput>
-                            <failOnViolation>false</failOnViolation>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>onap-java-style</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <phase>process-sources</phase>
-                        <configuration>
-                            <!-- Use Google Java Style Guide: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
-                                with minor changes -->
-                            <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
-                            <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
-                            <sourceDirectory>${project.build.sourceDirectory}/src/main/java</sourceDirectory>
-                            <includeResources>true</includeResources>
-                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                            <includeTestResources>true</includeTestResources>
-                            <excludes>
-                            </excludes>
-                            <consoleOutput>true</consoleOutput>
-                            <failOnViolation>false</failOnViolation>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.12</version>
-            </plugin>
+            <!-- Plugins from ONAP oparent -->
             <!-- Jacoco / Sonar -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco.version}</version>
+                <version>\${jacoco.version}</version>
                 <executions>
                     <execution>
                         <id>pre-unit-test</id>
@@ -600,7 +536,7 @@
                         </goals>
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
-                            <destFile>${project.build.directory}/code-coverage/jacoco-ut.exec</destFile>
+                            <destFile>\${project.build.directory}/code-coverage/jacoco-ut.exec</destFile>
                             <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>surefireArgLine</propertyName>
                         </configuration>
@@ -614,9 +550,9 @@
                         </goals>
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
-                            <dataFile>${project.build.directory}/code-coverage/jacoco-ut.exec</dataFile>
+                            <dataFile>\${project.build.directory}/code-coverage/jacoco-ut.exec</dataFile>
                             <!-- Sets the output directory for the code coverage report. -->
-                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
+                            <outputDirectory>\${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
                         </configuration>
                     </execution>
                     <execution>
@@ -627,7 +563,7 @@
                         </goals>
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
-                            <destFile>${project.build.directory}/code-coverage/jacoco-it.exec</destFile>
+                            <destFile>\${project.build.directory}/code-coverage/jacoco-it.exec</destFile>
                             <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>failsafeArgLine</propertyName>
                         </configuration>
@@ -641,9 +577,9 @@
                         </goals>
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
-                            <dataFile>${project.build.directory}/code-coverage/jacoco-it.exec</dataFile>
+                            <dataFile>\${project.build.directory}/code-coverage/jacoco-it.exec</dataFile>
                             <!-- Sets the output directory for the code coverage report. -->
-                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
+                            <outputDirectory>\${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
                         </configuration>
                     </execution>
                     <execution>
@@ -682,6 +618,19 @@
                 </executions>
             </plugin>
             <plugin>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.12</version>
+            </plugin>
+            <!-- Jacoco / Sonar -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
@@ -689,22 +638,46 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
             </plugin>
-            <!-- end of plugins from oparent -->
+
+            <!-- End of plugins from ONAP oparent -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.4</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0.0</version>
                 <executions>
                     <execution>
-                        <id>attach-javadocs</id>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>set-system-properties</goal>
                         </goals>
                         <configuration>
-                            <additionalparam>-Xdoclint:none</additionalparam>
+                            <properties>
+                                <property>
+                                    <name>maven.wagon.http.ssl.allowall</name>
+                                    <value>\${ssl.allowall}</value>
+                                </property>
+                                <property>
+                                    <name>maven.wagon.http.ssl.insecure</name>
+                                    <value>\${ssl.insecure}</value>
+                                </property>
+                            </properties>
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <processAllModules>true</processAllModules>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.8.1</version>
+                <configuration>
+                    <tag>\${project.artifactId}-\${project.version}</tag>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -716,21 +689,72 @@
                 <version>2.10.4</version>
                 <configuration>
                     <failOnError>false</failOnError>
-                    <additionalparam>-Xdoclint:none</additionalparam>
+                    <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+                    <docletArtifact>
+                        <groupId>org.umlgraph</groupId>
+                        <artifactId>umlgraph</artifactId>
+                        <version>5.6</version>
+                    </docletArtifact>
+                    <additionalparam>-views</additionalparam>
+                    <useStandardDocletOptions>true</useStandardDocletOptions>
+                    <excludePackageNames>org.opendaylight.*</excludePackageNames>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco.version}</version>
                 <reportSets>
                     <reportSet>
                         <reports>
-                            <!-- select non-aggregate reports -->
-                            <report>report</report>
+                            <report>javadoc-no-fork</report>
+                            <report>test-javadoc-no-fork</report>
+                        </reports>
+                    </reportSet>
+                    <reportSet>
+                        <id>aggregate</id>
+                        <reports>
+                            <report>aggregate</report>
+                            <report>test-aggregate</report>
                         </reports>
                     </reportSet>
                 </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.3</version>
+                <reportSets>
+                    <reportSet>
+                        <id>aggregate</id>
+                        <reports>
+                            <report>aggregate</report>
+                            <report>test-aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.17</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-changelog-plugin</artifactId>
+                <version>2.3</version>
+                <reportSets>
+                    <reportSet>
+                        <id>dual-report</id>
+                        <configuration>
+                            <type>range</type>
+                            <range>30</range>
+                        </configuration>
+                        <reports>
+                            <report>changelog</report>
+                            <report>file-activity</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>taglist-maven-plugin</artifactId>
+                <version>2.4</version>
             </plugin>
         </plugins>
     </reporting>
@@ -741,7 +765,7 @@
             <id>generate-json</id>
             <activation>
                 <file>
-                    <exists>${swagger-properties}</exists>
+                    <exists>\${swagger-properties}</exists>
                 </file>
                 <property>
                     <name>swagger-sdk.generate-json</name>
@@ -761,7 +785,7 @@
                                 </goals>
                                 <configuration>
                                     <files>
-                                        <file>${basedir}/src/main/resources/swagger.properties</file>
+                                        <file>\${basedir}/src/main/resources/swagger.properties</file>
                                     </files>
                                 </configuration>
                             </execution>
@@ -774,19 +798,19 @@
                         <configuration>
                             <apiSources>
                                 <apiSource>
-                                    <locations>${api-rest-package}</locations>
+                                    <locations>\${api-rest-package}</locations>
                                     <schemes>http,https</schemes>
-                                    <host>${api-host-ip}:${api-host-port}</host>
-                                    <basePath>${api-base-path}</basePath>
+                                    <host>\${api-host-ip}:\${api-host-port}</host>
+                                    <basePath>\${api-base-path}</basePath>
                                     <info>
-                                        <title>${api-title}</title>
-                                        <version>${api-version}</version>
-                                        <description>${api-description}</description>
+                                        <title>\${api-title}</title>
+                                        <version>\${api-version}</version>
+                                        <description>\${api-description}</description>
                                         <license>
-                                            <name>${api-license}</name>
+                                            <name>\${api-license}</name>
                                         </license>
                                     </info>
-                                    <swaggerDirectory>${basedir}/src/main/resources</swaggerDirectory>
+                                    <swaggerDirectory>\${basedir}/src/main/resources</swaggerDirectory>
                                 </apiSource>
                             </apiSources>
                         </configuration>
@@ -811,10 +835,10 @@
                                     <goal>install-file</goal>
                                 </goals>
                                 <configuration>
-                                    <file>${basedir}/src/main/resources/swagger.json</file>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>${project.artifactId}-swagger-schema</artifactId>
-                                    <version>${project.version}</version>
+                                    <file>\${basedir}/src/main/resources/swagger.json</file>
+                                    <groupId>\${project.groupId}</groupId>
+                                    <artifactId>\${project.artifactId}-swagger-schema</artifactId>
+                                    <version>\${project.version}</version>
                                     <packaging>json</packaging>
                                 </configuration>
                             </execution>
@@ -827,7 +851,7 @@
             <id>generate-sdk</id>
             <activation>
                 <file>
-                    <exists>${swagger-json}</exists>
+                    <exists>\${swagger-json}</exists>
                 </file>
                 <property>
                     <name>swagger-sdk.generate-java-sdk</name>
@@ -854,21 +878,17 @@
                                             <os family="unix"/>
                                         </condition>
                                         <if>
-                                            <equals arg1="${is_windows}" arg2="true"/>
+                                            <equals arg1="\${is_windows}" arg2="true"/>
                                             <then>
                                                 <property name="swagger.sdk.script.file" value="generated-source-script.bat"/>
-                                                <echo file="${project.build.directory}${file.separator}generated-source-script.bat" append="true"
-                                                  message="cd ${project.build.directory}${file.separator}generated-sources${line.separator}"/>
-                                                <echo file="${project.build.directory}${file.separator}generated-source-script.bat" append="true"
-                                                  message="mvn clean install -Dmaven.test.skip=true${line.separator}"/>
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.bat" append="true" message="cd \${project.build.directory}\${file.separator}generated-sources\${line.separator}"/>
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.bat" append="true" message="mvn clean install -Dmaven.test.skip=true\${line.separator}"/>
                                             </then>
                                             <else>
                                                 <property name="swagger.sdk.script.file" value="generated-source-script.sh"/>
-                                                <echo file="${project.build.directory}${file.separator}generated-source-script.sh" append="true"
-                                                  message="cd ${project.build.directory}${file.separator}generated-sources${line.separator}"/>
-                                                <echo file="${project.build.directory}${file.separator}generated-source-script.sh" append="true"
-                                                  message="mvn clean install -Dmaven.test.skip=true${line.separator}"/>
-                                                <chmod file="${project.build.directory}${file.separator}generated-source-script.sh" perm="755"/>
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.sh" append="true" message="cd \${project.build.directory}\${file.separator}generated-sources\${line.separator}"/>
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.sh" append="true" message="mvn clean install -Dmaven.test.skip=true\${line.separator}"/>
+                                                <chmod file="\${project.build.directory}\${file.separator}generated-source-script.sh" perm="755"/>
                                             </else>
                                         </if>
                                     </tasks>
@@ -902,19 +922,19 @@
                                     <goal>generate</goal>
                                 </goals>
                                 <configuration>
-                                    <inputSpec>${basedir}/src/main/resources/swagger.json</inputSpec>
-                                    <output>${project.build.directory}/generated-sources</output>
+                                    <inputSpec>\${basedir}/src/main/resources/swagger.json</inputSpec>
+                                    <output>\${project.build.directory}/generated-sources</output>
                                     <language>java</language>
                                     <configOptions>
                                         <dateLibrary>joda</dateLibrary>
                                     </configOptions>
                                     <library>jersey2</library>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>${project.artifactId}-java-sdk</artifactId>
-                                    <artifactVersion>${project.version}</artifactVersion>
-                                    <modelPackage>${project.groupId}.${project.artifactId}.client.model</modelPackage>
-                                    <apiPackage>${project.groupId}.${project.artifactId}.client.api</apiPackage>
-                                    <invokerPackage>${project.groupId}.${project.artifactId}.client.invoker</invokerPackage>
+                                    <groupId>\${project.groupId}</groupId>
+                                    <artifactId>\${project.artifactId}-java-sdk</artifactId>
+                                    <artifactVersion>\${project.version}</artifactVersion>
+                                    <modelPackage>\${project.groupId}.\${project.artifactId}.client.model</modelPackage>
+                                    <apiPackage>\${project.groupId}.\${project.artifactId}.client.api</apiPackage>
+                                    <invokerPackage>\${project.groupId}.\${project.artifactId}.client.invoker</invokerPackage>
                                 </configuration>
                             </execution>
                         </executions>
@@ -931,7 +951,7 @@
                                     <goal>exec</goal>
                                 </goals>
                                 <configuration>
-                                    <executable>${project.build.directory}${file.separator}${swagger.sdk.script.file}</executable>
+                                    <executable>\${project.build.directory}\${file.separator}\${swagger.sdk.script.file}</executable>
                                 </configuration>
                             </execution>
                         </executions>
@@ -950,7 +970,7 @@
                                 <configuration>
                                     <filesets>
                                         <fileset>
-                                            <directory>${project.build.directory}/generated-sources</directory>
+                                            <directory>\${project.build.directory}/generated-sources</directory>
                                         </fileset>
                                     </filesets>
                                 </configuration>
@@ -966,6 +986,47 @@
                     <version>1.0.0</version>
                 </dependency>
             </dependencies>
+        </profile>
+        <profile>
+            <!-- http://blog2.vorburger.ch/2016/06/improve-maven-build-speed-with-q.html
+                 q = http://memory-alpha.wikia.com/wiki/Q ;)
+
+                 The Quick profile is used during incremental local development, when you want to "just get that JAR built",
+                 which is very handy e.g. for fast hot reloading cycles in Karaf with bundle watch.  It (intentionally!) skips
+                 tests, quality checks etc. which are great and useful to run before finally submitting changes to Gerrit, and
+                 which all must run on Gerrit, but which are overhead during ongoing fast iterative local development.
+
+                 Note that the idea here is that your IDE will already have run quality checks such as e.g. Checkstyle
+                 while you typed the code anyway.  Similarly, if you wrote a test, you'll probably already have compiled and run it
+                 from your IDE, so when you want the OSGi bundle JAR for Karaf, ASAP, you typically don't want all that to run again.
+              -->
+            <id>q</id>
+            <properties>
+                <skipTests>true</skipTests>
+                <!-- But NOT <maven.test.skip>true, as that's for compiling, not running, tests;
+                     and that's usually quick.  Skipping test compilation with -Pq with maven.test.skip would be
+                     particularly confusing when used in a project with maven-jar-plugin <goal>test-jar, so don't.)  -->
+                <skipIT>true</skipIT>
+                <skipITs>true</skipITs>
+                <skip.karaf.featureTest>true</skip.karaf.featureTest>
+                <jacoco.skip>true</jacoco.skip>
+                <maven.javadoc.skip>true</maven.javadoc.skip>
+                <maven.source.skip>true</maven.source.skip>
+                <checkstyle.skip>true</checkstyle.skip>
+                <findbugs.skip>true</findbugs.skip>
+                <spotbugs.skip>true</spotbugs.skip>
+                <pmd.skip>true</pmd.skip>
+                <cpd.skip>true</cpd.skip>
+                <maven.site.skip>true</maven.site.skip>
+                <invoker.skip>true</invoker.skip>
+                <enforcer.skip>true</enforcer.skip>
+                <duplicate-finder.skip>true</duplicate-finder.skip>
+                <mdsal.skip.verbose>true</mdsal.skip.verbose> <!-- Bug 6236 -->
+                <maven.gitcommitid.skip>true</maven.gitcommitid.skip>
+                <modernizer.skip>true</modernizer.skip>
+                <format.skipExecute>true</format.skipExecute>
+                <format.skipValidate>true</format.skipValidate>
+            </properties>
         </profile>
         <profile>
             <id>sonar-jacoco-aggregate</id>
@@ -990,7 +1051,7 @@
                                     <destFile>${onap.jacoco.aggregateFile}</destFile>
                                     <fileSets>
                                         <fileSet>
-                                            <directory>${project.basedir}</directory>
+                                            <directory>\${project.basedir}</directory>
                                             <includes>
                                                 <include>**/target/code-coverage/*.exec</include>
                                             </includes>
@@ -1004,59 +1065,5 @@
             </build>
         </profile>
         <!-- End of profiles from ONAP oparent -->
-
-        <profile>
-            <id>yang-compile</id>
-            <activation>
-                <file>
-                    <exists>src/main/yang</exists>
-                </file>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.opendaylight.yangtools</groupId>
-                        <artifactId>yang-maven-plugin</artifactId>
-                        <version>2.1.8</version>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.opendaylight.mdsal</groupId>
-                                <artifactId>maven-sal-api-gen-plugin</artifactId>
-                                <version>${odl.mdsal.model.version}</version>
-                                <type>jar</type>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.opendaylight.netconf</groupId>
-                                <artifactId>sal-rest-docgen-maven</artifactId>
-                                <version>${odl.netconf.sal.rest.docgen.version}</version>
-                                <type>jar</type>
-                            </dependency>
-                        </dependencies>
-                        <executions>
-                            <execution>
-                                <id>binding</id>
-                                <goals>
-                                    <goal>generate-sources</goal>
-                                </goals>
-                                <configuration>
-                                    <yangFilesRootDir>${yang.file.directory}</yangFilesRootDir>
-                                    <codeGenerators>
-                                        <generator>
-                                            <codeGeneratorClass>org.opendaylight.mdsal.binding.maven.api.gen.plugin.CodeGeneratorImpl</codeGeneratorClass>
-                                            <outputBaseDir>${salGeneratorPath}</outputBaseDir>
-                                        </generator>
-                                        <generator>
-                                            <codeGeneratorClass>org.opendaylight.netconf.sal.rest.doc.maven.StaticDocGenerator</codeGeneratorClass>
-                                            <outputBaseDir>target/swagger</outputBaseDir>
-                                        </generator>
-                                    </codeGenerators>
-                                    <inspectDependencies>true</inspectDependencies>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
     </profiles>
 </project>
