@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e3d1f915_17ce3e29",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-02-19T22:54:21Z",
+      "side": 0,
+      "message": "Removing these as all are defined in dependencies-odl-bom and being imported in dependency management.",
+      "revId": "9548ff862e5dbe4531e3fcfccd0e472228d7770d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
