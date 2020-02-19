@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.onap.ccsdk.parent</groupId>
+        <artifactId>springboot-aggregator</artifactId>
+        <version>1.5.2-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.onap.ccsdk.parent</groupId>
+    <artifactId>spring-boot-setup</artifactId>
+    <version>1.5.2-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
+    <description>Root POM to be used in place of spring-boot parent for CCSDK based projects</description>
+    <url>http://wiki.onap.org</url>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>create-springboot1-parent-pom</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals><!-- here the phase you need -->
+                        <phase>validate</phase>
+                        <configuration>
+                            <outputDirectory>../springboot1</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>pom-template.xml</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                            <escapeString>\</escapeString>
+                            <filters>
+                                <filter>${basedir}/src/main/properties/springboot1.properties</filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>create-springboot2-parent-pom</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals><!-- here the phase you need -->
+                        <phase>validate</phase>
+                        <configuration>
+                            <outputDirectory>../springboot2</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>pom-template.xml</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                            <escapeString>\</escapeString>
+                            <filters>
+                                <filter>${basedir}/src/main/properties/springboot2.properties</filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.coderplus.maven.plugins</groupId>
+                <artifactId>copy-rename-maven-plugin</artifactId>
+                <version>1.0.1</version>
+                <executions>
+                    <execution>
+                        <id>rename-springboot1-parent-pom</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>rename</goal>
+                        </goals>
+                        <configuration>
+                            <sourceFile>../springboot1/pom-template.xml</sourceFile>
+                            <destinationFile>../springboot1/pom.xml</destinationFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>rename-springboot2-parent-pom</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>rename</goal>
+                        </goals>
+                        <configuration>
+                            <sourceFile>../springboot2/pom-template.xml</sourceFile>
+                            <destinationFile>../springboot2/pom.xml</destinationFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -6,18 +6,18 @@
         Any updates needed should be made to that template and not to the generated
         pom.xml file -->
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.22.RELEASE</version>
+        <groupId>${springbootparent.groupId}</groupId>
+        <artifactId>${springbootparent.artifactId}</artifactId>
+        <version>${springbootparent.version}</version>
         <relativePath/>
     </parent>
 
     <groupId>org.onap.ccsdk.parent</groupId>
-    <artifactId>spring-boot-1-starter-parent</artifactId>
-    <version>1.5.2-SNAPSHOT</version>
+    <artifactId>${springboot.project.artifactId}</artifactId>
+    <version>${project.version}</version>
     <packaging>pom</packaging>
 
-    <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
+    <name>ONAP :: \${project.groupId} :: \${project.artifactId}</name>
     <description>Root POM to be used in place of spring-boot parent for CCSDK based projects</description>
     <url>http://wiki.onap.org</url>
     <organization>
@@ -31,11 +31,11 @@
     <distributionManagement>
         <repository>
             <id>ecomp-releases</id>
-            <url>${onap.nexus.release-url}</url>
+            <url>\${onap.nexus.release-url}</url>
         </repository>
         <snapshotRepository>
             <id>ecomp-snapshots</id>
-            <url>${onap.nexus.snapshot-url}</url>
+            <url>\${onap.nexus.snapshot-url}</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -45,7 +45,7 @@
         <sonar-jacoco-listeners.version>3.2</sonar-jacoco-listeners.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
         <!-- Default Sonar configuration -->
-        <sonar.coverage.jacoco.xmlReportPaths>${project.reporting.outputDirectory}/jacoco-ut/jacoco.xml,${project.reporting.outputDirectory}/jacoco-it/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>\${project.reporting.outputDirectory}/jacoco-ut/jacoco.xml,\${project.reporting.outputDirectory}/jacoco-it/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
         <!-- Note: This list should match jacoco-maven-plugin's exclusion list below -->
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
 
@@ -59,12 +59,12 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
         <!-- sitePath may be overridden in the inheriting POM if desired -->
-        <sitePath>/content/sites/site/${project.groupId}/${project.artifactId}/${project.version}</sitePath>
+        <sitePath>/content/sites/site/\${project.groupId}/\${project.artifactId}/\${project.version}</sitePath>
 
         <!-- If following file exist, auto-generation of swagger.json will be done -->
-        <swagger-properties>${basedir}/src/main/resources/swagger.properties</swagger-properties>
+        <swagger-properties>\${basedir}/src/main/resources/swagger.properties</swagger-properties>
         <!-- If following file exist, auto-generation of sdk will be done -->
-        <swagger-json>${basedir}/src/main/resources/swagger.json</swagger-json>
+        <swagger-json>\${basedir}/src/main/resources/swagger.json</swagger-json>
         <!-- end of properties from oparent -->
 
         <!-- ONAP repositories -->
@@ -99,8 +99,8 @@
         <ccsdk.distribution.version>0.7.1-SNAPSHOT</ccsdk.distribution.version>
 
         <!-- Spring versions -->
-        <spring.boot.version>1.5.22.RELEASE</spring.boot.version>
-        <spring.version>4.3.25.RELEASE</spring.version>
+        <spring.boot.version>${springbootparent.version}</spring.boot.version>
+        <spring.version>${spring.version}</spring.version>
 
         <!-- Kotlin versions -->
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
@@ -144,46 +144,46 @@
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
-                <version>1.5.2-SNAPSHOT</version>
+                <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>sli-common</artifactId>
-                <version>${ccsdk.sli.core.version}</version>
+                <version>\${ccsdk.sli.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>sli-provider</artifactId>
-                <version>${ccsdk.sli.core.version}</version>
+                <version>\${ccsdk.sli.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>ccsdk-sli</artifactId>
-                <version>${ccsdk.sli.core.version}</version>
+                <version>\${ccsdk.sli.core.version}</version>
                 <type>xml</type>
                 <classifier>features</classifier>
             </dependency>
             <dependency>
                 <groupId>org.onap.ccsdk.sli.core</groupId>
                 <artifactId>dblib-provider</artifactId>
-                <version>${ccsdk.sli.core.version}</version>
+                <version>\${ccsdk.sli.core.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.onap.ccsdk.sli.adaptors</groupId>
                 <artifactId>aai-service-provider</artifactId>
-                <version>${ccsdk.sli.adaptors.version}</version>
+                <version>\${ccsdk.sli.adaptors.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.onap.logging-analytics</groupId>
                 <artifactId>logging-slf4j</artifactId>
-                <version>${logging-analytics.version}</version>
+                <version>\${logging-analytics.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.onap.logging-analytics</groupId>
                 <artifactId>logging-filter-base</artifactId>
-                <version>${logging-analytics.version}</version>
+                <version>\${logging-analytics.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -191,7 +191,7 @@
     <repositories>
         <repository>
             <id>onap-public</id>
-            <url>${onap.nexus.public-url}</url>
+            <url>\${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -203,7 +203,7 @@
         </repository>
         <repository>
             <id>onap-staging</id>
-            <url>${onap.nexus.staging-url}</url>
+            <url>\${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -216,7 +216,7 @@
         <repository>
             <id>ecomp-release</id>
             <name>onap-repository-releases</name>
-            <url>${onap.nexus.release-url}</url>
+            <url>\${onap.nexus.release-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -228,7 +228,7 @@
         <repository>
             <id>ecomp-snapshot</id>
             <name>onap-repository-snapshots</name>
-            <url>${onap.nexus.snapshot-url}</url>
+            <url>\${onap.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -240,7 +240,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>onap-public</id>
-            <url>${onap.nexus.public-url}</url>
+            <url>\${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -250,7 +250,7 @@
         </pluginRepository>
         <pluginRepository>
             <id>onap-staging</id>
-            <url>${onap.nexus.staging-url}</url>
+            <url>\${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -260,7 +260,7 @@
         </pluginRepository>
         <pluginRepository>
             <id>onap-snapshot</id>
-            <url>${onap.nexus.snapshot-url}</url>
+            <url>\${onap.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -353,7 +353,7 @@
                                 <includeResources>false</includeResources>
                                 <includeTestSourceDirectory>true</includeTestSourceDirectory>
                                 <includeTestResources>false</includeTestResources>
-                                <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+                                <sourceDirectory>\${project.build.sourceDirectory}</sourceDirectory>
                                 <excludes>
                                 </excludes>
                                 <failsOnError>false</failsOnError>
@@ -371,7 +371,7 @@
                                     with minor changes -->
                                 <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
                                 <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
-                                <sourceDirectory>${project.build.sourceDirectory}/src/main/java</sourceDirectory>
+                                <sourceDirectory>\${project.build.sourceDirectory}/src/main/java</sourceDirectory>
                                 <includeResources>true</includeResources>
                                 <includeTestSourceDirectory>true</includeTestSourceDirectory>
                                 <includeTestResources>true</includeTestResources>
@@ -390,7 +390,7 @@
                     <version>2.19.1</version>
                     <configuration>
                         <!-- Sets the VM argument line used when unit tests are run. -->
-                        <argLine>${surefireArgLine}</argLine>
+                        <argLine>\${surefireArgLine}</argLine>
                         <!-- Excludes integration tests when unit tests are run. -->
                         <excludes>
                             <exclude>**/IT*.java</exclude>
@@ -411,7 +411,7 @@
                             </goals>
                             <configuration>
                                 <!-- Sets the VM argument line used when integration tests are run. -->
-                                <argLine>${failsafeArgLine}</argLine>
+                                <argLine>\${failsafeArgLine}</argLine>
                             </configuration>
                         </execution>
                     </executions>
@@ -419,10 +419,10 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven.compile.plugin.version}</version>
+                    <version>\${maven.compile.plugin.version}</version>
                     <configuration>
-                        <source>${java.version.source}</source>
-                        <target>${java.version.target}</target>
+                        <source>\${java.version.source}</source>
+                        <target>\${java.version.target}</target>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -442,42 +442,42 @@
                             <additionalDependency>
                                 <groupId>org.slf4j</groupId>
                                 <artifactId>slf4j-api</artifactId>
-                                <version>${slf4j.version}</version>
+                                <version>\${slf4j.version}</version>
                             </additionalDependency>
                             <additionalDependency>
                                 <groupId>org.antlr</groupId>
                                 <artifactId>antlr4</artifactId>
-                                <version>${antlr.version}</version>
+                                <version>\${antlr.version}</version>
                             </additionalDependency>
                             <additionalDependency>
                                 <groupId>org.antlr</groupId>
                                 <artifactId>antlr4-runtime</artifactId>
-                                <version>${antlr.version}</version>
+                                <version>\${antlr.version}</version>
                             </additionalDependency>
                             <additionalDependency>
                                 <groupId>com.sun.jersey</groupId>
                                 <artifactId>jersey-client</artifactId>
-                                <version>${jersey.client.version}</version>
+                                <version>\${jersey.client.version}</version>
                             </additionalDependency>
                             <additionalDependency>
                                 <groupId>com.sun.jersey</groupId>
                                 <artifactId>jersey-core</artifactId>
-                                <version>${jersey.version}</version>
+                                <version>\${jersey.version}</version>
                             </additionalDependency>
                             <additionalDependency>
                                 <groupId>org.apache.httpcomponents</groupId>
                                 <artifactId>httpcore-osgi</artifactId>
-                                <version>${apache.httpcomponents.core.version}</version>
+                                <version>\${apache.httpcomponents.core.version}</version>
                             </additionalDependency>
                             <additionalDependency>
                                 <groupId>org.apache.httpcomponents</groupId>
                                 <artifactId>httpclient-osgi</artifactId>
-                                <version>${apache.httpcomponents.client.version}</version>
+                                <version>\${apache.httpcomponents.client.version}</version>
                             </additionalDependency>
                             <additionalDependency>
                                 <groupId>commons-lang</groupId>
                                 <artifactId>commons-lang</artifactId>
-                                <version>${commons.lang.version}</version>
+                                <version>\${commons.lang.version}</version>
                             </additionalDependency>
                         </additionalDependencies>
                     </configuration>
@@ -497,8 +497,8 @@
                     <version>3.3.0</version>
                     <configuration>
                         <graphFormat>text</graphFormat>
-                        <outputFileName>${dependency-list.file}</outputFileName>
-                        <outputDirectory>${project.basedir}</outputDirectory>
+                        <outputFileName>\${dependency-list.file}</outputFileName>
+                        <outputDirectory>\${project.basedir}</outputDirectory>
                         <transitiveExcludes>*</transitiveExcludes>
                         <showVersions>true</showVersions>
                         <showGroupIds>true</showGroupIds>
@@ -513,7 +513,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco.version}</version>
+                <version>\${jacoco.version}</version>
                 <executions>
                     <execution>
                         <id>pre-unit-test</id>
@@ -522,7 +522,7 @@
                         </goals>
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
-                            <destFile>${project.build.directory}/code-coverage/jacoco-ut.exec</destFile>
+                            <destFile>\${project.build.directory}/code-coverage/jacoco-ut.exec</destFile>
                             <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>surefireArgLine</propertyName>
                         </configuration>
@@ -536,9 +536,9 @@
                         </goals>
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
-                            <dataFile>${project.build.directory}/code-coverage/jacoco-ut.exec</dataFile>
+                            <dataFile>\${project.build.directory}/code-coverage/jacoco-ut.exec</dataFile>
                             <!-- Sets the output directory for the code coverage report. -->
-                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
+                            <outputDirectory>\${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
                         </configuration>
                     </execution>
                     <execution>
@@ -549,7 +549,7 @@
                         </goals>
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
-                            <destFile>${project.build.directory}/code-coverage/jacoco-it.exec</destFile>
+                            <destFile>\${project.build.directory}/code-coverage/jacoco-it.exec</destFile>
                             <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>failsafeArgLine</propertyName>
                         </configuration>
@@ -563,9 +563,9 @@
                         </goals>
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
-                            <dataFile>${project.build.directory}/code-coverage/jacoco-it.exec</dataFile>
+                            <dataFile>\${project.build.directory}/code-coverage/jacoco-it.exec</dataFile>
                             <!-- Sets the output directory for the code coverage report. -->
-                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
+                            <outputDirectory>\${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
                         </configuration>
                     </execution>
                     <execution>
@@ -639,11 +639,11 @@
                             <properties>
                                 <property>
                                     <name>maven.wagon.http.ssl.allowall</name>
-                                    <value>${ssl.allowall}</value>
+                                    <value>\${ssl.allowall}</value>
                                 </property>
                                 <property>
                                     <name>maven.wagon.http.ssl.insecure</name>
-                                    <value>${ssl.insecure}</value>
+                                    <value>\${ssl.insecure}</value>
                                 </property>
                             </properties>
                         </configuration>
@@ -662,7 +662,7 @@
                 <artifactId>maven-scm-plugin</artifactId>
                 <version>1.8.1</version>
                 <configuration>
-                    <tag>${project.artifactId}-${project.version}</tag>
+                    <tag>\${project.artifactId}-\${project.version}</tag>
                 </configuration>
             </plugin>
         </plugins>
@@ -751,7 +751,7 @@
             <id>generate-json</id>
             <activation>
                 <file>
-                    <exists>${swagger-properties}</exists>
+                    <exists>\${swagger-properties}</exists>
                 </file>
                 <property>
                     <name>swagger-sdk.generate-json</name>
@@ -771,7 +771,7 @@
                                 </goals>
                                 <configuration>
                                     <files>
-                                        <file>${basedir}/src/main/resources/swagger.properties</file>
+                                        <file>\${basedir}/src/main/resources/swagger.properties</file>
                                     </files>
                                 </configuration>
                             </execution>
@@ -784,19 +784,19 @@
                         <configuration>
                             <apiSources>
                                 <apiSource>
-                                    <locations>${api-rest-package}</locations>
+                                    <locations>\${api-rest-package}</locations>
                                     <schemes>http,https</schemes>
-                                    <host>${api-host-ip}:${api-host-port}</host>
-                                    <basePath>${api-base-path}</basePath>
+                                    <host>\${api-host-ip}:\${api-host-port}</host>
+                                    <basePath>\${api-base-path}</basePath>
                                     <info>
-                                        <title>${api-title}</title>
-                                        <version>${api-version}</version>
-                                        <description>${api-description}</description>
+                                        <title>\${api-title}</title>
+                                        <version>\${api-version}</version>
+                                        <description>\${api-description}</description>
                                         <license>
-                                            <name>${api-license}</name>
+                                            <name>\${api-license}</name>
                                         </license>
                                     </info>
-                                    <swaggerDirectory>${basedir}/src/main/resources</swaggerDirectory>
+                                    <swaggerDirectory>\${basedir}/src/main/resources</swaggerDirectory>
                                 </apiSource>
                             </apiSources>
                         </configuration>
@@ -821,10 +821,10 @@
                                     <goal>install-file</goal>
                                 </goals>
                                 <configuration>
-                                    <file>${basedir}/src/main/resources/swagger.json</file>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>${project.artifactId}-swagger-schema</artifactId>
-                                    <version>${project.version}</version>
+                                    <file>\${basedir}/src/main/resources/swagger.json</file>
+                                    <groupId>\${project.groupId}</groupId>
+                                    <artifactId>\${project.artifactId}-swagger-schema</artifactId>
+                                    <version>\${project.version}</version>
                                     <packaging>json</packaging>
                                 </configuration>
                             </execution>
@@ -837,7 +837,7 @@
             <id>generate-sdk</id>
             <activation>
                 <file>
-                    <exists>${swagger-json}</exists>
+                    <exists>\${swagger-json}</exists>
                 </file>
                 <property>
                     <name>swagger-sdk.generate-java-sdk</name>
@@ -864,17 +864,17 @@
                                             <os family="unix"/>
                                         </condition>
                                         <if>
-                                            <equals arg1="${is_windows}" arg2="true"/>
+                                            <equals arg1="\${is_windows}" arg2="true"/>
                                             <then>
                                                 <property name="swagger.sdk.script.file" value="generated-source-script.bat"/>
-                                                <echo file="${project.build.directory}${file.separator}generated-source-script.bat" append="true" message="cd ${project.build.directory}${file.separator}generated-sources${line.separator}"/>
-                                                <echo file="${project.build.directory}${file.separator}generated-source-script.bat" append="true" message="mvn clean install -Dmaven.test.skip=true${line.separator}"/>
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.bat" append="true" message="cd \${project.build.directory}\${file.separator}generated-sources\${line.separator}"/>
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.bat" append="true" message="mvn clean install -Dmaven.test.skip=true\${line.separator}"/>
                                             </then>
                                             <else>
                                                 <property name="swagger.sdk.script.file" value="generated-source-script.sh"/>
-                                                <echo file="${project.build.directory}${file.separator}generated-source-script.sh" append="true" message="cd ${project.build.directory}${file.separator}generated-sources${line.separator}"/>
-                                                <echo file="${project.build.directory}${file.separator}generated-source-script.sh" append="true" message="mvn clean install -Dmaven.test.skip=true${line.separator}"/>
-                                                <chmod file="${project.build.directory}${file.separator}generated-source-script.sh" perm="755"/>
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.sh" append="true" message="cd \${project.build.directory}\${file.separator}generated-sources\${line.separator}"/>
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.sh" append="true" message="mvn clean install -Dmaven.test.skip=true\${line.separator}"/>
+                                                <chmod file="\${project.build.directory}\${file.separator}generated-source-script.sh" perm="755"/>
                                             </else>
                                         </if>
                                     </tasks>
@@ -908,19 +908,19 @@
                                     <goal>generate</goal>
                                 </goals>
                                 <configuration>
-                                    <inputSpec>${basedir}/src/main/resources/swagger.json</inputSpec>
-                                    <output>${project.build.directory}/generated-sources</output>
+                                    <inputSpec>\${basedir}/src/main/resources/swagger.json</inputSpec>
+                                    <output>\${project.build.directory}/generated-sources</output>
                                     <language>java</language>
                                     <configOptions>
                                         <dateLibrary>joda</dateLibrary>
                                     </configOptions>
                                     <library>jersey2</library>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>${project.artifactId}-java-sdk</artifactId>
-                                    <artifactVersion>${project.version}</artifactVersion>
-                                    <modelPackage>${project.groupId}.${project.artifactId}.client.model</modelPackage>
-                                    <apiPackage>${project.groupId}.${project.artifactId}.client.api</apiPackage>
-                                    <invokerPackage>${project.groupId}.${project.artifactId}.client.invoker</invokerPackage>
+                                    <groupId>\${project.groupId}</groupId>
+                                    <artifactId>\${project.artifactId}-java-sdk</artifactId>
+                                    <artifactVersion>\${project.version}</artifactVersion>
+                                    <modelPackage>\${project.groupId}.\${project.artifactId}.client.model</modelPackage>
+                                    <apiPackage>\${project.groupId}.\${project.artifactId}.client.api</apiPackage>
+                                    <invokerPackage>\${project.groupId}.\${project.artifactId}.client.invoker</invokerPackage>
                                 </configuration>
                             </execution>
                         </executions>
@@ -937,7 +937,7 @@
                                     <goal>exec</goal>
                                 </goals>
                                 <configuration>
-                                    <executable>${project.build.directory}${file.separator}${swagger.sdk.script.file}</executable>
+                                    <executable>\${project.build.directory}\${file.separator}\${swagger.sdk.script.file}</executable>
                                 </configuration>
                             </execution>
                         </executions>
@@ -956,7 +956,7 @@
                                 <configuration>
                                     <filesets>
                                         <fileset>
-                                            <directory>${project.build.directory}/generated-sources</directory>
+                                            <directory>\${project.build.directory}/generated-sources</directory>
                                         </fileset>
                                     </filesets>
                                 </configuration>
@@ -1037,7 +1037,7 @@
                                     <destFile>${onap.jacoco.aggregateFile}</destFile>
                                     <fileSets>
                                         <fileSet>
-                                            <directory>${project.basedir}</directory>
+                                            <directory>\${project.basedir}</directory>
                                             <includes>
                                                 <include>**/target/code-coverage/*.exec</include>
                                             </includes>

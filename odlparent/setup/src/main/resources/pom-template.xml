@@ -31,16 +31,15 @@
     <distributionManagement>
         <repository>
             <id>ecomp-releases</id>
-            <url>https://nexus.onap.org/content/repositories/releases</url>
+            <url>\${onap.nexus.release-url}</url>
         </repository>
         <snapshotRepository>
             <id>ecomp-snapshots</id>
-            <url>https://nexus.onap.org/content/repositories/snapshots</url>
+            <url>\${onap.nexus.snapshot-url}</url>
         </snapshotRepository>
     </distributionManagement>
 
     <properties>
-
         <!-- Sonar properties -->
         <sonar.scanner.version>3.7.0.1746</sonar.scanner.version>
         <sonar-jacoco-listeners.version>3.2</sonar-jacoco-listeners.version>
@@ -61,8 +60,6 @@
         <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
         <!-- sitePath may be overridden in the inheriting POM if desired -->
         <sitePath>/content/sites/site/\${project.groupId}/\${project.artifactId}/\${project.version}</sitePath>
-
-
 
         <!-- If following file exist, auto-generation of swagger.json will be done -->
         <swagger-properties>\${basedir}/src/main/resources/swagger.properties</swagger-properties>
@@ -141,10 +138,8 @@
         <!-- Used by snmp4sdn, yangtools -->
         <javassist.version>3.24.1-GA</javassist.version>
 
-        <!-- FIXME remove all dependencies for jersey 1.17 after migration all
-            projects -->
-        <!-- Used by aaa, alto, netconf, neutron, sfc; see also affinity, defense4all,
-            snmp4sdn, toolkit -->
+        <!-- FIXME remove all dependencies for jersey 1.17 after migration all projects -->
+        <!-- Used by aaa, alto, netconf, neutron, sfc; see also affinity, defense4all, snmp4sdn, toolkit -->
         <jersey.version>2.25.1</jersey.version>
         <!-- Used by sfc -->
         <jersey.client.version>2.25.1</jersey.client.version>
@@ -162,11 +157,9 @@
         <mockito.version>1.10.19</mockito.version>
         <!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
         <netty.version>4.1.34.Final</netty.version>
-        <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity,
-            toolkit -->
+        <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
         <slf4j.version>1.7.25</slf4j.version>
-        <!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit,
-            tsdr, ttp -->
+        <!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit, tsdr, ttp -->
         <spring.version>4.3.24.RELEASE</spring.version>
 
         <!-- Extra support libraries used by SDN-C -->
@@ -187,13 +180,11 @@
         <tomcat-jdbc.version>9.0.27</tomcat-jdbc.version>
         <jetty.version>9.4.12.v20180830</jetty.version>
         <skip.karaf.featureTest>true</skip.karaf.featureTest>
-
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-
             <!-- Note: If value in BOM conflicts with value inherited from
             parent pom, inherited value takes precedence.  This seems more like
             a bug than a feature, but this is how maven 3.6 works -->
@@ -203,51 +194,6 @@
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-
-            <!-- Override incorrect versions in ODL parent poms -->
-            <!-- to match versions actually installed in ODL Neon -->
-            <dependency>
-                <groupId>com.google.protobuf</groupId>
-                <artifactId>protobuf-java</artifactId>
-                <version>3.6.1</version>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-transport</artifactId>
-                <version>4.1.34.Final</version>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>4.1.34.Final</version>
-                <!-- <version>${netty.version}</version> -->
-            </dependency>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.12</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-server</artifactId>
-                <version>9.4.12.v20180830</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-servlets</artifactId>
-                <version>9.4.12.v20180830</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.jersey.bundles.repackaged</groupId>
-                <artifactId>jersey-guava</artifactId>
-                <version>2.25.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.codehaus.jettison</groupId>
-                <artifactId>jettison</artifactId>
-                <version>1.3.8</version>
             </dependency>
             <dependency>
                 <groupId>org.onap.logging-analytics</groupId>
@@ -260,13 +206,12 @@
                 <version>\${logging-analytics.version}</version>
             </dependency>
         </dependencies>
-
     </dependencyManagement>
 
     <repositories>
         <repository>
             <id>onap-public</id>
-            <url>https://nexus.onap.org/content/groups/public</url>
+            <url>\${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -278,7 +223,7 @@
         </repository>
         <repository>
             <id>onap-staging</id>
-            <url>https://nexus.onap.org/content/groups/staging</url>
+            <url>\${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -291,7 +236,7 @@
         <repository>
             <id>ecomp-release</id>
             <name>onap-repository-releases</name>
-            <url>https://nexus.onap.org/content/repositories/releases</url>
+            <url>\${onap.nexus.release-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -303,7 +248,7 @@
         <repository>
             <id>ecomp-snapshot</id>
             <name>onap-repository-snapshots</name>
-            <url>https://nexus.onap.org/content/repositories/snapshots</url>
+            <url>\${onap.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -314,7 +259,7 @@
         <repository>
             <id>opendaylight-mirror</id>
             <name>opendaylight-mirror</name>
-            <url>https://nexus.opendaylight.org/content/repositories/public/</url>
+            <url>\${opendaylight.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -326,7 +271,7 @@
         <repository>
             <id>opendaylight-snapshot</id>
             <name>opendaylight-snapshot</name>
-            <url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</url>
+            <url>\${opendaylight.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -407,9 +352,7 @@
     <build>
         <pluginManagement>
             <plugins>
-
                 <!-- Plugins from ONAP version (parent of oparent) -->
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
@@ -479,8 +422,6 @@
                 <!-- end of plugins from ONAP version (parent of oparent) -->
 
                 <!-- Plugins from ONAP oparent -->
-
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
@@ -628,8 +569,7 @@
                             <!-- Use Google Java Style Guide: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
                                 with minor changes -->
                             <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
-                            <!-- <sourceDirectory> is needed so that checkstyle ignores the generated
-                                sources directory -->
+                            <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
                             <sourceDirectory>\${project.build.sourceDirectory}/src/main/java</sourceDirectory>
                             <includeResources>true</includeResources>
                             <includeTestSourceDirectory>true</includeTestSourceDirectory>
@@ -661,13 +601,11 @@
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
                             <destFile>\${project.build.directory}/code-coverage/jacoco-ut.exec</destFile>
-                            <!-- Sets the name of the property containing the settings for JaCoCo
-                                                                 runtime agent. -->
+                            <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>surefireArgLine</propertyName>
                         </configuration>
                     </execution>
-                    <!-- Ensures that the code coverage report for unit tests is created
-                                                 after unit tests have been run. -->
+                    <!-- Ensures that the code coverage report for unit tests is created after unit tests have been run. -->
                     <execution>
                         <id>post-unit-test</id>
                         <phase>test</phase>
@@ -690,13 +628,11 @@
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
                             <destFile>\${project.build.directory}/code-coverage/jacoco-it.exec</destFile>
-                            <!-- Sets the name of the property containing the settings for JaCoCo
-                                                                 runtime agent. -->
+                            <!-- Sets the name of the property containing the settings for JaCoCo runtime agent. -->
                             <propertyName>failsafeArgLine</propertyName>
                         </configuration>
                     </execution>
-                    <!-- Ensures that the code coverage report for integration tests after
-                                                 integration tests have been run. -->
+                    <!-- Ensures that the code coverage report for integration tests after integration tests have been run. -->
                     <execution>
                         <id>post-integration-test</id>
                         <phase>post-integration-test</phase>
@@ -910,8 +846,7 @@
                                 <configuration>
                                     <exportAntProperties>true</exportAntProperties>
                                     <tasks>
-                                        <taskdef resource="net/sf/antcontrib/antlib.xml"
-                                                 classpathref="maven.plugin.classpath"/>
+                                        <taskdef resource="net/sf/antcontrib/antlib.xml" classpathref="maven.plugin.classpath"/>
                                         <condition property="is_windows" value="true">
                                             <os family="windows"/>
                                         </condition>
@@ -921,31 +856,19 @@
                                         <if>
                                             <equals arg1="\${is_windows}" arg2="true"/>
                                             <then>
-                                                <property name="swagger.sdk.script.file"
-                                                          value="generated-source-script.bat"/>
-                                                <echo
-                                                  file="\${project.build.directory}\${file.separator}generated-source-script.bat"
-                                                  append="true"
+                                                <property name="swagger.sdk.script.file" value="generated-source-script.bat"/>
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.bat" append="true"
                                                   message="cd \${project.build.directory}\${file.separator}generated-sources\${line.separator}"/>
-                                                <echo
-                                                  file="\${project.build.directory}\${file.separator}generated-source-script.bat"
-                                                  append="true"
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.bat" append="true"
                                                   message="mvn clean install -Dmaven.test.skip=true\${line.separator}"/>
                                             </then>
                                             <else>
-                                                <property name="swagger.sdk.script.file"
-                                                          value="generated-source-script.sh"/>
-                                                <echo
-                                                  file="\${project.build.directory}\${file.separator}generated-source-script.sh"
-                                                  append="true"
+                                                <property name="swagger.sdk.script.file" value="generated-source-script.sh"/>
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.sh" append="true"
                                                   message="cd \${project.build.directory}\${file.separator}generated-sources\${line.separator}"/>
-                                                <echo
-                                                  file="\${project.build.directory}\${file.separator}generated-source-script.sh"
-                                                  append="true"
+                                                <echo file="\${project.build.directory}\${file.separator}generated-source-script.sh" append="true"
                                                   message="mvn clean install -Dmaven.test.skip=true\${line.separator}"/>
-                                                <chmod
-                                                  file="\${project.build.directory}\${file.separator}generated-source-script.sh"
-                                                  perm="755"/>
+                                                <chmod file="\${project.build.directory}\${file.separator}generated-source-script.sh" perm="755"/>
                                             </else>
                                         </if>
                                     </tasks>
@@ -1135,6 +1058,5 @@
                 </plugins>
             </build>
         </profile>
-
     </profiles>
 </project>
