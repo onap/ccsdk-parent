@@ -160,7 +160,7 @@
         <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
         <slf4j.version>1.7.25</slf4j.version>
         <!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit, tsdr, ttp -->
-        <spring.version>4.3.24.RELEASE</spring.version>
+        <spring.version>4.3.25.RELEASE</spring.version>
 
         <!-- Extra support libraries used by SDN-C -->
         <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
@@ -173,7 +173,6 @@
         <apache.httpcomponents.client.version>4.5.10</apache.httpcomponents.client.version>
         <derby.version>10.14.2.0</derby.version>
         <eelf.version>1.0.0</eelf.version>
-        <grpc.version>1.21.1</grpc.version>
         <mariadb.connector.version>2.4.4</mariadb.connector.version>
         <mariadb4j.version>2.4.0</mariadb4j.version>
         <testng.version>6.14.3</testng.version>
