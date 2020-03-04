@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.onap.ccsdk.parent</groupId>
         <artifactId>parent</artifactId>
-        <version>1.5.2-SNAPSHOT</version>
+        <version>1.5.3-SNAPSHOT</version>
     </parent>
 
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>springboot-aggregator</artifactId>
-    <version>1.5.2-SNAPSHOT</version>
+    <version>1.5.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
