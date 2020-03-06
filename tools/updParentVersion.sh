@@ -16,7 +16,7 @@ cat <<END > /tmp/rebase-pom.xslt
     xmlns:pom="http://maven.apache.org/POM/4.0.0"
     xmlns="http://maven.apache.org/POM/4.0.0"
     exclude-result-prefixes="pom">
-    <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="no"/>
+    <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="no" cdata-section-elements="sdnc.keypass"/>
 
     <!-- Copy everything that does not match a rewrite rule -->
     <xsl:template match="@*|node()">
@@ -39,3 +39,6 @@ then
 fi
 
 find $1 -name pom.xml -exec bash -c 'updatePom "$0" $1' '{}' \;
+
+#Adding single empty line before project tag if there is a header available
+find $1 -name pom.xml -exec sed -i -n '$!N;s@-->\n<project@-->\n\n<project@;P;D' {} \;
