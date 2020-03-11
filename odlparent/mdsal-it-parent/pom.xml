@@ -177,7 +177,7 @@
         <mariadb.connector.version>2.4.4</mariadb.connector.version>
         <mariadb4j.version>2.4.0</mariadb4j.version>
         <testng.version>6.14.3</testng.version>
-        <tomcat-jdbc.version>9.0.27</tomcat-jdbc.version>
+        <tomcat-jdbc.version>9.0.30</tomcat-jdbc.version>
         <jetty.version>9.4.12.v20180830</jetty.version>
         <skip.karaf.featureTest>true</skip.karaf.featureTest>
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
