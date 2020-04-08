@@ -13,3 +13,5 @@ Any updates needed should be made to respective template and not to the generate
 
 Every parent pom has associated properties files (src/main/properties).<br>
 Setup module will read those properties and populate respective values within generated pom.xml
+
+
