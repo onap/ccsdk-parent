@@ -41,4 +41,6 @@ fi
 find $1 -name pom.xml -exec bash -c 'updatePom "$0" $1' '{}' \;
 
 #Adding single empty line before project tag if there is a header available
-find $1 -name pom.xml -exec sed -i -n '$!N;s@-->\n<project@-->\n\n<project@;P;D' {} \;
+find $1 -name pom.xml -exec sed -i '' '$!N;s@-->\n<project@-->\
+\
+<project@;P;D' {} \;
