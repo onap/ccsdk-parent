@@ -62,7 +62,7 @@
         <checkstyle.skip>true</checkstyle.skip>
 
         <org.json.version>20170516</org.json.version>
-        <jackson.version>2.8.9</jackson.version>
+        <jackson.version>2.9.5</jackson.version>
         <!-- Need to stick to JUnit 4.11 until https://github.com/jayway/powermock/issues/560
             is fixed (either in PowerMock or with a new JUnit release) -->
         <!-- Used everywhere -->
@@ -71,8 +71,10 @@
         <lombok.version>1.18.0</lombok.version>
         <openpojo.version>0.8.10</openpojo.version>
         <spring.version>4.3.7.RELEASE</spring.version>
-        <javax.validation.version>2.0.0.Final</javax.validation.version>
-        <swagger.version>1.5.16</swagger.version>
+        <javax.validation.version>1.1.0.Final</javax.validation.version>
+        <swagger.version>1.5.21</swagger.version>
+        <yangtools.version>1.2.3</yangtools.version>
+        <yang2swagger.version>1.1.12</yang2swagger.version>
 
         <!-- ONAP repositories -->
         <onap.nexus.host>nexus.onap.org</onap.nexus.host>
@@ -84,6 +86,9 @@
         <onap.nexus.snapshot-url>https://nexus.onap.org/content/repositories/snapshots</onap.nexus.snapshot-url>
         <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
+
+        <!-- Default api name for client -->
+        <api.name>client</api.name>
 
     </properties>
 
@@ -422,17 +427,17 @@
                 <plugin>
                     <groupId>org.opendaylight.yangtools</groupId>
                     <artifactId>yang-maven-plugin</artifactId>
-                    <version>1.2.3</version>
+                    <version>${yangtools.version}</version>
                     <dependencies>
                         <dependency>
                             <groupId>com.mrv.yangtools</groupId>
                             <artifactId>swagger-maven-plugin</artifactId>
-                            <version>1.1.9</version>
+                            <version>${yang2swagger.version}</version>
                         </dependency>
                         <dependency>
-                            <groupId>com.github.romix</groupId>
-                            <artifactId>java-concurrent-hash-trie-map</artifactId>
-                            <version>0.2.23</version>
+                            <groupId>com.fasterxml.jackson.core</groupId>
+                            <artifactId>jackson-core</artifactId>
+                            <version>${jackson.version}</version>
                         </dependency>
                     </dependencies>
                     <executions>
@@ -449,8 +454,9 @@
                                         <resourceBaseDir>${project.build.directory}/yang</resourceBaseDir>
                                         <additionalConfiguration>
                                             <api-version>${project.version}</api-version>
-                                            <base-module>client</base-module>
+                                            <base-module>${api.name}</base-module>
                                             <swagger-format>yaml</swagger-format>
+                                            <path-format>odl</path-format>
                                         </additionalConfiguration>
                                     </generator>
                                 </codeGenerators>
@@ -502,7 +508,7 @@
                                 <goal>generate</goal>
                             </goals>
                             <configuration>
-                                <inputSpec>${project.build.directory}/generated-sources/swagger-maven-api-gen/client.yaml</inputSpec>
+                                <inputSpec>${project.build.directory}/generated-sources/swagger-maven-api-gen/${api.name}.yaml</inputSpec>
                                 <language>spring</language>
                             </configuration>
                         </execution>
