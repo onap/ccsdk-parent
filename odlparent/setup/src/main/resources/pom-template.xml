@@ -96,12 +96,12 @@
         <logging-analytics.version>1.6.5</logging-analytics.version>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>0.7.3-SNAPSHOT</ccsdk.cds.version>
-        <ccsdk.sli.core.version>0.7.3-SNAPSHOT</ccsdk.sli.core.version>
-        <ccsdk.sli.adaptors.version>0.7.3-SNAPSHOT</ccsdk.sli.adaptors.version>
-        <ccsdk.sli.northbound.version>0.7.3-SNAPSHOT</ccsdk.sli.northbound.version>
-        <ccsdk.sli.plugins.version>0.7.3-SNAPSHOT</ccsdk.sli.plugins.version>
-        <ccsdk.distribution.version>0.7.3-SNAPSHOT</ccsdk.distribution.version>
+        <ccsdk.cds.version>0.7.3</ccsdk.cds.version>
+        <ccsdk.sli.core.version>0.7.3</ccsdk.sli.core.version>
+        <ccsdk.sli.adaptors.version>0.7.3</ccsdk.sli.adaptors.version>
+        <ccsdk.sli.northbound.version>0.7.3</ccsdk.sli.northbound.version>
+        <ccsdk.sli.plugins.version>0.7.3</ccsdk.sli.plugins.version>
+        <ccsdk.distribution.version>0.7.3</ccsdk.distribution.version>
         <sdnctl.sli.version>\${ccsdk.sli.core.version}</sdnctl.sli.version>
         <sdnctl.aai.service.version>\${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
         <sdnctl.dblib.version>\${ccsdk.sli.core.version}</sdnctl.dblib.version>
