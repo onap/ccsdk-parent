@@ -97,6 +97,7 @@
 
         <!-- CCSDK component versions -->
         <ccsdk.cds.version>1.0.0-SNAPSHOT</ccsdk.cds.version>
+        <ccsdk.features.version>1.0.0-SNAPSHOT</ccsdk.features.version>
         <ccsdk.sli.core.version>1.0.0-SNAPSHOT</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>1.0.0-SNAPSHOT</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>1.0.0-SNAPSHOT</ccsdk.sli.northbound.version>
