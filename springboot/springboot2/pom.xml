@@ -91,7 +91,7 @@
         <logging-analytics.version>1.6.5</logging-analytics.version>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>0.7.2</ccsdk.cds.version>
+        <ccsdk.cds.version>0.7.3-SNAPSHOT</ccsdk.cds.version>
         <ccsdk.features.version>0.7.5-SNAPSHOT</ccsdk.features.version>
         <ccsdk.sli.core.version>0.7.2</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>0.7.3-SNAPSHOT</ccsdk.sli.adaptors.version>
