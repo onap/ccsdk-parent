@@ -100,7 +100,7 @@
         <ccsdk.features.version>0.7.5-SNAPSHOT</ccsdk.features.version>
         <ccsdk.sli.core.version>0.7.2</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>0.7.3-SNAPSHOT</ccsdk.sli.adaptors.version>
-        <ccsdk.sli.northbound.version>0.7.3-SNAPSHOT</ccsdk.sli.northbound.version>
+        <ccsdk.sli.northbound.version>0.7.4-SNAPSHOT</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>0.7.2</ccsdk.sli.plugins.version>
         <ccsdk.distribution.version>0.7.3-SNAPSHOT</ccsdk.distribution.version>
         <sdnctl.sli.version>\${ccsdk.sli.core.version}</sdnctl.sli.version>
