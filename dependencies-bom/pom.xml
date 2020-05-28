@@ -4,7 +4,7 @@
 
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>dependencies-bom</artifactId>
-    <version>1.5.7-SNAPSHOT</version>
+    <version>1.5.8-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <distributionManagement>
