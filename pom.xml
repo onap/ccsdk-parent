@@ -10,6 +10,7 @@
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
 
     <modules>
+        <module>installed-odl-bom</module>
         <module>dependencies-bom</module>
         <module>dependencies-odl-bom</module>
         <module>oparent</module>
