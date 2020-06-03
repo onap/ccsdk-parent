@@ -91,13 +91,13 @@
         <logging-analytics.version>1.6.5</logging-analytics.version>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>0.7.4-SNAPSHOT</ccsdk.cds.version>
-        <ccsdk.features.version>0.7.6-SNAPSHOT</ccsdk.features.version>
+        <ccsdk.cds.version>0.7.4</ccsdk.cds.version>
+        <ccsdk.features.version>0.7.6</ccsdk.features.version>
         <ccsdk.sli.core.version>0.7.2</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>0.7.3</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>0.7.4</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>0.7.2</ccsdk.sli.plugins.version>
-        <ccsdk.distribution.version>0.7.4-SNAPSHOT</ccsdk.distribution.version>
+        <ccsdk.distribution.version>0.7.4</ccsdk.distribution.version>
 
         <!-- Spring versions -->
         <spring.boot.version>${springbootparent.version}</spring.boot.version>
