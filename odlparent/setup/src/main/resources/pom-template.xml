@@ -102,7 +102,7 @@
         <ccsdk.sli.adaptors.version>0.7.3</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>0.7.4</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>0.7.3-SNAPSHOT</ccsdk.sli.plugins.version>
-        <ccsdk.distribution.version>0.7.4-SNAPSHOT</ccsdk.distribution.version>
+        <ccsdk.distribution.version>0.7.5-SNAPSHOT</ccsdk.distribution.version>
         <sdnctl.sli.version>\${ccsdk.sli.core.version}</sdnctl.sli.version>
         <sdnctl.aai.service.version>\${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
         <sdnctl.dblib.version>\${ccsdk.sli.core.version}</sdnctl.dblib.version>
