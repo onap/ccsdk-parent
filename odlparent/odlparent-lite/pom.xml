@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.opendaylight.odlparent</groupId>
         <artifactId>odlparent-lite</artifactId>
-        <version>4.0.10</version>
+        <version>5.0.7</version>
         <relativePath/>
     </parent>
 
@@ -53,8 +53,8 @@
         <jacoco.version>0.8.5</jacoco.version>
 
         <!-- properties from oparent -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
@@ -83,8 +83,8 @@
         <opendaylight.nexus.snapshot-url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</opendaylight.nexus.snapshot-url>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version.source>1.8</java.version.source>
-        <java.version.target>1.8</java.version.target>
+        <java.version.source>8</java.version.source>
+        <java.version.target>8</java.version.target>
         <bundle.plugin.version>2.5.0</bundle.plugin.version>
         <maven.compile.plugin.version>2.5.1</maven.compile.plugin.version>
         <features.file>features.xml</features.file>
@@ -110,15 +110,15 @@
         <sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
 
         <!-- Support libraries used by OpenDaylight -->
-        <odl.controller.mdsal.version>1.9.1</odl.controller.mdsal.version>
-        <odl.mdsal.version>3.0.8</odl.mdsal.version>
-        <odl.mdsal.model.version>1.0.8</odl.mdsal.model.version>
-        <odl.netconf.restconf.version>1.9.1</odl.netconf.restconf.version>
-        <odl.netconf.netconf.version>1.6.1</odl.netconf.netconf.version>
-        <odl.netconf.sal.rest.docgen.version>1.9.1</odl.netconf.sal.rest.docgen.version>
+        <odl.controller.mdsal.version>1.10.3</odl.controller.mdsal.version>
+        <odl.mdsal.version>4.0.14</odl.mdsal.version>
+        <odl.mdsal.model.version>2.0.14</odl.mdsal.model.version>
+        <odl.netconf.restconf.version>1.10.3</odl.netconf.restconf.version>
+        <odl.netconf.netconf.version>1.7.3</odl.netconf.netconf.version>
+        <odl.netconf.sal.rest.docgen.version>1.10.3</odl.netconf.sal.rest.docgen.version>
 
         <!-- Used by aaa, vtn -->
-        <commons.codec.version>1.12</commons.codec.version>
+        <commons.codec.version>1.13</commons.codec.version>
         <!-- Used by netconf, ovsdb -->
         <commons.lang3.version>3.8.1</commons.lang3.version>
         <!-- Used by sfc, snmp4sdn; see also affinity, toolkit -->
@@ -126,7 +126,7 @@
         <!-- Used by neutron; see also controller, vtn -->
         <commons.net.version>3.6</commons.net.version>
         <!-- Used by neutron -->
-        <eclipse.persistence.version>2.7.3</eclipse.persistence.version>
+        <eclipse.persistence.version>2.7.4</eclipse.persistence.version>
         <!-- Used by aaa -->
         <felix.dependencymanager.version>4.4.1</felix.dependencymanager.version>
         <!-- Used by lacp, netconf, ovsdb, sfc, toolkit; see also vtn -->
@@ -135,7 +135,7 @@
         <guava.version>25.1-jre</guava.version>
         <!-- Used by aaa, alto, netconf, ovsdb, sfc; see also affinity, defense4all,
             integration/distribution, snmp4sdn, toolkit, ttp -->
-        <jackson.version>2.9.8</jackson.version>
+        <jackson.version>2.9.10</jackson.version>
         <!-- Used by snmp4sdn, yangtools -->
         <javassist.version>3.24.1-GA</javassist.version>
 
@@ -157,7 +157,7 @@
         <!-- Used by nic, sfc, sxp, tsdr -->
         <mockito.version>1.10.19</mockito.version>
         <!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
-        <netty.version>4.1.34.Final</netty.version>
+        <netty.version>4.1.42.Final</netty.version>
         <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
         <slf4j.version>1.7.25</slf4j.version>
         <!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit, tsdr, ttp -->
@@ -418,6 +418,40 @@
                                 </rules>
                             </configuration>
                         </execution>
+                        <execution>
+                            <id>enforce-maven</id>
+                            <goals>
+                            <goal>enforce</goal>
+                            </goals>
+                            <configuration>
+                            <rules>
+                                <requireJavaVersion>
+                                <version>8</version>
+                                </requireJavaVersion>
+                                <requireMavenVersion>
+                                <version>[3.5.0,)</version>
+                                </requireMavenVersion>
+                            </rules>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>enforce-banned-dependencies</id>
+                            <goals>
+                            <goal>enforce</goal>
+                            </goals>
+                            <configuration>
+                            <rules>
+                                <bannedDependencies>
+                                <message>Please always use mockito-core instead of mockito-all (see https://bugs.opendaylight.org/show_bug.cgi?id=7662), and spotbugs:annotations instead of findbugs:annotations</message>
+                                <excludes>
+                                    <exclude>org.mockito:mockito-all</exclude>
+                <!--                     <exclude>com.google.code.findbugs:annotations</exclude> -->
+                                </excludes>
+                                </bannedDependencies>
+                            </rules>
+                            <fail>true</fail>
+                            </configuration>
+                        </execution>
                     </executions>
                 </plugin>
                 <!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
@@ -529,10 +563,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
             </plugin>
             <!-- end of plugins from oparent version (parent of oparent) -->
 
@@ -713,6 +743,77 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.0.0-M2</version>
+                <executions>
+                    <execution>
+                        <id>enforce-property</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireProperty>
+                                    <property>onap.nexus.url</property>
+                                    <message>You must set a onap.nexus.url property in your
+                                        ~/.m2/settings.xml. See oparent/settings.xml for an example.</message>
+                                </requireProperty>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>enforce-no-snapshots</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireReleaseDeps>
+                                    <failWhenParentIsSnapshot>false</failWhenParentIsSnapshot>
+                                    <onlyWhenRelease>true</onlyWhenRelease>
+                                    <level>WARN</level>
+                                </requireReleaseDeps>
+                            </rules>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>enforce-maven</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireJavaVersion>
+                                    <version>1.8.0</version>
+                                </requireJavaVersion>
+                                <requireMavenVersion>
+                                    <version>[3.5.0,)</version>
+                                </requireMavenVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>enforce-banned-dependencies</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <bannedDependencies>
+                                    <message>Please always use mockito-core instead of mockito-all (see https://bugs.opendaylight.org/show_bug.cgi?id=7662), and spotbugs:annotations instead of findbugs:annotations</message>
+                                    <excludes>
+                                        <exclude>org.mockito:mockito-all</exclude>
+<!--                                         <exclude>com.google.code.findbugs:annotations</exclude> -->
+                                    </excludes>
+                                </bannedDependencies>
+                            </rules>
+                            <fail>true</fail>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -725,19 +826,6 @@
                     <failOnError>false</failOnError>
                     <additionalparam>-Xdoclint:none</additionalparam>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco.version}</version>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <!-- select non-aggregate reports -->
-                            <report>report</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
             </plugin>
         </plugins>
     </reporting>
@@ -1024,13 +1112,14 @@
                     <plugin>
                         <groupId>org.opendaylight.yangtools</groupId>
                         <artifactId>yang-maven-plugin</artifactId>
-                        <version>2.1.8</version>
+                        <version>3.0.11</version>
                         <dependencies>
                             <dependency>
                                 <groupId>org.opendaylight.mdsal</groupId>
                                 <artifactId>maven-sal-api-gen-plugin</artifactId>
                                 <version>${odl.mdsal.model.version}</version>
                                 <type>jar</type>
+                                <scope>compile</scope>
                             </dependency>
                             <dependency>
                                 <groupId>org.opendaylight.netconf</groupId>
