@@ -44,6 +44,7 @@
                             <filters>
                                 <filter>${basedir}/src/main/properties/binding-parent.properties</filter>
                             </filters>
+                            <encoding>UTF-8</encoding>
                         </configuration>
                     </execution>
                     <execution>
@@ -67,6 +68,7 @@
                             <filters>
                                 <filter>${basedir}/src/main/properties/bundle-parent.properties</filter>
                             </filters>
+                            <encoding>UTF-8</encoding>
                         </configuration>
                     </execution>
                     <execution>
@@ -90,6 +92,7 @@
                             <filters>
                                 <filter>${basedir}/src/main/properties/feature-repo-parent.properties</filter>
                             </filters>
+                             <encoding>UTF-8</encoding>
                         </configuration>
                     </execution>
                     <execution>
@@ -113,6 +116,7 @@
                             <filters>
                                 <filter>${basedir}/src/main/properties/karaf4-parent.properties</filter>
                             </filters>
+                            <encoding>UTF-8</encoding>
                         </configuration>
                     </execution>
                     <execution>
@@ -136,6 +140,7 @@
                             <filters>
                                 <filter>${basedir}/src/main/properties/mdsal-it-parent.properties</filter>
                             </filters>
+                            <encoding>UTF-8</encoding>
                         </configuration>
                     </execution>
                     <execution>
@@ -159,6 +164,7 @@
                             <filters>
                                 <filter>${basedir}/src/main/properties/odlparent.properties</filter>
                             </filters>
+                            <encoding>UTF-8</encoding>
                         </configuration>
                     </execution>
                     <execution>
@@ -182,6 +188,7 @@
                             <filters>
                                 <filter>${basedir}/src/main/properties/odlparent-lite.properties</filter>
                             </filters>
+                            <encoding>UTF-8</encoding>
                         </configuration>
                     </execution>
                     <execution>
@@ -205,6 +212,7 @@
                             <filters>
                                 <filter>${basedir}/src/main/properties/single-feature-parent.properties</filter>
                             </filters>
+                            <encoding>UTF-8</encoding>
                         </configuration>
                     </execution>
                 </executions>
@@ -223,6 +231,7 @@
                         <configuration>
                             <sourceFile>../binding-parent/pom-template.xml</sourceFile>
                             <destinationFile>../binding-parent/pom.xml</destinationFile>
+                            
                         </configuration>
                     </execution>
                     <execution>
