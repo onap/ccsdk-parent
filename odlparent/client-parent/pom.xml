@@ -62,7 +62,7 @@
         <checkstyle.skip>true</checkstyle.skip>
 
         <org.json.version>20170516</org.json.version>
-        <jackson.version>2.9.5</jackson.version>
+        <jackson.version>2.11.0</jackson.version>
         <!-- Need to stick to JUnit 4.11 until https://github.com/jayway/powermock/issues/560
             is fixed (either in PowerMock or with a new JUnit release) -->
         <!-- Used everywhere -->
