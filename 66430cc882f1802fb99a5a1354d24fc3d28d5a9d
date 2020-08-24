@@ -34,6 +34,24 @@
       "revId": "66430cc882f1802fb99a5a1354d24fc3d28d5a9d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14dbf20f_bac688b4",
+        "filename": "odlparent/binding-parent/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-08-24T17:29:10Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4a8e4edb_b601c6fa",
+      "revId": "66430cc882f1802fb99a5a1354d24fc3d28d5a9d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
