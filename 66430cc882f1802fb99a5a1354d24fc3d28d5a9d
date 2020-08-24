@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0f89751e_6f9682b9",
+        "filename": "odlparent/binding-parent/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-08-24T17:19:35Z",
+      "side": 1,
+      "message": "what is this version for ?",
+      "revId": "66430cc882f1802fb99a5a1354d24fc3d28d5a9d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
