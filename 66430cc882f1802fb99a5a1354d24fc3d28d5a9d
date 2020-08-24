@@ -16,6 +16,24 @@
       "revId": "66430cc882f1802fb99a5a1354d24fc3d28d5a9d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4a8e4edb_b601c6fa",
+        "filename": "odlparent/binding-parent/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 564,
+      "author": {
+        "id": 5625
+      },
+      "writtenOn": "2020-08-24T17:23:29Z",
+      "side": 1,
+      "message": "this is the elasticsearch database version which is started for unit tests",
+      "parentUuid": "0f89751e_6f9682b9",
+      "revId": "66430cc882f1802fb99a5a1354d24fc3d28d5a9d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
