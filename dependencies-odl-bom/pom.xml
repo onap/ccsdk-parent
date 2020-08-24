@@ -305,6 +305,17 @@
                 <artifactId>snakeyaml</artifactId>
                 <version>1.25</version>
             </dependency>
+            <!-- sdnr package dependencies -->
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-client</artifactId>
+                <version>6.4.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.onap.dmaap.messagerouter.dmaapclient</groupId>
+                <artifactId>dmaapClient</artifactId>
+                <version>1.1.12</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

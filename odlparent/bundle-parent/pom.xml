@@ -551,6 +551,19 @@
                         <showGroupIds>true</showGroupIds>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>de.jacks-it-lab</groupId>
+                    <artifactId>frontend-maven-plugin</artifactId>
+                    <version>1.7.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.alexcojocaru</groupId>
+                    <artifactId>elasticsearch-maven-plugin</artifactId>
+                    <version>6.16</version>
+                    <configuration>
+                        <version>7.1.1</version>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
