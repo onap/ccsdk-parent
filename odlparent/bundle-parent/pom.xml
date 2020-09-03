@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.opendaylight.odlparent</groupId>
         <artifactId>bundle-parent</artifactId>
-        <version>5.0.7</version>
+        <version>5.0.11</version>
         <relativePath/>
     </parent>
 
@@ -165,7 +165,7 @@
 
         <!-- Extra support libraries used by SDN-C -->
         <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
-        <antlr.version>4.7.2</antlr.version>
+        <antlr.version>4.7.7</antlr.version>
 
         <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 

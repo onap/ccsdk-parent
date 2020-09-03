@@ -115,7 +115,7 @@
         <mockk.version>1.9.3</mockk.version>
 
         <!-- Managed dependency versions -->
-        <antlr.version>4.7.2</antlr.version>
+        <antlr.version>4.7.7</antlr.version>
         <commons.lang.version>2.6</commons.lang.version>
         <apache.httpcomponents.core.version>4.4.12</apache.httpcomponents.core.version>
         <apache.httpcomponents.client.version>4.5.10</apache.httpcomponents.client.version>
