@@ -231,7 +231,6 @@
                         <configuration>
                             <sourceFile>../binding-parent/pom-template.xml</sourceFile>
                             <destinationFile>../binding-parent/pom.xml</destinationFile>
-                            
                         </configuration>
                     </execution>
                     <execution>

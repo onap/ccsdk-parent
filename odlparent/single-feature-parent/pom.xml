@@ -825,7 +825,7 @@
                                     <message>Please always use mockito-core instead of mockito-all (see https://bugs.opendaylight.org/show_bug.cgi?id=7662), and spotbugs:annotations instead of findbugs:annotations</message>
                                     <excludes>
                                         <exclude>org.mockito:mockito-all</exclude>
-<!--                                         <exclude>com.google.code.findbugs:annotations</exclude> -->
+                                        <!-- <exclude>com.google.code.findbugs:annotations</exclude> -->
                                     </excludes>
                                 </bannedDependencies>
                             </rules>
@@ -833,6 +833,18 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <version>4.0.0</version>
+                <configuration>
+                    <commitIdGenerationMode>full</commitIdGenerationMode>
+                    <includeOnlyProperties>
+                        <includeOnlyProperty>^git.build.(time|version)$</includeOnlyProperty>
+                        <includeOnlyProperty>^git.commit.id.(abbrev|full)$</includeOnlyProperty>
+                    </includeOnlyProperties>
+                </configuration>
             </plugin>
         </plugins>
     </build>
