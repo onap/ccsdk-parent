@@ -14,7 +14,7 @@
 
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>mdsal-it-parent</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
@@ -96,13 +96,13 @@
         <logging-analytics.version>1.6.6</logging-analytics.version>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>1.0.0-SNAPSHOT</ccsdk.cds.version>
-        <ccsdk.features.version>1.0.1-SNAPSHOT</ccsdk.features.version>
-        <ccsdk.sli.core.version>1.0.1-SNAPSHOT</ccsdk.sli.core.version>
-        <ccsdk.sli.adaptors.version>1.0.1-SNAPSHOT</ccsdk.sli.adaptors.version>
-        <ccsdk.sli.northbound.version>1.0.1-SNAPSHOT</ccsdk.sli.northbound.version>
-        <ccsdk.sli.plugins.version>1.0.1-SNAPSHOT</ccsdk.sli.plugins.version>
-        <ccsdk.distribution.version>1.0.0-SNAPSHOT</ccsdk.distribution.version>
+        <ccsdk.cds.version>1.0.1-SNAPSHOT</ccsdk.cds.version>
+        <ccsdk.features.version>1.0.1</ccsdk.features.version>
+        <ccsdk.sli.core.version>1.0.1</ccsdk.sli.core.version>
+        <ccsdk.sli.adaptors.version>1.0.1</ccsdk.sli.adaptors.version>
+        <ccsdk.sli.northbound.version>1.0.1</ccsdk.sli.northbound.version>
+        <ccsdk.sli.plugins.version>1.0.1</ccsdk.sli.plugins.version>
+        <ccsdk.distribution.version>1.0.1</ccsdk.distribution.version>
         <sdnctl.sli.version>${ccsdk.sli.core.version}</sdnctl.sli.version>
         <sdnctl.aai.service.version>${ccsdk.sli.adaptors.version}</sdnctl.aai.service.version>
         <sdnctl.dblib.version>${ccsdk.sli.core.version}</sdnctl.dblib.version>
@@ -192,7 +192,7 @@
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-odl-bom</artifactId>
-                <version>2.0.1-SNAPSHOT</version>
+                <version>2.0.2-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
