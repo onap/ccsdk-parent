@@ -998,6 +998,8 @@
             <id>q</id>
             <properties>
                 <skipTests>true</skipTests>
+                <skipPush>true</skipPush>
+                <docker.skip.push>true</docker.skip.push>
                 <!-- But NOT <maven.test.skip>true, as that's for compiling, not running, tests;
                      and that's usually quick.  Skipping test compilation with -Pq with maven.test.skip would be
                      particularly confusing when used in a project with maven-jar-plugin <goal>test-jar, so don't.)  -->
