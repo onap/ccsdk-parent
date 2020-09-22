@@ -3,5 +3,3 @@
 6313c1c1e757065016a64175d2e51934a8d9240a                                     	saml/onap-gerrit-ccsdk-parent-committers
 89d362029514c4ee83998322389ebd87042c5519                                     	saml/lf-gerrit-transfer
 daebbf523be390041a1a9c0e340a6d833aae5043                                     	GitHub Replication
-ldap:cn=lf-gerrit-transfer,ou=Groups,dc=freestandards,dc=org                 	ldap/lf-gerrit-transfer
-ldap:cn=onap-gerrit-ccsdk-parent-committers,ou=Groups,dc=freestandards,dc=org	ldap/onap-gerrit-ccsdk-parent-committers
