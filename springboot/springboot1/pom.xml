@@ -91,13 +91,14 @@
         <logging-analytics.version>1.6.5</logging-analytics.version>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>1.1.0-SNAPSHOT</ccsdk.cds.version>
-        <ccsdk.features.version>1.1.0-SNAPSHOT</ccsdk.features.version>
-        <ccsdk.sli.core.version>1.1.0-SNAPSHOT</ccsdk.sli.core.version>
-        <ccsdk.sli.adaptors.version>1.1.0-SNAPSHOT</ccsdk.sli.adaptors.version>
-        <ccsdk.sli.northbound.version>1.1.0-SNAPSHOT</ccsdk.sli.northbound.version>
-        <ccsdk.sli.plugins.version>1.1.0-SNAPSHOT</ccsdk.sli.plugins.version>
-        <ccsdk.distribution.version>1.1.0-SNAPSHOT</ccsdk.distribution.version>
+        <ccsdk.cds.version>1.1.1-SNAPSHOT</ccsdk.cds.version>
+        <ccsdk.features.version>1.1.1-SNAPSHOT</ccsdk.features.version>
+        <ccsdk.distribution.version>1.1.1-SNAPSHOT</ccsdk.distribution.version>
+        <ccsdk.sli.version>1.2.0-SNAPSHOT</ccsdk.sli.version>
+        <ccsdk.sli.core.version>${ccsdl.sli.version}</ccsdk.sli.core.version>
+        <ccsdk.sli.adaptors.version>${ccsdl.sli.version}</ccsdk.sli.adaptors.version>
+        <ccsdk.sli.northbound.version>${ccsdl.sli.version}</ccsdk.sli.northbound.version>
+        <ccsdk.sli.plugins.version>${ccsdl.sli.version}</ccsdk.sli.plugins.version>
 
         <!-- Spring versions -->
         <spring.boot.version>1.5.22.RELEASE</spring.boot.version>
