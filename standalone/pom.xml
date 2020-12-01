@@ -55,7 +55,6 @@
         <bundle.plugin.version>2.5.0</bundle.plugin.version>
         <checkstyle.skip>true</checkstyle.skip>
 
-
         <mariadb.connector.version>2.1.1</mariadb.connector.version>
         <fasterxml.jackson.version>2.10.0</fasterxml.jackson.version>
         <velocity.version>2.0</velocity.version>
@@ -193,7 +192,6 @@
             </snapshots>
         </repository>
     </repositories>
-
 
     <build>
         <pluginManagement>
