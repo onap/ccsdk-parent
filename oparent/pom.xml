@@ -50,10 +50,22 @@
         <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
 
-        <java.version.source>1.8</java.version.source>
-        <java.version.target>1.8</java.version.target>
-        <bundle.plugin.version>2.5.0</bundle.plugin.version>
+        <java.version>11</java.version>
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
+        <bundle.plugin.version>4.2.1</bundle.plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <checkstyle.skip>true</checkstyle.skip>
+
+        <!-- CCSDK component versions -->
+        <ccsdk.cds.version>1.1.1-SNAPSHOT</ccsdk.cds.version>
+        <ccsdk.features.version>1.1.1-SNAPSHOT</ccsdk.features.version>
+        <ccsdk.sli.version>1.2.0-SNAPSHOT</ccsdk.sli.version>
+        <ccsdk.sli.core.version>${ccsdk.sli.version}</ccsdk.sli.core.version>
+        <ccsdk.sli.adaptors.version>${ccsdk.sli.version}</ccsdk.sli.adaptors.version>
+        <ccsdk.sli.northbound.version>${ccsdk.sli.version}</ccsdk.sli.northbound.version>
+        <ccsdk.sli.plugins.version>${ccsdk.sli.version}</ccsdk.sli.plugins.version>
+        <ccsdk.distribution.version>1.1.1-SNAPSHOT</ccsdk.distribution.version>
 
         <mariadb.connector.version>2.1.1</mariadb.connector.version>
         <fasterxml.jackson.version>2.10.0</fasterxml.jackson.version>
@@ -71,8 +83,8 @@
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
                 <version>2.1.1-SNAPSHOT</version>
-                <scope>import</scope>
                 <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -189,10 +201,20 @@
         </repository>
     </repositories>
 
-
     <build>
         <pluginManagement>
             <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                    <configuration>
+                        <release>${java.version}</release>
+                        <!--explicitly remove source and target-->
+                        <source combine.self="override"/>
+                        <target combine.self="override"/>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
@@ -315,7 +337,7 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <version>4.2.1</version>
+                <version>${bundle.plugin.version}</version>
                 <extensions>true</extensions>
             </plugin>
             <plugin>
