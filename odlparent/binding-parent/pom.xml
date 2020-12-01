@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.opendaylight.mdsal</groupId>
         <artifactId>binding-parent</artifactId>
-        <version>4.0.17</version>
+        <version>6.0.7</version>
         <relativePath/>
     </parent>
 
@@ -53,8 +53,6 @@
         <jacoco.version>0.8.5</jacoco.version>
 
         <!-- properties from oparent -->
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
@@ -83,14 +81,17 @@
         <opendaylight.nexus.snapshot-url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</opendaylight.nexus.snapshot-url>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version.source>8</java.version.source>
-        <java.version.target>8</java.version.target>
-        <bundle.plugin.version>2.5.0</bundle.plugin.version>
-        <maven.compile.plugin.version>2.5.1</maven.compile.plugin.version>
+        <java.version>11</java.version>
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
+        <bundle.plugin.version>4.2.1</bundle.plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <features.file>features.xml</features.file>
         <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
         <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
+        <checkstyle.plugin.version>3.1.1</checkstyle.plugin.version>
         <checkstyle.skip>true</checkstyle.skip>
+        <odlparent.spotbugs.enforce>false</odlparent.spotbugs.enforce>
 
         <!-- logging-analytics versions -->
         <logging-analytics.version>1.6.6</logging-analytics.version>
@@ -110,40 +111,40 @@
         <sdnctl.slipluginutils.version>${ccsdk.sli.core.version}</sdnctl.slipluginutils.version>
 
         <!-- Support libraries used by OpenDaylight -->
-        <odl.controller.mdsal.version>1.10.3</odl.controller.mdsal.version>
-        <odl.mdsal.version>4.0.14</odl.mdsal.version>
-        <odl.mdsal.model.version>2.0.14</odl.mdsal.model.version>
-        <odl.netconf.restconf.version>1.10.3</odl.netconf.restconf.version>
-        <odl.netconf.netconf.version>1.7.3</odl.netconf.netconf.version>
-        <odl.netconf.sal.rest.docgen.version>1.10.3</odl.netconf.sal.rest.docgen.version>
+        <odl.controller.mdsal.version>1.12.1</odl.controller.mdsal.version>
+        <odl.mdsal.version>6.0.7</odl.mdsal.version>
+        <odl.mdsal.model.version>6.0.7</odl.mdsal.model.version>
+        <odl.netconf.restconf.version>1.12.1</odl.netconf.restconf.version>
+        <odl.netconf.netconf.version>1.9.1</odl.netconf.netconf.version>
+        <odl.netconf.sal.rest.docgen.version>1.12.1</odl.netconf.sal.rest.docgen.version>
 
         <!-- Used by aaa, vtn -->
-        <commons.codec.version>1.13</commons.codec.version>
+        <commons.codec.version>1.15</commons.codec.version>
         <!-- Used by netconf, ovsdb -->
         <commons.lang3.version>3.8.1</commons.lang3.version>
         <!-- Used by sfc, snmp4sdn; see also affinity, toolkit -->
         <commons.lang.version>2.6</commons.lang.version>
         <!-- Used by neutron; see also controller, vtn -->
-        <commons.net.version>3.6</commons.net.version>
+        <commons.net.version>3.7</commons.net.version>
         <!-- Used by neutron -->
-        <eclipse.persistence.version>2.7.4</eclipse.persistence.version>
+        <eclipse.persistence.version>2.7.7</eclipse.persistence.version>
         <!-- Used by aaa -->
         <felix.dependencymanager.version>4.4.1</felix.dependencymanager.version>
         <!-- Used by lacp, netconf, ovsdb, sfc, toolkit; see also vtn -->
         <gson.version>2.8.5</gson.version>
         <!-- Used by aaa, dlux, persistence, snmp4sdn, sxp -->
-        <guava.version>25.1-jre</guava.version>
+        <guava.version>28.2-jre</guava.version>
         <!-- Used by aaa, alto, netconf, ovsdb, sfc; see also affinity, defense4all,
             integration/distribution, snmp4sdn, toolkit, ttp -->
-        <jackson.version>2.9.10</jackson.version>
+        <jackson.version>2.10.4</jackson.version>
         <!-- Used by snmp4sdn, yangtools -->
-        <javassist.version>3.24.1-GA</javassist.version>
+        <javassist.version>3.27.0-GA</javassist.version>
 
         <!-- FIXME remove all dependencies for jersey 1.17 after migration all projects -->
         <!-- Used by aaa, alto, netconf, neutron, sfc; see also affinity, defense4all, snmp4sdn, toolkit -->
-        <jersey.version>2.25.1</jersey.version>
+        <jersey.version>2.27</jersey.version>
         <!-- Used by sfc -->
-        <jersey.client.version>2.25.1</jersey.client.version>
+        <jersey.client.version>2.27</jersey.client.version>
 
         <!-- New packages for jersey migration 1.17 to 2.8 -->
         <!-- appache.geronimo.bundle for DocGen -->
@@ -151,21 +152,21 @@
         <org.json.version>20131018</org.json.version>
 
         <!-- Used everywhere -->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13</junit.version>
         <!-- Used by coretutorials, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
-        <logback.version>1.2.3</logback.version>
+        <logback.version>1.11.6</logback.version>
         <!-- Used by nic, sfc, sxp, tsdr -->
-        <mockito.version>1.10.19</mockito.version>
+        <mockito.version>3.3.3</mockito.version>
         <!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
-        <netty.version>4.1.42.Final</netty.version>
+        <netty.version>4.1.51.Final</netty.version>
         <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
-        <slf4j.version>1.7.25</slf4j.version>
+        <slf4j.version>1.7.29</slf4j.version>
         <!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit, tsdr, ttp -->
         <spring.version>4.3.25.RELEASE</spring.version>
 
         <!-- Extra support libraries used by SDN-C -->
         <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
-        <antlr.version>4.7.2</antlr.version>
+        <antlr.version>4.8.1</antlr.version>
 
         <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 
@@ -179,12 +180,12 @@
         <mariadb4j.version>2.4.0</mariadb4j.version>
         <testng.version>6.14.3</testng.version>
         <tomcat-jdbc.version>9.0.30</tomcat-jdbc.version>
-        <jetty.version>9.4.12.v20180830</jetty.version>
+        <jetty.version>9.4.28.v20200408</jetty.version>
         <skip.karaf.featureTest>true</skip.karaf.featureTest>
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
     </properties>
 
-    <dependencyManagement>
+    <dependencyManagement >
         <dependencies>
             <!-- Note: If value in BOM conflicts with value inherited from
             parent pom, inherited value takes precedence.  This seems more like
@@ -461,12 +462,11 @@
                     <version>${sonar.scanner.version}</version>
                 </plugin>
                 <!-- end of plugins from ONAP version (parent of oparent) -->
-
                 <!-- Plugins from ONAP oparent -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.22.0</version>
+                    <version>${maven-surefire-plugin.version}</version>
                     <configuration>
                         <!-- Sets the VM argument line used when unit tests are run. -->
                         <argLine>${surefireArgLine}</argLine>
@@ -479,7 +479,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.22.0</version>
+                    <version>${maven-failsafe-plugin.version}</version>
                     <executions>
                         <!-- Ensures that both integration-test and verify goals of the Failsafe
                             Maven plugin are executed. -->
@@ -572,9 +572,146 @@
                         <failOnError>false</failOnError>
                     </configuration>
                 </plugin>
+				<plugin>
+					<artifactId>maven-checkstyle-plugin</artifactId>
+					<executions>
+						<execution>
+							<phase>process-sources</phase>
+							<goals>
+								<goal>check</goal>
+							</goals>
+							<configuration>
+								<failOnViolation>false</failOnViolation>
+								<skip>false</skip>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				 <plugin>
+			          <groupId>com.github.spotbugs</groupId>
+			          <artifactId>spotbugs-maven-plugin</artifactId>
+			          <version>3.1.12.2</version>
+			          <executions>
+			            <execution>
+			              <id>analyze-compile</id>
+			              <phase>compile</phase>
+			              <goals>
+			                <goal>check</goal>
+			              </goals>
+			              <configuration>
+			                <plugins>
+			                  <plugin>
+			                    <groupId>jp.skypencil.findbugs.slf4j</groupId>
+			                    <artifactId>bug-pattern</artifactId>
+			                    <version>1.5.0</version>
+			                  </plugin>
+			                </plugins>
+			                <effort>Max</effort>
+			                <threshold>Low</threshold>
+			                <failOnError>false</failOnError>
+			                <skip>true</skip>
+			                <excludeFilterFile>spotbugs-exclude.xml</excludeFilterFile>
+			                <xmlOutput>true</xmlOutput>
+			                <findbugsXmlOutputDirectory>/home/jack/onap/onap-sdnr/features/sdnr/wt-aluminium-sr0-2/target/wt/common/target-ide/spotbugs</findbugsXmlOutputDirectory>
+			              </configuration>
+			            </execution>
+			          </executions>
+			          <dependencies>
+			            <dependency>
+			              <groupId>com.github.spotbugs</groupId>
+			              <artifactId>spotbugs</artifactId>
+			              <version>3.1.12</version>
+			              <scope>compile</scope>
+			            </dependency>
+			            <dependency>
+			              <groupId>org.opendaylight.odlparent</groupId>
+			              <artifactId>spotbugs</artifactId>
+			              <version>7.0.5</version>
+			              <scope>compile</scope>
+			            </dependency>
+			            <dependency>
+			              <groupId>org.slf4j</groupId>
+			              <artifactId>slf4j-simple</artifactId>
+			              <version>1.8.0-beta2</version>
+			              <scope>compile</scope>
+			            </dependency>
+			          </dependencies>
+			          <configuration>
+			            <plugins>
+			              <plugin>
+			                <groupId>jp.skypencil.findbugs.slf4j</groupId>
+			                <artifactId>bug-pattern</artifactId>
+			                <version>1.5.0</version>
+			              </plugin>
+			            </plugins>
+			            <effort>Max</effort>
+			            <threshold>Low</threshold>
+			            <failOnError>false</failOnError>
+			            <skip>true</skip>
+			            <excludeFilterFile>spotbugs-exclude.xml</excludeFilterFile>
+			            <xmlOutput>true</xmlOutput>
+			            <findbugsXmlOutputDirectory>/home/jack/onap/onap-sdnr/features/sdnr/wt-aluminium-sr0-2/target/wt/common/target-ide/spotbugs</findbugsXmlOutputDirectory>
+			          </configuration>
+			        </plugin>
+                               <plugin>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${checkstyle.plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.onap.oparent</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>1.2.2</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>check-license</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <configLocation>onap-checkstyle/check-license.xml</configLocation>
+                            <includeResources>false</includeResources>
+                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                            <includeTestResources>false</includeTestResources>
+                            <sourceDirectories>
+                                <directory>${project.build.sourceDirectory}</directory>
+                            </sourceDirectories>
+                            <excludes>
+                            </excludes>
+                            <consoleOutput>true</consoleOutput>
+                            <failOnViolation>false</failOnViolation>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>onap-java-style</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <!-- Use Google Java Style Guide: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
+                                with minor changes -->
+                            <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
+                            <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
+                            <sourceDirectories>
+                                <directory>${project.build.sourceDirectory}/src/main/java</directory>
+                            </sourceDirectories>
+                            <includeResources>true</includeResources>
+                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                            <includeTestResources>true</includeTestResources>
+                            <excludes>
+                            </excludes>
+                            <consoleOutput>true</consoleOutput>
+                            <failOnViolation>false</failOnViolation>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             </plugins>
         </pluginManagement>
-        <plugins>
+        <plugins >
 
             <!-- Plugins from oparent version (parent of oparent) -->
             <plugin>
@@ -584,13 +721,22 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
+<!--                 <configuration> -->
+<!-- 	                 <reportPlugins> -->
+<!-- 	                 	<reportPlugin> -->
+<!-- 	                  		<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 	                  		<artifactId>maven-checkstyle-plugin</artifactId> -->
+<!-- 	                  		<version>${checkstyle.plugin.version}</version> -->
+<!-- 	                	</reportPlugin> -->
+<!-- 	                </reportPlugins> -->
+<!--                 </configuration> -->
             </plugin>
             <!-- end of plugins from oparent version (parent of oparent) -->
 
             <!-- Plugins from oparent -->
             <plugin>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
+                <version>${checkstyle.plugin.version}</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.onap.oparent</groupId>
@@ -610,7 +756,9 @@
                             <includeResources>false</includeResources>
                             <includeTestSourceDirectory>true</includeTestSourceDirectory>
                             <includeTestResources>false</includeTestResources>
-                            <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+                            <sourceDirectories>
+                            	<directory>${project.build.sourceDirectory}</directory>
+                            </sourceDirectories>
                             <excludes>
                             </excludes>
                             <consoleOutput>true</consoleOutput>
@@ -628,7 +776,9 @@
                                 with minor changes -->
                             <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
                             <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
-                            <sourceDirectory>${project.build.sourceDirectory}/src/main/java</sourceDirectory>
+                            <sourceDirectories>
+                            	<directory>${project.build.sourceDirectory}/src/main/java</directory>
+                            </sourceDirectories>
                             <includeResources>true</includeResources>
                             <includeTestSourceDirectory>true</includeTestSourceDirectory>
                             <includeTestResources>true</includeTestResources>
@@ -1143,7 +1293,7 @@
                     <plugin>
                         <groupId>org.opendaylight.yangtools</groupId>
                         <artifactId>yang-maven-plugin</artifactId>
-                        <version>3.0.11</version>
+                        <version>5.0.5</version>
                         <dependencies>
                             <dependency>
                                 <groupId>org.opendaylight.mdsal</groupId>
@@ -1172,10 +1322,10 @@
                                             <codeGeneratorClass>org.opendaylight.mdsal.binding.maven.api.gen.plugin.CodeGeneratorImpl</codeGeneratorClass>
                                             <outputBaseDir>${salGeneratorPath}</outputBaseDir>
                                         </generator>
-                                        <generator>
-                                            <codeGeneratorClass>org.opendaylight.netconf.sal.rest.doc.maven.StaticDocGenerator</codeGeneratorClass>
-                                            <outputBaseDir>target/swagger</outputBaseDir>
-                                        </generator>
+<!--                                         <generator> -->
+<!--                                             <codeGeneratorClass>org.opendaylight.netconf.sal.rest.doc.maven.StaticDocGenerator</codeGeneratorClass> -->
+<!--                                             <outputBaseDir>target/swagger</outputBaseDir> -->
+<!--                                         </generator> -->
                                     </codeGenerators>
                                     <inspectDependencies>true</inspectDependencies>
                                 </configuration>
