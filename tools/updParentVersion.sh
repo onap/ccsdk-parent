@@ -27,7 +27,7 @@ cat <<END > /tmp/rebase-pom.xslt
 
     <!-- Change ccsdk parent pom version -->
     <xsl:template match="//pom:parent[pom:groupId='org.onap.ccsdk.parent']/pom:version">
-	<version>$newVersion</version>
+    <version>$newVersion</version>
     </xsl:template>
 </xsl:stylesheet>
 END
