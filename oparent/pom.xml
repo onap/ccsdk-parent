@@ -64,7 +64,6 @@
         <ccsdk.sli.plugins.version>1.1.0-SNAPSHOT</ccsdk.sli.plugins.version>
         <ccsdk.distribution.version>1.1.0-SNAPSHOT</ccsdk.distribution.version>
 
-
         <mariadb.connector.version>2.1.1</mariadb.connector.version>
         <fasterxml.jackson.version>2.10.0</fasterxml.jackson.version>
         <velocity.version>2.0</velocity.version>
@@ -83,8 +82,8 @@
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
                 <version>2.1.1-SNAPSHOT</version>
-                <scope>import</scope>
                 <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.onap.sdc.sdc-distribution-client</groupId>
@@ -209,7 +208,6 @@
             </snapshots>
         </repository>
     </repositories>
-
 
     <build>
         <pluginManagement>
