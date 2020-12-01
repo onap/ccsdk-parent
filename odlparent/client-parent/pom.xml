@@ -32,8 +32,6 @@
     <properties>
 
         <!-- properties from oparent -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
@@ -55,9 +53,10 @@
         <opendaylight.nexus.public-url>https://nexus.opendaylight.org/content/repositories/public/</opendaylight.nexus.public-url>
         <opendaylight.nexus.snapshot-url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</opendaylight.nexus.snapshot-url>
 
-        <java.version.source>1.8</java.version.source>
-        <java.version.target>1.8</java.version.target>
-        <maven.compiler.version>3.6.1</maven.compiler.version>
+        <java.version>11</java.version>
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 
         <checkstyle.skip>true</checkstyle.skip>
 
@@ -66,7 +65,7 @@
         <!-- Need to stick to JUnit 4.11 until https://github.com/jayway/powermock/issues/560
             is fixed (either in PowerMock or with a new JUnit release) -->
         <!-- Used everywhere -->
-        <junit.version>4.11</junit.version>
+        <junit.version>4.13</junit.version>
         <mockito.version>2.8.9</mockito.version>
         <lombok.version>1.18.0</lombok.version>
         <openpojo.version>0.8.10</openpojo.version>
@@ -349,11 +348,45 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven.compiler.version}</version>
+                    <version>${maven-compiler-plugin.version}</version>
                     <configuration>
-                        <source>${java.version.source}</source>
-                        <target>${java.version.target}</target>
+                        <release>${java.version}</release>
+                        <!--explicitly remove source and target-->
+                        <source combine.self="override"/>
+                        <target combine.self="override"/>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                    <configuration>
+                        <!-- Sets the VM argument line used when unit tests are run. -->
+                        <argLine>${surefireArgLine}</argLine>
+                        <!-- Excludes integration tests when unit tests are run. -->
+                        <excludes>
+                            <exclude>**/IT*.java</exclude>
+                        </excludes>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>${maven-failsafe-plugin.version}</version>
+                    <executions>
+                        <!-- Ensures that both integration-test and verify goals of the Failsafe Maven plugin are executed. -->
+                        <execution>
+                            <id>integration-tests</id>
+                            <goals>
+                                <goal>integration-test</goal>
+                                <goal>verify</goal>
+                            </goals>
+                            <configuration>
+                                <!-- Sets the VM argument line used when integration tests are run. -->
+                                <argLine>${failsafeArgLine}</argLine>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
