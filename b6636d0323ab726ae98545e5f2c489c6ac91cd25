@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ff0a04c_bc349ff7",
+        "filename": "odlparent/client-parent/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-12-02T18:21:02Z",
+      "side": 1,
+      "message": "why is that downgraded ?",
+      "revId": "b6636d0323ab726ae98545e5f2c489c6ac91cd25",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a23b0bea_40b5665e",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-12-02T18:21:02Z",
+      "side": 1,
+      "message": "If ODL Aluminum is only looking for bundles build using JDK11, \nthen source and target is not required and \nmaven-compiler-plugin needs to be overriden as below:\n\n    \n\u003cplugin\u003e\n    \u003cgroupId\u003eorg.apache.maven.plugins\u003c/groupId\u003e\n    \u003cartifactId\u003emaven-compiler-plugin\u003c/artifactId\u003e\n    \u003cversion\u003e3.8.1\u003c/version\u003e\n    \u003cconfiguration\u003e\n        \u003crelease\u003e${java.version}\u003c/release\u003e\n        \u003c!--explicitly remove source and target--\u003e\n        \u003csource combine.self\u003d\"override\"/\u003e\n        \u003ctarget combine.self\u003d\"override\"/\u003e\n    \u003c/configuration\u003e\n\u003c/plugin\u003e\n\n\nFurther, maven-surefire-plugin and maven-failsafe-plugin version should be upgraded to 3.0.0-M5\n\nRefer: https://gerrit.onap.org/r/c/ccsdk/cds/+/111484/40/pom.xml#67 for relative changes !",
+      "revId": "b6636d0323ab726ae98545e5f2c489c6ac91cd25",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
