@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f7260aaa_d56b3474",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 655,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-12-03T14:50:57Z",
+      "side": 1,
+      "message": "have spaces instead of tabs !",
+      "range": {
+        "startLine": 575,
+        "startChar": 0,
+        "endLine": 655,
+        "endChar": 20
+      },
+      "revId": "3108e4ca0ae8cda0a5e723f8056a5dbdb63046c1",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
