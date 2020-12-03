@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d3e4518b_f979a887",
+        "filename": "odlparent/client-parent/pom.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-12-03T14:46:09Z",
+      "side": 0,
+      "message": "As this is only being used by onap/sdnc-northbound/generic-resource-api/client/pom.xml\nNeed to check with Dan if this pom needs migration to jdk11 !",
+      "revId": "b044ec87f782ed741c814311e64664f0b64aa255",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f61c12a8_d45dd184",
+        "filename": "odlparent/client-parent/pom.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-12-03T14:46:09Z",
+      "side": 0,
+      "message": "These properties are being used in plugin section !",
+      "revId": "b044ec87f782ed741c814311e64664f0b64aa255",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
