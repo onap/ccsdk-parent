@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d91db92d_e1bceb06",
+        "filename": "oparent/pom.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2020-12-07T21:49:10Z",
+      "side": 1,
+      "message": "@Dan, @Michael\n\nDon\u0027t these required to be updated with as per jdk 11 ?",
+      "revId": "b6bba043d3b481491ef36a7b955751f6bfa3b45a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
