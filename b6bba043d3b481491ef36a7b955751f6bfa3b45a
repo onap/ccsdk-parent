@@ -16,6 +16,24 @@
       "revId": "b6bba043d3b481491ef36a7b955751f6bfa3b45a",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dafcfeac_c84569ff",
+        "filename": "oparent/pom.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2020-12-10T14:25:39Z",
+      "side": 1,
+      "message": "I pushed a change that I believe should address this (also resolved a merge conflict with another change I pushed)",
+      "parentUuid": "d91db92d_e1bceb06",
+      "revId": "b6bba043d3b481491ef36a7b955751f6bfa3b45a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
