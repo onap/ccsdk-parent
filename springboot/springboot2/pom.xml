@@ -95,10 +95,10 @@
         <ccsdk.features.version>1.1.1-SNAPSHOT</ccsdk.features.version>
         <ccsdk.distribution.version>1.1.1-SNAPSHOT</ccsdk.distribution.version>
         <ccsdk.sli.version>1.2.0-SNAPSHOT</ccsdk.sli.version>
-        <ccsdk.sli.core.version>${ccsdl.sli.version}</ccsdk.sli.core.version>
-        <ccsdk.sli.adaptors.version>${ccsdl.sli.version}</ccsdk.sli.adaptors.version>
-        <ccsdk.sli.northbound.version>${ccsdl.sli.version}</ccsdk.sli.northbound.version>
-        <ccsdk.sli.plugins.version>${ccsdl.sli.version}</ccsdk.sli.plugins.version>
+        <ccsdk.sli.core.version>${ccsdk.sli.version}</ccsdk.sli.core.version>
+        <ccsdk.sli.adaptors.version>${ccsdk.sli.version}</ccsdk.sli.adaptors.version>
+        <ccsdk.sli.northbound.version>${ccsdk.sli.version}</ccsdk.sli.northbound.version>
+        <ccsdk.sli.plugins.version>${ccsdk.sli.version}</ccsdk.sli.plugins.version>
 
         <!-- Spring versions -->
         <spring.boot.version>2.3.5.RELEASE</spring.boot.version>
