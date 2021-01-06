@@ -14,7 +14,7 @@
 
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.0.4-SNAPSHOT</version>
+    <version>2.0.4</version>
     <packaging>pom</packaging>
 
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
@@ -93,12 +93,12 @@
         <!-- CCSDK component versions -->
         <ccsdk.cds.version>1.0.3</ccsdk.cds.version>
         <ccsdk.features.version>1.0.3</ccsdk.features.version>
-        <ccsdk.sli.version>1.0.4-SNAPSHOT</ccsdk.sli.version>
+        <ccsdk.sli.version>1.0.4</ccsdk.sli.version>
         <ccsdk.sli.core.version>${ccsdk.sli.version}</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>${ccsdk.sli.version}</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>${ccsdk.sli.version}</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>${ccsdk.sli.version}</ccsdk.sli.plugins.version>
-        <ccsdk.distribution.version>1.0.4-SNAPSHOT</ccsdk.distribution.version>
+        <ccsdk.distribution.version>1.0.4</ccsdk.distribution.version>
 
         <!-- Spring versions -->
         <spring.boot.version>2.3.3.RELEASE</spring.boot.version>
@@ -145,7 +145,7 @@
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
-                <version>2.0.4-SNAPSHOT</version>
+                <version>2.0.4</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
