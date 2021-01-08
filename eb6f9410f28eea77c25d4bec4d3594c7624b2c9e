@@ -16,6 +16,24 @@
       "revId": "eb6f9410f28eea77c25d4bec4d3594c7624b2c9e",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3446e655_f927d88d",
+        "filename": "springboot/spring-boot-setup/src/main/resources/pom-template.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2021-01-08T19:02:52Z",
+      "side": 1,
+      "message": "Not at the moment, but it probably makes sense to add this just in case we find a need to create a microservice that needs to write to an A1 interface at some point",
+      "parentUuid": "5d3c6050_915773cf",
+      "revId": "eb6f9410f28eea77c25d4bec4d3594c7624b2c9e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
