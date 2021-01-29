@@ -31,7 +31,7 @@ cat <<END > /tmp/rebase-pom.xslt
     <dependency><xsl:text>&#xa;            </xsl:text>
         <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId><xsl:text>&#xa;            </xsl:text>
         <artifactId>rfc6991</artifactId><xsl:text>&#xa;        </xsl:text>
-    </dependency><xsl:text>&#xa;</xsl:text>
+	</dependency><xsl:text>&#xa;</xsl:text>
     </xsl:template>
 
     <xsl:template match="//pom:dependency[pom:groupId='org.opendaylight.mdsal.model' and pom:artifactId='ietf-yang-types-20130715']">
