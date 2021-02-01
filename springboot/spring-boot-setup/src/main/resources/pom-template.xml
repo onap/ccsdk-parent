@@ -294,6 +294,7 @@
                     <version>2.8</version>
                     <configuration>
                         <skip/>
+                        <deployAtEnd>true</deployAtEnd>
                     </configuration>
                 </plugin>
                 <plugin>
