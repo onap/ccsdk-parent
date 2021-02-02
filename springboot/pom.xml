@@ -31,4 +31,19 @@
             <url>https://nexus.onap.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <!-- This version supports the "deployAtEnd" parameter -->
+                <version>2.8</version>
+                <configuration>
+                    <skip/>
+                    <deployAtEnd>true</deployAtEnd>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
