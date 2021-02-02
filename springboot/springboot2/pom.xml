@@ -509,7 +509,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
         <plugins>
             <!-- Plugins from ONAP oparent -->
             <!-- Jacoco / Sonar -->
