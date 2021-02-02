@@ -576,7 +576,6 @@
             </plugins>
         </pluginManagement>
         <plugins>
-
             <!-- Plugins from oparent version (parent of oparent) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
