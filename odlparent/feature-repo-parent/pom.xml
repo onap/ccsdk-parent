@@ -762,6 +762,17 @@
                 </dependencies>
                 <executions>
                     <execution>
+                        <!-- overwrite odl default to supress spotbugs code check execution -->
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <skip>true</skip>
+                            <failOnViolation>false</failOnViolation>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>onap-license</id>
                         <goals>
                             <goal>check</goal>
