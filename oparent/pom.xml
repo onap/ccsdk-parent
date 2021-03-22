@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.onap.oparent</groupId>
         <artifactId>oparent</artifactId>
-        <version>3.1.0</version>
+        <version>3.2.0</version>
         <relativePath/>
     </parent>
 
@@ -75,6 +75,8 @@
         <sdc.client.version>1.4.1</sdc.client.version>
         <sdc.tosca.version>1.6.5</sdc.tosca.version>
 
+        <antlr.version>4.8-1</antlr.version>
+
     </properties>
 
     <dependencyManagement>
@@ -93,7 +95,11 @@
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
-
+            <dependency>
+                 <groupId>org.antlr</groupId>
+                 <artifactId>antlr4-runtime</artifactId>
+                 <version>${antlr.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.onap.sdc.sdc-distribution-client</groupId>
                 <artifactId>sdc-distribution-client</artifactId>
@@ -231,7 +237,7 @@
                 <plugin>
                     <groupId>org.antlr</groupId>
                     <artifactId>antlr4-maven-plugin</artifactId>
-                    <version>4.7.2</version>
+                    <version>${antlr.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
