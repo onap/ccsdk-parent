@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.opendaylight.odlparent</groupId>
         <artifactId>odlparent</artifactId>
-        <version>7.0.7</version>
+        <version>8.1.1</version>
         <relativePath/>
     </parent>
 
@@ -111,12 +111,12 @@
         <sdnctl.slipluginutils.version>${ccsdk.sli.version}</sdnctl.slipluginutils.version>
 
         <!-- Support libraries used by OpenDaylight -->
-        <odl.controller.mdsal.version>1.12.1</odl.controller.mdsal.version>
-        <odl.mdsal.version>6.0.7</odl.mdsal.version>
-        <odl.mdsal.model.version>6.0.7</odl.mdsal.model.version>
-        <odl.netconf.restconf.version>1.12.1</odl.netconf.restconf.version>
-        <odl.netconf.netconf.version>1.9.1</odl.netconf.netconf.version>
-        <odl.netconf.sal.rest.docgen.version>1.12.1</odl.netconf.sal.rest.docgen.version>
+        <odl.controller.mdsal.version>1.13.0</odl.controller.mdsal.version>
+        <odl.mdsal.version>7.0.6</odl.mdsal.version>
+        <odl.mdsal.model.version>7.0.6</odl.mdsal.model.version>
+        <odl.netconf.restconf.version>1.13.0</odl.netconf.restconf.version>
+        <odl.netconf.netconf.version>1.13.1</odl.netconf.netconf.version>
+        <odl.netconf.sal.rest.docgen.version>1.13.0</odl.netconf.sal.rest.docgen.version>
 
         <!-- Used by aaa, vtn -->
         <commons.codec.version>1.15</commons.codec.version>
@@ -125,7 +125,7 @@
         <!-- Used by sfc, snmp4sdn; see also affinity, toolkit -->
         <commons.lang.version>2.6</commons.lang.version>
         <!-- Used by neutron; see also controller, vtn -->
-        <commons.net.version>3.7</commons.net.version>
+        <commons.net.version>3.8</commons.net.version>
         <!-- Used by neutron -->
         <eclipse.persistence.version>2.7.7</eclipse.persistence.version>
         <!-- Used by aaa -->
@@ -133,10 +133,10 @@
         <!-- Used by lacp, netconf, ovsdb, sfc, toolkit; see also vtn -->
         <gson.version>2.8.5</gson.version>
         <!-- Used by aaa, dlux, persistence, snmp4sdn, sxp -->
-        <guava.version>28.2-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <!-- Used by aaa, alto, netconf, ovsdb, sfc; see also affinity, defense4all,
             integration/distribution, snmp4sdn, toolkit, ttp -->
-        <jackson.version>2.10.4</jackson.version>
+        <jackson.version>2.11.4</jackson.version>
         <!-- Used by snmp4sdn, yangtools -->
         <javassist.version>3.27.0-GA</javassist.version>
 
@@ -722,6 +722,28 @@
                             </configuration>
                         </execution>
                     </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.gaul</groupId>
+                    <artifactId>modernizer-maven-plugin</artifactId>
+                    <version>2.1.0</version>
+                    <executions>
+                        <execution>
+                            <id>modernizer</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>modernizer</goal>
+                            </goals>
+                            <configuration>
+                                <failOnViolations>false</failOnViolations>
+                                <skip>true</skip>
+                            </configuration>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <failOnViolations>false</failOnViolations>
+                        <skip>true</skip>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -1320,7 +1342,7 @@
                     <plugin>
                         <groupId>org.opendaylight.yangtools</groupId>
                         <artifactId>yang-maven-plugin</artifactId>
-                        <version>5.0.5</version>
+                        <version>6.0.5</version>
                         <dependencies>
                             <dependency>
                                 <groupId>org.opendaylight.mdsal</groupId>
