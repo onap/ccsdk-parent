@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4c1c224b_a9545db2",
+        "filename": "installed-odl-bom/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 4884,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2021-05-04T17:52:47Z",
+      "side": 0,
+      "message": "We will need this !",
+      "revId": "f5c3473618497c35f14333ce134e90e1fed20e55",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
