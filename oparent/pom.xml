@@ -58,14 +58,14 @@
         <checkstyle.skip>true</checkstyle.skip>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>1.1.1</ccsdk.cds.version>
-        <ccsdk.features.version>1.1.4-SNAPSHOT</ccsdk.features.version>
-        <ccsdk.sli.version>1.2.2-SNAPSHOT</ccsdk.sli.version>
+        <ccsdk.cds.version>1.1.4</ccsdk.cds.version>
+        <ccsdk.features.version>1.1.5-SNAPSHOT</ccsdk.features.version>
+        <ccsdk.sli.version>1.2.3-SNAPSHOT</ccsdk.sli.version>
         <ccsdk.sli.core.version>${ccsdk.sli.version}</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>${ccsdk.sli.version}</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>${ccsdk.sli.version}</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>${ccsdk.sli.version}</ccsdk.sli.plugins.version>
-        <ccsdk.distribution.version>1.1.1-SNAPSHOT</ccsdk.distribution.version>
+        <ccsdk.distribution.version>1.1.6-SNAPSHOT</ccsdk.distribution.version>
 
         <mariadb.connector.version>2.1.1</mariadb.connector.version>
         <fasterxml.jackson.version>2.10.0</fasterxml.jackson.version>

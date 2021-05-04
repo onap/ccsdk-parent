@@ -43,11 +43,11 @@ do
     groupId=$(echo $jar | rev | cut -d'/' -f4- | rev | tr '/' '.')
 
 
-    echo "        <dependency>"
-    echo "            <groupId>$groupId</groupId>"
-    echo "            <artifactId>$artifactId</artifactId>"
-    echo "            <version>$version</version>"
-    echo "        </dependency>"
+    echo "            <dependency>"
+    echo "                <groupId>$groupId</groupId>"
+    echo "                <artifactId>$artifactId</artifactId>"
+    echo "                <version>$version</version>"
+    echo "            </dependency>"
 done
 
 cat  <<END
