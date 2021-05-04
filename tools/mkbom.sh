@@ -43,15 +43,30 @@ do
     groupId=$(echo $jar | rev | cut -d'/' -f4- | rev | tr '/' '.')
 
 
-    echo "        <dependency>"
-    echo "            <groupId>$groupId</groupId>"
-    echo "            <artifactId>$artifactId</artifactId>"
-    echo "            <version>$version</version>"
-    echo "        </dependency>"
+    echo "            <dependency>"
+    echo "                <groupId>$groupId</groupId>"
+    echo "                <artifactId>$artifactId</artifactId>"
+    echo "                <version>$version</version>"
+    echo "            </dependency>"
 done
 
 cat  <<END
         </dependencies>
     </dependencyManagement>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <!-- This version supports the "deployAtEnd" parameter -->
+                <version>2.8</version>
+                <configuration>
+                    <skip/>
+                    <deployAtEnd>true</deployAtEnd>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
 END
