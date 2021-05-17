@@ -28,6 +28,7 @@
         <system>JIRA</system>
         <url>https://jira.onap.org/</url>
     </issueManagement>
+
     <distributionManagement>
         <repository>
             <id>ecomp-releases</id>
@@ -57,7 +58,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
         <!-- sitePath may be overridden in the inheriting POM if desired -->
         <sitePath>/content/sites/site/\${project.groupId}/\${project.artifactId}/\${project.version}</sitePath>
 
@@ -68,6 +68,7 @@
         <!-- end of properties from oparent -->
 
         <!-- ONAP repositories -->
+        <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
         <onap.nexus.host>nexus.onap.org</onap.nexus.host>
         <onap.nexus.port>443</onap.nexus.port>
         <onap.nexus.protocol>https</onap.nexus.protocol>
@@ -238,6 +239,7 @@
             </snapshots>
         </repository>
     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>onap-public</id>
