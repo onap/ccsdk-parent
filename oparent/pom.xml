@@ -153,7 +153,7 @@
     <repositories>
         <repository>
             <id>onap-public</id>
-            <url>\${onap.nexus.public-url}</url>
+            <url>${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -165,7 +165,7 @@
         </repository>
         <repository>
             <id>onap-staging</id>
-            <url>\${onap.nexus.staging-url}</url>
+            <url>${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -178,7 +178,7 @@
         <repository>
             <id>ecomp-release</id>
             <name>onap-repository-releases</name>
-            <url>\${onap.nexus.release-url}</url>
+            <url>${onap.nexus.release-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -190,7 +190,7 @@
         <repository>
             <id>ecomp-snapshot</id>
             <name>onap-repository-snapshots</name>
-            <url>\${onap.nexus.snapshot-url}</url>
+            <url>${onap.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -202,7 +202,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>onap-public</id>
-            <url>\${onap.nexus.public-url}</url>
+            <url>${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -212,7 +212,7 @@
         </pluginRepository>
         <pluginRepository>
             <id>onap-staging</id>
-            <url>\${onap.nexus.staging-url}</url>
+            <url>${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -222,7 +222,7 @@
         </pluginRepository>
         <pluginRepository>
             <id>onap-snapshot</id>
-            <url>\${onap.nexus.snapshot-url}</url>
+            <url>${onap.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
