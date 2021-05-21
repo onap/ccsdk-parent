@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c56602dd_c3ecaf37",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2021-05-21T13:26:29Z",
+      "side": 1,
+      "message": "Any particular reason to downgrade/use-older artifact version ?",
+      "range": {
+        "startLine": 100,
+        "startChar": 8,
+        "endLine": 103,
+        "endChar": 61
+      },
+      "revId": "216ebf491cff1cc1d568b4c05ee0850d90661f87",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
