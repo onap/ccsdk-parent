@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e2121990_c7bd674c",
+        "filename": "odlparent/binding-parent/pom.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2021-05-26T15:56:58Z",
+      "side": 1,
+      "message": "Please verify/fix these version downgrade !",
+      "revId": "d8c903b6338b04f5b6d70133d0727a6b2f92017d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
