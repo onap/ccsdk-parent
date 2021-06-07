@@ -10,6 +10,21 @@ pomGroupId=$1
 pomArtifactId=$2
 pomVersion=$3
 
+jarlist=/tmp/mkbom-jar-$$
+
+
+
+# Make list of jars
+for jar in $(find . -name '*.jar' -print | cut -d'/' -f2- | sort)
+do
+    version=$(echo $jar | rev | cut -d'/' -f2 | rev)
+    artifactId=$(echo $jar | rev | cut -d'/' -f3 | rev)
+    groupId=$(echo $jar | rev | cut -d'/' -f4- | rev | tr '/' '.')
+    echo "$groupId|$artifactId|$version" >> $jarlist
+done
+
+
+
 cat <<END
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -35,23 +50,55 @@ cat <<END
         <dependencies>
 END
 
-
-for jar in $(find . -name '*.jar' -print | cut -d'/' -f2- | sort)
+lastGroupId="UNSET"
+lastArtifactId="UNSET"
+lastVersion="UNSET"
+for ln in $(cat $jarlist | sort -u)
 do
-    version=$(echo $jar | rev | cut -d'/' -f2 | rev)
-    artifactId=$(echo $jar | rev | cut -d'/' -f3 | rev)
-    groupId=$(echo $jar | rev | cut -d'/' -f4- | rev | tr '/' '.')
 
+    groupId=$(echo $ln | cut -d'|' -f1)
+    artifactId=$(echo $ln | cut -d'|' -f2)
+    version=$(echo $ln | cut -d'|' -f3)
 
-    echo "        <dependency>"
-    echo "            <groupId>$groupId</groupId>"
-    echo "            <artifactId>$artifactId</artifactId>"
-    echo "            <version>$version</version>"
-    echo "        </dependency>"
+    if [ "$lastGroupId" != "UNSET" ]
+    then
+        if [ "$lastGroupId" != "$groupId" -o "$lastArtifactId" != "$artifactId" ]
+        then
+            echo "            <dependency>"
+            echo "                <groupId>$lastGroupId</groupId>"
+            echo "                <artifactId>$lastArtifactId</artifactId>"
+            echo "                <version>$lastVersion</version>"
+            echo "            </dependency>"
+        fi
+    fi
+    lastGroupId=$groupId
+    lastArtifactId=$artifactId
+    lastVersion=$version
 done
+
+echo "            <dependency>"
+echo "                <groupId>$lastGroupId</groupId>"
+echo "                <artifactId>$lastArtifactId</artifactId>"
+echo "                <version>$lastVersion</version>"
+echo "            </dependency>"
 
 cat  <<END
         </dependencies>
     </dependencyManagement>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <!-- This version supports the "deployAtEnd" parameter -->
+                <version>2.8</version>
+                <configuration>
+                    <skip/>
+                    <deployAtEnd>true</deployAtEnd>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
 END
