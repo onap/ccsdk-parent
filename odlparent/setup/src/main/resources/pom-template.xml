@@ -121,7 +121,7 @@
         <!-- Used by aaa, vtn -->
         <commons.codec.version>1.15</commons.codec.version>
         <!-- Used by netconf, ovsdb -->
-        <commons.lang3.version>3.8.1</commons.lang3.version>
+        <commons.lang3.version>3.11</commons.lang3.version>
         <!-- Used by sfc, snmp4sdn; see also affinity, toolkit -->
         <commons.lang.version>2.6</commons.lang.version>
         <!-- Used by neutron; see also controller, vtn -->
@@ -154,19 +154,19 @@
         <!-- Used everywhere -->
         <junit.version>4.13</junit.version>
         <!-- Used by coretutorials, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
-        <logback.version>1.11.6</logback.version>
+        <logback.version>1.11.7</logback.version>
         <!-- Used by nic, sfc, sxp, tsdr -->
         <mockito.version>3.3.3</mockito.version>
         <!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
-        <netty.version>4.1.51.Final</netty.version>
+        <netty.version>4.1.56.Final</netty.version>
         <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
-        <slf4j.version>1.7.29</slf4j.version>
+        <slf4j.version>1.7.28</slf4j.version>
         <!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit, tsdr, ttp -->
         <spring.version>4.3.25.RELEASE</spring.version>
 
         <!-- Extra support libraries used by SDN-C -->
         <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
-        <antlr.version>4.8.1</antlr.version>
+        <antlr.version>4.8-1</antlr.version>
 
         <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 
@@ -180,7 +180,7 @@
         <mariadb4j.version>2.4.0</mariadb4j.version>
         <testng.version>6.14.3</testng.version>
         <tomcat-jdbc.version>9.0.30</tomcat-jdbc.version>
-        <jetty.version>9.4.28.v20200408</jetty.version>
+        <jetty.version>9.4.31.v20200723</jetty.version>
         <skip.karaf.featureTest>true</skip.karaf.featureTest>
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
     </properties>
@@ -587,21 +587,6 @@
                     </configuration>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-checkstyle-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <phase>process-sources</phase>
-                            <goals>
-                                <goal>check</goal>
-                            </goals>
-                            <configuration>
-                                <failOnViolation>false</failOnViolation>
-                                <skip>false</skip>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
                     <groupId>com.github.spotbugs</groupId>
                     <artifactId>spotbugs-maven-plugin</artifactId>
                     <version>3.1.12.2</version>
@@ -668,6 +653,7 @@
                     </configuration>
                 </plugin>
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>${checkstyle.plugin.version}</version>
                     <dependencies>
@@ -678,6 +664,16 @@
                         </dependency>
                     </dependencies>
                     <executions>
+                        <execution>
+                            <phase>process-sources</phase>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                            <configuration>
+                                <failOnViolation>false</failOnViolation>
+                                <skip>true</skip>
+                            </configuration>
+                        </execution>
                         <execution>
                             <id>check-license</id>
                             <goals>
@@ -772,71 +768,8 @@
 
             <!-- Plugins from oparent -->
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>${checkstyle.plugin.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.onap.oparent</groupId>
-                        <artifactId>checkstyle</artifactId>
-                        <version>1.2.2</version>
-                    </dependency>
-                </dependencies>
-                <executions>
-                    <execution>
-                        <!-- overwrite odl default to supress spotbugs code check execution -->
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <phase>process-sources</phase>
-                        <configuration>
-                            <skip>true</skip>
-                            <failOnViolation>false</failOnViolation>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>onap-license</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <phase>process-sources</phase>
-                        <configuration>
-                            <configLocation>onap-checkstyle/check-license.xml</configLocation>
-                            <includeResources>false</includeResources>
-                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                            <includeTestResources>false</includeTestResources>
-                            <sourceDirectories>
-                                <directory>\${project.build.sourceDirectory}</directory>
-                            </sourceDirectories>
-                            <excludes>
-                            </excludes>
-                            <consoleOutput>true</consoleOutput>
-                            <failOnViolation>false</failOnViolation>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>onap-java-style</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <phase>process-sources</phase>
-                        <configuration>
-                            <!-- Use Google Java Style Guide: https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml
-                                with minor changes -->
-                            <configLocation>onap-checkstyle/onap-java-style.xml</configLocation>
-                            <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
-                            <sourceDirectories>
-                                <directory>\${project.build.sourceDirectory}/src/main/java</directory>
-                            </sourceDirectories>
-                            <includeResources>true</includeResources>
-                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                            <includeTestResources>true</includeTestResources>
-                            <excludes>
-                            </excludes>
-                            <consoleOutput>true</consoleOutput>
-                            <failOnViolation>false</failOnViolation>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
