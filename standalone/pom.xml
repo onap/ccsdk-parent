@@ -55,16 +55,15 @@
         <bundle.plugin.version>2.5.0</bundle.plugin.version>
         <checkstyle.skip>true</checkstyle.skip>
 
-        <mariadb.connector.version>2.1.1</mariadb.connector.version>
-        <fasterxml.jackson.version>2.10.0</fasterxml.jackson.version>
+        <mariadb.connector.version>2.4.4</mariadb.connector.version>
+        <fasterxml.jackson.version>2.10.5</fasterxml.jackson.version>
         <velocity.version>2.0</velocity.version>
 
-        <dmaap.listener.version>1.1.5</dmaap.listener.version>
+        <dmaap.listener.version>1.1.12</dmaap.listener.version>
         <sdc.client.version>1.4.1</sdc.client.version>
         <sdc.tosca.version>1.6.5</sdc.tosca.version>
 
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
-
     </properties>
 
     <dependencyManagement>
@@ -89,7 +88,7 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.7.21</version>
+                <version>1.7.28</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
