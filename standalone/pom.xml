@@ -25,6 +25,16 @@
         <system>JIRA</system>
         <url>https://jira.onap.org/</url>
     </issueManagement>
+    <distributionManagement>
+        <repository>
+            <id>ecomp-releases</id>
+            <url>${onap.nexus.release-url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>ecomp-snapshots</id>
+            <url>${onap.nexus.snapshot-url}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <properties>
         <!-- Sonar properties -->
@@ -145,7 +155,7 @@
     <repositories>
         <repository>
             <id>onap-public</id>
-            <url>https://nexus.onap.org/content/groups/public</url>
+            <url>${onap.nexus.public-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -157,7 +167,7 @@
         </repository>
         <repository>
             <id>onap-staging</id>
-            <url>https://nexus.onap.org/content/groups/staging</url>
+            <url>${onap.nexus.staging-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -170,7 +180,7 @@
         <repository>
             <id>ecomp-release</id>
             <name>onap-repository-releases</name>
-            <url>https://nexus.onap.org/content/repositories/releases</url>
+            <url>${onap.nexus.release-url}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>never</updatePolicy>
@@ -182,7 +192,7 @@
         <repository>
             <id>ecomp-snapshot</id>
             <name>onap-repository-snapshots</name>
-            <url>https://nexus.onap.org/content/repositories/snapshots</url>
+            <url>${onap.nexus.snapshot-url}</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
