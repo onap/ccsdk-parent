@@ -25,6 +25,16 @@
         <system>JIRA</system>
         <url>https://jira.onap.org/</url>
     </issueManagement>
+    <distributionManagement>
+        <repository>
+            <id>ecomp-releases</id>
+            <url>${onap.nexus.release-url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>ecomp-snapshots</id>
+            <url>${onap.nexus.snapshot-url}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <properties>
         <!-- Sonar properties -->
