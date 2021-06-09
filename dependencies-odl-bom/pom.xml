@@ -157,6 +157,18 @@
                 <artifactId>listenablefuture</artifactId>
                 <version>9999.0-empty-to-avoid-conflict-with-guava</version>
             </dependency>
+            <!-- Below is no longer packaged within ODL distribution -->
+            <dependency>
+                <groupId>com.typesafe.akka</groupId>
+                <artifactId>akka-bom_2.13</artifactId>
+                <version>2.6.12</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.sshd</groupId>
+                <artifactId>sshd-core</artifactId>
+                <version>1.7.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
