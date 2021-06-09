@@ -58,8 +58,7 @@
         <mariadb.connector.version>2.4.4</mariadb.connector.version>
         <fasterxml.jackson.version>2.10.5</fasterxml.jackson.version>
         <velocity.version>2.0</velocity.version>
-        <!-- Using dmaapClient 1.1.5 as SLI needs java package as com.att.nsa.mr and dmaapClient 1.1.12 has org.onap.dmaap.mr -->
-        <dmaap.listener.version>1.1.5</dmaap.listener.version>
+        <dmaap.listener.version>1.1.12</dmaap.listener.version>
         <sdc.client.version>1.4.1</sdc.client.version>
         <sdc.tosca.version>1.6.5</sdc.tosca.version>
 

@@ -98,11 +98,10 @@
                 <artifactId>elasticsearch-rest-client</artifactId>
                 <version>6.4.3</version>
             </dependency>
-            <!-- Using dmaapClient 1.1.5 as SLI needs java package as com.att.nsa.mr and dmaapClient 1.1.12 has org.onap.dmaap.mr -->
             <dependency>
                 <groupId>org.onap.dmaap.messagerouter.dmaapclient</groupId>
                 <artifactId>dmaapClient</artifactId>
-                <version>1.1.5</version>
+                <version>1.1.12</version>
             </dependency>
             <!-- Below provides javax.annotations -->
             <dependency>
