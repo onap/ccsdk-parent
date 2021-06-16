@@ -98,8 +98,8 @@
 
         <!-- CCSDK component versions -->
         <ccsdk.cds.version>1.1.4</ccsdk.cds.version>
-        <ccsdk.features.version>1.1.5-SNAPSHOT</ccsdk.features.version>
-        <ccsdk.distribution.version>1.1.6-SNAPSHOT</ccsdk.distribution.version>
+        <ccsdk.features.version>1.1.6-SNAPSHOT</ccsdk.features.version>
+        <ccsdk.distribution.version>1.1.7-SNAPSHOT</ccsdk.distribution.version>
         <ccsdk.sli.version>1.2.3-SNAPSHOT</ccsdk.sli.version>
         <ccsdk.sli.core.version>\${ccsdk.sli.version}</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>\${ccsdk.sli.version}</ccsdk.sli.adaptors.version>
