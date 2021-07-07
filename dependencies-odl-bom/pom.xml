@@ -169,6 +169,17 @@
                 <artifactId>sshd-core</artifactId>
                 <version>1.7.0</version>
             </dependency>
+            <!-- Below highstreet odl artifacts -->
+            <dependency>
+                <groupId>com.highstreet-technologies.aaa</groupId>
+                <artifactId>aaa-shiro</artifactId>
+                <version>0.13.3</version>
+            </dependency>
+            <dependency>
+                <groupId>com.highstreet-technologies.opendaylight</groupId>
+                <artifactId>odl-ready</artifactId>
+                <version>3.1.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

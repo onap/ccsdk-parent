@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.opendaylight.odlparent</groupId>
         <artifactId>single-feature-parent</artifactId>
-        <version>8.1.1</version>
+        <version>8.1.2</version>
         <relativePath/>
     </parent>
 
@@ -111,12 +111,12 @@
         <sdnctl.slipluginutils.version>${ccsdk.sli.version}</sdnctl.slipluginutils.version>
 
         <!-- Support libraries used by OpenDaylight -->
-        <odl.controller.mdsal.version>1.13.1</odl.controller.mdsal.version>
-        <odl.mdsal.version>7.0.6</odl.mdsal.version>
-        <odl.mdsal.model.version>7.0.6</odl.mdsal.model.version>
-        <odl.netconf.restconf.version>1.13.1</odl.netconf.restconf.version>
-        <odl.netconf.netconf.version>1.13.1</odl.netconf.netconf.version>
-        <odl.netconf.sal.rest.docgen.version>1.13.1</odl.netconf.sal.rest.docgen.version>
+        <odl.controller.mdsal.version>1.13.2</odl.controller.mdsal.version>
+        <odl.mdsal.version>7.0.7</odl.mdsal.version>
+        <odl.mdsal.model.version>7.0.7</odl.mdsal.model.version>
+        <odl.netconf.restconf.version>1.13.2</odl.netconf.restconf.version>
+        <odl.netconf.netconf.version>1.13.2</odl.netconf.netconf.version>
+        <odl.netconf.sal.rest.docgen.version>1.13.2</odl.netconf.sal.rest.docgen.version>
 
         <!-- Used by aaa, vtn -->
         <commons.codec.version>1.15</commons.codec.version>
@@ -158,9 +158,9 @@
         <!-- Used by nic, sfc, sxp, tsdr -->
         <mockito.version>3.3.3</mockito.version>
         <!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
-        <netty.version>4.1.59.Final</netty.version>
+        <netty.version>4.1.63.Final</netty.version>
         <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
-        <slf4j.version>1.7.28</slf4j.version>
+        <slf4j.version>1.7.29</slf4j.version>
         <!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit, tsdr, ttp -->
         <spring.version>4.3.25.RELEASE</spring.version>
 
@@ -180,7 +180,7 @@
         <mariadb4j.version>2.4.0</mariadb4j.version>
         <testng.version>6.14.3</testng.version>
         <tomcat-jdbc.version>9.0.30</tomcat-jdbc.version>
-        <jetty.version>9.4.31.v20200723</jetty.version>
+        <jetty.version>9.4.38.v20210224</jetty.version>
         <skip.karaf.featureTest>true</skip.karaf.featureTest>
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
     </properties>
