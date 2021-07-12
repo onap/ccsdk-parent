@@ -370,10 +370,11 @@
                 <artifactId>javax.security.auth.message-api</artifactId>
                 <version>1.1</version>
             </dependency>
+            <!-- TODO: Short Term fix, as 4.0.1 seems to have buggy MANIFEST.MF -->
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
-                <version>4.0.1</version>
+                <version>3.1.0</version>
             </dependency>
             <dependency>
                 <groupId>javax.transaction</groupId>
@@ -4412,7 +4413,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <build>
         <plugins>
             <plugin>
