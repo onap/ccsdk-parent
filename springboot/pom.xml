@@ -19,6 +19,7 @@
         <module>spring-boot-setup</module>
         <module>springboot1</module>
         <module>springboot2</module>
+        <module>springboot25</module>
     </modules>
 
     <distributionManagement>

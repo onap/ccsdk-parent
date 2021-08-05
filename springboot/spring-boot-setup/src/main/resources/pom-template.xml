@@ -119,23 +119,24 @@
         <!-- Managed dependency versions -->
         <antlr.version>4.8-1</antlr.version>
         <commons.lang.version>2.6</commons.lang.version>
-        <apache.httpcomponents.core.version>4.4.14</apache.httpcomponents.core.version>
-        <apache.httpcomponents.client.version>4.5.13</apache.httpcomponents.client.version>
+        <apache.httpcomponents.core.version>${springboot.httpcomponents.core.version}</apache.httpcomponents.core.version>
+        <apache.httpcomponents.client.version>${springboot.httpcomponents.client.version}</apache.httpcomponents.client.version>
         <derby.version>10.14.2.0</derby.version>
         <eelf.version>1.0.0</eelf.version>
         <grpc.version>1.25.0</grpc.version>
-        <netty-ssl>2.0.39.Final</netty-ssl>
+        <netty-ssl>${springboot.netty.ssl.version}</netty-ssl>
         <protobuff.java.version>3.10.0</protobuff.java.version>
         <protobuff.java.utils.version>3.10.0</protobuff.java.utils.version>
-        <jersey.version>2.30.1</jersey.version>
-        <jersey.client.version>2.30.1</jersey.client.version>
+        <jersey.version>${springboot.jersey.version}</jersey.version>
+        <jersey.client.version>${springboot.jersey.version}</jersey.client.version>
         <jettison.version>1.3.8</jettison.version>
         <logback.version>1.2.3</logback.version>
         <mariadb.connector.version>2.7.3</mariadb.connector.version>
         <mariadb4j.version>2.4.0</mariadb4j.version>
-        <slf4j.version>1.7.25</slf4j.version>
+        <slf4j.version>${springboot.slf4j.version}</slf4j.version>
+        <springfox.version>${springboot.springfox.version}</springfox.version>
         <testng.version>6.14.3</testng.version>
-        <tomcat-jdbc.version>9.0.46</tomcat-jdbc.version>
+        <tomcat-jdbc.version>${springboot.tomcat.jdbc.version}</tomcat-jdbc.version>
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
     </properties>
 
@@ -148,6 +149,13 @@
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
                 <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${springboot.jackson.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
