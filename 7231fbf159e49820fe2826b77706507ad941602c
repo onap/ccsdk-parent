@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f65d595_ea9a2f7c",
+        "filename": "springboot/springboot25/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2021-08-06T21:09:53Z",
+      "side": 1,
+      "message": "can this new pom be refactored as per jdk11 (may need separate template)?",
+      "revId": "7231fbf159e49820fe2826b77706507ad941602c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
