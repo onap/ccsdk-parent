@@ -196,6 +196,11 @@
                 <artifactId>logging-filter-base</artifactId>
                 <version>\${logging-analytics.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-core</artifactId>
+                <version>4.4.2-nordix</version>
+            </dependency>   
         </dependencies>
     </dependencyManagement>
 
@@ -246,6 +251,11 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <id>nordix-liquibase-repo</id>
+            <name>liquibase</name>
+            <url>https://artifactory.nordix.org/artifactory/liquibase</url>
         </repository>
     </repositories>
 
