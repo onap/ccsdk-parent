@@ -16,6 +16,24 @@
       "revId": "7231fbf159e49820fe2826b77706507ad941602c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2dd8e10e_a6ebcad3",
+        "filename": "springboot/springboot25/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2021-08-17T15:58:40Z",
+      "side": 1,
+      "message": "Good catch - thanks!  I\u0027d prefer to address that in a separate review.  OK?",
+      "parentUuid": "7f65d595_ea9a2f7c",
+      "revId": "7231fbf159e49820fe2826b77706507ad941602c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
