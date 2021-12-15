@@ -65,8 +65,8 @@
         <bundle.plugin.version>2.5.0</bundle.plugin.version>
         <checkstyle.skip>true</checkstyle.skip>
 
-        <log4j.version>2.15.0</log4j.version>
-        <log4j2.version>2.15.0</log4j2.version>
+        <log4j.version>2.16.0</log4j.version>
+        <log4j2.version>2.16.0</log4j2.version>
         <mariadb.connector.version>2.7.2</mariadb.connector.version>
         <fasterxml.jackson.version>2.12.4</fasterxml.jackson.version>
         <velocity.version>2.3</velocity.version>
