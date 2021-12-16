@@ -77,6 +77,8 @@
         <ccsdk.sli.plugins.version>${ccsdk.sli.version}</ccsdk.sli.plugins.version>
         <ccsdk.distribution.version>1.2.2-SNAPSHOT</ccsdk.distribution.version>
 
+        <log4j.version>2.16.0</log4j.version>
+        <log4j2.version>2.16.0</log4j2.version>
         <mariadb.connector.version>2.7.3</mariadb.connector.version>
         <fasterxml.jackson.version>2.10.5</fasterxml.jackson.version>
         <velocity.version>2.3</velocity.version>
