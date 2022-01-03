@@ -124,8 +124,8 @@
         <derby.version>10.14.2.0</derby.version>
         <eelf.version>1.0.0</eelf.version>
         <grpc.version>1.25.0</grpc.version>
-        <log4j.version>2.16.0</log4j.version>
-        <log4j2.version>2.16.0</log4j2.version>
+        <log4j.version>2.17.1</log4j.version>
+        <log4j2.version>2.17.1</log4j2.version>
         <netty-ssl>${springboot.netty.ssl.version}</netty-ssl>
         <protobuff.java.version>3.10.0</protobuff.java.version>
         <protobuff.java.utils.version>3.10.0</protobuff.java.utils.version>
@@ -202,7 +202,18 @@
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-core</artifactId>
                 <version>4.4.2-nordix</version>
-            </dependency>   
+            </dependency> 
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
