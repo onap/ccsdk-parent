@@ -14,7 +14,7 @@
 
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>${springboot.project.artifactId}</artifactId>
-    <version>${project.version}</version>
+    <version>\${revision}</version>
     <packaging>pom</packaging>
 
     <name>ONAP :: \${project.groupId} :: \${project.artifactId}</name>
@@ -150,7 +150,7 @@
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
-                <version>${project.version}</version>
+                <version>\${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
