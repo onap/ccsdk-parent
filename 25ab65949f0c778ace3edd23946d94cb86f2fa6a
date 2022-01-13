@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "780b9bfa_79f8f736",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2022-01-13T20:35:35Z",
+      "side": 1,
+      "message": "would rather use ${revision} itself, if using project.version maven will resolve same as current project version referring to parent poms, and will cause build failure dur to artifact not found",
+      "revId": "25ab65949f0c778ace3edd23946d94cb86f2fa6a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "852c124d_669ca22b",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2022-01-13T20:35:35Z",
+      "side": 1,
+      "message": "same here !",
+      "revId": "25ab65949f0c778ace3edd23946d94cb86f2fa6a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4636d57e_f6342289",
+        "filename": "springboot/spring-boot-setup/src/main/resources/pom-template.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2022-01-13T20:35:35Z",
+      "side": 1,
+      "message": "same here !",
+      "revId": "25ab65949f0c778ace3edd23946d94cb86f2fa6a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
