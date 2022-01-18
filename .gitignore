@@ -18,6 +18,7 @@ workspace
 target
 target-ide
 MANIFEST.MF
+**/__pycache__
 
 ## Misc Ignores (OS specific etc) ##
 bin/
