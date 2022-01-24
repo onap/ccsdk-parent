@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a57fbe1e_f278c83f",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2022-01-24T18:13:57Z",
+      "side": 0,
+      "message": "log4j.version and log4j2.version were added for log4j patch - a number of repos still use these.  Please restore these",
+      "revId": "4be5050dbf39609eb11490355601480d97f8c407",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
