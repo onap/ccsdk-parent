@@ -251,11 +251,6 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>nordix-liquibase-repo</id>
-            <name>liquibase</name>
-            <url>https://artifactory.nordix.org/artifactory/liquibase</url>
-        </repository>
     </repositories>
 
     <pluginRepositories>
