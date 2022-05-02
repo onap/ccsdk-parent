@@ -35,7 +35,7 @@
                                 <resource>
                                     <directory>src/main/resources</directory>
                                     <includes>
-                                        <include>pom-template.xml</include>
+                                        <include>pom-template-jdk8.xml</include>
                                     </includes>
                                     <filtering>true</filtering>
                                 </resource>
@@ -48,25 +48,49 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>create-springboot2-parent-pom</id>
+                        <id>create-springboot23-parent-pom</id>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals><!-- here the phase you need -->
                         <phase>validate</phase>
                         <configuration>
-                            <outputDirectory>../springboot2</outputDirectory>
+                            <outputDirectory>../springboot23</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>src/main/resources</directory>
                                     <includes>
-                                        <include>pom-template.xml</include>
+                                        <include>pom-template-jdk8.xml</include>
                                     </includes>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
                             <escapeString>\</escapeString>
                             <filters>
-                                <filter>${basedir}/src/main/properties/springboot2.properties</filter>
+                                <filter>${basedir}/src/main/properties/springboot23.properties</filter>
+                            </filters>
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>create-springboot25-parent-pom</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals><!-- here the phase you need -->
+                        <phase>validate</phase>
+                        <configuration>
+                            <outputDirectory>../springboot25</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>pom-template-jdk11.xml</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                            <escapeString>\</escapeString>
+                            <filters>
+                                <filter>${basedir}/src/main/properties/springboot25.properties</filter>
                             </filters>
                             <encoding>UTF-8</encoding>
                         </configuration>
@@ -85,19 +109,30 @@
                             <goal>rename</goal>
                         </goals>
                         <configuration>
-                            <sourceFile>../springboot1/pom-template.xml</sourceFile>
+                            <sourceFile>../springboot1/pom-template-jdk8.xml</sourceFile>
                             <destinationFile>../springboot1/pom.xml</destinationFile>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>rename-springboot2-parent-pom</id>
+                        <id>rename-springboot23-parent-pom</id>
                         <phase>validate</phase>
                         <goals>
                             <goal>rename</goal>
                         </goals>
                         <configuration>
-                            <sourceFile>../springboot2/pom-template.xml</sourceFile>
-                            <destinationFile>../springboot2/pom.xml</destinationFile>
+                            <sourceFile>../springboot23/pom-template-jdk8.xml</sourceFile>
+                            <destinationFile>../springboot23/pom.xml</destinationFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>rename-springboot25-parent-pom</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>rename</goal>
+                        </goals>
+                        <configuration>
+                            <sourceFile>../springboot25/pom-template-jdk11.xml</sourceFile>
+                            <destinationFile>../springboot25/pom.xml</destinationFile>
                         </configuration>
                     </execution>
                 </executions>
