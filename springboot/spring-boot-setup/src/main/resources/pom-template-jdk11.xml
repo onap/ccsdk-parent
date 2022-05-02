@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/springboot/spring-boot-setup/src/main/template/pom-template.xml
+    <!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/springboot/spring-boot-setup/src/main/template/pom-template-jdk11.xml
         Any updates needed should be made to that template and not to the generated
         pom.xml file -->
     <parent>
@@ -54,8 +54,6 @@
         <jacoco.version>0.8.5</jacoco.version>
         <!-- properties from oparent -->
 
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- sitePath may be overridden in the inheriting POM if desired -->
@@ -79,10 +77,9 @@
         <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
 
-        <java.version.source>1.8</java.version.source>
-        <java.version.target>1.8</java.version.target>
+        <java.version>11</java.version>
         <bundle.plugin.version>2.5.0</bundle.plugin.version>
-        <maven.compile.plugin.version>2.5.1</maven.compile.plugin.version>
+        <maven.compile.plugin.version>3.8.1</maven.compile.plugin.version>
         <features.file>features.xml</features.file>
         <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
         <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
@@ -132,7 +129,7 @@
         <jettison.version>1.3.8</jettison.version>
         <log4j.version>2.17.1</log4j.version>
         <log4j2.version>2.17.1</log4j2.version>
-        <logback.version>1.2.3</logback.version>
+        <logback.version>${springboot.logback.version}</logback.version>
         <mariadb.connector.version>2.7.3</mariadb.connector.version>
         <mariadb4j.version>2.4.0</mariadb4j.version>
         <slf4j.version>${springboot.slf4j.version}</slf4j.version>
@@ -202,16 +199,6 @@
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-core</artifactId>
                 <version>4.4.2-nordix</version>
-            </dependency>   
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-api</artifactId>
-                <version>${log4j2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>${log4j2.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -452,8 +439,10 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>\${maven.compile.plugin.version}</version>
                     <configuration>
-                        <source>\${java.version.source}</source>
-                        <target>\${java.version.target}</target>
+                        <release>\${java.version}</release>
+                        <!--explicitly remove source and target-->
+                        <source combine.self="override"/>
+                        <target combine.self="override"/>
                     </configuration>
                 </plugin>
                 <plugin>
