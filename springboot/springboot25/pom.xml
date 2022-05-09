@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/springboot/spring-boot-setup/src/main/template/pom-template.xml
+    <!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/springboot/spring-boot-setup/src/main/template/pom-template-jdk11.xml
         Any updates needed should be made to that template and not to the generated
         pom.xml file -->
     <parent>
@@ -79,7 +79,7 @@
 
         <java.version>11</java.version>
         <bundle.plugin.version>2.5.0</bundle.plugin.version>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven.compile.plugin.version>3.8.1</maven.compile.plugin.version>
         <features.file>features.xml</features.file>
         <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
         <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
@@ -89,10 +89,10 @@
         <logging-analytics.version>1.6.9</logging-analytics.version>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>(1.1.99999,1.2.99999-SNAPSHOT)</ccsdk.cds.version>
-        <ccsdk.features.version>(1.1.99999, 1.2.99999-SNAPSHOT)</ccsdk.features.version>
-        <ccsdk.distribution.version>(1.1.99999, 1.2.99999-SNAPSHOT)</ccsdk.distribution.version>
-        <ccsdk.sli.version>1.3.1</ccsdk.sli.version>
+        <ccsdk.cds.version>(1.2.99999,1.3.99999-SNAPSHOT]</ccsdk.cds.version>
+        <ccsdk.features.version>(1.2.99999, 1.3.99999-SNAPSHOT]</ccsdk.features.version>
+        <ccsdk.distribution.version>(1.2.99999, 1.3.99999-SNAPSHOT]</ccsdk.distribution.version>
+        <ccsdk.sli.version>(1.3.99999, 1.4.99999-SNAPSHOT]</ccsdk.sli.version>
         <ccsdk.sli.core.version>${ccsdk.sli.version}</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>${ccsdk.sli.version}</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>${ccsdk.sli.version}</ccsdk.sli.northbound.version>
@@ -199,7 +199,7 @@
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-core</artifactId>
                 <version>4.4.2-nordix</version>
-            </dependency>   
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -437,7 +437,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven-compiler-plugin.version}</version>
+                    <version>${maven.compile.plugin.version}</version>
                     <configuration>
                         <release>${java.version}</release>
                         <!--explicitly remove source and target-->
