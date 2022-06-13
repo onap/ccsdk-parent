@@ -8,7 +8,7 @@ import tempfile
 from lib.pomfile import PomFile
 
 DEFAULT_PARENT_GROUPID="org.onap.ccsdk.parent"
-DEFAULT_PARENT_VERSION="2.3.3-SNAPSHOT"
+DEFAULT_PARENT_VERSION="2.4.0-SNAPSHOT"
 DEFAULT_STRICT=True
 USE_OLD_SERVLET_API=True
 
