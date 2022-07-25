@@ -155,7 +155,7 @@
         <!-- Used everywhere -->
         <junit.version>4.13.2</junit.version>
         <!-- Used by coretutorials, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
-        <logback.version>1.11.7</logback.version>
+        <logback.version>1.2.11</logback.version>
         <!-- Used by nic, sfc, sxp, tsdr -->
         <mockito.version>3.12.4</mockito.version>
         <!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
