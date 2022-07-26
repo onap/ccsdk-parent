@@ -101,7 +101,7 @@
             <dependency>
                 <groupId>org.onap.dmaap.messagerouter.dmaapclient</groupId>
                 <artifactId>dmaapClient</artifactId>
-                <version>1.1.12</version>
+                <version>1.1.13-SNAPSHOT</version>
             </dependency>
             <!-- Below provides javax.annotations -->
             <dependency>
