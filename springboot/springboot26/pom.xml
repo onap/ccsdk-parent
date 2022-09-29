@@ -80,6 +80,9 @@
         <java.version>11</java.version>
         <bundle.plugin.version>2.5.0</bundle.plugin.version>
         <maven.compile.plugin.version>3.8.1</maven.compile.plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
+        <maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
         <features.file>features.xml</features.file>
         <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
         <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
@@ -103,10 +106,10 @@
         <spring.version>5.3.22</spring.version>
 
         <!-- Kotlin versions -->
-        <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-        <kotlin.version>1.3.61</kotlin.version>
-        <kotlin.maven.version>1.3.61</kotlin.maven.version>
-        <kotlin.couroutines.version>1.3.3</kotlin.couroutines.version>
+        <kotlin.compiler.jvmTarget>1.11</kotlin.compiler.jvmTarget>
+        <kotlin.version>1.5.32</kotlin.version>
+        <kotlin.maven.version>1.5.32</kotlin.maven.version>
+        <kotlin.couroutines.version>1.5.2</kotlin.couroutines.version>
         <kotlinpoet.version>1.5.0</kotlinpoet.version>
         <kroto-plus.version>0.5.0</kroto-plus.version>
         <nats.version>2.6.6</nats.version>
@@ -881,7 +884,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-antrun-plugin</artifactId>
-                        <version>1.8</version>
+                        <version>${maven-antrun-plugin.version}</version>
                         <executions>
                             <execution>
                                 <phase>initialize</phase>
