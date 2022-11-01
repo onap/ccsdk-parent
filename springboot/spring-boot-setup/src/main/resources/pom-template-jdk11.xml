@@ -130,8 +130,8 @@
         <jersey.version>${springboot.jersey.version}</jersey.version>
         <jersey.client.version>${springboot.jersey.version}</jersey.client.version>
         <jettison.version>1.3.8</jettison.version>
-        <log4j.version>2.17.1</log4j.version>
-        <log4j2.version>2.17.1</log4j2.version>
+        <log4j.version>2.17.2</log4j.version>
+        <log4j2.version>2.17.2</log4j2.version>
         <logback.version>${springboot.logback.version}</logback.version>
         <mariadb.connector.version>2.7.3</mariadb.connector.version>
         <mariadb4j.version>2.4.0</mariadb4j.version>
