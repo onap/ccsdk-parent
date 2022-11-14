@@ -167,6 +167,7 @@
 
         <!-- Extra support libraries used by SDN-C -->
         <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
+        <jaxb-api.version>2.3.3</jaxb-api.version>
         <antlr.version>4.8-1</antlr.version>
 
         <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
@@ -364,17 +365,6 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-        </pluginRepository>
-        <!-- Black Duck plugin dependencies -->
-        <pluginRepository>
-            <id>JCenter</id>
-            <name>JCenter Repository</name>
-            <url>http://jcenter.bintray.com</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>Restlet</id>
-            <name>Restlet Repository</name>
-            <url>http://maven.restlet.com</url>
         </pluginRepository>
     </pluginRepositories>
 
