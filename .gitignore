@@ -11,6 +11,7 @@ org.eclipse.core.resources.prefs
 maven-eclipse.xml
 workspace
 .vscode
+*.orig
 
 ## Compilation Files ##
 *.class
