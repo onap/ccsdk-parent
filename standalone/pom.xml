@@ -70,7 +70,7 @@
         <mariadb.connector.version>2.7.2</mariadb.connector.version>
         <fasterxml.jackson.version>2.12.4</fasterxml.jackson.version>
         <velocity.version>2.3</velocity.version>
-        <dmaap.listener.version>1.1.13</dmaap.listener.version>
+        <dmaap.listener.version>1.1.12</dmaap.listener.version>
         <sdc.client.version>1.4.1</sdc.client.version>
         <sdc.tosca.version>1.6.5</sdc.tosca.version>
 
