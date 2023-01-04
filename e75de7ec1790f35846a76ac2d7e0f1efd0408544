@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41dc908c_8bafb7e6",
+        "filename": "dependencies-bom/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-01-04T15:03:26Z",
+      "side": 1,
+      "message": "can remove this comment, it\u0027s misleading !",
+      "revId": "e75de7ec1790f35846a76ac2d7e0f1efd0408544",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a221692c_a8c63a6a",
+        "filename": "dependencies-bom/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-01-04T15:03:26Z",
+      "side": 1,
+      "message": "Is this intentional downgrade ?",
+      "revId": "e75de7ec1790f35846a76ac2d7e0f1efd0408544",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "97e144bd_5436ef37",
+        "filename": "dependencies-odl-bom/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-01-04T15:03:26Z",
+      "side": 1,
+      "message": "Is this intentional downgrade ?",
+      "revId": "e75de7ec1790f35846a76ac2d7e0f1efd0408544",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "61ed8584_c2ab66e6",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-01-04T15:03:26Z",
+      "side": 1,
+      "message": "Changing the Group ID will impact all projects !",
+      "revId": "e75de7ec1790f35846a76ac2d7e0f1efd0408544",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b06f2ee5_dbaa30cb",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-01-04T15:03:26Z",
+      "side": 1,
+      "message": "Are SLI modules ready to be built using jdk11 ?",
+      "revId": "e75de7ec1790f35846a76ac2d7e0f1efd0408544",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c2a4dcb9_a316065a",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-01-04T15:03:26Z",
+      "side": 1,
+      "message": "is this correct version ?",
+      "revId": "e75de7ec1790f35846a76ac2d7e0f1efd0408544",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
