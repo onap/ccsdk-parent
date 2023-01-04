@@ -44,40 +44,40 @@
             <dependency>
                 <groupId>org.opendaylight.bgpcep</groupId>
                 <artifactId>bgp-artifacts</artifactId>
-                <version>0.17.5</version>
+                <version>0.18.4</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>controller-artifacts</artifactId>
-                <version>5.0.5</version>
+                <version>6.0.5</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-artifacts</artifactId>
-                <version>9.0.4</version>
+                <version>10.0.5</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-artifacts</artifactId>
-                <version>3.0.5</version>
+                <version>4.0.4</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-binding-broker-impl</artifactId>
-                <version>3.0.5</version>
+                <version>4.0.4</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-binding-broker-impl</artifactId>
-                <version>3.0.5</version>
+                <version>4.0.4</version>
                 <type>test-jar</type>
                 <classifier>tests</classifier>
                 <scope>test</scope>
@@ -85,7 +85,7 @@
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-test-model</artifactId>
-                <version>3.0.5</version>
+                <version>4.0.4</version>
             </dependency>
             <dependency>
                 <groupId>org.java-websocket</groupId>
