@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.opendaylight.mdsal</groupId>
         <artifactId>binding-parent</artifactId>
-        <version>9.0.4</version>
+        <version>10.0.5</version>
         <relativePath/>
     </parent>
 
@@ -50,7 +50,7 @@
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
 
         <!-- Jacoco properties -->
-        <jacoco.version>0.8.5</jacoco.version>
+        <jacoco.version>0.8.8</jacoco.version>
 
         <!-- properties from oparent -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -81,7 +81,7 @@
         <opendaylight.nexus.snapshot-url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</opendaylight.nexus.snapshot-url>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
         <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
         <bundle.plugin.version>4.2.1</bundle.plugin.version>
@@ -111,13 +111,13 @@
         <sdnctl.slipluginutils.version>${ccsdk.sli.version}</sdnctl.slipluginutils.version>
 
         <!-- Support libraries used by OpenDaylight -->
-        <odl.controller.mdsal.version>9.0.4</odl.controller.mdsal.version>
-        <odl.mdsal.version>10.0.2</odl.mdsal.version>
-        <odl.mdsal.model.version>10.0.2</odl.mdsal.model.version>
+        <odl.controller.mdsal.version>10.0.5</odl.controller.mdsal.version>
+        <odl.mdsal.version>11.0.3</odl.mdsal.version>
+        <odl.mdsal.model.version>11.0.3</odl.mdsal.model.version>
         <odl.mdsal.generator.version>8.0.5</odl.mdsal.generator.version>
-        <odl.netconf.restconf.version>9.0.4</odl.netconf.restconf.version>
-        <odl.netconf.netconf.version>9.0.4</odl.netconf.netconf.version>
-        <odl.netconf.sal.rest.docgen.version>9.0.4</odl.netconf.sal.rest.docgen.version>
+        <odl.netconf.restconf.version>10.0.5</odl.netconf.restconf.version>
+        <odl.netconf.netconf.version>10.0.5</odl.netconf.netconf.version>
+        <odl.netconf.sal.rest.docgen.version>10.0.5</odl.netconf.sal.rest.docgen.version>
 
         <!-- Used by aaa, vtn -->
         <commons.codec.version>1.15</commons.codec.version>
@@ -132,25 +132,25 @@
         <!-- Used by aaa -->
         <felix.dependencymanager.version>4.4.1</felix.dependencymanager.version>
         <!-- Used by lacp, netconf, ovsdb, sfc, toolkit; see also vtn -->
-        <gson.version>2.9.0</gson.version>
+        <gson.version>2.10</gson.version>
         <!-- Used by aaa, dlux, persistence, snmp4sdn, sxp -->
         <guava.version>31.1-jre</guava.version>
         <!-- Used by aaa, alto, netconf, ovsdb, sfc; see also affinity, defense4all,
             integration/distribution, snmp4sdn, toolkit, ttp -->
-        <jackson.version>2.13.2</jackson.version>
+        <jackson.version>2.13.4</jackson.version>
         <!-- Used by snmp4sdn, yangtools -->
-        <javassist.version>3.28.0-GA</javassist.version>
+        <javassist.version>3.29.2-GA</javassist.version>
 
         <!-- FIXME remove all dependencies for jersey 1.17 after migration all projects -->
         <!-- Used by aaa, alto, netconf, neutron, sfc; see also affinity, defense4all, snmp4sdn, toolkit -->
-        <jersey.version>2.27</jersey.version>
+        <jersey.version>2.37</jersey.version>
         <!-- Used by sfc -->
-        <jersey.client.version>2.27</jersey.client.version>
+        <jersey.client.version>2.37</jersey.client.version>
 
         <!-- New packages for jersey migration 1.17 to 2.8 -->
         <!-- appache.geronimo.bundle for DocGen -->
         <!-- Used by aaa, iotdm, netconf, ovsdb, sfc -->
-        <org.json.version>20131018</org.json.version>
+        <org.json.version>None</org.json.version>
 
         <!-- Used everywhere -->
         <junit.version>4.13.2</junit.version>
@@ -159,7 +159,7 @@
         <!-- Used by nic, sfc, sxp, tsdr -->
         <mockito.version>3.12.4</mockito.version>
         <!-- Used by bgpcep, netconf, ovsdb, sxp; see also opendove, toolkit -->
-        <netty.version>4.1.76.Final</netty.version>
+        <netty.version>4.1.84.Final</netty.version>
         <!-- Used by openflowjava, persistence, sfc, snmp4sdn, sxp; see also affinity, toolkit -->
         <slf4j.version>1.7.32</slf4j.version>
         <!-- Used in integration/distribution; see also affinity, snmp4sdn, toolkit, tsdr, ttp -->
@@ -167,7 +167,6 @@
 
         <!-- Extra support libraries used by SDN-C -->
         <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
-        <jaxb-api.version>2.3.3</jaxb-api.version>
         <antlr.version>4.8-1</antlr.version>
 
         <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
@@ -180,7 +179,7 @@
         <grpc.version>1.21.1</grpc.version>
         <log4j.version>2.17.1</log4j.version>
         <log4j2.version>2.17.1</log4j2.version>
-        <jetty.version>9.4.46.v20220331</jetty.version>
+        <jetty.version>9.4.49.v20220914</jetty.version>
         <mariadb.connector.version>2.7.5</mariadb.connector.version>
         <mariadb4j.version>2.4.0</mariadb4j.version>
         <testng.version>6.14.3</testng.version>
@@ -365,6 +364,17 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
+        </pluginRepository>
+        <!-- Black Duck plugin dependencies -->
+        <pluginRepository>
+            <id>JCenter</id>
+            <name>JCenter Repository</name>
+            <url>http://jcenter.bintray.com</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>Restlet</id>
+            <name>Restlet Repository</name>
+            <url>http://maven.restlet.com</url>
         </pluginRepository>
     </pluginRepositories>
 
