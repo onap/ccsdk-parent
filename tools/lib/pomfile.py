@@ -34,7 +34,8 @@ class PomFile:
     #         /project/dependencies/dependency[groupId=org.opendaylight.netconf]/version
     # value: value to set
     def setXmlValue(self, valuePath, value, replaceMultiple=False) -> bool:
-        
+        if value is None:
+            return False
         found=False
         pathToFind = XPath(valuePath)
         pattern = re.compile('<([^>^\ ^?^!]+)')
