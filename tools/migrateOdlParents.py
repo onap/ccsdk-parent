@@ -164,7 +164,7 @@ class OdlParentMigrator:
         bgpVersion = self.getMvnRepoVersion('org.opendaylight.bgpcep','topology-api')
         controllerVersion = self.getMvnRepoVersion('org.opendaylight.controller', 'blueprint')
         mdsalVersion=self.getMvnRepoVersion('org.opendaylight.mdsal','mdsal-binding-api')
-        netconfVersion = self.getMvnRepoVersion('org.opendaylight.netconf','ietf-netconf')
+        netconfVersion = self.getMvnRepoVersion('org.opendaylight.netconf','netconf-impl')
 
         pomFile = PomFile(os.path.abspath(self.parentPath+'/dependencies-odl-bom/pom.xml'))
         x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=bgp-artifacts]/version',bgpVersion)
