@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "38925c4a_e406e332",
+        "filename": "dependencies-bom/pom.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-01-19T13:03:24Z",
+      "side": 1,
+      "message": "is this downgrading intentional ?",
+      "revId": "dd2135fd321dedb41c08bd760177cdb7cd80f784",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "72a48e0f_ee3576eb",
+        "filename": "installed-odl-bom/pom.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-01-19T13:03:24Z",
+      "side": 1,
+      "message": "is this downgrading intentional ?",
+      "revId": "dd2135fd321dedb41c08bd760177cdb7cd80f784",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "67a553c5_518e6be6",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-01-19T13:03:24Z",
+      "side": 1,
+      "message": "Why \u0027None\u0027 ? if this doesn\u0027t need to be in dependencies, then property can be removed right !",
+      "revId": "dd2135fd321dedb41c08bd760177cdb7cd80f784",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "75607586_b5053a5e",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-01-19T13:03:24Z",
+      "side": 1,
+      "message": "do we really need these to be added ?",
+      "revId": "dd2135fd321dedb41c08bd760177cdb7cd80f784",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
