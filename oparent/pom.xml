@@ -47,7 +47,7 @@
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
 
         <!-- Jacoco properties -->
-        <jacoco.version>0.8.5</jacoco.version>
+        <jacoco.version>0.8.8</jacoco.version>
         <!-- ONAP repositories -->
         <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
         <onap.nexus.host>nexus.onap.org</onap.nexus.host>
@@ -60,11 +60,11 @@
         <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
 
-        <java.version>11</java.version>
-        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
-        <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
+        <java.version>17</java.version>
+        <maven-surefire-plugin.version>3.0.0-M8</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.0.0-M8</maven-failsafe-plugin.version>
         <bundle.plugin.version>5.1.1</bundle.plugin.version>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <checkstyle.skip>true</checkstyle.skip>
         <logback.version>1.2.11</logback.version>
 

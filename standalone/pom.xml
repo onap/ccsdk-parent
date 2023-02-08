@@ -47,7 +47,7 @@
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
 
         <!-- Jacoco properties -->
-        <jacoco.version>0.8.5</jacoco.version>
+        <jacoco.version>0.8.8</jacoco.version>
         <!-- ONAP repositories -->
         <onap.nexus.url>https://nexus.onap.org</onap.nexus.url>
         <onap.nexus.host>nexus.onap.org</onap.nexus.host>
@@ -60,9 +60,11 @@
         <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
 
-        <java.version.source>1.8</java.version.source>
-        <java.version.target>1.8</java.version.target>
-        <bundle.plugin.version>2.5.0</bundle.plugin.version>
+        <java.version.source>17</java.version.source>
+        <java.version.target>17</java.version.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <bundle.plugin.version>5.1.1</bundle.plugin.version>
         <checkstyle.skip>true</checkstyle.skip>
 
         <log4j.version>2.17.1</log4j.version>

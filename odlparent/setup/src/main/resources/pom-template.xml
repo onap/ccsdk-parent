@@ -50,7 +50,7 @@
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
 
         <!-- Jacoco properties -->
-        <jacoco.version>0.8.5</jacoco.version>
+        <jacoco.version>0.8.8</jacoco.version>
 
         <!-- properties from oparent -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -81,15 +81,15 @@
         <opendaylight.nexus.snapshot-url>https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/</opendaylight.nexus.snapshot-url>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>11</java.version>
-        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
-        <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
+        <java.version>17</java.version>
+        <maven-surefire-plugin.version>3.0.0-M8</maven-surefire-plugin.version>
+        <maven-failsafe-plugin.version>3.0.0-M8</maven-failsafe-plugin.version>
         <bundle.plugin.version>5.1.1</bundle.plugin.version>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <features.file>features.xml</features.file>
         <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
         <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
-        <checkstyle.plugin.version>3.1.1</checkstyle.plugin.version>
+        <checkstyle.plugin.version>3.2.1</checkstyle.plugin.version>
         <checkstyle.skip>true</checkstyle.skip>
         <odlparent.spotbugs.enforce>false</odlparent.spotbugs.enforce>
 
