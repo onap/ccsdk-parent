@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "04bcf543_23d847e7",
+        "filename": "dependencies-bom/pom.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 6215
+      },
+      "writtenOn": "2023-02-09T08:16:15Z",
+      "side": 1,
+      "message": "Included a newer version",
+      "parentUuid": "38925c4a_e406e332",
+      "revId": "dd2135fd321dedb41c08bd760177cdb7cd80f784",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "72a48e0f_ee3576eb",
         "filename": "installed-odl-bom/pom.xml",
         "patchSetId": 3
@@ -33,6 +51,24 @@
       "revId": "dd2135fd321dedb41c08bd760177cdb7cd80f784",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5cdac356_26393a52",
+        "filename": "installed-odl-bom/pom.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 6215
+      },
+      "writtenOn": "2023-02-09T08:16:15Z",
+      "side": 1,
+      "message": "Reverted to the old version",
+      "parentUuid": "72a48e0f_ee3576eb",
+      "revId": "dd2135fd321dedb41c08bd760177cdb7cd80f784",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "426adb25_ed8e0b38",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 6215
+      },
+      "writtenOn": "2023-02-09T08:16:15Z",
+      "side": 1,
+      "message": "Commented",
+      "parentUuid": "67a553c5_518e6be6",
+      "revId": "dd2135fd321dedb41c08bd760177cdb7cd80f784",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "75607586_b5053a5e",
         "filename": "odlparent/setup/src/main/resources/pom-template.xml",
         "patchSetId": 3
@@ -67,6 +121,24 @@
       "revId": "dd2135fd321dedb41c08bd760177cdb7cd80f784",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6655d3a0_5d44f756",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 6215
+      },
+      "writtenOn": "2023-02-09T08:16:15Z",
+      "side": 1,
+      "message": "Commented",
+      "parentUuid": "75607586_b5053a5e",
+      "revId": "dd2135fd321dedb41c08bd760177cdb7cd80f784",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
