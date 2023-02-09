@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "629723c3_a49640fa",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 6215
+      },
+      "writtenOn": "2023-02-09T17:15:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a2f8e1c7_652ccf48",
+      "revId": "ff9252c4a58afb90412cde48ab95db9a95467f1a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "78428080_1f965e80",
         "filename": "odlparent/setup/src/main/resources/pom-template.xml",
         "patchSetId": 6
@@ -33,6 +51,24 @@
       "revId": "ff9252c4a58afb90412cde48ab95db9a95467f1a",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "262be14f_2d439dc3",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 6215
+      },
+      "writtenOn": "2023-02-09T17:15:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "78428080_1f965e80",
+      "revId": "ff9252c4a58afb90412cde48ab95db9a95467f1a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
