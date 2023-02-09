@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a2f8e1c7_652ccf48",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-02-09T14:02:53Z",
+      "side": 1,
+      "message": "Indent the line or remove it !",
+      "revId": "ff9252c4a58afb90412cde48ab95db9a95467f1a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "78428080_1f965e80",
+        "filename": "odlparent/setup/src/main/resources/pom-template.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 865
+      },
+      "writtenOn": "2023-02-09T14:02:53Z",
+      "side": 1,
+      "message": "Please remove this !",
+      "revId": "ff9252c4a58afb90412cde48ab95db9a95467f1a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
