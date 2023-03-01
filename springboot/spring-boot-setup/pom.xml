@@ -119,6 +119,30 @@
                             <encoding>UTF-8</encoding>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>create-springboot30-parent-pom</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals><!-- here the phase you need -->
+                        <phase>validate</phase>
+                        <configuration>
+                            <outputDirectory>../springboot30</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>pom-template-jdk17.xml</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                            <escapeString>\</escapeString>
+                            <filters>
+                                <filter>${basedir}/src/main/properties/springboot30.properties</filter>
+                            </filters>
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
