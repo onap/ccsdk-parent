@@ -24,30 +24,6 @@
                 <version>2.6</version>
                 <executions>
                     <execution>
-                        <id>create-springboot1-parent-pom</id>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals><!-- here the phase you need -->
-                        <phase>validate</phase>
-                        <configuration>
-                            <outputDirectory>../springboot1</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <includes>
-                                        <include>pom-template-jdk8.xml</include>
-                                    </includes>
-                                    <filtering>true</filtering>
-                                </resource>
-                            </resources>
-                            <escapeString>\</escapeString>
-                            <filters>
-                                <filter>${basedir}/src/main/properties/springboot1.properties</filter>
-                            </filters>
-                            <encoding>UTF-8</encoding>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>create-springboot23-parent-pom</id>
                         <goals>
                             <goal>copy-resources</goal>
@@ -59,7 +35,7 @@
                                 <resource>
                                     <directory>src/main/resources</directory>
                                     <includes>
-                                        <include>pom-template-jdk8.xml</include>
+                                        <include>pom-template-jdk17.xml</include>
                                     </includes>
                                     <filtering>true</filtering>
                                 </resource>
@@ -83,7 +59,7 @@
                                 <resource>
                                     <directory>src/main/resources</directory>
                                     <includes>
-                                        <include>pom-template-jdk11.xml</include>
+                                        <include>pom-template-jdk17.xml</include>
                                     </includes>
                                     <filtering>true</filtering>
                                 </resource>
@@ -107,7 +83,7 @@
                                 <resource>
                                     <directory>src/main/resources</directory>
                                     <includes>
-                                        <include>pom-template-jdk11.xml</include>
+                                        <include>pom-template-jdk17.xml</include>
                                     </includes>
                                     <filtering>true</filtering>
                                 </resource>
@@ -115,6 +91,30 @@
                             <escapeString>\</escapeString>
                             <filters>
                                 <filter>${basedir}/src/main/properties/springboot26.properties</filter>
+                            </filters>
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>create-springboot27-parent-pom</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals><!-- here the phase you need -->
+                        <phase>validate</phase>
+                        <configuration>
+                            <outputDirectory>../springboot27</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>pom-template-jdk17.xml</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                            <escapeString>\</escapeString>
+                            <filters>
+                                <filter>${basedir}/src/main/properties/springboot27.properties</filter>
                             </filters>
                             <encoding>UTF-8</encoding>
                         </configuration>
@@ -151,24 +151,13 @@
                 <version>1.0.1</version>
                 <executions>
                     <execution>
-                        <id>rename-springboot1-parent-pom</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>rename</goal>
-                        </goals>
-                        <configuration>
-                            <sourceFile>../springboot1/pom-template-jdk8.xml</sourceFile>
-                            <destinationFile>../springboot1/pom.xml</destinationFile>
-                        </configuration>
-                    </execution>
-                    <execution>
                         <id>rename-springboot23-parent-pom</id>
                         <phase>validate</phase>
                         <goals>
                             <goal>rename</goal>
                         </goals>
                         <configuration>
-                            <sourceFile>../springboot23/pom-template-jdk8.xml</sourceFile>
+                            <sourceFile>../springboot23/pom-template-jdk17.xml</sourceFile>
                             <destinationFile>../springboot23/pom.xml</destinationFile>
                         </configuration>
                     </execution>
@@ -179,7 +168,7 @@
                             <goal>rename</goal>
                         </goals>
                         <configuration>
-                            <sourceFile>../springboot25/pom-template-jdk11.xml</sourceFile>
+                            <sourceFile>../springboot25/pom-template-jdk17.xml</sourceFile>
                             <destinationFile>../springboot25/pom.xml</destinationFile>
                         </configuration>
                     </execution>
@@ -190,8 +179,30 @@
                             <goal>rename</goal>
                         </goals>
                         <configuration>
-                            <sourceFile>../springboot26/pom-template-jdk11.xml</sourceFile>
+                            <sourceFile>../springboot26/pom-template-jdk17.xml</sourceFile>
                             <destinationFile>../springboot26/pom.xml</destinationFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>rename-springboot27-parent-pom</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>rename</goal>
+                        </goals>
+                        <configuration>
+                            <sourceFile>../springboot27/pom-template-jdk17.xml</sourceFile>
+                            <destinationFile>../springboot27/pom.xml</destinationFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>rename-springboot30-parent-pom</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>rename</goal>
+                        </goals>
+                        <configuration>
+                            <sourceFile>../springboot30/pom-template-jdk17.xml</sourceFile>
+                            <destinationFile>../springboot30/pom.xml</destinationFile>
                         </configuration>
                     </execution>
                 </executions>
