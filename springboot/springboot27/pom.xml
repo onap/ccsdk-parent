@@ -8,13 +8,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.3</version>
+        <version>2.7.12</version>
         <relativePath/>
     </parent>
 
     <groupId>org.onap.ccsdk.parent</groupId>
-    <artifactId>spring-boot-30-starter-parent</artifactId>
-    <version>2.5.4-SNAPSHOT</version>
+    <artifactId>spring-boot-27-starter-parent</artifactId>
+    <version>2.6.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
@@ -89,18 +89,18 @@
         <logging-analytics.version>1.6.9</logging-analytics.version>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>(1.4.99999,1.5.99999-SNAPSHOT]</ccsdk.cds.version>
-        <ccsdk.features.version>(1.4.99999, 1.5.99999-SNAPSHOT]</ccsdk.features.version>
-        <ccsdk.distribution.version>(1.4.99999, 1.5.99999-SNAPSHOT]</ccsdk.distribution.version>
-        <ccsdk.sli.version>(1.5.99999, 1.6.99999-SNAPSHOT]</ccsdk.sli.version>
+        <ccsdk.cds.version>(1.5.99999,1.6.99999-SNAPSHOT]</ccsdk.cds.version>
+        <ccsdk.features.version>(1.5.99999, 1.6.99999-SNAPSHOT]</ccsdk.features.version>
+        <ccsdk.distribution.version>(1.5.99999, 1.6.99999-SNAPSHOT]</ccsdk.distribution.version>
+        <ccsdk.sli.version>(1.6.99999, 1.7.99999-SNAPSHOT]</ccsdk.sli.version>
         <ccsdk.sli.core.version>${ccsdk.sli.version}</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>${ccsdk.sli.version}</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>${ccsdk.sli.version}</ccsdk.sli.northbound.version>
         <ccsdk.sli.plugins.version>${ccsdk.sli.version}</ccsdk.sli.plugins.version>
 
         <!-- Spring versions -->
-        <spring.boot.version>3.0.3</spring.boot.version>
-        <spring.version>6.0.4</spring.version>
+        <spring.boot.version>2.7.12</spring.boot.version>
+        <spring.version>5.3.27</spring.version>
 
         <!-- Kotlin versions -->
         <kotlin.compiler.jvmTarget>1.11</kotlin.compiler.jvmTarget>
@@ -112,6 +112,10 @@
         <nats.version>2.6.6</nats.version>
         <nats.streaming.version>2.2.3</nats.streaming.version>
         <mockk.version>1.9.3</mockk.version>
+
+
+        <antlr.version>4.12.0</antlr.version>
+        <antlr4.version>4.12.0</antlr4.version>
 
         <!-- Managed dependency versions -->
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
@@ -125,7 +129,7 @@
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
-                <version>2.5.4-SNAPSHOT</version>
+                <version>2.6.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
