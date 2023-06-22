@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/springboot/spring-boot-setup/src/main/template/pom-template-jdk8.xml
+    <!-- PLEASE READ !!!!! This file is generated from ccsdk/parent/springboot/spring-boot-setup/src/main/template/pom-template-jdk17.xml
         Any updates needed should be made to that template and not to the generated
         pom.xml file -->
     <parent>
@@ -51,11 +51,9 @@
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
 
         <!-- Jacoco properties -->
-        <jacoco.version>0.8.5</jacoco.version>
+        <jacoco.version>0.8.8</jacoco.version>
         <!-- properties from oparent -->
 
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- sitePath may be overridden in the inheriting POM if desired -->
@@ -79,10 +77,9 @@
         <onap.nexus.staging.server-id>ecomp-staging</onap.nexus.staging.server-id>
         <onap.nexus.staging.profile-id>176c31dfe190a</onap.nexus.staging.profile-id>
 
-        <java.version.source>1.8</java.version.source>
-        <java.version.target>1.8</java.version.target>
-        <bundle.plugin.version>2.5.0</bundle.plugin.version>
-        <maven.compile.plugin.version>2.5.1</maven.compile.plugin.version>
+        <java.version>17</java.version>
+        <maven.compile.plugin.version>3.10.0</maven.compile.plugin.version>
+        <maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
         <features.file>features.xml</features.file>
         <jmxGeneratorPath>src/main/yang-gen-config</jmxGeneratorPath>
         <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
@@ -92,10 +89,10 @@
         <logging-analytics.version>1.6.9</logging-analytics.version>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>(1.4.99999,1.5.99999-SNAPSHOT]</ccsdk.cds.version>
-        <ccsdk.features.version>(1.4.99999, 1.5.99999-SNAPSHOT]</ccsdk.features.version>
-        <ccsdk.distribution.version>(1.4.99999, 1.5.99999-SNAPSHOT]</ccsdk.distribution.version>
-        <ccsdk.sli.version>(1.5.99999, 1.6.99999-SNAPSHOT]</ccsdk.sli.version>
+        <ccsdk.cds.version>(1.5.99999,1.6.99999-SNAPSHOT]</ccsdk.cds.version>
+        <ccsdk.features.version>(1.5.99999, 1.6.99999-SNAPSHOT]</ccsdk.features.version>
+        <ccsdk.distribution.version>(1.5.99999, 1.6.99999-SNAPSHOT]</ccsdk.distribution.version>
+        <ccsdk.sli.version>(1.6.99999, 1.7.99999-SNAPSHOT]</ccsdk.sli.version>
         <ccsdk.sli.core.version>${ccsdk.sli.version}</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>${ccsdk.sli.version}</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>${ccsdk.sli.version}</ccsdk.sli.northbound.version>
@@ -106,39 +103,21 @@
         <spring.version>5.2.15.RELEASE</spring.version>
 
         <!-- Kotlin versions -->
-        <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
-        <kotlin.version>1.3.61</kotlin.version>
-        <kotlin.maven.version>1.3.61</kotlin.maven.version>
-        <kotlin.couroutines.version>1.3.3</kotlin.couroutines.version>
+        <kotlin.compiler.jvmTarget>1.11</kotlin.compiler.jvmTarget>
+        <kotlin.version>1.5.32</kotlin.version>
+        <kotlin.maven.version>1.5.32</kotlin.maven.version>
+        <kotlin.couroutines.version>1.5.2</kotlin.couroutines.version>
         <kotlinpoet.version>1.5.0</kotlinpoet.version>
         <kroto-plus.version>0.5.0</kroto-plus.version>
         <nats.version>2.6.6</nats.version>
         <nats.streaming.version>2.2.3</nats.streaming.version>
         <mockk.version>1.9.3</mockk.version>
 
+
+        <antlr.version>4.12.0</antlr.version>
+        <antlr4.version>4.12.0</antlr4.version>
+
         <!-- Managed dependency versions -->
-        <antlr.version>4.8-1</antlr.version>
-        <commons.lang.version>2.6</commons.lang.version>
-        <apache.httpcomponents.core.version>4.4.14</apache.httpcomponents.core.version>
-        <apache.httpcomponents.client.version>4.5.13</apache.httpcomponents.client.version>
-        <derby.version>10.14.2.0</derby.version>
-        <eelf.version>1.0.0</eelf.version>
-        <grpc.version>1.25.0</grpc.version>
-        <netty-ssl>2.0.39.Final</netty-ssl>
-        <protobuff.java.version>3.10.0</protobuff.java.version>
-        <protobuff.java.utils.version>3.10.0</protobuff.java.utils.version>
-        <jersey.version>2.30.1</jersey.version>
-        <jersey.client.version>2.30.1</jersey.client.version>
-        <jettison.version>1.3.8</jettison.version>
-        <log4j.version>2.17.2</log4j.version>
-        <log4j2.version>2.17.2</log4j2.version>
-        <logback.version>1.2.11</logback.version>
-        <mariadb.connector.version>2.7.3</mariadb.connector.version>
-        <mariadb4j.version>2.4.0</mariadb4j.version>
-        <slf4j.version>1.7.25</slf4j.version>
-        <springfox.version>2.9.2</springfox.version>
-        <testng.version>6.14.3</testng.version>
-        <tomcat-jdbc.version>9.0.46</tomcat-jdbc.version>
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
     </properties>
 
@@ -202,16 +181,6 @@
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-core</artifactId>
                 <version>4.4.2-nordix</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-api</artifactId>
-                <version>${log4j2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>${log4j2.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -297,18 +266,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </pluginRepository>
-        <!-- Black Duck plugin dependencies -->
-        <pluginRepository>
-            <id>JCenter</id>
-            <name>JCenter Repository</name>
-            <url>http://jcenter.bintray.com</url>
-        </pluginRepository>
 
-        <pluginRepository>
-            <id>Restlet</id>
-            <name>Restlet Repository</name>
-            <url>http://maven.restlet.com</url>
-        </pluginRepository>
     </pluginRepositories>
 
     <build>
@@ -418,7 +376,6 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.19.1</version>
                     <configuration>
                         <!-- Sets the VM argument line used when unit tests are run. -->
                         <argLine>${surefireArgLine}</argLine>
@@ -431,7 +388,6 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.19.1</version>
                     <executions>
                         <!-- Ensures that both integration-test and verify goals of the Failsafe Maven plugin are executed. -->
                         <execution>
@@ -452,14 +408,16 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven.compile.plugin.version}</version>
                     <configuration>
-                        <source>${java.version.source}</source>
-                        <target>${java.version.target}</target>
+                        <release>${java.version}</release>
+                        <!--explicitly remove source and target-->
+                        <source combine.self="override"/>
+                        <target combine.self="override"/>
                     </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
-                    <version>3.6.0.1398</version>
+                    <version>3.7.0.1746</version>
                 </plugin>
 
                 <!-- End of plugins from ONAP oparent -->
@@ -467,50 +425,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.2.0</version>
                     <configuration>
-                        <additionalDependencies>
-                            <additionalDependency>
-                                <groupId>org.slf4j</groupId>
-                                <artifactId>slf4j-api</artifactId>
-                                <version>${slf4j.version}</version>
-                            </additionalDependency>
-                            <additionalDependency>
-                                <groupId>org.antlr</groupId>
-                                <artifactId>antlr4</artifactId>
-                                <version>${antlr.version}</version>
-                            </additionalDependency>
-                            <additionalDependency>
-                                <groupId>org.antlr</groupId>
-                                <artifactId>antlr4-runtime</artifactId>
-                                <version>${antlr.version}</version>
-                            </additionalDependency>
-                            <additionalDependency>
-                                <groupId>com.sun.jersey</groupId>
-                                <artifactId>jersey-client</artifactId>
-                                <version>${jersey.client.version}</version>
-                            </additionalDependency>
-                            <additionalDependency>
-                                <groupId>com.sun.jersey</groupId>
-                                <artifactId>jersey-core</artifactId>
-                                <version>${jersey.version}</version>
-                            </additionalDependency>
-                            <additionalDependency>
-                                <groupId>org.apache.httpcomponents</groupId>
-                                <artifactId>httpcore-osgi</artifactId>
-                                <version>${apache.httpcomponents.core.version}</version>
-                            </additionalDependency>
-                            <additionalDependency>
-                                <groupId>org.apache.httpcomponents</groupId>
-                                <artifactId>httpclient-osgi</artifactId>
-                                <version>${apache.httpcomponents.client.version}</version>
-                            </additionalDependency>
-                            <additionalDependency>
-                                <groupId>commons-lang</groupId>
-                                <artifactId>commons-lang</artifactId>
-                                <version>${commons.lang.version}</version>
-                            </additionalDependency>
-                        </additionalDependencies>
                         <failOnError>false</failOnError>
                     </configuration>
                     <executions>
@@ -892,7 +807,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-antrun-plugin</artifactId>
-                        <version>1.8</version>
+                        <version>${maven-antrun-plugin.version}</version>
                         <executions>
                             <execution>
                                 <phase>initialize</phase>
@@ -972,7 +887,7 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
-                        <version>1.5.0</version>
+                        <version>3.1.0</version>
                         <executions>
                             <execution>
                                 <id>swagger-generate-sources</id>

@@ -87,7 +87,8 @@
         <sdc.client.version>2.0.0</sdc.client.version>
         <sdc.tosca.version>1.6.5</sdc.tosca.version>
 
-        <antlr.version>4.8-1</antlr.version>
+        <antlr.version>4.12.0</antlr.version>
+        <antlr4.version>4.12.0</antlr4.version>
     </properties>
 
     <dependencyManagement>
