@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48c21b01_4d4b3818",
+        "filename": "dependencies-odl-bom/pom.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 5625
+      },
+      "writtenOn": "2023-07-17T07:44:34Z",
+      "side": 1,
+      "message": "this is version 0.19.5",
+      "revId": "8ac451fea42e7fbd262495383bff5b74a584262b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7df997d0_9fcb9eec",
+        "filename": "dependencies-odl-bom/pom.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 5625
+      },
+      "writtenOn": "2023-07-17T07:44:34Z",
+      "side": 1,
+      "message": "this is version 2.10.0",
+      "revId": "8ac451fea42e7fbd262495383bff5b74a584262b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
