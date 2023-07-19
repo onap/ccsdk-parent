@@ -18,6 +18,24 @@
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "00217723_346a45cb",
+        "filename": "dependencies-odl-bom/pom.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2023-07-19T12:28:22Z",
+      "side": 1,
+      "message": "Thanks - updated that version",
+      "parentUuid": "48c21b01_4d4b3818",
+      "revId": "8ac451fea42e7fbd262495383bff5b74a584262b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7df997d0_9fcb9eec",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-07-17T07:44:34Z",
       "side": 1,
       "message": "this is version 2.10.0",
+      "revId": "8ac451fea42e7fbd262495383bff5b74a584262b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcca5c0b_12cd3566",
+        "filename": "dependencies-odl-bom/pom.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2023-07-19T12:28:22Z",
+      "side": 1,
+      "message": "Thanks - updated that version",
+      "parentUuid": "7df997d0_9fcb9eec",
       "revId": "8ac451fea42e7fbd262495383bff5b74a584262b",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
