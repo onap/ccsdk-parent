@@ -16,6 +16,23 @@
       "message": "stage-release",
       "revId": "3b0843204a1dbbf4c4da01162149d0f111675132",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd80165c_82e14bf3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6215
+      },
+      "writtenOn": "2023-10-07T08:34:10Z",
+      "side": 1,
+      "message": "Hi All, Please review and approve if all OK.\nRegards.\nRavi",
+      "revId": "3b0843204a1dbbf4c4da01162149d0f111675132",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
