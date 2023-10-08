@@ -33,6 +33,23 @@
       "message": "Hi All, Please review and approve if all OK.\nRegards.\nRavi",
       "revId": "3b0843204a1dbbf4c4da01162149d0f111675132",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "836e5d02_b1fc5722",
+        "filename": "dependencies-odl-bom/pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4931
+      },
+      "writtenOn": "2023-10-08T14:03:04Z",
+      "side": 1,
+      "message": "The additional space shouldn\u0027t be added.",
+      "revId": "3b0843204a1dbbf4c4da01162149d0f111675132",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
