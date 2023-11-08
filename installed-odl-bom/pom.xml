@@ -23,42 +23,42 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
-                <version>2.14.2</version>
+                <version>2.14.3</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
-                <version>2.14.2</version>
+                <version>2.14.3</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
-                <version>2.14.2</version>
+                <version>2.14.3</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.dataformat</groupId>
                 <artifactId>jackson-dataformat-xml</artifactId>
-                <version>2.14.2</version>
+                <version>2.14.3</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.jaxrs</groupId>
                 <artifactId>jackson-jaxrs-base</artifactId>
-                <version>2.14.2</version>
+                <version>2.14.3</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.jaxrs</groupId>
                 <artifactId>jackson-jaxrs-json-provider</artifactId>
-                <version>2.14.2</version>
+                <version>2.14.3</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
                 <artifactId>jackson-module-jaxb-annotations</artifactId>
-                <version>2.14.2</version>
+                <version>2.14.3</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.woodstox</groupId>
                 <artifactId>woodstox-core</artifactId>
-                <version>6.4.0</version>
+                <version>6.5.1</version>
             </dependency>
             <dependency>
                 <groupId>com.github.mifmif</groupId>
@@ -113,7 +113,7 @@
             <dependency>
                 <groupId>com.rabbitmq</groupId>
                 <artifactId>amqp-client</artifactId>
-                <version>5.16.0</version>
+                <version>5.17.0</version>
             </dependency>
             <dependency>
                 <groupId>com.sun.activation</groupId>
@@ -153,7 +153,7 @@
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
-                <version>2.11.0</version>
+                <version>2.13.0</version>
             </dependency>
             <dependency>
                 <groupId>commons-lang</groupId>
@@ -183,77 +183,77 @@
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>
                 <artifactId>metrics-core</artifactId>
-                <version>4.2.18</version>
+                <version>4.2.19</version>
             </dependency>
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>
                 <artifactId>metrics-graphite</artifactId>
-                <version>4.2.18</version>
+                <version>4.2.19</version>
             </dependency>
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>
                 <artifactId>metrics-healthchecks</artifactId>
-                <version>4.2.18</version>
+                <version>4.2.19</version>
             </dependency>
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>
                 <artifactId>metrics-jmx</artifactId>
-                <version>4.2.18</version>
+                <version>4.2.19</version>
             </dependency>
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>
                 <artifactId>metrics-jvm</artifactId>
-                <version>4.2.18</version>
+                <version>4.2.19</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-buffer</artifactId>
-                <version>4.1.91.Final</version>
+                <version>4.1.95.Final</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-codec-http</artifactId>
-                <version>4.1.91.Final</version>
+                <version>4.1.95.Final</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-codec</artifactId>
-                <version>4.1.91.Final</version>
+                <version>4.1.95.Final</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-common</artifactId>
-                <version>4.1.91.Final</version>
+                <version>4.1.95.Final</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-handler</artifactId>
-                <version>4.1.91.Final</version>
+                <version>4.1.95.Final</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-resolver</artifactId>
-                <version>4.1.91.Final</version>
+                <version>4.1.95.Final</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-transport-classes-epoll</artifactId>
-                <version>4.1.91.Final</version>
+                <version>4.1.95.Final</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-transport-native-epoll</artifactId>
-                <version>4.1.91.Final</version>
+                <version>4.1.95.Final</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-transport-native-unix-common</artifactId>
-                <version>4.1.91.Final</version>
+                <version>4.1.95.Final</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-transport</artifactId>
-                <version>4.1.91.Final</version>
+                <version>4.1.95.Final</version>
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
@@ -378,7 +378,7 @@
             <dependency>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4-runtime</artifactId>
-                <version>4.12.0</version>
+                <version>4.13.0</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.aries.blueprint</groupId>
@@ -933,7 +933,7 @@
             <dependency>
                 <groupId>org.checkerframework</groupId>
                 <artifactId>checker-qual</artifactId>
-                <version>3.33.0</version>
+                <version>3.36.0</version>
             </dependency>
             <dependency>
                 <groupId>org.codehaus.woodstox</groupId>
@@ -1133,37 +1133,37 @@
             <dependency>
                 <groupId>org.glassfish.jersey.containers</groupId>
                 <artifactId>jersey-container-servlet-core</artifactId>
-                <version>2.39.1</version>
+                <version>2.40</version>
             </dependency>
             <dependency>
                 <groupId>org.glassfish.jersey.containers</groupId>
                 <artifactId>jersey-container-servlet</artifactId>
-                <version>2.39.1</version>
+                <version>2.40</version>
             </dependency>
             <dependency>
                 <groupId>org.glassfish.jersey.core</groupId>
                 <artifactId>jersey-client</artifactId>
-                <version>2.39.1</version>
+                <version>2.40</version>
             </dependency>
             <dependency>
                 <groupId>org.glassfish.jersey.core</groupId>
                 <artifactId>jersey-common</artifactId>
-                <version>2.39.1</version>
+                <version>2.40</version>
             </dependency>
             <dependency>
                 <groupId>org.glassfish.jersey.core</groupId>
                 <artifactId>jersey-server</artifactId>
-                <version>2.39.1</version>
+                <version>2.40</version>
             </dependency>
             <dependency>
                 <groupId>org.glassfish.jersey.inject</groupId>
                 <artifactId>jersey-hk2</artifactId>
-                <version>2.39.1</version>
+                <version>2.40</version>
             </dependency>
             <dependency>
                 <groupId>org.glassfish.jersey.media</groupId>
                 <artifactId>jersey-media-sse</artifactId>
-                <version>2.39.1</version>
+                <version>2.40</version>
             </dependency>
             <dependency>
                 <groupId>org.hsqldb</groupId>
@@ -1218,1227 +1218,1227 @@
             <dependency>
                 <groupId>org.opendaylight.aaa.web</groupId>
                 <artifactId>servlet-api</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa.web</groupId>
                 <artifactId>servlet-jersey2</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa.web</groupId>
                 <artifactId>web-api</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa.web</groupId>
                 <artifactId>web-osgi-impl</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-authn-api</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-cert</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-cli</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-encrypt-service-impl</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-encrypt-service</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-filterchain</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-idm-store-h2</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-password-service-api</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-password-service-impl</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-shiro-api</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-shiro</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>aaa-tokenauthrealm</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.aaa</groupId>
                 <artifactId>repackaged-shiro</artifactId>
-                <version>0.17.8</version>
+                <version>0.17.11</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller.samples</groupId>
                 <artifactId>sample-toaster-consumer</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller.samples</groupId>
                 <artifactId>sample-toaster-provider</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller.samples</groupId>
                 <artifactId>sample-toaster</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>atomix-storage</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>blueprint</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>cds-access-api</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>cds-access-client</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>cds-dom-api</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>cds-mgmt-api</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>eos-dom-akka</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>netty-event-executor-config</artifactId>
-                <version>0.18.6</version>
+                <version>0.18.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>netty-threadgroup-config</artifactId>
-                <version>0.18.6</version>
+                <version>0.18.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>netty-timer-config</artifactId>
-                <version>0.18.6</version>
+                <version>0.18.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>repackaged-akka</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-akka-raft</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-akka-segmented-journal</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-cluster-admin-api</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-cluster-admin-impl</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-clustering-commons</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-common-util</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-distributed-datastore</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>sal-remoterpc-connector</artifactId>
-                <version>7.0.6</version>
+                <version>7.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>threadpool-config-api</artifactId>
-                <version>0.18.6</version>
+                <version>0.18.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.controller</groupId>
                 <artifactId>threadpool-config-impl</artifactId>
-                <version>0.18.6</version>
+                <version>0.18.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.daexim</groupId>
                 <artifactId>daexim-akka-infoprovider-impl</artifactId>
-                <version>1.13.1</version>
+                <version>1.13.2</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.daexim</groupId>
                 <artifactId>daexim-impl</artifactId>
-                <version>1.13.1</version>
+                <version>1.13.2</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.daexim</groupId>
                 <artifactId>daexim-model</artifactId>
-                <version>1.13.1</version>
+                <version>1.13.2</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.daexim</groupId>
                 <artifactId>daexim-spi</artifactId>
-                <version>1.13.1</version>
+                <version>1.13.2</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.infrautils</groupId>
                 <artifactId>infrautils-util</artifactId>
-                <version>5.0.4</version>
+                <version>5.0.6</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.infrautils</groupId>
                 <artifactId>ready-api</artifactId>
-                <version>5.0.4</version>
+                <version>5.0.6</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.infrautils</groupId>
                 <artifactId>ready-impl</artifactId>
-                <version>5.0.4</version>
+                <version>5.0.6</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.iana</groupId>
                 <artifactId>iana-crypt-hash</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.iana</groupId>
                 <artifactId>iana-hardware</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.iana</groupId>
                 <artifactId>iana-if-type</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.iana</groupId>
                 <artifactId>iana-routing-types</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc6991-ietf-inet-types</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc6991-ietf-yang-types</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc6991</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc7952</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8040</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8072</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8294-ietf-routing-types</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8294</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8342-ietf-datastores</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8342-ietf-origin</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8342</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8343</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8344</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8345-ietf-network-state</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8345-ietf-network-topology-state</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8345-ietf-network-topology</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8345-ietf-network</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8345</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8346-ietf-l3-unicast-topology-state</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8346-ietf-l3-unicast-topology</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8346</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8348-ietf-hardware-state</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8348-ietf-hardware</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8348</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8349-ietf-ipv4-unicast-routing</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8349-ietf-ipv6-unicast-routing</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8349-ietf-routing</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8349</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8519-ietf-access-control-list</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8519-ietf-ethertypes</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8519-ietf-packet-fields</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8519</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8520-ietf-acldns</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8520-ietf-mud</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8520</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8525</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8528</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8529</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8530</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8542-ietf-dc-fabric-topology</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8542-ietf-dc-fabric-types</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8542</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8776-ietf-te-packet-types</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8776-ietf-te-types</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8776</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8795-ietf-te-topology-state</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8795-ietf-te-topology</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8795</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8819-ietf-module-tags-state</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.binding.model.ietf</groupId>
                 <artifactId>rfc8819-ietf-module-tags</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.model</groupId>
                 <artifactId>general-entity</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.model</groupId>
                 <artifactId>ietf-topology</artifactId>
-                <version>2013.10.21.23.9</version>
+                <version>2013.10.21.23.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.model</groupId>
                 <artifactId>ietf-type-util</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.model</groupId>
                 <artifactId>opendaylight-l2-types</artifactId>
-                <version>2013.08.27.23.9</version>
+                <version>2013.08.27.23.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal.model</groupId>
                 <artifactId>yang-ext</artifactId>
-                <version>2013.09.07.23.9</version>
+                <version>2013.09.07.23.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-dom-adapter</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-dom-codec-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-dom-codec-osgi</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-dom-codec-spi</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-dom-codec</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-generator</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-loader</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-model-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-model-ri</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-runtime-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-runtime-osgi</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-runtime-spi</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-spec-util</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-spi</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-binding-util</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-common-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-dom-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-dom-broker</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-dom-inmemory-datastore</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-dom-schema-osgi</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-dom-spi</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-eos-binding-adapter</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-eos-binding-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-eos-common-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-eos-common-spi</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-eos-dom-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-eos-dom-simple</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-replicate-common</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-replicate-netty</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-rfc8294-netty</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-singleton-common-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-singleton-dom-impl</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-trace-api</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-trace-cli</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>mdsal-trace-impl</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.mdsal</groupId>
                 <artifactId>yang-binding</artifactId>
-                <version>11.0.9</version>
+                <version>11.0.12</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf.model</groupId>
                 <artifactId>rfc5277</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf.model</groupId>
                 <artifactId>rfc6022</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf.model</groupId>
                 <artifactId>rfc6241</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf.model</groupId>
                 <artifactId>rfc6243</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf.model</groupId>
                 <artifactId>rfc6470</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf.model</groupId>
                 <artifactId>rfc8040-ietf-restconf-monitoring</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf.model</groupId>
                 <artifactId>rfc8526</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>aaa-authn-odl-plugin</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>callhome-model</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>callhome-protocol</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>callhome-provider</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>mdsal-netconf-connector</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>mdsal-netconf-impl</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>mdsal-netconf-monitoring</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>mdsal-netconf-notification</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>mdsal-netconf-ssh</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>mdsal-netconf-tcp</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>mdsal-netconf-yang-library</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-api</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-auth</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-client</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-config</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-console</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-dom-api</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-impl</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-mapping-api</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-netty-util</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-notifications-api</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-topology-impl</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-topology-singleton</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-topology</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>netconf-util</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>restconf-api</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>restconf-common-models</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>restconf-common</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>restconf-nb</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>sal-netconf-connector</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>sal-rest-docgen</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>shaded-exificient</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>shaded-sshd</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.netconf</groupId>
                 <artifactId>yanglib</artifactId>
-                <version>5.0.6</version>
+                <version>5.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.odlparent</groupId>
                 <artifactId>bcpkix-framework-ext</artifactId>
-                <version>12.0.5</version>
+                <version>12.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.odlparent</groupId>
                 <artifactId>bcprov-framework-ext</artifactId>
-                <version>12.0.5</version>
+                <version>12.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.odlparent</groupId>
                 <artifactId>bcutil-framework-ext</artifactId>
-                <version>12.0.5</version>
+                <version>12.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.odlparent</groupId>
                 <artifactId>karaf.branding</artifactId>
-                <version>12.0.5</version>
+                <version>12.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.odlparent</groupId>
                 <artifactId>logging-markers</artifactId>
-                <version>12.0.5</version>
+                <version>12.0.7</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>concepts</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>odlext-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>odlext-parser-support</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>openconfig-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>openconfig-parser-support</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc6241-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc6241-parser-support</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc6536-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc6536-parser-support</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc6643-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc6643-parser-support</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc7952-data-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc7952-data-util</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc7952-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc7952-parser-support</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc8040-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc8040-parser-support</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc8528-data-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc8528-data-util</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc8528-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc8528-parser-support</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc8639-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc8639-parser-support</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc8819-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>rfc8819-parser-support</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>util</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-common-netty</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-common</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-codec-binfmt</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-codec-gson</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-codec-xml</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-impl</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-spi</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-transform</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-tree-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-tree-ri</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-tree-spi</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-data-util</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-ir</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-model-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-model-export</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-model-ri</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-model-spi</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-model-util</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-parser-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-parser-impl</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-parser-reactor</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-parser-rfc7950</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-parser-spi</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-repo-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-repo-fs</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-repo-spi</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-xpath-api</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.opendaylight.yangtools</groupId>
                 <artifactId>yang-xpath-impl</artifactId>
-                <version>10.0.6</version>
+                <version>10.0.9</version>
             </dependency>
             <dependency>
                 <groupId>org.ops4j.pax.jdbc</groupId>
@@ -2773,12 +2773,12 @@
             <dependency>
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-library</artifactId>
-                <version>2.13.10</version>
+                <version>2.13.11</version>
             </dependency>
             <dependency>
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-reflect</artifactId>
-                <version>2.13.10</version>
+                <version>2.13.11</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -2793,7 +2793,7 @@
             <dependency>
                 <groupId>tech.pantheon.triemap</groupId>
                 <artifactId>triemap</artifactId>
-                <version>1.3.0</version>
+                <version>1.3.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
