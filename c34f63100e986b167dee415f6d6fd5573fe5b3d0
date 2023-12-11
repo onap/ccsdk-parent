@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78b86d4d_ec45cdea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2023-12-11T14:29:07Z",
+      "side": 1,
+      "message": "Dan: Should we update GitHub Action to 3.8.3? \nhttps://gerrit.onap.org/r/gitweb?p\u003dccsdk/parent.git;a\u003dblob;f\u003d.github/workflows/gerrit-verify.yaml;h\u003dd8bffbea2a780382771caae0fbd9592d7d905d5f;hb\u003dc34f63100e986b167dee415f6d6fd5573fe5b3d0#l85",
+      "revId": "c34f63100e986b167dee415f6d6fd5573fe5b3d0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
