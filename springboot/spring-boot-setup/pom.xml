@@ -167,6 +167,30 @@
                             <encoding>UTF-8</encoding>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>create-springboot32-parent-pom</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals><!-- here the phase you need -->
+                        <phase>validate</phase>
+                        <configuration>
+                            <outputDirectory>../springboot32</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>pom-template-jdk17.xml</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                            <escapeString>\</escapeString>
+                            <filters>
+                                <filter>${basedir}/src/main/properties/springboot32.properties</filter>
+                            </filters>
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -238,6 +262,17 @@
                         <configuration>
                             <sourceFile>../springboot31/pom-template-jdk17.xml</sourceFile>
                             <destinationFile>../springboot31/pom.xml</destinationFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>rename-springboot32-parent-pom</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>rename</goal>
+                        </goals>
+                        <configuration>
+                            <sourceFile>../springboot32/pom-template-jdk17.xml</sourceFile>
+                            <destinationFile>../springboot32/pom.xml</destinationFile>
                         </configuration>
                     </execution>
                 </executions>
