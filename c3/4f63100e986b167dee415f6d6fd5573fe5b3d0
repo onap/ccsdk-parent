@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Code-Review+2: Dan Timoney <dtimoney@att.com>
+Submitted-by: Dan Timoney <dtimoney@att.com>
+Submitted-at: Mon, 08 Jan 2024 20:21:45 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ccsdk/parent/+/136784
+Project: ccsdk/parent
+Branch: refs/heads/master
