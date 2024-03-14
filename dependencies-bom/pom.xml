@@ -23,12 +23,12 @@
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.2.11</version>
+                <version>1.2.12</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>1.2.11</version>
+                <version>1.2.12</version>
             </dependency>
             <dependency>
                 <groupId>ch.vorburger.mariaDB4j</groupId>
@@ -245,8 +245,8 @@
             <dependency>
                 <groupId>org.glassfish.jersey</groupId>
                 <artifactId>jersey-bom</artifactId>
-                <!-- ODL has 2.27 -->
-                <version>2.33</version>
+                <!-- ODL has 2.41 -->
+                <version>2.41</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
