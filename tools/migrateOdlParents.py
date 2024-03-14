@@ -8,7 +8,7 @@ import tempfile
 from lib.pomfile import PomFile
 
 DEFAULT_PARENT_GROUPID="org.onap.ccsdk.parent"
-DEFAULT_PARENT_VERSION="2.4.0-SNAPSHOT"
+DEFAULT_PARENT_VERSION="2.7.0-SNAPSHOT"
 DEFAULT_STRICT=True
 USE_OLD_SERVLET_API=True
 
@@ -94,8 +94,8 @@ class OdlParentMigrator:
 
 
         templatePom = PomFile(self.odlParentPath+'/setup/src/main/resources/pom-template.xml')
-        x = templatePom.setXmlValue('/project/properties/odl.controller.mdsal.version',mdsalVersion)
-        success = success and x
+        # x = templatePom.setXmlValue('/project/properties/odl.controller.mdsal.version',mdsalVersion)
+        # success = success and x
         x = templatePom.setXmlValue('/project/properties/odl.mdsal.version',odlBundleVersion)
         success = success and x
         x = templatePom.setXmlValue('/project/properties/odl.mdsal.model.version',odlBundleVersion)
@@ -164,24 +164,26 @@ class OdlParentMigrator:
         bgpVersion = self.getMvnRepoVersion('org.opendaylight.bgpcep','topology-api')
         controllerVersion = self.getMvnRepoVersion('org.opendaylight.controller', 'blueprint')
         mdsalVersion=self.getMvnRepoVersion('org.opendaylight.mdsal','mdsal-binding-api')
-        netconfVersion = self.getMvnRepoVersion('org.opendaylight.netconf','netconf-impl')
+        netconfVersion = self.getMvnRepoVersion('org.opendaylight.netconf','netconf-api')
 
         pomFile = PomFile(os.path.abspath(self.parentPath+'/dependencies-odl-bom/pom.xml'))
-        x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=bgp-artifacts]/version',bgpVersion)
+        x = pomFile.setXmlValue('/project/version',self.version)
+        success = success and x
+        x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=bgpcep-artifacts]/version',bgpVersion)
         success = success and x
         x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=controller-artifacts]/version',controllerVersion)
         success = success and x
         x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=mdsal-artifacts]/version',mdsalVersion)
         success = success and x
-        x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=netconf-artifacts]/version',netconfVersion)
-        success = success and x
-        x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=sal-binding-broker-impl]/version',netconfVersion, True)
-        success = success and x
+        # x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=netconf-artifacts]/version',netconfVersion)
+        # success = success and x
+        # x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=sal-binding-broker-impl]/version',netconfVersion, True)
+        # success = success and x
         # at the moment not possible because of dependent variable in path after value to set
         # x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=sal-binding-broker-impl,type=test-jar]/version',netconfVersion)
         # success = success and x
-        x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=sal-test-model]/version',netconfVersion)
-        success = success and x
+        # x = pomFile.setXmlValue('/project/dependencyManagement/dependencies/dependency[artifactId=sal-test-model]/version',netconfVersion)
+        # success = success and x
         print("done" if success else "failed")
         return success
 
