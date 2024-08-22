@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1739115_a5196c07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-08-22T11:08:12Z",
+      "side": 1,
+      "message": "I think this ready now. \nNeeds to be merged before the following reviews verify+1\n* https://gerrit.onap.org/r/c/ccsdk/oran/+/138827 \n* https://gerrit.onap.org/r/c/ccsdk/oran/+/138828",
+      "revId": "426ae53c36ff2d6c9351627c52e7985bae65489e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
