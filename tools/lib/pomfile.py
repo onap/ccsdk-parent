@@ -35,10 +35,11 @@ class PomFile:
     # value: value to set
     def setXmlValue(self, valuePath, value, replaceMultiple=False) -> bool:
         if value is None:
+            print("unable to set {} to {} in {}: {}".format(valuePath, value, self.filename, str(False)))
             return False
         found=False
         pathToFind = XPath(valuePath)
-        pattern = re.compile('<([^>^\ ^?^!]+)')
+        pattern = re.compile('<([^>^\ ^?^!]+(\ \/)?)')
         curPath=XPath()
         curParent=None
         isComment=False
