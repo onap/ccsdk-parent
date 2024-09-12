@@ -103,15 +103,15 @@
         <spring.version>6.1.1</spring.version>
 
         <!-- Kotlin versions -->
-        <kotlin.compiler.jvmTarget>17</kotlin.compiler.jvmTarget>
-        <kotlin.version>1.7.0</kotlin.version>
-        <kotlin.maven.version>1.7.0</kotlin.maven.version>
-        <kotlin.couroutines.version>1.7.0</kotlin.couroutines.version>
-        <kotlinpoet.version>1.11.0</kotlinpoet.version>
-        <kroto-plus.version>0.6.1</kroto-plus.version>
-        <nats.version>2.15.0</nats.version>
+        <kotlin.compiler.jvmTarget>1.11</kotlin.compiler.jvmTarget>
+        <kotlin.version>1.5.32</kotlin.version>
+        <kotlin.maven.version>1.5.32</kotlin.maven.version>
+        <kotlin.couroutines.version>1.5.2</kotlin.couroutines.version>
+        <kotlinpoet.version>1.5.0</kotlinpoet.version>
+        <kroto-plus.version>0.5.0</kroto-plus.version>
+        <nats.version>2.6.6</nats.version>
         <nats.streaming.version>2.2.3</nats.streaming.version>
-        <mockk.version>1.13.12</mockk.version>
+        <mockk.version>1.9.3</mockk.version>
 
 
         <antlr.version>4.12.0</antlr.version>
