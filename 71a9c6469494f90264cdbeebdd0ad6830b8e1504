@@ -16,6 +16,24 @@
       "message": "I see a change after this one called \"Revert Changes\".  Does that undo all of these?  If so, it might be cleaner just to abandon both rather than risk having some unintended change that didn\u0027t get reverted for some reason slip through?",
       "revId": "71a9c6469494f90264cdbeebdd0ad6830b8e1504",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b40b536d_c0c16d80",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8463
+      },
+      "writtenOn": "2024-09-16T04:59:27Z",
+      "side": 1,
+      "message": "It doesn\u0027t undo all changes, unintentionally pushed some modified files, so reverted only those files.",
+      "parentUuid": "fb09d04f_6f190afd",
+      "revId": "71a9c6469494f90264cdbeebdd0ad6830b8e1504",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
