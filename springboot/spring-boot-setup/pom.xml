@@ -120,6 +120,30 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>create-springboot27-jdk17-parent-pom</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals><!-- here the phase you need -->
+                        <phase>validate</phase>
+                        <configuration>
+                            <outputDirectory>../springboot27-jdk17</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/resources</directory>
+                                    <includes>
+                                        <include>pom-template-jdk17.xml</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                            <escapeString>\</escapeString>
+                            <filters>
+                                <filter>${basedir}/src/main/properties/springboot27-jdk17.properties</filter>
+                            </filters>
+                            <encoding>UTF-8</encoding>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>create-springboot30-parent-pom</id>
                         <goals>
                             <goal>copy-resources</goal>
@@ -264,6 +288,17 @@
                         <configuration>
                             <sourceFile>../springboot27/pom-template-jdk17.xml</sourceFile>
                             <destinationFile>../springboot27/pom.xml</destinationFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>rename-springboot27-jdk17-parent-pom</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>rename</goal>
+                        </goals>
+                        <configuration>
+                            <sourceFile>../springboot27-jdk17/pom-template-jdk17.xml</sourceFile>
+                            <destinationFile>../springboot27-jdk17/pom.xml</destinationFile>
                         </configuration>
                     </execution>
                     <execution>
