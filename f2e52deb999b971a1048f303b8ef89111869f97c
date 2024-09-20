@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e0bdf33_5fcef531",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 8463
+      },
+      "writtenOn": "2024-09-20T04:11:19Z",
+      "side": 1,
+      "message": "Hi Dan Timoney,\n\nAs you have suggested, we abandoned the previous commits and now pushed one new commit with valid changes. Kindly review.\n\nThank you.",
+      "revId": "f2e52deb999b971a1048f303b8ef89111869f97c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
