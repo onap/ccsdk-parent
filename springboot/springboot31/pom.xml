@@ -14,7 +14,7 @@
 
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>spring-boot-31-starter-parent</artifactId>
-    <version>2.8.1-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
@@ -89,10 +89,10 @@
         <logging-analytics.version>1.6.9</logging-analytics.version>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>(1.6.99999,1.7.99999-SNAPSHOT]</ccsdk.cds.version>
-        <ccsdk.features.version>(1.7.99999, 1.8.99999-SNAPSHOT]</ccsdk.features.version>
-        <ccsdk.distribution.version>(1.6.99999, 1.7.99999-SNAPSHOT]</ccsdk.distribution.version>
-        <ccsdk.sli.version>(1.8.99999, 1.9.99999-SNAPSHOT]</ccsdk.sli.version>
+        <ccsdk.cds.version>[2.0.0-SNAPSHOT, 2.0.99999-SNAPSHOT]</ccsdk.cds.version>
+        <ccsdk.features.version>[2.0.0-SNAPSHOT, 2.0.99999-SNAPSHOT]</ccsdk.features.version>
+        <ccsdk.distribution.version>[2.0.0-SNAPSHOT, 2.0.99999-SNAPSHOT]</ccsdk.distribution.version>
+        <ccsdk.sli.version>[2.0.0-SNAPSHOT, 2.0.99999-SNAPSHOT]</ccsdk.sli.version>
         <ccsdk.sli.core.version>${ccsdk.sli.version}</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>${ccsdk.sli.version}</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>${ccsdk.sli.version}</ccsdk.sli.northbound.version>
@@ -103,15 +103,15 @@
         <spring.version>6.0.9</spring.version>
 
         <!-- Kotlin versions -->
-        <kotlin.compiler.jvmTarget>1.11</kotlin.compiler.jvmTarget>
-        <kotlin.version>1.5.32</kotlin.version>
-        <kotlin.maven.version>1.5.32</kotlin.maven.version>
-        <kotlin.couroutines.version>1.5.2</kotlin.couroutines.version>
-        <kotlinpoet.version>1.5.0</kotlinpoet.version>
-        <kroto-plus.version>0.5.0</kroto-plus.version>
-        <nats.version>2.6.6</nats.version>
+        <kotlin.compiler.jvmTarget>17</kotlin.compiler.jvmTarget>
+        <kotlin.version>1.7.0</kotlin.version>
+        <kotlin.maven.version>1.7.0</kotlin.maven.version>
+        <kotlin.couroutines.version>1.7.0</kotlin.couroutines.version>
+        <kotlinpoet.version>1.11.0</kotlinpoet.version>
+        <kroto-plus.version>0.6.1</kroto-plus.version>
+        <nats.version>2.15.0</nats.version>
         <nats.streaming.version>2.2.3</nats.streaming.version>
-        <mockk.version>1.9.3</mockk.version>
+        <mockk.version>1.13.12</mockk.version>
 
 
         <antlr.version>4.12.0</antlr.version>
@@ -129,7 +129,7 @@
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
-                <version>2.8.1-SNAPSHOT</version>
+                <version>3.0.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
