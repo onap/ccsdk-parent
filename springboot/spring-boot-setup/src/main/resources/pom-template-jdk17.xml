@@ -100,6 +100,7 @@
 
         <!-- Spring versions -->
         <spring.boot.version>${springbootparent.version}</spring.boot.version>
+        <springboot.jackson.version>2.17.2</springboot.jackson.version>
         <spring.version>${spring.version}</spring.version>
 
         <!-- Kotlin versions -->

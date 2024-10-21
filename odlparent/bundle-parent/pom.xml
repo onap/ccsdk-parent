@@ -136,7 +136,7 @@
         <guava.version>32.1.3-jre</guava.version>
         <!-- Used by aaa, alto, netconf, ovsdb, sfc; see also affinity, defense4all,
             integration/distribution, snmp4sdn, toolkit, ttp -->
-        <jackson.version>2.15.3</jackson.version>
+        <jackson.version>2.17.2</jackson.version>
         <!-- Used by snmp4sdn, yangtools -->
         <javassist.version>3.30.2-GA</javassist.version>
 

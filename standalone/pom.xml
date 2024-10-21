@@ -70,7 +70,7 @@
         <log4j.version>2.17.1</log4j.version>
         <log4j2.version>2.17.1</log4j2.version>
         <mariadb.connector.version>2.7.2</mariadb.connector.version>
-        <fasterxml.jackson.version>2.12.4</fasterxml.jackson.version>
+        <fasterxml.jackson.version>2.17.2</fasterxml.jackson.version>
         <velocity.version>2.3</velocity.version>
         <dmaap.listener.version>1.1.14</dmaap.listener.version>
         <sdc.client.version>2.0.0</sdc.client.version>
