@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "668a5a2c_cac6d166",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-10-22T08:51:38Z",
+      "side": 1,
+      "message": "But, would v 2.17.2  be better? \nhttps://github.com/FasterXML/jackson/wiki/Jackson-Release-2.17.2",
+      "revId": "9f05cbc4a68c12568bbadc1f5c7387455534e5d8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
