@@ -16,6 +16,24 @@
       "message": "But, would v 2.17.2  be better? \nhttps://github.com/FasterXML/jackson/wiki/Jackson-Release-2.17.2",
       "revId": "9f05cbc4a68c12568bbadc1f5c7387455534e5d8",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "411ccb7f_98c2e763",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2024-11-01T16:58:08Z",
+      "side": 1,
+      "message": "Might as well .. I believe 2.17.1 was the recommended version in from SECCOM but I verified in the CLM report that 2.27.2 also does not have known vulnerabilities, so might as well pick up those extra fixes while we\u0027re at it",
+      "parentUuid": "668a5a2c_cac6d166",
+      "revId": "9f05cbc4a68c12568bbadc1f5c7387455534e5d8",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
