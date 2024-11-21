@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "090e5413_aa49e084",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 7735
+      },
+      "writtenOn": "2024-11-21T16:55:08Z",
+      "side": 1,
+      "message": "The below 2 are the vulnerabilities which will be gone after this update\n\nGHSA-2rmj-mq67-h97g -- Got from maven:org.springframework:spring-webflux:6.1.11 -- Severity HIGH\n\nGHSA-4gc7-5j7h-4qph -- Got from maven:org.springframework:spring-context:6.1.11 -- Severity LOW",
+      "revId": "24da359dd0f30414e1b86c073f20c278da7679d6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
