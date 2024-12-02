@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "c2e9097a95f4c854c5c15227982df9d11849d407",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b4f57b5_5dd477b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-12-02T10:49:24Z",
+      "side": 1,
+      "message": "Strange how the \u0027local\u0027 maven-verify job works fine (and +1 vote), but the github-action maven-verify fails (no vote). \nI guess the VM that the GHA job runs on needs to be updated, re-config-ed to anable later version of maven?",
+      "revId": "c2e9097a95f4c854c5c15227982df9d11849d407",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
