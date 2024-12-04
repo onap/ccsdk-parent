@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "343fb637_d0ee615f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-12-04T20:00:44Z",
+      "side": 1,
+      "message": "Require parent in https://gerrit.onap.org/r/c/ccsdk/parent/+/139648 first",
+      "revId": "8bdd6e83ce5b18a78f63b0bd23f8d4d9d145153c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
