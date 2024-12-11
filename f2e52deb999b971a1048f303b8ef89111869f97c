@@ -16,6 +16,23 @@
       "message": "Hi Dan Timoney,\n\nAs you have suggested, we abandoned the previous commits and now pushed one new commit with valid changes. Kindly review.\n\nThank you.",
       "revId": "f2e52deb999b971a1048f303b8ef89111869f97c",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5afefc2c_facd7cd9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-12-11T13:48:39Z",
+      "side": 1,
+      "message": "Suggest updating later Springboot parent too. (All using JDK 17)",
+      "revId": "f2e52deb999b971a1048f303b8ef89111869f97c",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ],
   "submitRequirementResults": [
