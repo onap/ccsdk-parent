@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "e54b3e2db95c6da73f49443f747a9e37a4f78d3d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74b3c4d6_56df0633",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-12-17T09:42:42Z",
+      "side": 1,
+      "message": "I think jjb parameter \"mvn-version: mvn39\" might be available on these build machines ... ?",
+      "revId": "e54b3e2db95c6da73f49443f747a9e37a4f78d3d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
