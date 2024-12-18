@@ -68,6 +68,24 @@
       "message": "recheck",
       "revId": "e54b3e2db95c6da73f49443f747a9e37a4f78d3d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c652789_1c86d0f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2024-12-18T15:05:27Z",
+      "side": 1,
+      "message": "If you stick with mvn38 you will need to convince LF to upgrade the version of maven-3.8 installed in the build node. \nCurrently Maven v.3.8.2 is installed for profile \u0027mvn38\u0027, whereas v.3.8.3 is needed by maven plugin org.opendaylight.odlparent:copy-files-plugin:13.0.10 \nI just thought mvn39 might be easier :-)",
+      "parentUuid": "795bc1dd_40267872",
+      "revId": "e54b3e2db95c6da73f49443f747a9e37a4f78d3d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
