@@ -86,6 +86,24 @@
       "parentUuid": "795bc1dd_40267872",
       "revId": "e54b3e2db95c6da73f49443f747a9e37a4f78d3d",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc377d33_9b9f286e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2024-12-18T18:56:02Z",
+      "side": 1,
+      "message": "true ... simpler just to upgrade to mvn 3.9. which I believe we\u0027re going to need pretty soon anyway (I think I saw the next version of OpenDaylight requires maven 3.9)",
+      "parentUuid": "8c652789_1c86d0f3",
+      "revId": "e54b3e2db95c6da73f49443f747a9e37a4f78d3d",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
