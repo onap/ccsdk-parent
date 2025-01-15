@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40aa70c9_78c87092",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4931
+      },
+      "writtenOn": "2025-01-15T14:05:38Z",
+      "side": 1,
+      "message": "Dev environment requires: Java JDK 21, Apache Maven 3.9.5 or later",
+      "revId": "2313c54faf0bc0866884c2d02055e7313e963b93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
