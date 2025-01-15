@@ -197,6 +197,11 @@ class OdlParentMigrator:
             os.path.abspath(self.parentPath+'/springboot/pom.xml'),
             os.path.abspath(self.parentPath+'/springboot/spring-boot-setup/pom.xml')]
         
+        subs = os.listdir(os.path.abspath(self.parentPath+'/springboot'))
+        for sub in subs:
+            if sub.startswith('springboot'):
+                pomfiles.append(self.parentPath+'/springboot/'+sub+'/pom.xml')
+                          
         success=True
         for file in pomfiles:
             pomfile = PomFile(file)
