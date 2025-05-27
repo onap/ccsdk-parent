@@ -170,7 +170,7 @@
         <!-- Managed dependency versions -->
         <apache.httpcomponents.core.version>4.4.12</apache.httpcomponents.core.version>
         <apache.httpcomponents.client.version>4.5.13</apache.httpcomponents.client.version>
-        <derby.version>10.14.2.0</derby.version>
+        <derby.version>10.17.1.0</derby.version>
         <eelf.version>1.0.0</eelf.version>
         <grpc.version>1.21.1</grpc.version>
         <log4j.version>2.17.1</log4j.version>
@@ -234,6 +234,11 @@
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4</artifactId>
                 <version>\${antlr.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.derby</groupId>
+                <artifactId>derby</artifactId>
+                <version>\${derby.version}</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
