@@ -33,6 +33,24 @@
       "message": "Please rebase against master to pick up version change to 3.1.1-SNAPSHOT",
       "revId": "2313c54faf0bc0866884c2d02055e7313e963b93",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cf3d5ee_9ca42c05",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4931
+      },
+      "writtenOn": "2025-06-02T09:56:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "40aa70c9_78c87092",
+      "revId": "2313c54faf0bc0866884c2d02055e7313e963b93",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
