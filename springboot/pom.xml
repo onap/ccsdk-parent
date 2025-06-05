@@ -27,6 +27,7 @@
         <module>springboot32</module>
         <module>springboot33</module>
         <module>springboot34</module>
+        <module>springboot35</module>
     </modules>
 
     <distributionManagement>
