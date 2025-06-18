@@ -42,7 +42,7 @@
 
     <properties>
         <!-- Sonar properties -->
-        <sonar.scanner.version>3.7.0.1746</sonar.scanner.version>
+        <sonar.scanner.version>3.11.0.3922</sonar.scanner.version>
         <sonar-jacoco-listeners.version>3.2</sonar-jacoco-listeners.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
         <!-- Default Sonar configuration -->
