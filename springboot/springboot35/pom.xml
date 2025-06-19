@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.0</version>
+        <version>3.5.1</version>
         <relativePath/>
     </parent>
 
@@ -99,9 +99,9 @@
         <ccsdk.sli.plugins.version>${ccsdk.sli.version}</ccsdk.sli.plugins.version>
 
         <!-- Spring versions -->
-        <spring.boot.version>3.5.0</spring.boot.version>
+        <spring.boot.version>3.5.1</spring.boot.version>
         <springboot.jackson.version>2.17.2</springboot.jackson.version>
-        <spring.version>6.2.7</spring.version>
+        <spring.version>6.2.8</spring.version>
 
         <!-- Kotlin versions -->
         <kotlin.compiler.jvmTarget>17</kotlin.compiler.jvmTarget>
