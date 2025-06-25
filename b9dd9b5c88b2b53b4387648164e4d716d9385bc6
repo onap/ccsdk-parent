@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e75f55c3_bb7f40e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2701
+      },
+      "writtenOn": "2025-06-25T06:41:49Z",
+      "side": 1,
+      "message": "@dtimoney@att.com is it ok for you?",
+      "revId": "b9dd9b5c88b2b53b4387648164e4d716d9385bc6",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    }
+  ]
+}
