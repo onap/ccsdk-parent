@@ -1,0 +1,10 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Aravindhan Ayyanathan <aravindhan.a@est.tech>
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Code-Review+2: John Keeney <john.keeney@est.tech>
+Verified+1: ONAP Bypass GHA <releng+onap.bypass.gha@linuxfoundation.org>
+Submitted-by: Dan Timoney <dtimoney@att.com>
+Submitted-at: Wed, 25 Jun 2025 12:23:34 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ccsdk/parent/+/141345
+Project: ccsdk/parent
+Branch: refs/heads/master
