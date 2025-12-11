@@ -1,0 +1,9 @@
+Code-Review+2: Kevin Smokowski <kevin.smokowski@att.com>
+Verified+1: ONAP Required GHA <releng+onap.required.gha@linuxfoundation.org>
+Verified+1: ONAP Bypass GHA <releng+onap.bypass.gha@linuxfoundation.org>
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Submitted-by: Dan Timoney <dtimoney@att.com>
+Submitted-at: Thu, 11 Dec 2025 15:28:47 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/ccsdk/parent/+/142732
+Project: ccsdk/parent
+Branch: refs/heads/master
