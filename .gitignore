@@ -48,3 +48,6 @@ blackDuckHubProjectVersionName.txt
 
 #Generated dependencies list
 direct-dependencies.txt
+
+#vscode
+debug.log
