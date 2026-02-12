@@ -14,7 +14,7 @@
 
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>spring-boot-31-starter-parent</artifactId>
-    <version>3.3.0-SNAPSHOT</version>
+    <version>3.3.0</version>
     <packaging>pom</packaging>
 
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
@@ -89,10 +89,10 @@
         <logging-analytics.version>1.6.9</logging-analytics.version>
 
         <!-- CCSDK component versions -->
-        <ccsdk.cds.version>[2.3.0-SNAPSHOT, 2.3.99999-SNAPSHOT]</ccsdk.cds.version>
-        <ccsdk.features.version>[2.3.0-SNAPSHOT, 2.3.99999-SNAPSHOT]</ccsdk.features.version>
-        <ccsdk.distribution.version>[2.3.0-SNAPSHOT, 2.3.99999-SNAPSHOT]</ccsdk.distribution.version>
-        <ccsdk.sli.version>[2.3.0-SNAPSHOT, 2.3.99999-SNAPSHOT]</ccsdk.sli.version>
+        <ccsdk.cds.version>[2.3.0, 2.3.99999]</ccsdk.cds.version>
+        <ccsdk.features.version>[2.3.0, 2.3.99999]</ccsdk.features.version>
+        <ccsdk.distribution.version>[2.3.0, 2.3.99999]</ccsdk.distribution.version>
+        <ccsdk.sli.version>[2.3.0, 2.3.99999]</ccsdk.sli.version>
         <ccsdk.sli.core.version>${ccsdk.sli.version}</ccsdk.sli.core.version>
         <ccsdk.sli.adaptors.version>${ccsdk.sli.version}</ccsdk.sli.adaptors.version>
         <ccsdk.sli.northbound.version>${ccsdk.sli.version}</ccsdk.sli.northbound.version>
@@ -130,7 +130,7 @@
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
-                <version>3.3.0-SNAPSHOT</version>
+                <version>3.3.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
