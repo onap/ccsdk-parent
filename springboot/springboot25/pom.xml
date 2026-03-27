@@ -137,7 +137,7 @@
             <dependency>
                 <groupId>com.fasterxml.jackson</groupId>
                 <artifactId>jackson-bom</artifactId>
-                <version>2.12.6</version>
+                <version>${springboot.jackson.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
