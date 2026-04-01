@@ -51,7 +51,7 @@
         <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
 
         <!-- Jacoco properties -->
-        <jacoco.version>0.8.5</jacoco.version>
+        <jacoco.version>0.8.12</jacoco.version>
         <!-- properties from oparent -->
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

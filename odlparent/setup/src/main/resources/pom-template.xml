@@ -136,7 +136,7 @@
         <guava.version>33.4.0-jre</guava.version>
         <!-- Used by aaa, alto, netconf, ovsdb, sfc; see also affinity, defense4all,
             integration/distribution, snmp4sdn, toolkit, ttp -->
-        <jackson.version>2.17.3</jackson.version>
+        <jackson.version>2.19.2</jackson.version>
         <!-- Used by snmp4sdn, yangtools -->
         <javassist.version>3.30.2-GA</javassist.version>
 
@@ -161,22 +161,22 @@
 
         <!-- Extra support libraries used by SDN-C -->
         <jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
-        <antlr.version>4.12.0</antlr.version>
+        <antlr.version>4.13.2</antlr.version>
         <antlr4.version>4.12.0</antlr4.version>
 
 
         <eelf.maven.plugin.version>1.0.0</eelf.maven.plugin.version>
 
         <!-- Managed dependency versions -->
-        <apache.httpcomponents.core.version>4.4.12</apache.httpcomponents.core.version>
+        <apache.httpcomponents.core.version>4.4.14</apache.httpcomponents.core.version>
         <apache.httpcomponents.client.version>4.5.13</apache.httpcomponents.client.version>
         <derby.version>10.17.1.0</derby.version>
         <eelf.version>1.0.0</eelf.version>
-        <grpc.version>1.21.1</grpc.version>
-        <log4j.version>2.17.1</log4j.version>
-        <log4j2.version>2.17.1</log4j2.version>
+        <grpc.version>1.29.0</grpc.version>
+        <log4j.version>2.17.2</log4j.version>
+        <log4j2.version>2.17.2</log4j2.version>
         <jetty.version>9.4.54.v20240208</jetty.version>
-        <mariadb.connector.version>2.7.5</mariadb.connector.version>
+        <mariadb.connector.version>3.3.3</mariadb.connector.version>
         <mariadb4j.version>2.4.0</mariadb4j.version>
         <testng.version>6.14.3</testng.version>
         <tomcat-jdbc.version>9.0.52</tomcat-jdbc.version>
