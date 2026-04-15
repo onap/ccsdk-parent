@@ -42,15 +42,15 @@
     <properties>
         <!-- Sonar properties -->
         <sonar.scanner.version>3.7.0.1746</sonar.scanner.version>
-        <sonar-jacoco-listeners.version>3.2</sonar-jacoco-listeners.version>
+        <sonar-jacoco-listeners.version>5.14.0.18788</sonar-jacoco-listeners.version>
         <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
         <!-- Default Sonar configuration -->
         <sonar.coverage.jacoco.xmlReportPaths>\${project.reporting.outputDirectory}/jacoco-ut/jacoco.xml,\${project.reporting.outputDirectory}/jacoco-it/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
         <!-- Note: This list should match jacoco-maven-plugin's exclusion list below -->
-        <sonar.exclusions>**/gen/**,**/generated-sources/**,**/yang-gen**,**/pax/**</sonar.exclusions>
+        <sonar.exclusions>**/gen/**,**/generated-sources/**,**/generated-test-sources/**,**/yang-gen/**,**/yang-gen-config/**,**/yang-gen-sal/**,**/yang-gen-code/**,**/pax/**</sonar.exclusions>
 
         <!-- Jacoco properties -->
-        <jacoco.version>0.8.12</jacoco.version>
+        <jacoco.version>0.8.13</jacoco.version>
 
         <!-- properties from oparent -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
