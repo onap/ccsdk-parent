@@ -66,7 +66,7 @@ jobs:
     steps:
       # Harden the runner used by this workflow
       # yamllint disable-line rule:line-length
-      - uses: step-security/harden-runner@6c3c2f2c1c457b00c10c4848d6f5491db3b629df  # v2.18.0
+      - uses: step-security/harden-runner@f808768d1510423e83855289c910610ca9b43176  # v2.17.0
         with:
           egress-policy: audit
 
@@ -96,7 +96,7 @@ jobs:
     steps:
       # Harden the runner used by this workflow
       # yamllint disable-line rule:line-length
-      - uses: step-security/harden-runner@6c3c2f2c1c457b00c10c4848d6f5491db3b629df  # v2.18.0
+      - uses: step-security/harden-runner@f808768d1510423e83855289c910610ca9b43176  # v2.17.0
         with:
           egress-policy: audit
 
@@ -207,7 +207,7 @@ jobs:
       - name: 'Output SHA1 sum of password'
         if: steps.check-pom-xml.outputs.exists == 'true'
         env:
-          NEXUS_PASSWORD: $NEXUS_PASSWORD
+          NEXUS_PASSWORD: ${{ env.NEXUS_PASSWORD }}
         run: |
           # Output SHA1 sum of password
           VALUE_SHA1=$(printf '%s' "$NEXUS_PASSWORD" | shasum -a 1 | awk '{print $1}')
@@ -341,7 +341,7 @@ jobs:
     steps:
       # Harden the runner used by this workflow
       # yamllint disable-line rule:line-length
-      - uses: step-security/harden-runner@6c3c2f2c1c457b00c10c4848d6f5491db3b629df  # v2.18.0
+      - uses: step-security/harden-runner@f808768d1510423e83855289c910610ca9b43176  # v2.17.0
         with:
           egress-policy: audit
 
