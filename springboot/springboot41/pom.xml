@@ -14,7 +14,7 @@
 
     <groupId>org.onap.ccsdk.parent</groupId>
     <artifactId>spring-boot-41-starter-parent</artifactId>
-    <version>3.3.3-SNAPSHOT</version>
+    <version>3.3.4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>ONAP :: ${project.groupId} :: ${project.artifactId}</name>
@@ -100,7 +100,7 @@
 
         <!-- Spring versions -->
         <spring.boot.version>4.1.0</spring.boot.version>
-        <springboot.jackson.version>2.21.4</springboot.jackson.version>
+        <springboot.jackson.version>2.22.1</springboot.jackson.version>
         <spring.version>7.0.8</spring.version>
 
         <!-- Kotlin versions -->
@@ -130,7 +130,7 @@
             <dependency>
                 <groupId>org.onap.ccsdk.parent</groupId>
                 <artifactId>dependencies-bom</artifactId>
-                <version>3.3.3-SNAPSHOT</version>
+                <version>3.3.4-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
