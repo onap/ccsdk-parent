@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "42facefc1814b4e0fa0ba56c482adfbe5b4375e3",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69f34a5a_baabfb09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5519
+      },
+      "writtenOn": "2026-09-08T11:13:03Z",
+      "side": 1,
+      "message": "It seems jenkins-maven-verify jobs are no longer triggered. \nBut in this case the GHA-maven-verify job now works ok. So this is probably sufficient. \n(e.g. Gerrit Composed Maven Verify:  https://github.com/onap/ccsdk-parent/actions/runs/34215540131) \n\nI guess the rule requiring the jenkins-maven-verify job to succeed \u0026 +1 needs to be removed?",
+      "revId": "42facefc1814b4e0fa0ba56c482adfbe5b4375e3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a"
     }
   ]
 }
