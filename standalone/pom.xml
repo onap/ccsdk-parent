@@ -73,7 +73,7 @@
         <fasterxml.jackson.version>2.17.2</fasterxml.jackson.version>
         <velocity.version>2.3</velocity.version>
         <dmaap.listener.version>1.1.14</dmaap.listener.version>
-        <sdc.client.version>2.0.0</sdc.client.version>
+        <sdc.client.version>2.3.0</sdc.client.version>
         <sdc.tosca.version>1.6.5</sdc.tosca.version>
 
         <dependency-list.file>direct-dependencies.txt</dependency-list.file>
